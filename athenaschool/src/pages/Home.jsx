@@ -7,6 +7,8 @@ import Programs from '../components/Programs';
 import CTA from '../components/CTA';
 import Features from '../components/Features';
 import Testimonials from '../components/Testimonials';
+import StudentSpotlight from '../components/StudentSpotlight';
+import AcademicCrew from '../components/AcademicCrew';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import CurriculumOverview from '../components/CurriculumOverview';
@@ -27,31 +29,35 @@ function Home() {
       <Hero />
       
       {/* Stats Section */}
-      <div className="py-12 bg-white relative z-10 max-w-7xl mx-auto">
+      <div className="py-12 bg-white relative z-10">
         <Stats />
       </div>
       
       <AffordableAccredited />
       
       {/* Programs Section */}
-      <div className="py-12 bg-white relative z-10 max-w-7xl mx-auto">
+      <div className="py-12 bg-white relative z-10">
         <Programs />
       </div>
       
       {/* Features Section */}
-      <div className="py-12 bg-white relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="py-12 bg-white relative z-10">
         <Features />
       </div>
       
       {/* Testimonials Section */}
       <div className="py-12 bg-white relative overflow-hidden">
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Testimonials />
-        </div>
+        <Testimonials />
       </div>
       
+      {/* Student Spotlight Section */}
+      <StudentSpotlight />
+      
+      {/* Academic Crew Section */}
+      <AcademicCrew />
+      
       {/* Curriculum Overview */}
-      <div className="py-12 bg-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="py-12 bg-white">
         <CurriculumOverview />
       </div>
       
@@ -59,7 +65,7 @@ function Home() {
       <TrustIndicators />
       
       {/* Contact Section */}
-      <div className="py-12 bg-white relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="py-12 bg-white relative z-10">
         <Contact />
       </div>
       

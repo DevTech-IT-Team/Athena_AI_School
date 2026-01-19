@@ -3,7 +3,7 @@ import { Brain, Settings, Target, Headset, MessageCircleQuestion } from 'lucide-
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen bg-white overflow-hidden flex items-center justify-center font-sans">
+    <section className="relative w-full min-h-screen bg-gradient-to-br from-blue-50 to-white overflow-hidden flex items-center justify-center font-sans">
       
       {/* --- Background Effects --- */}
       {/* Gradient Overlay */}

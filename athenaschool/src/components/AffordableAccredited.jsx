@@ -1,56 +1,123 @@
 import React from 'react';
+import { GraduationCap, Globe, ShieldCheck, Users } from 'lucide-react';
 
 const AffordableAccredited = () => {
   return (
-    <section className="relative w-full min-h-[600px] bg-white overflow-hidden flex items-center justify-center font-sans py-12 lg:py-0">
-      
-      {/* --- Decorative Background Blobs --- */}
-      {/* Top Right Blob */}
-      <div className="absolute top-0 right-0 w-32 h-32 md:w-64 md:h-64 bg-gradient-to-br from-blue-100 to-blue-200 rounded-bl-[100px] -z-0 opacity-60"></div>
-      
-      {/* Bottom Right Floating Bean Shape */}
-      <div className="absolute bottom-10 right-10 w-24 h-12 md:w-48 md:h-24 bg-gradient-to-r from-blue-500 to-blue-900 rounded-full blur-2xl opacity-20 -z-0 rotate-45"></div>
-       {/* Hard shape for the distinct blue blob in bottom right */}
-      <svg className="absolute bottom-[-50px] right-[10%] w-40 h-40 text-blue-950 opacity-80 z-0" viewBox="0 0 200 200" fill="currentColor">
-         <path d="M45.7,-76.3C58.9,-69.3,69.1,-55.6,76.3,-41.2C83.5,-26.8,87.6,-11.7,85.6,2.6C83.6,16.9,75.5,30.4,65.8,42.4C56.1,54.4,44.8,64.9,32.1,70.5C19.4,76.1,5.3,76.8,-7.8,75.3C-20.9,73.8,-33,70.1,-44.6,63.1C-56.2,56.1,-67.3,45.8,-74.6,33.1C-81.9,20.4,-85.4,5.3,-82.6,-8.6C-79.8,-22.5,-70.7,-35.2,-60.1,-45.5C-49.5,-55.8,-37.4,-63.7,-25.1,-68.8C-12.8,-73.9,0.3,-76.2,12.8,-75.8L25.3,-75.4Z" transform="translate(100 100)" />
-      </svg>
-
-
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-
-          {/* --- Left Column: Image --- */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-            <div className="relative">
+    <div className="min-h-screen bg-sky-100 flex items-center justify-center p-6 md:p-12 font-sans overflow-hidden">
+      <div className="max-w-7xl w-full relative">
+        
+        {/* Main Content Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end relative mt-20 md:mt-0">
+          
+          {/* Left Side: Image (Overlapping) */}
+          <div className="md:col-span-5 relative z-20">
+            <div className="relative h-[500px] w-full md:w-[90%] rounded-sm overflow-hidden shadow-2xl border-4 border-slate-950">
               <img 
-                src="/src/assets/download.webp.webp" 
-                alt="Athena AI School" 
-                className="w-[300px] h-[300px] md:w-[450px] md:h-[450px] object-contain rounded-2xl"
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop" 
+                alt="Student using online learning platform" 
+                className="object-cover w-full h-full"
               />
+              {/* Decorative outline box behind image for style */}
+              <div className="absolute -z-10 top-6 -left-6 w-full h-full border-2 border-sky-500/30 rounded-sm hidden md:block"></div>
             </div>
           </div>
 
-          {/* --- Right Column: Text Content --- */}
-          <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-950">
-              Affordable & Accredited AI-Powered Online School in Delhi
-            </h2>
-            <h3 className="text-2xl font-semibold text-blue-700">
-              Nursery to Grade 12
-            </h3>
+          {/* Right Side: The "Blue Block" (Content) */}
+          <div className="md:col-span-12 md:absolute md:bottom-10 md:right-0 md:w-[75%] bg-sky-900 rounded-sm p-8 md:pl-48 md:pr-12 md:py-16 shadow-xl z-0">
             
-            <p className="text-gray-700 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Experience flexible, future-ready learning with our AI-powered online school. We offer recognised Indian and British curricula for students aged 3–18, supported by expert teachers and personalised learning paths. Our safe, engaging virtual classrooms help students learn from home and reach their full potential.
-            </p>
+            {/* Header inside the blue box */}
+            <div className="mb-8">
+              <p className="text-sky-400 uppercase tracking-widest text-xs font-semibold mb-2">
+                Affordable & Accredited
+              </p>
+              <h1 className="text-4xl md:text-5xl font-serif text-white leading-tight">
+                AI-Powered Online <br /> School in Delhi
+              </h1>
+            </div>
             
-            <button className="bg-yellow-400 text-gray-900 px-8 py-3 rounded-full font-semibold text-lg hover:bg-yellow-300 transition-colors shadow-lg hover:shadow-xl">
-              Learn more about us
-            </button>
-          </div>
+            {/* Mobile Header (Visible only on small screens) */}
+            <div className="block md:hidden mb-8">
+              <p className="text-sky-400 uppercase tracking-widest text-xs font-semibold mb-2">
+                Affordable & Accredited
+              </p>
+              <h1 className="text-3xl font-serif text-white leading-tight">
+                AI-Powered Online School in Delhi
+              </h1>
+            </div>
 
+            {/* Content Highlights - Mimicking the 4 circles in the reference */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
+              
+              <div className="flex gap-4 items-start">
+                <div className="bg-white/10 p-3 rounded-full shrink-0">
+                  <span className="text-sky-300 font-bold text-lg">01</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sky-200 text-lg mb-1">Grade Levels</h3>
+                  <p className="text-blue-100 text-sm leading-relaxed">
+                    Nursery to Grade 12 education supported by expert teachers.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 items-start">
+                <div className="bg-white/10 p-3 rounded-full shrink-0">
+                  <span className="text-sky-300 font-bold text-lg">02</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sky-200 text-lg mb-1">Global Curricula</h3>
+                  <p className="text-blue-100 text-sm leading-relaxed">
+                    We offer recognised Indian and British curricula for students aged 3–18.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 items-start">
+                <div className="bg-white/10 p-3 rounded-full shrink-0">
+                  <span className="text-sky-300 font-bold text-lg">03</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sky-200 text-lg mb-1">Future-Ready</h3>
+                  <p className="text-blue-100 text-sm leading-relaxed">
+                    Experience flexible learning with personalised AI learning paths.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 items-start">
+                <div className="bg-white/10 p-3 rounded-full shrink-0">
+                  <span className="text-sky-300 font-bold text-lg">04</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sky-200 text-lg mb-1">Virtual Classrooms</h3>
+                  <p className="text-blue-100 text-sm leading-relaxed">
+                    Safe, engaging environments to help students reach full potential from home.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            {/* CTA / Footer of card */}
+            <div className="mt-10 border-t border-blue-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+               <p className="text-sky-100 italic text-sm">
+                 Empowering students to learn from home.
+               </p>
+               <button className="px-6 py-2 bg-sky-500 hover:bg-sky-400 text-white font-medium rounded transition-colors duration-300 flex items-center gap-2">
+                 Learn more about us
+                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+               </button>
+            </div>
+
+          </div>
+        </div>
+        
+        {/* Footer mark (from original image) */}
+        <div className="absolute bottom-2 right-0 text-slate-600 text-xs hidden md:block">
+           © 2024 ONLINE SCHOOL
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
