@@ -3,7 +3,7 @@ import { ArrowLongRightIcon } from '@heroicons/react/24/outline';
 
 const ProgramHighlight = () => {
   return (
-    <section className="bg-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="bg-white px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto relative">
         
         {/* DECORATIVE GRID LINES (Thin lines characteristic of the reference design) */}

@@ -37,7 +37,7 @@ const Programs = () => {
     <section className="relative w-full bg-white font-sans overflow-hidden">
       
       {/* --- Top Section (Blue Header) --- */}
-      <div className="relative w-full bg-blue-200 pt-20 px-6 text-center pb-32">
+      <div className="relative w-full bg-blue-500 px-6 py-32 md:py-36 text-center" style={{backgroundColor: '#1e90ff'}}>
         
         {/* Background Patterns */}
         <div className="absolute inset-0 opacity-10 pointer-events-none" 
@@ -46,9 +46,12 @@ const Programs = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black/10 pointer-events-none"></div>
 
         {/* Header Text */}
-        <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-md">
+        <h2 className="relative z-10 text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
           Educational Programs
         </h2>
+        <p className="relative z-10 text-lg md:text-xl text-blue-100 max-w-2xl mx-auto">
+          Discover our comprehensive learning pathways designed for every age group
+        </p>
         
         {/* Abstract decorative circles */}
         <div className="absolute top-10 left-10 w-20 h-20 border-2 border-white/10 rounded-full animate-pulse"></div>
@@ -73,11 +76,11 @@ const Programs = () => {
 
       {/* --- Cards Container --- */}
       {/* Negative margin pulls the cards up over the wave */}
-      <div className="container mx-auto px-6 -mt-24 relative z-20 pb-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+      <div className="container mx-auto px-6 -mt-16 md:-mt-20 relative z-20 pb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           
           {programs.map((program, index) => (
-            <div key={index} className="group relative bg-white rounded-2xl p-8 pt-12 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 flex flex-col items-center text-center">
+            <div key={index} className="group relative bg-white rounded-2xl p-6 md:p-8 pt-12 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 flex flex-col items-center text-center">
               
               {/* Floating Icon */}
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300 border-4 border-white">

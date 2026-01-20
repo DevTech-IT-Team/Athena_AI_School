@@ -6,7 +6,7 @@ const Contact = () => {
     <section className="min-h-screen flex flex-col lg:flex-row relative">
       
       {/* LEFT SIDE: Visuals & Contact Info (Blue 950 Theme) */}
-      <div className="lg:w-5/12 bg-blue-950 relative overflow-hidden flex flex-col justify-center p-8 lg:p-16 text-white z-10">
+      <div className="lg:w-5/12 bg-blue-950 relative overflow-hidden flex flex-col justify-center text-white z-10">
         
         {/* GEOMETRIC BACKGROUND (Diagonal Slashes) */}
         {/* Top Texture */}
@@ -21,7 +21,7 @@ const Contact = () => {
         <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-900 -rotate-12 opacity-30 z-0 rounded-tr-[100px]"></div>
 
         {/* Content Container */}
-        <div className="relative z-10">
+        <div className="relative z-10 text-center">
           <div className="mb-2 inline-block px-3 py-1 border border-sky-500 rounded-full text-sky-400 text-xs font-bold uppercase tracking-wider">
             Contact Our Experts
           </div>
@@ -30,24 +30,24 @@ const Contact = () => {
             Get In <span className="text-sky-400">Touch</span>
           </h2>
 
-          <div className="space-y-8 mt-12">
+          <div className="space-y-8 mt-12 flex flex-col items-center">
             {/* Phone */}
-            <div className="flex items-start gap-4 group">
+            <div className="flex items-center justify-center gap-4 group">
               <div className="p-3 bg-white/10 rounded-lg group-hover:bg-sky-500 transition-colors duration-300">
                 <PhoneIcon className="w-6 h-6 text-white" />
               </div>
-              <div>
+              <div className="text-center">
                 <p className="text-xs text-sky-300 font-bold uppercase tracking-wider mb-1">Call Us</p>
                 <p className="text-2xl font-semibold text-white">+91 99999 99999</p>
               </div>
             </div>
 
             {/* Email */}
-            <div className="flex items-start gap-4 group">
+            <div className="flex items-center justify-center gap-4 group">
               <div className="p-3 bg-white/10 rounded-lg group-hover:bg-sky-500 transition-colors duration-300">
                 <EnvelopeIcon className="w-6 h-6 text-white" />
               </div>
-              <div>
+              <div className="text-center">
                 <p className="text-xs text-sky-300 font-bold uppercase tracking-wider mb-1">Email Us</p>
                 <p className="text-xl font-semibold text-white">info@aischool.com</p>
               </div>
@@ -58,7 +58,7 @@ const Contact = () => {
 
 
       {/* RIGHT SIDE: Enquire Now Form (White Theme) */}
-      <div className="lg:w-7/12 bg-white flex items-center justify-center p-8 lg:p-20 relative">
+      <div className="lg:w-7/12 bg-white flex items-center justify-center relative">
         
         {/* Subtle Background Pattern */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-sky-50 rounded-bl-full -z-0"></div>

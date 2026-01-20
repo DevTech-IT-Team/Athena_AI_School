@@ -9,7 +9,7 @@ const CurriculumOverview = () => {
   };
 
   return (
-    <section className="min-h-screen bg-white py-16 flex items-center overflow-hidden relative">
+    <section className="min-h-screen bg-white flex items-center overflow-hidden relative">
       
       {/* HALF-SECTION BACKGROUND ON LEFT SIDE - Extended */}
       <div className="absolute inset-y-0 left-0 w-3/4 bg-gradient-to-br from-blue-50 via-blue-100/80 to-sky-100/60 z-0">
@@ -30,34 +30,34 @@ const CurriculumOverview = () => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-950/10 rounded-full blur-3xl"></div>
 
           {/* Top Left Image (Pen) */}
-          <div className="absolute top-0 left-10 w-72 h-72 bg-blue-950 p-2 shadow-2xl transform rotate-45 overflow-hidden border-[8px] border-blue-950 z-20">
+          <div className="absolute top-0 left-10 w-72 h-72 bg-blue-950 p-2 shadow-2xl overflow-hidden border-[8px] border-blue-950 z-20">
             <div className="w-full h-full overflow-hidden bg-white">
               <img 
                 src={images.pen} 
                 alt="Classic Pen" 
-                className="w-full h-full object-cover transform -rotate-45 scale-150" 
+                className="w-full h-full object-cover" 
               />
             </div>
           </div>
 
           {/* Middle Right Image (Library) */}
-          <div className="absolute top-32 right-0 w-80 h-80 bg-blue-950 p-2 shadow-2xl transform rotate-45 overflow-hidden border-[8px] border-blue-950 z-10">
+          <div className="absolute top-32 right-0 w-80 h-80 bg-blue-950 p-2 shadow-2xl overflow-hidden border-[8px] border-blue-950 z-10">
             <div className="w-full h-full overflow-hidden bg-white">
               <img 
                 src={images.library} 
                 alt="Old Library" 
-                className="w-full h-full object-cover transform -rotate-45 scale-150" 
+                className="w-full h-full object-cover" 
               />
             </div>
           </div>
 
           {/* Bottom Left Image (Statue) */}
-          <div className="absolute bottom-0 left-20 w-64 h-64 bg-blue-950 p-2 shadow-2xl transform rotate-45 overflow-hidden border-[8px] border-blue-950 z-30">
+          <div className="absolute bottom-0 left-20 w-64 h-64 bg-blue-950 p-2 shadow-2xl overflow-hidden border-[8px] border-blue-950 z-30">
             <div className="w-full h-full overflow-hidden bg-white">
               <img 
                 src={images.statue} 
                 alt="Classic Statue" 
-                className="w-full h-full object-cover transform -rotate-45 scale-150" 
+                className="w-full h-full object-cover" 
               />
             </div>
           </div>

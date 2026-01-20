@@ -65,7 +65,7 @@ function Home() {
       <TrustIndicators />
       
       {/* Contact Section */}
-      <div className="py-12 bg-white relative z-10">
+      <div className="bg-white relative z-10">
         <Contact />
       </div>
       

@@ -175,8 +175,8 @@ function Navigation() {
       {isOpen && (
         <div className="absolute top-16 left-0 right-0 bg-white shadow-lg py-4">
           <div className="container mx-auto px-4">
-            {/* Simple Navigation Links */}
-            <div className="flex flex-wrap gap-4 mb-8">
+            {/* Simple Navigation Links - only visible on mobile */}
+            <div className="lg:hidden flex flex-wrap gap-4 mb-8">
               <Link 
                 to="/" 
                 className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/' ? 'text-blue-600' : ''}`}

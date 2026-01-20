@@ -97,7 +97,7 @@ const stats = [
 
 const Testimonials = () => {
   return (
-    <section className="relative min-h-screen bg-white overflow-hidden">
+    <section className="relative min-h-[120vh] bg-white overflow-hidden">
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]"></div>
 
@@ -146,7 +146,7 @@ const Testimonials = () => {
 // CTA Section Component
 const CTASection = () => {
   return (
-    <section className="relative py-24 overflow-hidden bg-white">
+    <section className="relative overflow-hidden bg-white">
       
       {/* --- BACKGROUND GLOWING ARCS (The Design Element) --- */}
       
@@ -174,7 +174,7 @@ const CTASection = () => {
         </div>
 
         {/* Heading */}
-        <h3 className="text-4xl lg:text-5xl font-extrabold text-blue-950 mb-6 tracking-tight">
+        <h3 className="text-4xl lg:text-5xl font-extrabold text-blue-950 mb-12 tracking-tight py-8">
           Ready to Start Your Child's <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-950">
             Success Story?
