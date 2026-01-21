@@ -16,7 +16,7 @@ function TrustIndicators() {
     }, 800); // Change every 800ms (less than 1 second)
 
     return () => clearInterval(interval);
-  }, []);
+  }, [logos.length]);
 
   return (
     <div className="bg-white">

@@ -10,7 +10,7 @@ function Navigation() {
   const location = useLocation();
 
   useEffect(() => {
-    setIsVisible(true);
+    const timer = setTimeout(() => setIsVisible(true), 0);
     
     // Close mega menu when clicking outside
     const handleClickOutside = (event) => {
@@ -21,6 +21,7 @@ function Navigation() {
     
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
+      clearTimeout(timer);
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
@@ -36,10 +37,6 @@ function Navigation() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  const toggleMegaMenu = () => {
-    setIsMegaMenuOpen(!isMegaMenuOpen);
-  };
 
   const menuItems = [
     {

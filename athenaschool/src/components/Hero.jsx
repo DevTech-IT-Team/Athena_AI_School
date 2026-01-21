@@ -1,6 +1,6 @@
 import React from 'react';
 import { Brain, Settings, Target, Headset, MessageCircleQuestion } from 'lucide-react';
-import heroImage from '../assets/optimized/gemini.webp (2).webp';
+import heroImage from '../assets/gemini.webp (2).webp';
 
 const Hero = () => {
   return (
@@ -70,7 +70,7 @@ const Hero = () => {
           
           {/* Main Gemini Image */}
           <img 
-            src="/src/assets/gemini.webp.webp" 
+            src={heroImage} 
             alt="Athena AI School" 
             className="relative z-10 w-[800px] drop-shadow-2xl object-contain"
           />

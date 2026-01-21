@@ -1,88 +1,9 @@
 import React from 'react';
-import backgroundImage from '../assets/optimized/bg.webp.webp';
-import successStoryImage from '../assets/optimized/relxro.webp.webp';
-import robotImage from '../assets/optimized/cartoon-ai-robot-scene (2).webp';
-import futureReadyImage from "../assets/optimized/Human.webp.webp";
-import anytimeLearningImage from '../assets/optimized/Premium.webp.webp';
-import relxroImage from '../assets/optimized/relxro.webp.webp';
-
-import { 
-  Monitor, 
-  Clock, 
-  GraduationCap, 
-  Target,
-  Users,
-  Sparkles,
-  TargetIcon,
-  UsersIcon,
-  ArrowRightIcon
-} from 'lucide-react';
+import backgroundImage from '../assets/bg.webp';
+import successStoryImage from '../assets/relxro.webp';
+import { Users as UsersIcon, ArrowRight } from 'lucide-react';
 
 // No testimonial data - CTA only component
-
-// Feature Cards Data
-const features = [
-  {
-    id: 1,
-    icon: <Monitor className="w-8 h-8" />,
-    title: "Technology Driven Learning",
-    description: "Our Online Learning School provides a seamless, tech-driven learning experience with progress tracking and interactive tools.",
-    gradient: "from-sky-50 to-sky-100",
-    stats: "AI-Powered",
-    link: "#",
-    iconColor: "text-sky-600",
-    bgColor: "bg-gradient-to-br from-sky-50/40 via-white to-white",
-    color: "from-sky-500 to-sky-400",
-    backgroundImage: robotImage
-  },
-  {
-    id: 2,
-    icon: <Clock className="w-8 h-8" />,
-    title: "Anytime Learning",
-    description: "With over 1,250 hours of live classes daily, all sessions are recorded for flexible, on-demand learning.",
-    gradient: "from-blue-50 to-blue-100",
-    stats: "1,250+ Hours",
-    link: "#",
-    iconColor: "text-blue-950",
-    bgColor: "bg-gradient-to-br from-blue-50/30 via-white to-white",
-    color: "from-blue-950 to-blue-900",
-    backgroundImage: anytimeLearningImage
-  },
-  {
-    id: 3,
-    icon: <GraduationCap className="w-8 h-8" />,
-    title: "Future Ready Education",
-    description: "We prepare students for the future with skills-based learning, critical thinking, and problem-solving abilities.",
-    gradient: "from-sky-50 to-sky-100",
-    stats: "21st Century Skills",
-    link: "#",
-    iconColor: "text-sky-600",
-    bgColor: "bg-gradient-to-br from-sky-50/40 via-white to-white",
-    color: "from-sky-500 to-sky-400",
-    backgroundImage: futureReadyImage
-  },
-  {
-    id: 4,
-    icon: <Target className="w-8 h-8" />,
-    title: "Personalized Curriculum",
-    description: "Tailored learning paths for each student based on their interests, strengths, and career aspirations.",
-    gradient: "from-blue-50 to-blue-100",
-    stats: "100% Customized",
-    link: "#",
-    iconColor: "text-blue-950",
-    bgColor: "bg-gradient-to-br from-blue-50/30 via-white to-white",
-    color: "from-blue-950 to-blue-900",
-    backgroundImage: relxroImage
-  }
-];
-
-// Statistics Data
-const stats = [
-  { value: "98%", label: "Student Success Rate", icon: <TargetIcon className="w-6 h-6" />, color: "text-sky-600" },
-  { value: "1,250+", label: "Daily Learning Hours", icon: <Clock className="w-6 h-6" />, color: "text-blue-950" },
-  { value: "50+", label: "Expert Faculty", icon: <Users className="w-6 h-6" />, color: "text-sky-600" },
-  { value: "10,000+", label: "Happy Students", icon: <Sparkles className="w-6 h-6" />, color: "text-blue-950" }
-];
 
 const Testimonials = () => {
   return (
@@ -194,7 +115,7 @@ const CTASection = () => {
           {/* Secondary Button (Outline/Glass) */}
           <button className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-blue-950/5 backdrop-blur-sm text-blue-950 font-bold text-lg rounded-full border border-blue-950/10 hover:bg-blue-950/10 hover:border-blue-950/30 transition-all duration-300">
             <span>Schedule a Demo</span>
-            <ArrowRightIcon className="w-5 h-5 text-sky-600 group-hover:translate-x-1 transition-transform duration-300" />
+            <ArrowRight className="w-5 h-5 text-sky-600 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
           
         </div>

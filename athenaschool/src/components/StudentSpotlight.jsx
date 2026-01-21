@@ -1,8 +1,8 @@
 import React from 'react';
 import { PlayCircle, ArrowRight, Trophy, Star } from 'lucide-react';
-import personalizedImage from '../assets/optimized/3.webp.webp';
-import chessImage from '../assets/optimized/2.webp.webp';
-import keyaImage from '../assets/optimized/1.webp.webp';
+import personalizedImage from '../assets/3.webp';
+import chessImage from '../assets/2.webp';
+import keyaImage from '../assets/1.webp';
 
 const StudentSpotlight = () => {
   const students = [

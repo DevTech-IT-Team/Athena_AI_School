@@ -13,7 +13,7 @@ function PathwayContent() {
   // Content Configuration - Easier to manage
   const content = {
     hero: {
-      title: "School for Your Child?",
+      title: "Indian and British Pathway",
       subtitle: "Excellence Delivered, Consistently",
       schoolName: "21K School"
     },

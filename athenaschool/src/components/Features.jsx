@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowLongRightIcon } from '@heroicons/react/24/outline';
-import skillImage from '../assets/optimized/skill.wep.webp';
-import parentImage from '../assets/optimized/relxro.webp.webp';
+import skillImage from '../assets/skill.webp';
+import parentImage from '../assets/relxro.webp';
 
 const ProgramHighlight = () => {
   return (

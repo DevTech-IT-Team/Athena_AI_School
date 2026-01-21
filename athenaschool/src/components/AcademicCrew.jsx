@@ -1,9 +1,9 @@
 import React from 'react';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
-import headOfEducationImage from '../assets/optimized/smiley-businesswoman-posing-city-with-arms-crossed.jpg';
-import seniorMentorImage from '../assets/optimized/indian-businessman-with-his-white-car.webp';
-import curriculumDirectorImage from '../assets/optimized/portrait-businessman-smiling.webp';
-import studentSuccessLeadImage from '../assets/optimized/brunette-business-woman-with-wavy-long-hair-blue-eyes-stands-holding-notebook-hands.webp';
+import headOfEducationImage from '../assets/smiley-businesswoman-posing-city-with-arms-crossed.jpg';
+import seniorMentorImage from '../assets/indian-businessman-with-his-white-car.webp';
+import curriculumDirectorImage from '../assets/portrait-businessman-smiling.webp';
+import studentSuccessLeadImage from '../assets/brunette-business-woman-with-wavy-long-hair-blue-eyes-stands-holding-notebook-hands.webp';
 
 const AcademicCrew = () => {
   return (

@@ -156,7 +156,7 @@ function AdmissionTracker() {
               </div>
 
               <div className="space-y-4">
-                {applicationStatus.steps.map((step, index) => (
+                {applicationStatus.steps.map((step) => (
                   <div key={step.id} className="flex items-start">
                     <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
                       step.completed ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-500'

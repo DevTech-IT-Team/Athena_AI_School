@@ -1,8 +1,8 @@
 import React from 'react';
 import { BookOpenIcon, AcademicCapIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline';
-import penImage from '../assets/optimized/download.webp.webp';
-import libraryImage from '../assets/optimized/Human.webp.webp';
-import statueImage from '../assets/optimized/hand.webp.webp';
+import penImage from '../assets/download.webp';
+import libraryImage from '../assets/Human.webp';
+import statueImage from '../assets/hand.webp';
 
 const CurriculumOverview = () => {
   const images = {

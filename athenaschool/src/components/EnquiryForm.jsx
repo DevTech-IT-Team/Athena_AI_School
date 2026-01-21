@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function EnquiryForm({ onClose }) {
+function EnquiryForm() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
