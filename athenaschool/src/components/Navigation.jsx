@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Home, User, BookOpen, Award, Users, Phone, ChevronDown } from 'lucide-react';
+import { Menu, X, Home, User, BookOpen, Award, Users, Phone } from 'lucide-react';
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -118,7 +118,9 @@ function Navigation() {
     <nav className={`fixed top-0 left-0 right-0 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'} z-50 h-16 flex items-center px-4 md:px-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}`}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <Link to="/" className="text-xl font-bold text-gray-900">AI School</Link>
+          <Link to="/" className="flex items-center">
+            <img src="/src/assets/ydyh (1).webp" alt="Athena AI School Logo" className="h-40 w-auto" style={{marginTop: '0.625rem'}} />
+          </Link>
         </div>
         
         {/* Desktop Navigation */}
@@ -129,6 +131,13 @@ function Navigation() {
           >
             <Home size={18} />
             <span>Home</span>
+          </Link>
+          <Link 
+            to="/pathway" 
+            className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/pathway' ? 'text-blue-600' : ''}`}
+          >
+            <BookOpen size={18} />
+            <span>Pathway</span>
           </Link>
           <Link 
             to="/about" 
@@ -184,6 +193,14 @@ function Navigation() {
               >
                 <Home size={18} />
                 <span>Home</span>
+              </Link>
+              <Link 
+                to="/pathway" 
+                className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/pathway' ? 'text-blue-600' : ''}`}
+                onClick={() => setIsOpen(false)}
+              >
+                <BookOpen size={18} />
+                <span>Pathway</span>
               </Link>
               <Link 
                 to="/about" 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { GraduationCap, Globe, ShieldCheck, Users } from 'lucide-react';
+import robotScene from '../assets/optimized/cartoon-ai-robot-scene (2).webp';
 
 const AffordableAccredited = () => {
   return (
@@ -14,8 +15,10 @@ const AffordableAccredited = () => {
           <div className="md:col-span-5 md:row-start-1 md:col-start-1 relative z-20">
             <div className="relative h-[500px] w-full md:w-[90%] rounded-sm overflow-hidden shadow-2xl border-4 border-slate-950">
               <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop" 
-                alt="Student using online learning platform" 
+                src={robotScene} 
+                alt="AI Robot Scene - Athena AI School" 
+                loading="lazy"
+                decoding="async"
                 className="object-cover w-full h-full"
               />
               {/* Decorative outline box */}

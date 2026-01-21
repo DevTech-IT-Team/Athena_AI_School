@@ -1,29 +1,18 @@
-import React, { useState } from 'react';
-import backgroundImage from '../assets/6247537.jpg';
-import stripImage from '../assets/6247537.jpg';
-import successStoryImage from '../assets/10681.jpg';
-import robotImage from '../assets/robot-decorating-with-wallpaper.jpg';
-import futureReadyImage from '../assets/3d-render-robot-with-books.jpg';
-import anytimeLearningImage from '../assets/robot-with-document-folders.jpg';
-import relxroImage from '../assets/relxro.webp.webp';
+import React from 'react';
+import backgroundImage from '../assets/optimized/bg.webp.webp';
+import successStoryImage from '../assets/optimized/relxro.webp.webp';
+import robotImage from '../assets/optimized/cartoon-ai-robot-scene (2).webp';
+import futureReadyImage from "../assets/optimized/Human.webp.webp";
+import anytimeLearningImage from '../assets/optimized/Premium.webp.webp';
+import relxroImage from '../assets/optimized/relxro.webp.webp';
+
 import { 
-  Star, 
+  Monitor, 
   Clock, 
   GraduationCap, 
-  Monitor, 
-  Quote, 
-  ArrowRight, 
-  Play, 
-  Award, 
-  Users,
-  ChevronLeft,
-  ChevronRight,
-  BookOpen,
   Target,
+  Users,
   Sparkles,
-  Trophy,
-  Brain,
-  Zap,
   TargetIcon,
   UsersIcon,
   ArrowRightIcon
@@ -105,9 +94,9 @@ const Testimonials = () => {
         {/* Header Section - CTA Focus */}
         <div className="text-center mb-16 lg:mb-20 relative rounded-3xl overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative z-10 px-8 py-2">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="block text-black">Join Our</span>
-              <span className="text-black">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6">
+              <span className="block text-black italic">Join Our</span>
+              <span className="text-black italic">
                 Learning Community
               </span>
             </h1>
@@ -131,6 +120,11 @@ const Testimonials = () => {
             <img 
               src={successStoryImage} 
               alt="Success Story" 
+              loading="lazy"
+              decoding="async"
+              sizes="(max-width: 1024px) 90vw, 960px"
+              width="1200"
+              height="800"
               className="max-w-2xl mx-auto h-auto rounded-2xl"
             />
           </div>

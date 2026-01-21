@@ -1,5 +1,9 @@
 import React from 'react';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import headOfEducationImage from '../assets/optimized/smiley-businesswoman-posing-city-with-arms-crossed.jpg';
+import seniorMentorImage from '../assets/optimized/indian-businessman-with-his-white-car.webp';
+import curriculumDirectorImage from '../assets/optimized/portrait-businessman-smiling.webp';
+import studentSuccessLeadImage from '../assets/optimized/brunette-business-woman-with-wavy-long-hair-blue-eyes-stands-holding-notebook-hands.webp';
 
 const AcademicCrew = () => {
   return (
@@ -49,8 +53,13 @@ const AcademicCrew = () => {
               {/* IMAGE 1: Top Left (Rounded Top-Left & Bottom-Right) */}
               <div className="aspect-square overflow-hidden rounded-tl-[80px] rounded-br-[80px] shadow-2xl border-4 border-white transform transition-transform duration-500 hover:scale-105">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" 
+                  src={headOfEducationImage} 
                   alt="Head of Education" 
+                  loading="lazy"
+                  decoding="async"
+                  sizes="(max-width: 768px) 50vw, 320px"
+                  width="640"
+                  height="640"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -58,8 +67,13 @@ const AcademicCrew = () => {
               {/* IMAGE 2: Top Right (Rounded Top-Right & Bottom-Left) */}
               <div className="aspect-square overflow-hidden rounded-tr-[80px] rounded-bl-[80px] shadow-2xl border-4 border-white transform transition-transform duration-500 hover:scale-105 mt-8 lg:mt-12">
                 <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" 
+                  src={seniorMentorImage} 
                   alt="Senior Mentor" 
+                  loading="lazy"
+                  decoding="async"
+                  sizes="(max-width: 768px) 50vw, 320px"
+                  width="640"
+                  height="640"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -67,8 +81,13 @@ const AcademicCrew = () => {
               {/* IMAGE 3: Bottom Left (Rounded Top-Right & Bottom-Left - Matching top right) */}
               <div className="aspect-square overflow-hidden rounded-tr-[80px] rounded-bl-[80px] shadow-2xl border-4 border-white transform transition-transform duration-500 hover:scale-105 -mt-8 lg:-mt-12">
                 <img 
-                  src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=800&auto=format&fit=crop" 
+                  src={curriculumDirectorImage} 
                   alt="Curriculum Director" 
+                  loading="lazy"
+                  decoding="async"
+                  sizes="(max-width: 768px) 50vw, 320px"
+                  width="640"
+                  height="640"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -76,8 +95,13 @@ const AcademicCrew = () => {
               {/* IMAGE 4: Bottom Right (Rounded Top-Left & Bottom-Right - Matching top left) */}
               <div className="aspect-square overflow-hidden rounded-tl-[80px] rounded-br-[80px] shadow-2xl border-4 border-white transform transition-transform duration-500 hover:scale-105">
                 <img 
-                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop" 
+                  src={studentSuccessLeadImage} 
                   alt="Student Success Lead" 
+                  loading="lazy"
+                  decoding="async"
+                  sizes="(max-width: 768px) 50vw, 320px"
+                  width="640"
+                  height="640"
                   className="w-full h-full object-cover"
                 />
               </div>

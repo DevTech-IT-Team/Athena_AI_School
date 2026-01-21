@@ -1,5 +1,6 @@
 import React from 'react';
 import { Brain, Settings, Target, Headset, MessageCircleQuestion } from 'lucide-react';
+import heroImage from '../assets/optimized/gemini.webp (2).webp';
 
 const Hero = () => {
   return (
@@ -9,11 +10,6 @@ const Hero = () => {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-blue-900 to-black opacity-10 mix-blend-overlay z-0"></div>
       
-      {/* Abstract Grid/Dots Pattern (Simulated) */}
-      <div className="absolute inset-0 opacity-10" 
-           style={{ backgroundImage: 'radial-gradient(circle, #1e3a8a 1px, transparent 1px)', backgroundSize: '30px 30px' }}>
-      </div>
-
       {/* Decorative Side Lines (Bottom Left) */}
       <div className="absolute bottom-10 left-10 hidden md:block opacity-50">
         <svg width="200" height="150" viewBox="0 0 200 150" fill="none" stroke="#1e3a8a" strokeWidth="2">
@@ -33,24 +29,24 @@ const Hero = () => {
         
         {/* --- Left Column: Text --- */}
         <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-blue-950 tracking-tight drop-shadow-lg">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-blue-950 tracking-tight drop-shadow-lg ml-4 lg:ml-8">
             Athena AI School
           </h1>
           <div className="h-1 w-32 bg-blue-950 my-4 rounded-full lg:hidden"></div>
-          <p className="text-lg md:text-2xl text-blue-800 tracking-widest font-light uppercase mt-2">
+          <p className="text-lg md:text-2xl text-blue-800 tracking-widest font-light uppercase mt-2 ml-4 lg:ml-8">
             Find your path
           </p>
           
-          <p className="text-base md:text-lg text-gray-600 mt-4 max-w-2xl">
+          <p className="text-base md:text-lg text-gray-600 mt-4 max-w-2xl ml-4 lg:ml-8">
             Personalized online schooling designed for modern learner
           </p>
           
-          <p className="text-sm md:text-base text-gray-500 mt-3 max-w-xl">
+          <p className="text-sm md:text-base text-gray-500 mt-3 max-w-xl ml-4 lg:ml-8">
             Experience education tailored to your child's unique needs, interests, and learning style. Our AI-powered platform adapts to create a perfect learning journey.
           </p>
           
           {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-8">
+          <div className="flex flex-col sm:flex-row gap-4 mt-8 ml-8 lg:ml-16">
             <button className="px-8 py-3 bg-yellow-400 hover:bg-yellow-500 text-black rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
               Enquire Now
             </button>
@@ -64,14 +60,19 @@ const Hero = () => {
         <div className="relative flex justify-center items-center">
           
           {/* The Glowing Rings Background */}
-          <div className="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] border border-blue-950/10 rounded-full animate-[spin_10s_linear_infinite]"></div>
-          <div className="absolute w-[250px] h-[250px] md:w-[400px] md:h-[400px] border border-blue-950/20 rounded-full shadow-[0_0_50px_rgba(30,58,138,0.5)]"></div>
+          <div className="absolute w-[240px] h-[240px] md:w-[360px] md:h-[360px] border border-blue-950/10 rounded-full"></div>
+          <div className="absolute w-[200px] h-[200px] md:w-[320px] md:h-[320px] border border-blue-950/20 rounded-full shadow-[0_0_35px_rgba(30,58,138,0.4)]"></div>
           
           {/* Main Gemini Image */}
           <img 
-            src="/src/assets/gemini.webp.webp" 
+            src={heroImage} 
             alt="Athena AI School" 
-            className="relative z-10 w-[800px] drop-shadow-2xl object-contain"
+            fetchpriority="high"
+            decoding="async"
+            sizes="(max-width: 1024px) 90vw, 520px"
+            width="520"
+            height="520"
+            className="relative z-10 w-[360px] md:w-[520px] drop-shadow-2xl object-contain"
           />
 
           {/* Floating Icons (Positioned in semi-circular pattern around the image) */}
@@ -92,8 +93,7 @@ const Hero = () => {
 const FloatingIcon = ({ icon, position, delay }) => {
   return (
     <div 
-      className={`absolute ${position} w-12 h-12 md:w-16 md:h-16 bg-blue-950/10 backdrop-blur-md border border-blue-950/30 rounded-full flex items-center justify-center text-blue-950 shadow-[0_0_15px_rgba(30,58,138,0.3)] animate-pulse z-20`}
-      style={{ animationDelay: delay }}
+      className={`absolute ${position} w-12 h-12 md:w-16 md:h-16 bg-blue-950/10 backdrop-blur-md border border-blue-950/30 rounded-full flex items-center justify-center text-blue-950 shadow-[0_0_15px_rgba(30,58,138,0.3)] z-20`}
     >
       {icon}
     </div>

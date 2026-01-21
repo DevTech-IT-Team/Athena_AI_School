@@ -1,4 +1,5 @@
-import { Facebook, Instagram, Linkedin, GraduationCap, BookOpen, User, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, GraduationCap, BookOpen, User, Mail, Phone, ArrowRight } from 'lucide-react';
+import logo from '../assets/vvx (1).webp';
 
 function Footer() {
   return (
@@ -6,9 +7,9 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
-            <h3 className="text-3xl font-bold mb-4 text-gray-900 flex items-center">
-              <GraduationCap size={28} className="mr-2" /> AI School
-            </h3>
+            <div className="flex items-center mb-4">
+              <img src={logo} alt="AI School Logo" className="h-60 w-100 mr-10" />
+            </div>
             <p className="text-gray-600 mb-6">India's Most Advanced AI-Powered Online School</p>
             <div className="flex space-x-4 mb-6">
               <a href="#" className="text-gray-600 hover:text-black transition-colors duration-300">

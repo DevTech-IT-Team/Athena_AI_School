@@ -14,6 +14,8 @@ const Contact = () => {
              <img 
                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop" 
                alt="Student Texture" 
+               loading="lazy"
+               decoding="async"
                className="w-full h-full object-cover opacity-30 grayscale mix-blend-overlay"
              />
         </div>

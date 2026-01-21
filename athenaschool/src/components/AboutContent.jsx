@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FaBars, FaGraduationCap, FaBullseye, FaEye, FaUserTie, FaLightbulb, FaHeart, FaUsers, FaTrophy, FaGlobe, FaRocket, FaAward, FaStar, FaCertificate, FaCheckCircle, FaUniversity, FaRobot, FaFlask, FaBook, FaDesktop, FaBasketballBall, FaPalette, FaUtensils, FaChartLine, FaBalanceScale, FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube, FaWhatsapp } from 'react-icons/fa';
+import { FaGraduationCap, FaBullseye, FaEye, FaUserTie, FaLightbulb, FaHeart, FaUsers, FaTrophy, FaGlobe, FaRocket, FaAward, FaStar, FaCertificate, FaCheckCircle, FaUniversity, FaRobot, FaFlask, FaBook, FaDesktop, FaBasketballBall, FaPalette, FaUtensils, FaChartLine, FaBalanceScale, FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaYoutube, FaWhatsapp } from 'react-icons/fa';
 import Footer from './Footer';
 
 const AboutContent = () => {

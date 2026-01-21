@@ -1,5 +1,7 @@
 import React from 'react';
 import { ArrowLongRightIcon } from '@heroicons/react/24/outline';
+import skillImage from '../assets/optimized/skill.wep.webp';
+import parentImage from '../assets/optimized/relxro.webp.webp';
 
 const ProgramHighlight = () => {
   return (
@@ -66,8 +68,13 @@ const ProgramHighlight = () => {
             {/* Main Image Container */}
             <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-[600px] shadow-2xl overflow-hidden group">
                <img 
-                 src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=1200&auto=format&fit=crop" 
+                 src={skillImage} 
                  alt="Student studying with mentor" 
+                 loading="lazy"
+                 decoding="async"
+                 sizes="(max-width: 1024px) 100vw, 840px"
+                 width="1200"
+                 height="900"
                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                />
                
@@ -76,19 +83,27 @@ const ProgramHighlight = () => {
             </div>
 
             {/* Floating "Quote" or "Stat" Box (Overlapping the image) */}
-            <div className="absolute bottom-12 left-0 lg:-left-12 bg-white p-8 shadow-xl max-w-xs border-t-4 border-sky-500">
+            <div className="absolute bottom-8 left-4 lg:left-8 bg-white p-8 shadow-xl max-w-xs border-t-4 border-sky-500 z-30">
                <div className="text-4xl text-sky-200 absolute top-4 left-4 font-serif">"</div>
                <p className="text-slate-700 italic text-sm relative z-10 pt-4">
                  The personalized attention my daughter receives is unmatched. She has never been more confident.
                </p>
                <div className="mt-4 flex items-center gap-3">
-                 <div className="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop" alt="Parent" />
-                 </div>
-                 <div className="text-xs">
-                    <p className="font-bold text-blue-950">Sarah Jenkins</p>
-                    <p className="text-slate-400">Parent, Year 9 Student</p>
-                 </div>
+                  <div className="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+                     <img 
+                       src={parentImage} 
+                       alt="Parent" 
+                       loading="lazy"
+                       decoding="async"
+                       sizes="(max-width: 768px) 64px, 96px"
+                       width="96"
+                       height="96"
+                     />
+                  </div>
+                  <div className="text-xs">
+                     <p className="font-bold text-blue-950">Sarah Jenkins</p>
+                     <p className="text-slate-400">Parent, Year 9 Student</p>
+                  </div>
                </div>
             </div>
 

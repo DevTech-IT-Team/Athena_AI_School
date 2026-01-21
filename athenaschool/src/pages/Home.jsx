@@ -1,28 +1,70 @@
+import React, { Suspense, lazy, useEffect, useRef, useState } from 'react';
+
 import Hero from '../components/Hero';
 import EnquireTab from '../components/EnquireTab';
-import TrustIndicators from '../components/TrustIndicators';
-import LiveChatWidget from '../components/LiveChatWidget';
 import Stats from '../components/Stats';
-import Programs from '../components/Programs';
-import CTA from '../components/CTA';
-import Features from '../components/Features';
-import Testimonials from '../components/Testimonials';
-import StudentSpotlight from '../components/StudentSpotlight';
-import AcademicCrew from '../components/AcademicCrew';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
-import CurriculumOverview from '../components/CurriculumOverview';
-import AgeSpecificPrograms from '../components/AgeSpecificPrograms';
-import TeacherQualifications from '../components/TeacherQualifications';
-import LearningMethodology from '../components/LearningMethodology';
-import Accordion from '../components/Accordion';
-import TrustElements from '../components/TrustElements';
-import CourseFinder from '../components/CourseFinder';
-import FeeCalculator from '../components/FeeCalculator';
-import AdmissionTracker from '../components/AdmissionTracker';
-import AffordableAccredited from '../components/AffordableAccredited';
+
+const TrustIndicators = lazy(() => import('../components/TrustIndicators'));
+const LiveChatWidget = lazy(() => import('../components/LiveChatWidget'));
+const Programs = lazy(() => import('../components/Programs'));
+const CTA = lazy(() => import('../components/CTA'));
+const Features = lazy(() => import('../components/Features'));
+const Testimonials = lazy(() => import('../components/Testimonials'));
+const StudentSpotlight = lazy(() => import('../components/StudentSpotlight'));
+const AcademicCrew = lazy(() => import('../components/AcademicCrew'));
+const Contact = lazy(() => import('../components/Contact'));
+const Footer = lazy(() => import('../components/Footer'));
+const CurriculumOverview = lazy(() => import('../components/CurriculumOverview'));
+const AffordableAccredited = lazy(() => import('../components/AffordableAccredited'));
+
+const SectionFallback = ({ label }) => (
+  <div className="py-12 text-center text-sm text-gray-500" aria-label={`Loading ${label}`}>
+    Loading {label}...
+  </div>
+);
+
+const LazySection = ({ children, label, placeholderHeight = 360 }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if (!ref.current || typeof IntersectionObserver === 'undefined') return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { rootMargin: '0px 0px', threshold: 0.15 }
+    );
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} aria-label={label || 'deferred section'}>
+      {isVisible ? (
+        children
+      ) : (
+        <div className="py-12 flex items-center justify-center text-gray-400" style={{ minHeight: placeholderHeight }}>
+          <span className="text-sm">Preparing {label || 'section'}…</span>
+        </div>
+      )}
+    </div>
+  );
+};
 
 function Home() {
+  const [enableChat, setEnableChat] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setEnableChat(true), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <EnquireTab />
@@ -33,45 +75,92 @@ function Home() {
         <Stats />
       </div>
       
-      <AffordableAccredited />
+      <Suspense fallback={<SectionFallback label="accreditation" />}>
+        <AffordableAccredited />
+      </Suspense>
       
       {/* Programs Section */}
-      <div className="py-12 bg-white relative z-10">
-        <Programs />
-      </div>
+      <LazySection label="programs">
+        <Suspense fallback={<SectionFallback label="programs" />}>
+          <div className="py-12 bg-white relative z-10">
+            <Programs />
+          </div>
+        </Suspense>
+      </LazySection>
       
       {/* Features Section */}
-      <div className="py-12 bg-white relative z-10">
-        <Features />
-      </div>
+      <LazySection label="features">
+        <Suspense fallback={<SectionFallback label="features" />}>
+          <div className="py-12 bg-white relative z-10">
+            <Features />
+          </div>
+        </Suspense>
+      </LazySection>
       
       {/* Testimonials Section */}
-      <div className="py-12 bg-white relative overflow-hidden">
-        <Testimonials />
-      </div>
+      <LazySection label="testimonials">
+        <Suspense fallback={<SectionFallback label="testimonials" />}>
+          <div className="py-12 bg-white relative overflow-hidden">
+            <Testimonials />
+          </div>
+        </Suspense>
+      </LazySection>
       
       {/* Student Spotlight Section */}
-      <StudentSpotlight />
+      <LazySection label="student stories">
+        <Suspense fallback={<SectionFallback label="student stories" />}>
+          <StudentSpotlight />
+        </Suspense>
+      </LazySection>
       
       {/* Academic Crew Section */}
-      <AcademicCrew />
+      <LazySection label="academic crew">
+        <Suspense fallback={<SectionFallback label="academic crew" />}>
+          <AcademicCrew />
+        </Suspense>
+      </LazySection>
       
       {/* Curriculum Overview */}
-      <div className="py-12 bg-white">
-        <CurriculumOverview />
-      </div>
+      <LazySection label="curriculum overview">
+        <Suspense fallback={<SectionFallback label="curriculum overview" />}>
+          <div className="py-12 bg-white">
+            <CurriculumOverview />
+          </div>
+        </Suspense>
+      </LazySection>
       
       {/* Trust Indicators */}
-      <TrustIndicators />
+      <LazySection label="trust indicators">
+        <Suspense fallback={<SectionFallback label="trust indicators" />}>
+          <TrustIndicators />
+        </Suspense>
+      </LazySection>
       
       {/* Contact Section */}
-      <div className="bg-white relative z-10">
-        <Contact />
-      </div>
+      <LazySection label="contact">
+        <Suspense fallback={<SectionFallback label="contact" />}>
+          <div className="bg-white relative z-10">
+            <Contact />
+          </div>
+        </Suspense>
+      </LazySection>
       
-      <CTA />
-      <Footer />
-      <LiveChatWidget />
+      <LazySection label="call to action">
+        <Suspense fallback={<SectionFallback label="call to action" />}>
+          <CTA />
+        </Suspense>
+      </LazySection>
+      <LazySection label="footer">
+        <Suspense fallback={<SectionFallback label="footer" />}>
+          <Footer />
+        </Suspense>
+      </LazySection>
+      
+      {enableChat && (
+        <Suspense fallback={null}>
+          <LiveChatWidget />
+        </Suspense>
+      )}
     </div>
   );
 }

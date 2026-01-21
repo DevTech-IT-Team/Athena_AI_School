@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Programs from './components/Programs';
 import Resources from './pages/Resources';
+import Pathway from './pages/Pathway';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/pathway" element={<Pathway />} />
         <Route path="/about" element={<About />} />
         <Route path="/programs" element={<Programs />} />
         <Route path="/resources" element={<Resources />} />

@@ -1,11 +1,14 @@
 import React from 'react';
 import { BookOpenIcon, AcademicCapIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline';
+import penImage from '../assets/optimized/download.webp.webp';
+import libraryImage from '../assets/optimized/Human.webp.webp';
+import statueImage from '../assets/optimized/hand.webp.webp';
 
 const CurriculumOverview = () => {
   const images = {
-    pen: "https://images.unsplash.com/photo-1585435465945-bef5a93f8849?q=80&w=800&auto=format&fit=crop",
-    library: "https://images.unsplash.com/photo-1568667256549-094345857637?q=80&w=800&auto=format&fit=crop",
-    statue: "https://images.unsplash.com/photo-1555662707-74443b40eb33?q=80&w=800&auto=format&fit=crop"
+    pen: penImage,
+    library: libraryImage,
+    statue: statueImage
   };
 
   return (
@@ -35,6 +38,8 @@ const CurriculumOverview = () => {
               <img 
                 src={images.pen} 
                 alt="Classic Pen" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover" 
               />
             </div>
@@ -46,6 +51,8 @@ const CurriculumOverview = () => {
               <img 
                 src={images.library} 
                 alt="Old Library" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover" 
               />
             </div>
@@ -57,6 +64,8 @@ const CurriculumOverview = () => {
               <img 
                 src={images.statue} 
                 alt="Classic Statue" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover" 
               />
             </div>

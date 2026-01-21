@@ -1,5 +1,8 @@
 import React from 'react';
-import { PlayCircle, ArrowRight, Trophy, Star, BookOpen } from 'lucide-react';
+import { PlayCircle, ArrowRight, Trophy, Star } from 'lucide-react';
+import personalizedImage from '../assets/optimized/3.webp.webp';
+import chessImage from '../assets/optimized/2.webp.webp';
+import keyaImage from '../assets/optimized/1.webp.webp';
 
 const StudentSpotlight = () => {
   const students = [
@@ -10,7 +13,7 @@ const StudentSpotlight = () => {
       mainBadge: "Chess Champion",
       description: "An 8-year-old prodigy, Divith, recently won the U-8 World Chess Championship in Italy. With his love for chess, he is determined to become the world's youngest Grandmaster.",
       tags: ["World Champion", "Chess Prodigy", "Math Genius"],
-      image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder
+      image: chessImage, // Local image
       hasVideo: true
     },
     {
@@ -20,7 +23,7 @@ const StudentSpotlight = () => {
       mainBadge: "Award Winner",
       description: "Thirteen-year-old Keya, recipient of the prestigious Pradhan Mantri Rashtriya Bal Puraskar, is an award-winning author, artist, and social impact entrepreneur.",
       tags: ["Award Winner", "Author", "Artist"],
-      image: "https://images.unsplash.com/photo-1517677130602-2ca710d91606?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder
+      image: keyaImage, // Local image
       hasVideo: false
     }
   ];
@@ -56,8 +59,13 @@ const StudentSpotlight = () => {
         <div className="relative mt-12 lg:mt-auto mb-8 mx-auto w-full max-w-sm transform rotate-2 hover:rotate-0 transition-transform duration-500">
           <div className="bg-white p-3 shadow-2xl shadow-black/50">
             <img 
-              src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              src={personalizedImage} 
               alt="Student holding a trophy" 
+              loading="lazy"
+              decoding="async"
+              sizes="(max-width: 1024px) 90vw, 420px"
+              width="640"
+              height="512"
               className="w-full h-80 object-cover grayscale hover:grayscale-0 transition-all duration-500"
             />
             <div className="pt-3 flex justify-between items-end">
@@ -141,8 +149,14 @@ const StudentSpotlight = () => {
                   <img 
                     src={student.image} 
                     alt={student.name} 
+                    loading="lazy"
+                    decoding="async"
+                    sizes="(max-width: 768px) 100vw, 224px"
+                    width="320"
+                    height="320"
                     className="w-full h-full object-cover"
                   />
+
                   {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-sky-600/20 group-hover:bg-transparent transition-colors duration-300"></div>
                 </div>
