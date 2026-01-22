@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, User, BookOpen, Award, Users, Phone } from 'lucide-react';
+import logoImg from '../assets/ydyh (1).webp';
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,14 +12,14 @@ function Navigation() {
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 0);
-    
+
     // Close mega menu when clicking outside
     const handleClickOutside = (event) => {
       if (!event.target.closest('.mega-menu-container') && !event.target.closest('.mega-menu-toggle')) {
         setIsMegaMenuOpen(false);
       }
     };
-    
+
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       clearTimeout(timer);
@@ -31,7 +32,7 @@ function Navigation() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -127,39 +128,39 @@ function Navigation() {
             />
           </Link>
         </div>
-        
+
         {/* Desktop Navigation */}
         <div className="hidden lg:flex space-x-6 mr-16">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/' ? 'text-blue-600' : ''}`}
           >
             <Home size={18} />
             <span>Home</span>
           </Link>
-          <Link 
-            to="/pathway" 
+          <Link
+            to="/pathway"
             className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/pathway' ? 'text-blue-600' : ''}`}
           >
             <BookOpen size={18} />
             <span>Pathway</span>
           </Link>
-          <Link 
-            to="/about" 
+          <Link
+            to="/about"
             className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/about' ? 'text-blue-600' : ''}`}
           >
             <User size={18} />
             <span>About</span>
           </Link>
-          <Link 
-            to="/programs" 
+          <Link
+            to="/programs"
             className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/programs' ? 'text-blue-600' : ''}`}
           >
             <BookOpen size={18} />
             <span>Programs</span>
           </Link>
-          <Link 
-            to="/resources" 
+          <Link
+            to="/resources"
             className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/resources' ? 'text-blue-600' : ''}`}
           >
             <Award size={18} />
@@ -173,10 +174,10 @@ function Navigation() {
             <span>Contact</span>
           </Link>
         </div>
-        
+
         {/* Hamburger menu button - visible on all screen sizes */}
         <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-          <button 
+          <button
             onClick={() => {
               setIsOpen(!isOpen);
               setIsMegaMenuOpen(false); // Close mega menu when opening hamburger menu
@@ -187,47 +188,47 @@ function Navigation() {
           </button>
         </div>
       </div>
-      
+
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="absolute top-16 left-0 right-0 bg-white shadow-lg py-4">
           <div className="container mx-auto px-4">
             {/* Simple Navigation Links - only visible on mobile */}
             <div className="lg:hidden flex flex-wrap gap-4 mb-8">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/' ? 'text-blue-600' : ''}`}
                 onClick={() => setIsOpen(false)}
               >
                 <Home size={18} />
                 <span>Home</span>
               </Link>
-              <Link 
-                to="/pathway" 
+              <Link
+                to="/pathway"
                 className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/pathway' ? 'text-blue-600' : ''}`}
                 onClick={() => setIsOpen(false)}
               >
                 <BookOpen size={18} />
                 <span>Pathway</span>
               </Link>
-              <Link 
-                to="/about" 
+              <Link
+                to="/about"
                 className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/about' ? 'text-blue-600' : ''}`}
                 onClick={() => setIsOpen(false)}
               >
                 <User size={18} />
                 <span>About</span>
               </Link>
-              <Link 
-                to="/programs" 
+              <Link
+                to="/programs"
                 className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/programs' ? 'text-blue-600' : ''}`}
                 onClick={() => setIsOpen(false)}
               >
                 <BookOpen size={18} />
                 <span>Programs</span>
               </Link>
-              <Link 
-                to="/resources" 
+              <Link
+                to="/resources"
                 className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/resources' ? 'text-blue-600' : ''}`}
                 onClick={() => setIsOpen(false)}
               >
@@ -243,10 +244,10 @@ function Navigation() {
                 <span>Contact</span>
               </Link>
             </div>
-            
+
             {/* Divider */}
             <div className="border-t border-gray-200 mb-6"></div>
-            
+
             {/* Mega Menu Content */}
             <div className="flex flex-wrap gap-8 overflow-x-auto">
               {menuItems.map((column, index) => (
@@ -258,7 +259,7 @@ function Navigation() {
                   <ul className="space-y-1">
                     {column.links.map((link, linkIndex) => (
                       <li key={linkIndex}>
-                        <a 
+                        <a
                           href={link.href}
                           className="text-gray-700 hover:text-blue-600 hover:underline transition-colors block py-1 whitespace-nowrap"
                           onClick={() => setIsOpen(false)}
@@ -274,7 +275,7 @@ function Navigation() {
           </div>
         </div>
       )}
-      
+
       {/* Mega Menu */}
       {isMegaMenuOpen && (
         <div className="mega-menu-container absolute top-full left-0 right-0 bg-white shadow-lg z-40 py-8">
@@ -289,7 +290,7 @@ function Navigation() {
                   <ul className="space-y-2">
                     {column.links.map((link, linkIndex) => (
                       <li key={linkIndex}>
-                        <a 
+                        <a
                           href={link.href}
                           className="text-gray-700 hover:text-blue-600 hover:underline transition-colors block py-1"
                           onClick={() => setIsMegaMenuOpen(false)}
