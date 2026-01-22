@@ -1,21 +1,22 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { 
   ChevronDown, Users, Clock, Globe, GraduationCap, Award, BookOpen, CheckCircle, Star, Monitor,
-  Calendar, Target, Users as UsersIcon, PenTool
+  Calendar, Target, Users as UsersIcon, PenTool, ArrowRight, ChevronUp, Brain, Cpu, Cctv,
+  Microscope, Palette, Building, Code, Zap, Video, FileText, Book, Laptop, Smartphone,
+  Tablet, Home, School, MapPin, Mail, Phone, Lock, Shield, Globe as World,
+  UserCheck, BarChart, TrendingUp, Heart, Eye, Music, Camera, Gamepad2,
+  Calculator, Beaker, Atom, Database, Cloud, Wifi, Router, Server,
+  Briefcase, Lightbulb, Rocket, Target as TargetIcon, Flag, Trophy, Medal,
+  HeartHandshake, Handshake, UsersRound, UserPlus, Baby, BrainCircuit
 } from 'lucide-react';
 
-function PathwayContent() {
-  const [openFAQ, setOpenFAQ] = useState(null);
-  const [selectedBatch, setSelectedBatch] = useState('premium');
-  const [selectedSession, setSelectedSession] = useState('S2');
-  const [selectedZone, setSelectedZone] = useState('indian');
-
-  // Content Configuration - Easier to manage
+const AthenaElegantLayout = () => {
+  // Content Configuration (Preserved Exactly)
   const content = {
     hero: {
       title: "Indian and British Pathway",
       subtitle: "Excellence Delivered, Consistently",
-      schoolName: "21K School"
+      schoolName: "Athena AI School"
     },
     
     features: [
@@ -24,7 +25,7 @@ function PathwayContent() {
         title: "Technology Driven Learning",
         description: "Our Online Learning School provides a seamless, tech-driven learning experience. With features such as progress tracking, on-demand access to materials, and interactive tools, our learners and expert faculty are always supported. Our Online Learning School's ease of use provides a holistic learning experience.",
         icon: Monitor,
-        iconBg: "bg-blue-100",
+        iconBg: "bg-sky-100",
         iconColor: "text-blue-600",
         textColor: "text-blue-900",
         bgColor: "bg-white",
@@ -35,19 +36,19 @@ function PathwayContent() {
         title: "Anytime Learning",
         description: "With over 1,250 hours of live, interactive classes conducted daily, our online school learners engage in dynamic, real-time learning. All sessions are recorded, giving learners the flexibility to revisit lessons anytime and anywhere, making our learner community truly diverse and our educational borderless.",
         icon: Clock,
-        iconBg: "bg-green-100",
-        iconColor: "text-green-600",
+        iconBg: "bg-blue-50",
+        iconColor: "text-blue-600",
         textColor: "text-blue-900",
-        bgColor: "bg-gray-50",
+        bgColor: "bg-slate-50",
         reverse: true
       },
       {
         id: 'future',
         title: "Future Ready Education",
-        description: "Offering globally recognized curriculums with a future-oriented approach, 21K prepares learners for success not only academically but in a rapidly evolving world. It enables us cater to both local and global educational standards, opening doors to international opportunities.",
+        description: "Offering globally recognized curriculums with a future-oriented approach, Athena AI School prepares learners for success not only academically but in a rapidly evolving world. It enables us cater to both local and global educational standards, opening doors to international opportunities.",
         icon: Target,
-        iconBg: "bg-purple-100",
-        iconColor: "text-purple-600",
+        iconBg: "bg-sky-100",
+        iconColor: "text-blue-600",
         textColor: "text-blue-900",
         bgColor: "bg-white",
         reverse: false
@@ -56,20 +57,20 @@ function PathwayContent() {
 
     academicCrew: {
       title: "Meet Our Academic Crew",
-      description: "Building the future of learning needs a team of 325+ passionate educators and innovators. At 21K School, an online school dedicated to excellence, our leadership and mentors are committed to guiding learners on their unique learning paths.",
+      description: "Building the future of learning needs a team of 325+ passionate educators and innovators. At Athena AI School, an online school dedicated to excellence, our leadership and mentors are committed to guiding learners on their unique learning paths.",
       cta: "Meet The Crew"
     },
 
     philosophy: {
       title: "Different Minds, Different Goals",
       subtitle: "One Tailored Path to Success",
-      description: "Our alumni are proof that unique journeys lead to extraordinary destinations. From diverse goals to tailored paths, 21K School online learners have gone on to thrive in top colleges and careers, showcasing the power of personalized inclusive education."
+      description: "Our alumni are proof that unique journeys lead to extraordinary destinations. From diverse goals to tailored paths, Athena AI School online learners have gone on to thrive in top colleges and careers, showcasing the power of personalized inclusive education."
     },
 
     faqs: [
       {
-        question: "Is the 21K school affiliated?",
-        answer: "Yes, 21K School is accredited and recognized by leading educational bodies including Cambridge International, Pearson Edexcel, and NIOS.",
+        question: "Is Athena AI School affiliated?",
+        answer: "Yes, Athena AI School is accredited and recognized by leading educational bodies including Cambridge International, Pearson Edexcel, and NIOS.",
         category: "Accreditation"
       },
       {
@@ -78,32 +79,32 @@ function PathwayContent() {
         category: "Curriculum"
       },
       {
-        question: "How does 21K school promote equal education?",
+        question: "How does Athena AI School promote equal education?",
         answer: "We provide inclusive education with personalized learning paths, ensuring every student gets equal opportunities regardless of their background or learning style through adaptive technologies and customized support.",
         category: "Philosophy"
       },
       {
-        question: "How much does 21K School cost?",
+        question: "How much does Athena AI School cost?",
         answer: "Our fee structure varies based on grade level, curriculum choice, and program selection. We offer transparent pricing and flexible payment plans. Contact our admissions team for a detailed fee breakdown.",
         category: "Admissions"
       },
       {
-        question: "How to enroll in 21K School?",
+        question: "How to enroll in Athena AI School?",
         answer: "Enroll through our streamlined online process: 1) Submit application form, 2) Provide academic records, 3) Attend orientation, 4) Complete onboarding. Our team guides you at every step.",
         category: "Admissions"
       },
       {
-        question: "How does 21K School work?",
+        question: "How does Athena AI School work?",
         answer: "We combine live interactive classes with recorded lessons, personalized learning plans, and continuous assessment through our advanced platform accessible 24/7 from any device.",
         category: "Operations"
       },
       {
-        question: "How to pay 21K School fees?",
+        question: "How to pay Athena AI School fees?",
         answer: "Multiple secure options: online portal, bank transfer, UPI, or installment plans. We provide payment reminders and receipts through our parent portal.",
         category: "Admissions"
       },
       {
-        question: "What are the benefits of choosing 21K School?",
+        question: "What are the benefits of choosing Athena AI School?",
         answer: "Global curriculum access, flexible scheduling, personalized attention, experienced faculty, comprehensive support, and preparation for international opportunities.",
         category: "Benefits"
       }
@@ -169,714 +170,633 @@ function PathwayContent() {
     ]
   };
 
-  // FAQ Toggle Handler
-  const toggleFAQ = (index) => {
-    setOpenFAQ(openFAQ === index ? null : index);
-  };
-
-  // Feature Component
-  const FeatureSection = ({ feature }) => {
-    const Icon = feature.icon;
-    
-    return (
-      <section className={`py-16 px-4 ${feature.bgColor}`} id={feature.id}>
-        <div className="container mx-auto">
-          <div className={`grid md:grid-cols-2 gap-12 items-center ${feature.reverse ? 'md:grid-flow-dense' : ''}`}>
-            {feature.reverse ? (
-              <>
-                <div className={`md:col-start-2 ${feature.reverse ? 'md:order-2' : ''}`}>
-                  <div className={`${feature.iconBg} rounded-lg p-8 text-center`}>
-                    <Icon className={`w-16 h-16 ${feature.iconColor} mx-auto mb-4`} 
-                          aria-hidden="true" />
-                    <h3 className="text-2xl font-semibold text-gray-800">
-                      {feature.title.split(' ')[0]}<br />
-                      <span className={feature.textColor}>
-                        {feature.title.split(' ').slice(1).join(' ')}
-                      </span>
-                    </h3>
-                  </div>
-                </div>
-                <div className={`${feature.reverse ? 'md:order-1' : ''}`}>
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                    {feature.title}
-                  </h2>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              </>
-            ) : (
-              <>
-                <div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                    {feature.title}
-                  </h2>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-                <div className={`${feature.iconBg} rounded-lg p-8 text-center`}>
-                  <Icon className={`w-16 h-16 ${feature.iconColor} mx-auto mb-4`} 
-                        aria-hidden="true" />
-                  <h3 className="text-2xl font-semibold text-gray-800">
-                    {feature.title.split(' ')[0]}<br />
-                    <span className={feature.textColor}>
-                      {feature.title.split(' ').slice(1).join(' ')}
-                    </span>
-                  </h3>
-                </div>
-              </>
-            )}
-          </div>
-        </div>
-      </section>
-    );
+  // State for Accordion
+  const [openFaq, setOpenFaq] = useState(null);
+  const toggleFaq = (index) => {
+    setOpenFaq(openFaq === index ? null : index);
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white" role="main">
-      {/* Hero Section */}
-      <header className="py-12 md:py-20 px-4">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+    <div className="font-sans text-blue-950 bg-white">
+      
+      {/* ---------------- HERO SECTION ---------------- */}
+      <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-b from-sky-50 to-white">
+        {/* Background Decorative Blob */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-sky-200/20 rounded-full blur-3xl -z-10"></div>
+        
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gray-900 leading-tight" data-aos="fade-up">
             {content.hero.title}
           </h1>
-          <p className="text-xl md:text-2xl text-blue-700 mb-3">
+          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto font-light leading-relaxed" data-aos="fade-up" data-aos-delay="100">
             {content.hero.subtitle}
           </p>
-          <div className="text-lg md:text-xl text-gray-600 font-medium">
-            {content.hero.schoolName}
-          </div>
-        </div>
-      </header>
-
-      {/* Feature Sections */}
-      {content.features.map((feature) => (
-        <FeatureSection key={feature.id} feature={feature} />
-      ))}
-
-      {/* Academic Crew */}
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            {content.academicCrew.title}
-          </h2>
-          <div className="flex justify-center mb-8">
-            <UsersIcon className="w-20 h-20 text-blue-200" aria-hidden="true" />
-          </div>
-          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
-            {content.academicCrew.description}
-          </p>
-          <p className="text-lg mb-8">
-            <span className="font-bold text-2xl">325+</span> passionate educators and innovators
-          </p>
-          <button 
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-800"
-            aria-label={content.academicCrew.cta}
-          >
-            {content.academicCrew.cta}
-          </button>
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {content.philosophy.title}
-          </h2>
-          <p className="text-xl md:text-2xl text-blue-700 mb-8">
-            {content.philosophy.subtitle}
-          </p>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-gray-700 mb-12 leading-relaxed">
-              {content.philosophy.description}
+      {/* ---------------- FEATURES SECTION ---------------- */}
+      <section className="py-24 px-6 md:px-12 bg-white">
+        <div className="max-w-7xl mx-auto space-y-24">
+            {content.features.map((feature, index) => (
+                <div key={feature.id} className={`flex flex-col md:flex-row gap-12 items-center ${feature.reverse ? 'md:flex-row-reverse' : ''}`}>
+                    {/* Visual Side - Replaced with Icon Composition */}
+                    <div className="w-full md:w-1/2 relative">
+                        <div className="aspect-[4/3] bg-gradient-to-br from-blue-950 to-blue-900 relative overflow-hidden rounded-lg">
+                            {/* Icon Background Pattern */}
+                            <div className="absolute inset-0 opacity-10">
+                                <div className="grid grid-cols-5 grid-rows-4 gap-4 p-8">
+                                    {[...Array(20)].map((_, i) => (
+                                        <feature.icon key={i} className="w-6 h-6 text-white" />
+                                    ))}
+                                </div>
+                            </div>
+                            
+                            {/* Feature-Specific Icon Display */}
+                            <div className="absolute inset-0 flex flex-col items-center justify-center p-12">
+                                <div className="relative">
+                                    <div className="w-48 h-48 rounded-full bg-gradient-to-r from-blue-600 to-sky-500 flex items-center justify-center shadow-2xl">
+                                        <feature.icon className="w-24 h-24 text-white" />
+                                    </div>
+                                    
+                                    {/* Floating Supplementary Icons */}
+                                    {feature.id === 'tech' && (
+                                        <>
+                                            <div className="absolute -top-4 -left-4 w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center">
+                                                <Cpu className="w-8 h-8 text-white" />
+                                            </div>
+                                            <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-sky-400 rounded-full flex items-center justify-center">
+                                                <Wifi className="w-8 h-8 text-white" />
+                                            </div>
+                                        </>
+                                    )}
+                                    
+                                    {feature.id === 'anytime' && (
+                                        <>
+                                            <div className="absolute -top-4 -left-4 w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center">
+                                                <Video className="w-8 h-8 text-white" />
+                                            </div>
+                                            <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-sky-400 rounded-full flex items-center justify-center">
+                                                <Cloud className="w-8 h-8 text-white" />
+                                            </div>
+                                        </>
+                                    )}
+                                    
+                                    {feature.id === 'future' && (
+                                        <>
+                                            <div className="absolute -top-4 -left-4 w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center">
+                                                <Rocket className="w-8 h-8 text-white" />
+                                            </div>
+                                            <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-sky-400 rounded-full flex items-center justify-center">
+                                                <TargetIcon className="w-8 h-8 text-white" />
+                                            </div>
+                                        </>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {/* Offset Box */}
+                        <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-sky-400 flex items-center justify-center shadow-lg">
+                            <feature.icon className="w-10 h-10 text-blue-950" />
+                        </div>
+                    </div>
+
+                    {/* Text Side */}
+                    <div className="w-full md:w-1/2 space-y-6">
+                        <div className="w-16 h-1 bg-sky-400"></div>
+                        <h2 className="text-4xl font-bold text-blue-950">{feature.title}</h2>
+                        <p className="text-lg text-blue-900/80 leading-relaxed">
+                            {feature.description}
+                        </p>
+                    </div>
+                </div>
+            ))}
+        </div>
+      </section>
+
+      {/* ---------------- PHILOSOPHY SECTION ---------------- */}
+      <section className="bg-blue-950 py-32 px-6 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-900/50 transform skew-x-12 translate-x-20"></div>
+        
+        <div className="max-w-4xl mx-auto relative z-10 text-center">
+            <h3 className="text-sky-400 uppercase tracking-widest font-bold mb-4">Our Philosophy</h3>
+            <h2 className="text-4xl md:text-6xl text-white font-bold mb-8 leading-tight">
+                {content.philosophy.title}
+                <span className="block text-sky-400 mt-2">{content.philosophy.subtitle}</span>
+            </h2>
+            <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
+            
+            {/* Icon Path Visualization */}
+            <div className="flex justify-center items-center mb-8">
+                <div className="flex items-center space-x-4">
+                    <div className="relative">
+                        <Brain className="w-12 h-12 text-sky-300" />
+                        <div className="absolute -top-2 -right-2">
+                            <Zap className="w-6 h-6 text-yellow-400" />
+                        </div>
+                    </div>
+                    
+                    <ArrowRight className="w-8 h-8 text-sky-300 mx-2" />
+                    
+                    <div className="relative">
+                        <Target className="w-12 h-12 text-sky-300" />
+                        <div className="absolute -top-2 -right-2">
+                            <CheckCircle className="w-6 h-6 text-green-400" />
+                        </div>
+                    </div>
+                    
+                    <ArrowRight className="w-8 h-8 text-sky-300 mx-2" />
+                    
+                    <div className="relative">
+                        <Trophy className="w-12 h-12 text-sky-300" />
+                        <div className="absolute -top-2 -right-2">
+                            <Star className="w-6 h-6 text-yellow-400" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p className="text-xl text-sky-100 leading-relaxed max-w-2xl mx-auto">
+                {content.philosophy.description}
             </p>
-            <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-8 max-w-2xl mx-auto border border-yellow-100">
-              <div className="flex justify-center mb-4">
-                <Award className="w-16 h-16 text-yellow-600" aria-hidden="true" />
+        </div>
+      </section>
+
+      {/* ---------------- ACADEMIC CREW ---------------- */}
+      <section className="flex flex-col md:flex-row min-h-[600px]">
+          <div className="w-full md:w-7/12 bg-sky-50 p-12 md:p-24 flex flex-col justify-center">
+              <h2 className="text-5xl font-bold text-blue-950 mb-8 relative inline-block">
+                  {content.academicCrew.title}
+                  <span className="absolute -bottom-2 left-0 w-1/2 h-2 bg-sky-400"></span>
+              </h2>
+              <p className="text-xl text-blue-900 mb-12 max-w-xl">
+                  {content.academicCrew.description}
+              </p>
+              <button className="bg-blue-950 text-white px-8 py-4 w-max hover:bg-sky-600 transition-colors flex items-center gap-2">
+                  {content.academicCrew.cta}
+                  <ArrowRight size={20} />
+              </button>
+          </div>
+          <div className="w-full md:w-5/12 bg-gradient-to-br from-blue-100 to-sky-100 relative flex items-center justify-center">
+               {/* Crew Icon Composition */}
+               <div className="relative w-64 h-64">
+                   {/* Central Icon */}
+                   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                       <GraduationCap className="w-32 h-32 text-blue-600" />
+                   </div>
+                   
+                   {/* Surrounding Educator Icons */}
+                   <div className="absolute top-8 left-8">
+                       <UsersRound className="w-12 h-12 text-sky-500 bg-white p-2 rounded-full shadow-lg" />
+                   </div>
+                   <div className="absolute top-8 right-8">
+                       <BrainCircuit className="w-12 h-12 text-blue-500 bg-white p-2 rounded-full shadow-lg" />
+                   </div>
+                   <div className="absolute bottom-8 left-8">
+                       <UserCheck className="w-12 h-12 text-teal-500 bg-white p-2 rounded-full shadow-lg" />
+                   </div>
+                   <div className="absolute bottom-8 right-8">
+                       <HeartHandshake className="w-12 h-12 text-indigo-500 bg-white p-2 rounded-full shadow-lg" />
+                   </div>
+                   
+                   {/* Floating Badges */}
+                   <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
+                       <Medal className="w-8 h-8 text-yellow-500" />
+                   </div>
+                   <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                       <Award className="w-8 h-8 text-sky-500" />
+                   </div>
+               </div>
+          </div>
+      </section>
+
+      {/* ---------------- ACCREDITATIONS ---------------- */}
+      <section className="py-24 px-6 bg-white">
+          <div className="max-w-7xl mx-auto">
+              <div className="flex items-center gap-4 mb-16">
+                  <div className="w-12 h-12 bg-blue-950 text-white flex items-center justify-center">
+                      <Award />
+                  </div>
+                  <h2 className="text-3xl font-bold text-blue-950">Accreditations & Curriculum</h2>
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-                Proven Success Stories
-              </h3>
-              <p className="text-gray-700">
-                Our learners excel in universities worldwide and diverse careers
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {content.accreditations.map((item) => (
+                      <div key={item.id} className="group border-l-4 border-blue-950 p-8 hover:bg-sky-50 transition-all duration-300 shadow-sm hover:shadow-md">
+                          {/* Accreditation Icons */}
+                          <div className="flex items-center gap-4 mb-4">
+                              <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-sky-500 rounded-lg flex items-center justify-center">
+                                  {item.id === 'CAMBRIDGE' && <Globe className="w-8 h-8 text-white" />}
+                                  {item.id === 'PEARSON' && <BookOpen className="w-8 h-8 text-white" />}
+                                  {item.id === 'IGCSE' && <GraduationCap className="w-8 h-8 text-white" />}
+                                  {item.id === 'NCF' && <Flag className="w-8 h-8 text-white" />}
+                                  {item.id === 'NIOS' && <Building className="w-8 h-8 text-white" />}
+                              </div>
+                              <div>
+                                  <h3 className="text-2xl font-bold text-blue-950">{item.name}</h3>
+                                  <p className="text-sky-600 font-semibold">{item.curriculum}</p>
+                              </div>
+                          </div>
+                          
+                          <div className="text-sm text-gray-500 mb-4 flex items-center gap-2">
+                              <School className="w-4 h-4" /> {item.grades}
+                          </div>
+                          <p className="text-gray-700">{item.description}</p>
+                      </div>
+                  ))}
+              </div>
+          </div>
+      </section>
+
+      {/* ---------------- PROGRAMS SECTION (MAGAZINE STYLE) ---------------- */}
+      <section className="py-24 px-6 lg:px-12 relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-50/50 -z-10"></div>
+        <div className="absolute top-20 left-10 w-64 h-64 bg-sky-50 -z-10"></div>
+
+        <div className="max-w-7xl mx-auto">
+          
+          {/* Section Header - Magazine Layout */}
+          <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-20 border-b border-blue-950 pb-8">
+            <div className="relative">
+              <span className="text-sky-600 font-bold tracking-[0.2em] text-sm uppercase block mb-4">
+                Curriculum & Pathways
+              </span>
+              <h2 className="text-6xl md:text-7xl font-serif text-blue-950 leading-none">
+                Our<br />Programs<span className="text-sky-500">.</span>
+              </h2>
+            </div>
+            <div className="mt-8 md:mt-0 max-w-sm">
+               <p className="text-blue-800 italic text-lg border-l-4 border-sky-500 pl-4">
+                "Learning paths designed for every learner."
               </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Our Programs Section */}
-      <section className="py-16 px-4 bg-gray-50" aria-labelledby="programs-heading">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 id="programs-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              📘 Our Programs
-            </h2>
-            <p className="text-xl text-gray-700 mb-2">
-              Learning paths designed for every learner
-            </p>
-            <p className="text-lg text-gray-600">
-              Choose from flexible programs that adapt to your child's goals and schedule
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* British Pathway */}
-            <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-8 border border-gray-200">
-              <div className="mb-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <Globe className="w-6 h-6 text-blue-600" aria-hidden="true" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">British Pathway</h3>
-                <p className="text-blue-600 font-medium">British curriculum • Global recognition</p>
-              </div>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">Cambridge / IGCSE / A & AS Level</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">Cambridge certified teachers</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">Complete IGCSE preparation</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">International assessments</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">University pathway support</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">International standards</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">Future-focused learning</span>
-                </li>
-              </ul>
-              <button className="mt-6 w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                Explore British Pathway
-              </button>
-            </div>
-
-            {/* Indian Pathway */}
-            <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-8 border border-gray-200">
-              <div className="mb-6">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <Target className="w-6 h-6 text-orange-600" aria-hidden="true" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Indian Pathway</h3>
-                <p className="text-orange-600 font-medium">Indian curriculum • Board exams</p>
-              </div>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">NCF / NIOS</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">NCERT aligned syllabus</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">Board exam preparation</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">Competitive exam coaching</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">Foreign & regional languages</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">Strong foundations</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">Academic excellence</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">NEP 2020 aligned</span>
-                </li>
-              </ul>
-              <button className="mt-6 w-full bg-orange-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">
-                Explore Indian Pathway
-              </button>
-            </div>
-
-            {/* 21K Learning FLOWW */}
-            <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-8 border border-gray-200">
-              <div className="mb-6">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                  <UsersIcon className="w-6 h-6 text-purple-600" aria-hidden="true" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">21K Learning FLOWW</h3>
-                <p className="text-purple-600 font-medium">Foundational & Future Skills for learners who want to grow beyond classroom</p>
-              </div>
-              <div className="mb-4">
-                <p className="text-sm text-gray-600 italic mb-4">Fundamental Learning of Working Ways</p>
-              </div>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">Mastery Pathway - English</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">Mastery Pathway – Maths</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">Languages (Indian and Foreign)</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">Capstone</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">Holistic development</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  <span className="text-gray-700">Learner-centric approach</span>
-                </li>
-              </ul>
-              <button className="mt-6 w-full bg-purple-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
-                Explore Learning FLOWW
-              </button>
-            </div>
-          </div>
-
-          {/* 21K Learning Garage */}
-          <div className="mt-12">
-            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 border border-indigo-200">
-              <div className="text-center mb-8">
-                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <PenTool className="w-8 h-8 text-indigo-600" aria-hidden="true" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">21K Learning Garage</h3>
-                <p className="text-indigo-600 font-medium">Physical Experiential Learning Centres for Grades 1-12</p>
-                <p className="text-lg text-gray-700 mt-3">Imagine. Build. Belong.</p>
-              </div>
+          {/* Main Grid - Asymmetric Layout */}
+          <div className="grid lg:grid-cols-3 gap-12 mb-32">
+            
+            {/* 1. British Pathway */}
+            <div className="relative group mt-12 lg:mt-0">
+              {/* Offset Border Effect */}
+              <div className="absolute inset-0 border-2 border-blue-200 translate-x-4 translate-y-4 transition-transform duration-300 group-hover:translate-x-2 group-hover:translate-y-2"></div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white relative z-10 h-full border border-blue-100 p-8 flex flex-col hover:shadow-2xl hover:shadow-blue-900/10 transition-shadow duration-300">
+                {/* Visual Header Block */}
+                <div className="bg-blue-950 w-16 h-16 flex items-center justify-center mb-8">
+                  <Globe className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-3xl font-serif text-blue-950 mb-2">British Pathway</h3>
+                <p className="text-sky-600 text-xs font-bold tracking-widest uppercase mb-6">British curriculum • Global</p>
+
+                {/* Icons Row */}
+                <div className="flex gap-4 mb-8 border-b border-gray-100 pb-6">
+                  <Flag className="w-5 h-5 text-blue-600" />
+                  <GraduationCap className="w-5 h-5 text-blue-600" />
+                  <BookOpen className="w-5 h-5 text-blue-600" />
+                </div>
+
+                <ul className="space-y-4 mb-8 flex-grow">
+                  {['Cambridge / IGCSE / A & AS Level', 'Cambridge certified teachers', 'Complete IGCSE preparation', 'International assessments'].map((item, index) => (
+                    <li key={index} className="flex items-start text-sm group/item">
+                      <span className="w-1.5 h-1.5 bg-sky-500 mt-2 mr-3 group-hover/item:bg-blue-950 transition-colors"></span>
+                      <span className="text-gray-600">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <button className="flex items-center gap-2 text-blue-950 font-bold hover:gap-4 transition-all">
+                  Explore <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            {/* 2. Indian Pathway (Highlighted) */}
+            <div className="relative group">
+              {/* Solid Color Background Block */}
+              <div className="absolute inset-0 bg-blue-950 transform -rotate-1 translate-x-2 translate-y-2"></div>
+
+              <div className="bg-white relative z-10 h-full p-8 flex flex-col shadow-xl">
+                 <div className="absolute top-0 right-0 bg-sky-500 text-white text-xs font-bold px-4 py-2">
+                    MOST POPULAR
+                 </div>
+                
+                <div className="bg-sky-100 w-16 h-16 flex items-center justify-center mb-8">
+                  <Flag className="w-8 h-8 text-blue-950" />
+                </div>
+
+                <h3 className="text-3xl font-serif text-blue-950 mb-2">Indian Pathway</h3>
+                <p className="text-sky-600 text-xs font-bold tracking-widest uppercase mb-6">CBSE / NCERT • National</p>
+
+                <div className="flex gap-4 mb-8 border-b border-gray-100 pb-6">
+                  <MapPin className="w-5 h-5 text-sky-600" />
+                  <Book className="w-5 h-5 text-sky-600" />
+                  <School className="w-5 h-5 text-sky-600" />
+                </div>
+
+                <ul className="space-y-4 mb-8 flex-grow">
+                  {['NCF / NIOS', 'NCERT aligned syllabus', 'Board exam preparation', 'NEP 2020 aligned'].map((item, index) => (
+                    <li key={index} className="flex items-start text-sm">
+                      <CheckCircle className="w-4 h-4 text-sky-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-blue-950 font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <button className="w-full py-3 bg-blue-950 text-white font-medium hover:bg-blue-900 transition-colors">
+                  View Details
+                </button>
+              </div>
+            </div>
+
+            {/* 3. Learning FLOWW */}
+            <div className="relative group mt-12 lg:mt-0">
+               <div className="absolute inset-0 border-2 border-blue-200 translate-x-4 translate-y-4 transition-transform duration-300 group-hover:translate-x-2 group-hover:translate-y-2"></div>
+
+              <div className="bg-white relative z-10 h-full border border-blue-100 p-8 flex flex-col hover:shadow-2xl hover:shadow-blue-900/10 transition-shadow duration-300">
+                <div className="bg-sky-500 w-16 h-16 flex items-center justify-center mb-8">
+                  <Brain className="w-8 h-8 text-white" />
+                </div>
+
+                <h3 className="text-3xl font-serif text-blue-950 mb-2">Learning FLOWW</h3>
+                <p className="text-sky-600 text-xs font-bold tracking-widest uppercase mb-6">Fundamental Skills</p>
+
+                <div className="flex gap-4 mb-8 border-b border-gray-100 pb-6">
+                  <Brain className="w-5 h-5 text-blue-400" />
+                  <Heart className="w-5 h-5 text-blue-400" />
+                  <UsersIcon className="w-5 h-5 text-blue-400" />
+                </div>
+
+                <ul className="space-y-4 mb-8 flex-grow">
+                  {['Mastery Pathway - English & Maths', 'Holistic development', 'Learner-centric approach', 'Capstone Projects'].map((item, index) => (
+                    <li key={index} className="flex items-start text-sm group/item">
+                      <span className="w-1.5 h-1.5 bg-sky-500 mt-2 mr-3 group-hover/item:bg-blue-950 transition-colors"></span>
+                      <span className="text-gray-600">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <button className="flex items-center gap-2 text-blue-950 font-bold hover:gap-4 transition-all">
+                  Explore <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Garage Section - Geometric Split Layout */}
+          <div className="relative mt-24">
+            <div className="bg-blue-950 text-white lg:flex min-h-[500px]">
+              
+              {/* Left Content */}
+              <div className="lg:w-1/3 p-12 lg:p-16 flex flex-col justify-center border-r border-blue-800 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-2 bg-sky-500"></div>
+                <PenTool className="w-12 h-12 text-sky-400 mb-8" />
+                <h3 className="text-4xl lg:text-5xl font-serif mb-6 leading-tight">Athena<br/>Learning Garage</h3>
+                <p className="text-blue-200 mb-8 font-light italic text-xl">"Imagine. Build. Belong."</p>
+                <div className="text-sm font-bold tracking-widest uppercase text-sky-400 mb-2">Physical Centers</div>
+                <div className="text-blue-100">Grades 1-12</div>
+                
+                <button className="mt-12 border border-sky-400 text-sky-400 px-8 py-3 hover:bg-sky-400 hover:text-blue-950 transition-colors w-max">
+                    Visit a Centre
+                </button>
+              </div>
+
+              {/* Right Grid */}
+              <div className="lg:w-2/3 grid grid-cols-2 md:grid-cols-3">
                 {[
-                  'Robotics Garage',
-                  'Electronics Garage', 
-                  'Tinkering Garage',
-                  'Ai & IOT Garage',
-                  'Design Garage',
-                  'Capstone Garage'
-                ].map((garage, index) => (
-                  <div key={index} className="bg-white rounded-lg p-4 text-center border border-gray-200">
-                    <div className="w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-                      <PenTool className="w-6 h-6 text-indigo-600" aria-hidden="true" />
-                    </div>
-                    <h4 className="font-semibold text-gray-900">{garage}</h4>
+                  { name: 'Robotics', icon: Cpu },
+                  { name: 'Electronics', icon: Cctv },
+                  { name: 'Tinkering', icon: Tool },
+                  { name: 'AI & IOT', icon: Brain },
+                  { name: 'Design', icon: Palette },
+                  { name: 'Capstone', icon: Target }
+                ].map((item, idx) => (
+                  <div key={idx} className="border border-blue-900 flex flex-col items-center justify-center p-8 hover:bg-blue-900 transition-colors group cursor-pointer">
+                    <item.icon className="w-10 h-10 text-sky-500 group-hover:text-white transition-colors mb-4" />
+                    <span className="font-serif text-lg tracking-wide">{item.name}</span>
                   </div>
                 ))}
               </div>
-              <div className="text-center mt-8">
-                <button className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                  Explore Learning Garage
-                </button>
-              </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Class Options Section */}
-      <section className="py-16 px-4 bg-white" aria-labelledby="class-options-heading">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 id="class-options-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Class Options
-            </h2>
-            <p className="text-xl text-gray-700">
-              Choose Your Batch & Schedule
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              {/* Batch Size */}
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Batch Size</h3>
-                <div className="space-y-2">
-                  <button
-                    onClick={() => setSelectedBatch('standard')}
-                    className={`w-full p-4 rounded-lg border-2 transition-all ${
-                      selectedBatch === 'standard'
-                        ? 'border-blue-500 bg-blue-50'
-                        : 'border-gray-200 hover:border-gray-300'
-                    }`}
-                  >
-                    <div className="text-2xl font-bold text-gray-900">24-26</div>
-                    <div className="text-sm text-gray-600">Standard</div>
-                  </button>
-                  <button
-                    onClick={() => setSelectedBatch('premium')}
-                    className={`w-full p-4 rounded-lg border-2 transition-all relative ${
-                      selectedBatch === 'premium'
-                        ? 'border-blue-500 bg-blue-50'
-                        : 'border-gray-200 hover:border-gray-300'
-                    }`}
-                  >
-                    {selectedBatch === 'premium' && (
-                      <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs px-2 py-1 rounded-full">
-                        Popular
-                      </span>
-                    )}
-                    <div className="text-2xl font-bold text-gray-900">20-22</div>
-                    <div className="text-sm text-gray-600">Premium</div>
-                  </button>
-                  <button
-                    onClick={() => setSelectedBatch('elite')}
-                    className={`w-full p-4 rounded-lg border-2 transition-all ${
-                      selectedBatch === 'elite'
-                        ? 'border-blue-500 bg-blue-50'
-                        : 'border-gray-200 hover:border-gray-300'
-                    }`}
-                  >
-                    <div className="text-2xl font-bold text-gray-900">16-18</div>
-                    <div className="text-sm text-gray-600">Elite</div>
-                  </button>
-                </div>
-              </div>
-
-              {/* Session Timing */}
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Session Timing (IST)</h3>
-                <div className="space-y-2">
-                  {[
-                    { id: 'S1', time: '9:30 AM' },
-                    { id: 'S2', time: '11:00 AM' },
-                    { id: 'S3', time: '1:30 PM' },
-                    { id: 'S4', time: '3:20 PM' }
-                  ].map((session) => (
-                    <button
-                      key={session.id}
-                      onClick={() => setSelectedSession(session.id)}
-                      className={`w-full p-4 rounded-lg border-2 transition-all ${
-                        selectedSession === session.id
-                          ? 'border-blue-500 bg-blue-50'
-                          : 'border-gray-200 hover:border-gray-300'
-                      }`}
-                    >
-                      <div className="text-lg font-bold text-gray-900">{session.id}</div>
-                      <div className="text-sm text-gray-600">{session.time}</div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Student Zone */}
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Student Zone</h3>
-                <div className="space-y-2">
-                  <button
-                    onClick={() => setSelectedZone('indian')}
-                    className={`w-full p-4 rounded-lg border-2 transition-all ${
-                      selectedZone === 'indian'
-                        ? 'border-blue-500 bg-blue-50'
-                        : 'border-gray-200 hover:border-gray-300'
-                    }`}
-                  >
-                    <div className="flex items-center justify-center">
-                      <span className="text-2xl mr-2">🇮🇳</span>
-                      <div className="text-left">
-                        <div className="text-lg font-bold text-gray-900">Indian</div>
-                      </div>
-                    </div>
-                  </button>
-                  <button
-                    onClick={() => setSelectedZone('global')}
-                    className={`w-full p-4 rounded-lg border-2 transition-all ${
-                      selectedZone === 'global'
-                        ? 'border-blue-500 bg-blue-50'
-                        : 'border-gray-200 hover:border-gray-300'
-                    }`}
-                  >
-                    <div className="flex items-center justify-center">
-                      <span className="text-2xl mr-2">🌍</span>
-                      <div className="text-left">
-                        <div className="text-lg font-bold text-gray-900">Global</div>
-                      </div>
-                    </div>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Selected Display */}
-            <div className="bg-gray-50 rounded-lg p-6 mb-8">
-              <div className="text-center">
-                <div className="text-sm text-gray-600 mb-2">Selected:</div>
-                <div className="text-lg font-semibold text-gray-900">
-                  {selectedBatch === 'standard' && 'Standard (24-26)'}
-                  {selectedBatch === 'premium' && 'Premium (20-22)'}
-                  {selectedBatch === 'elite' && 'Elite (16-18)'}
-                  {' • '}
-                  {selectedSession === 'S1' && 'S1 - 9:30 AM'}
-                  {selectedSession === 'S2' && 'S2 - 11:00 AM'}
-                  {selectedSession === 'S3' && 'S3 - 1:30 PM'}
-                  {selectedSession === 'S4' && 'S4 - 3:20 PM'}
-                  {' • '}
-                  {selectedZone === 'indian' ? 'Indian Zone' : 'Global Zone'}
-                </div>
-              </div>
-            </div>
-
-            {/* Action Button */}
-            <div className="text-center">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                Check Availability
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Section */}
-      <section className="py-16 px-4 bg-gray-50" aria-labelledby="blog-heading">
-        <div className="container mx-auto">
-          <h2 id="blog-heading" className="text-3xl font-bold text-gray-900 mb-10 text-center">
-            Online School Insights & Updates
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {content.blogs.map((blog, index) => (
-              <article 
-                key={index} 
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6"
-              >
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 text-xs font-semibold text-blue-600 bg-blue-50 rounded-full">
-                    {blog.category}
-                  </span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {blog.title}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {blog.excerpt}
+          
+          {/* ---------------- CLASS OPTIONS (REDESIGNED) ---------------- */}
+          <section className="py-24 px-6 lg:px-12 bg-slate-50 border-t border-slate-200">
+            <div className="max-w-7xl mx-auto">
+              
+              <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <h2 className="text-5xl md:text-6xl font-serif text-blue-950">
+                  Class Options<span className="text-sky-500">.</span>
+                </h2>
+                <p className="text-blue-600 font-medium tracking-wide uppercase text-sm mt-4 md:mt-0">
+                   Choose Your Batch & Schedule
                 </p>
-                <div className="flex items-center text-sm text-gray-500">
-                  <Clock className="w-4 h-4 mr-1" aria-hidden="true" />
-                  {blog.readTime}
+              </div>
+
+              <div className="grid lg:grid-cols-3 gap-8">
+                
+                {/* 1. Batch Size - Clean List Style */}
+                <div className="bg-white p-8 border-t-4 border-blue-950 shadow-sm">
+                   <div className="flex items-center gap-4 mb-8">
+                     <div className="p-3 bg-blue-50">
+                        <Users className="w-6 h-6 text-blue-950" />
+                     </div>
+                     <h3 className="text-2xl font-serif text-blue-950">Batch Size</h3>
+                   </div>
+
+                   <div className="space-y-4">
+                      {[
+                        { label: 'Standard', size: '24-26', desc: 'Collaborative Learning' },
+                        { label: 'Premium', size: '20-22', desc: 'Balanced Approach', active: true },
+                        { label: 'Elite', size: '16-18', desc: 'Focused Attention' }
+                      ].map((batch) => (
+                        <div key={batch.label} className={`group p-4 border ${batch.active ? 'border-sky-500 bg-sky-50/30' : 'border-slate-100 hover:border-blue-200'} transition-all`}>
+                           <div className="flex justify-between items-center mb-1">
+                              <span className="font-bold text-blue-950">{batch.label}</span>
+                              <span className="text-2xl font-serif text-sky-600">{batch.size}</span>
+                           </div>
+                           <div className="text-xs text-slate-500 uppercase tracking-wider">{batch.desc}</div>
+                        </div>
+                      ))}
+                   </div>
                 </div>
-              </article>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <button 
-              className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"
-              aria-label="View all blog articles"
-            >
-              View All Articles →
-            </button>
-          </div>
-        </div>
-      </section>
 
-      {/* Ratings Section */}
-      <section className="py-16 px-4 bg-white text-center">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Trusted by Parents Worldwide
-          </h2>
-          <div className="flex justify-center items-center mb-6" aria-label="5-star rating">
-            {[...Array(5)].map((_, i) => (
-              <Star 
-                key={i} 
-                className="w-10 h-10 text-yellow-400 fill-current mx-1" 
-                aria-hidden="true"
-              />
-            ))}
-            <span className="ml-4 text-xl font-semibold text-gray-900">4.9/5</span>
-          </div>
-          <p className="text-lg text-gray-700">
-            Based on 2,500+ parent reviews across 78 countries
-          </p>
-        </div>
-      </section>
+                {/* 2. Timing - Clean List Style */}
+                <div className="bg-white p-8 border-t-4 border-sky-500 shadow-sm">
+                   <div className="flex items-center gap-4 mb-8">
+                     <div className="p-3 bg-sky-50">
+                        <Clock className="w-6 h-6 text-sky-600" />
+                     </div>
+                     <h3 className="text-2xl font-serif text-blue-950">Timings (IST)</h3>
+                   </div>
 
-      {/* FAQ Section */}
-      <section className="py-16 px-4 bg-gray-50" aria-labelledby="faq-heading">
-        <div className="container mx-auto max-w-4xl">
-          <h2 id="faq-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            Frequently Asked Questions
-          </h2>
-          
-          {/* FAQ Categories */}
-          <div className="mb-8 flex flex-wrap justify-center gap-2">
-            {['All', 'Accreditation', 'Curriculum', 'Admissions', 'Operations'].map((cat) => (
-              <button
-                key={cat}
-                className="px-4 py-2 text-sm font-medium rounded-full bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-          
-          <div className="space-y-4">
-            {content.faqs.map((faq, index) => (
-              <div 
-                key={index} 
-                className="bg-white rounded-xl shadow-sm overflow-hidden"
-                itemScope
-                itemType="https://schema.org/Question"
-              >
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  aria-expanded={openFAQ === index}
-                  aria-controls={`faq-answer-${index}`}
-                >
-                  <div className="flex items-start">
-                    <BookOpen className="w-5 h-5 text-blue-500 mr-3 mt-1 flex-shrink-0" aria-hidden="true" />
-                    <span className="font-semibold text-gray-800 text-lg" itemProp="name">
-                      {faq.question}
-                    </span>
+                   <div className="space-y-4">
+                      {[
+                        { time: '9:30 AM', icon: Sun },
+                        { time: '11:00 AM', icon: Coffee },
+                        { time: '1:30 PM', icon: Sun },
+                        { time: '3:20 PM', icon: Sunset }
+                      ].map((s) => (
+                        <div key={s.time} className="flex items-center justify-between p-4 border-b border-slate-100 hover:pl-6 transition-all cursor-pointer group">
+                           <div className="flex items-center gap-3">
+                              <s.icon className="w-4 h-4 text-slate-400 group-hover:text-sky-500" />
+                              <span className="text-lg font-serif text-blue-950">{s.time}</span>
+                           </div>
+                           <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-sky-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </div>
+                      ))}
+                   </div>
+                </div>
+
+                {/* 3. Student Zone - Clean List Style */}
+                <div className="bg-white p-8 border-t-4 border-blue-950 shadow-sm">
+                   <div className="flex items-center gap-4 mb-8">
+                     <div className="p-3 bg-blue-50">
+                        <World className="w-6 h-6 text-blue-950" />
+                     </div>
+                     <h3 className="text-2xl font-serif text-blue-950">Student Zone</h3>
+                   </div>
+
+                   <div className="space-y-6">
+                      <div className="p-6 bg-slate-50 border border-slate-200 text-center hover:bg-white hover:shadow-lg transition-all cursor-pointer">
+                         <div className="text-4xl mb-4">🇮🇳</div>
+                         <h4 className="font-bold text-blue-950 mb-1">Indian Zone</h4>
+                         <p className="text-sm text-slate-500">Local curriculum focus</p>
+                      </div>
+                      <div className="p-6 bg-blue-950 text-white text-center shadow-lg cursor-pointer transform hover:-translate-y-1 transition-transform">
+                         <div className="text-4xl mb-4">🌍</div>
+                         <h4 className="font-bold text-white mb-1">Global Zone</h4>
+                         <p className="text-sm text-blue-200">International perspective</p>
+                      </div>
+                   </div>
+                </div>
+
+              </div>
+
+              <div className="mt-16 text-center">
+                 <button className="bg-blue-600 text-white px-10 py-4 font-bold tracking-widest uppercase hover:bg-blue-950 transition-colors shadow-lg shadow-blue-500/30">
+                    Check Availability
+                 </button>
+              </div>
+            </div>
+          </section>
+
+          {/* ---------------- RATINGS ---------------- */}
+          <section className="py-24 px-6 bg-slate-50">
+              <div className="max-w-2xl mx-auto text-center">
+                  <h2 className="text-4xl font-bold text-blue-950 mb-12">Trusted Excellence</h2>
+                  <div className="flex justify-center items-center mb-8">
+                      {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-12 h-12 text-yellow-400 fill-current mx-2" />
+                      ))}
+                      <span className="ml-6 text-3xl font-light text-blue-950">4.9/5</span>
                   </div>
-                  <ChevronDown 
-                    className={`w-5 h-5 text-gray-500 transition-transform duration-300 flex-shrink-0 ${
-                      openFAQ === index ? 'rotate-180' : ''
-                    }`}
-                    aria-hidden="true"
-                  />
-                </button>
-                {openFAQ === index && (
-                  <div 
-                    id={`faq-answer-${index}`}
-                    className="px-6 py-5 border-t border-gray-100 bg-gray-50"
-                    itemScope
-                    itemType="https://schema.org/Answer"
-                    role="region"
-                    aria-labelledby={`faq-question-${index}`}
-                  >
-                    <div className="flex">
-                      <div className="flex-shrink-0 mr-3">
-                        <span className="text-xs font-semibold px-2 py-1 bg-blue-100 text-blue-700 rounded">
-                          {faq.category}
-                        </span>
-                      </div>
-                      <p className="text-gray-700 leading-relaxed" itemProp="text">
-                        {faq.answer}
-                      </p>
-                    </div>
+                  <p className="text-xl text-blue-800">
+                      Based on 2,500+ parent reviews across 78 countries
+                  </p>
+              </div>
+          </section>
+
+          {/* ---------------- FAQS ---------------- */}
+          <section className="py-24 px-6 bg-slate-50">
+              <div className="max-w-4xl mx-auto">
+                  <h2 className="text-4xl font-bold text-blue-950 mb-12 text-center">Frequently Asked Questions</h2>
+                  <div className="space-y-4">
+                      {content.faqs.map((faq, index) => (
+                          <div key={index} className="bg-white shadow-sm border-l-4 border-transparent hover:border-sky-400 transition-all">
+                              <button 
+                                  onClick={() => toggleFaq(index)}
+                                  className="w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none"
+                              >
+                                  <div className="flex items-center gap-4">
+                                      <div className="w-10 h-10 bg-sky-50 rounded-full flex items-center justify-center">
+                                          <HelpCircle className="w-5 h-5 text-sky-500" />
+                                      </div>
+                                      <span className="text-lg font-semibold text-blue-950">{faq.question}</span>
+                                  </div>
+                                  {openFaq === index ? <ChevronUp className="text-sky-400" /> : <ChevronDown className="text-gray-400" />}
+                              </button>
+                              {openFaq === index && (
+                                  <div className="px-8 pb-8 text-gray-600 leading-relaxed animate-fadeIn">
+                                      <div className="mb-2 text-xs font-bold text-sky-400 uppercase tracking-wider flex items-center gap-2">
+                                          <Tag className="w-3 h-3" /> {faq.category}
+                                      </div>
+                                      {faq.answer}
+                                  </div>
+                              )}
+                          </div>
+                      ))}
                   </div>
-                )}
               </div>
-            ))}
-          </div>
-          
-          <div className="mt-12 text-center">
-            <p className="text-gray-600 mb-4">
-              Still have questions?
-            </p>
-            <button 
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-              aria-label="Contact admissions team"
-            >
-              Contact Admissions Team
-            </button>
-          </div>
+          </section>
+
+          {/* ---------------- BLOGS ---------------- */}
+          <section className="py-24 px-6 bg-blue-950 text-white">
+              <div className="max-w-7xl mx-auto">
+                  <div className="flex justify-between items-end mb-16 border-b border-blue-800 pb-6">
+                      <div>
+                          <h2 className="text-4xl font-bold mb-2">Latest Insights</h2>
+                          <p className="text-sky-400">Read our latest articles</p>
+                      </div>
+                      <BookOpen className="w-10 h-10 text-sky-400" />
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                      {content.blogs.map((blog, index) => (
+                          <div key={index} className="bg-blue-900 group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+                              {/* Icon Header */}
+                              <div className="h-48 bg-gradient-to-br from-blue-800 to-blue-700 w-full relative overflow-hidden flex items-center justify-center">
+                                   <div className="relative">
+                                       {index === 0 && <TrendingUp className="w-16 h-16 text-sky-300" />}
+                                       {index === 1 && <Eye className="w-16 h-16 text-sky-300" />}
+                                       {index === 2 && <FileText className="w-16 h-16 text-sky-300" />}
+                                       <div className="absolute -top-2 -right-2 w-8 h-8 bg-sky-500 rounded-full flex items-center justify-center">
+                                           <PenTool className="w-4 h-4 text-white" />
+                                       </div>
+                                   </div>
+                              </div>
+                              <div className="p-8">
+                                  <div className="flex justify-between text-xs text-sky-300 mb-4 uppercase tracking-wider">
+                                      <span className="flex items-center gap-2">
+                                          <Tag className="w-3 h-3" /> {blog.category}
+                                      </span>
+                                      <span className="flex items-center gap-2">
+                                          <Clock className="w-3 h-3" /> {blog.readTime}
+                                      </span>
+                                  </div>
+                                  <h3 className="text-xl font-bold mb-4 group-hover:text-sky-400 transition-colors">{blog.title}</h3>
+                                  <p className="text-blue-200 text-sm leading-relaxed">{blog.excerpt}</p>
+                              </div>
+                          </div>
+                      ))}
+                  </div>
+              </div>
+          </section>
+
+          {/* ---------------- FOOTER ---------------- */}
+          <footer className="bg-white py-12 text-center border-t border-gray-100">
+              <div className="text-blue-950 font-bold text-2xl mb-4 flex items-center justify-center gap-3">
+                  <GraduationCap className="w-8 h-8 text-blue-600" />
+                  {content.hero.schoolName}
+              </div>
+              <p className="text-gray-400"> 2024 Athena AI School. All rights reserved.</p>
+          </footer>
         </div>
       </section>
 
-      {/* Accreditation Section */}
-      <section className="py-16 px-4 bg-white" aria-labelledby="accreditation-heading">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 id="accreditation-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Recognized & Accredited
-            </h2>
-            <p className="text-xl text-gray-600 mb-2">
-              Globally Certified Curriculum Standards
-            </p>
-            <p className="text-gray-700 max-w-2xl mx-auto">
-              Our programs meet international education standards through recognized accreditation bodies
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {content.accreditations.map((acc) => (
-              <div 
-                key={acc.id}
-                className="bg-gradient-to-b from-gray-50 to-white rounded-xl p-6 text-center border border-gray-200 hover:border-blue-300 transition-colors"
-              >
-                <div className="w-16 h-16 bg-blue-50 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-blue-600" aria-hidden="true" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2 text-lg">
-                  {acc.name}
-                </h3>
-                <p className="text-sm text-gray-700 mb-1 font-medium">
-                  {acc.curriculum}
-                </p>
-                <p className="text-xs text-gray-500 mb-3 font-mono">
-                  {acc.grades}
-                </p>
-                <div className="inline-flex items-center text-green-600 text-sm font-medium">
-                  <CheckCircle className="w-4 h-4 mr-1" aria-hidden="true" />
-                  Accredited
-                </div>
-                <p className="text-xs text-gray-600 mt-3">
-                  {acc.description}
-                </p>
-              </div>
-            ))}
-          </div>
-          
-          <div className="mt-12 text-center text-sm text-gray-500">
-            <p>
-              All accreditations are current and verified for the 2024-2025 academic year
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer CTA */}
-      <footer className="py-12 px-4 bg-gradient-to-r from-gray-900 to-blue-900 text-white">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Ready to Begin Your Child's Journey?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join 20,000+ learners experiencing personalized, future-ready education
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              aria-label="Schedule a free consultation"
-            >
-              Free Consultation
-            </button>
-            <button 
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              aria-label="Download school brochure"
-            >
-              Download Brochure
-            </button>
-          </div>
-        </div>
-      </footer>
     </div>
   );
-}
+};
 
-export default PathwayContent;
+// Additional Icons that were referenced
+const Tool = ({ className }) => <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>;
+const Crown = ({ className }) => <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M5 7a2 2 0 012-2h10a2 2 0 012 2v.5a.5.5 0 01-.5.5h-13a.5.5 0 01-.5-.5V7zM3 15a2 2 0 012-2h14a2 2 0 012 2v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1z" /></svg>;
+const Sun = ({ className }) => <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>;
+const Coffee = ({ className }) => <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5v14m-7 0h14a2 2 0 002-2v-1a2 2 0 00-2-2H5a2 2 0 00-2 2v1a2 2 0 002 2z" /></svg>;
+const Sunset = ({ className }) => <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 18a5 5 0 00-10 0m12 0H5m0 0l-2 2m2-2l2 2m11-6H4m16 0l-2 2m2-2l2 2M4 12h16M4 12l-2 2m2-2l2 2m11-6H5m14 0l-2-2m2 2l2-2" /></svg>;
+const HelpCircle = ({ className }) => <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>;
+const Tag = ({ className }) => <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" /></svg>;
+
+export default AthenaElegantLayout;

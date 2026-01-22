@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, GraduationCap, BookOpen, User, Mail, Phone, ArrowRight } from 'lucide-react';
 import logo from '../assets/vvx (1).webp';
 
@@ -50,6 +51,7 @@ function Footer() {
               <GraduationCap size={18} className="mr-2" /> Programs
             </h4>
             <ul className="space-y-3">
+              <li><Link to="/programs" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><User size={16} className="mr-2" /> All Programs</Link></li>
               <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><User size={16} className="mr-2" /> Early Years</a></li>
               <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><User size={16} className="mr-2" /> Primary</a></li>
               <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><User size={16} className="mr-2" /> Middle School</a></li>
@@ -62,10 +64,10 @@ function Footer() {
               <User size={18} className="mr-2" /> Connect
             </h4>
             <ul className="space-y-3">
-              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><Phone size={16} className="mr-2" /> Contact Us</a></li>
+              <li><Link to="/contact" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><Phone size={16} className="mr-2" /> Contact Us</Link></li>
               <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><User size={16} className="mr-2" /> Careers</a></li>
               <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><BookOpen size={16} className="mr-2" /> FAQ</a></li>
-              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><BookOpen size={16} className="mr-2" /> Resources</a></li>
+              <li><Link to="/resources" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><BookOpen size={16} className="mr-2" /> Resources</Link></li>
               <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><BookOpen size={16} className="mr-2" /> Privacy Policy</a></li>
             </ul>
             <div className="mt-6 pt-6 border-t border-gray-300">

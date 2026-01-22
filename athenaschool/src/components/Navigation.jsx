@@ -116,7 +116,15 @@ function Navigation() {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
-            <img src="/src/assets/ydyh (1).webp" alt="Athena AI School Logo" className="h-40 w-auto" style={{marginTop: '0.625rem'}} />
+            <img 
+              src="/src/assets/ydyh (1).webp" 
+              alt="Athena AI School Logo" 
+              className="h-35 w-auto" 
+              loading="lazy"
+              decoding="async"
+              width="256"
+              height="103"
+            />
           </Link>
         </div>
         
@@ -157,10 +165,13 @@ function Navigation() {
             <Award size={18} />
             <span>Resources</span>
           </Link>
-          <a href="#contact" className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium">
+          <Link 
+            to="/contact" 
+            className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/contact' ? 'text-blue-600' : ''}`}
+          >
             <Phone size={18} />
             <span>Contact</span>
-          </a>
+          </Link>
         </div>
         
         {/* Hamburger menu button - visible on all screen sizes */}
@@ -223,14 +234,14 @@ function Navigation() {
                 <Award size={18} />
                 <span>Resources</span>
               </Link>
-              <a 
-                href="#contact" 
-                className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2"
+              <Link 
+                to="/contact" 
+                className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/contact' ? 'text-blue-600' : ''}`}
                 onClick={() => setIsOpen(false)}
               >
                 <Phone size={18} />
                 <span>Contact</span>
-              </a>
+              </Link>
             </div>
             
             {/* Divider */}

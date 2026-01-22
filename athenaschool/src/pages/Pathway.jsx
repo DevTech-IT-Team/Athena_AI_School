@@ -1,13 +1,7 @@
 import PathwayContent from '../components/PathwayContent';
-import Footer from '../components/Footer';
 
 function Pathway() {
-  return (
-    <div>
-      <PathwayContent />
-      <Footer />
-    </div>
-  );
+  return <PathwayContent />;
 }
 
 export default Pathway;

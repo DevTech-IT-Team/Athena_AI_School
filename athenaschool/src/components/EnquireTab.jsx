@@ -2,24 +2,17 @@ import { useState, useEffect } from 'react';
 import EnquiryForm from './EnquiryForm';
 
 function EnquireTab() {
-  const [isPanelOpen, setIsPanelOpen] = useState(true);
+  const [isPanelOpen, setIsPanelOpen] = useState(false);
   
   const togglePanel = () => {
     setIsPanelOpen(!isPanelOpen);
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (isPanelOpen) {
-        setIsPanelOpen(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    if (!isPanelOpen) return undefined;
+    const handleScroll = () => setIsPanelOpen(false);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [isPanelOpen]);
   
   return (

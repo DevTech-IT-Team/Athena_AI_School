@@ -1,7 +1,6 @@
 import React, { Suspense, lazy, useEffect, useRef, useState } from 'react';
 
 import Hero from '../components/Hero';
-import EnquireTab from '../components/EnquireTab';
 import Stats from '../components/Stats';
 
 const TrustIndicators = lazy(() => import('../components/TrustIndicators'));
@@ -13,9 +12,9 @@ const Testimonials = lazy(() => import('../components/Testimonials'));
 const StudentSpotlight = lazy(() => import('../components/StudentSpotlight'));
 const AcademicCrew = lazy(() => import('../components/AcademicCrew'));
 const Contact = lazy(() => import('../components/Contact'));
-const Footer = lazy(() => import('../components/Footer'));
 const CurriculumOverview = lazy(() => import('../components/CurriculumOverview'));
 const AffordableAccredited = lazy(() => import('../components/AffordableAccredited'));
+const EnquireTab = lazy(() => import('../components/EnquireTab'));
 
 const SectionFallback = ({ label }) => (
   <div className="py-12 text-center text-sm text-gray-500" aria-label={`Loading ${label}`}>
@@ -67,7 +66,10 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      <EnquireTab />
+      <Suspense fallback={null}>
+        <EnquireTab />
+      </Suspense>
+
       <Hero />
       
       {/* Stats Section */}
@@ -75,9 +77,11 @@ function Home() {
         <Stats />
       </div>
       
-      <Suspense fallback={<SectionFallback label="accreditation" />}>
-        <AffordableAccredited />
-      </Suspense>
+      <LazySection label="accreditation" placeholderHeight={520}>
+        <Suspense fallback={<SectionFallback label="accreditation" />}>
+          <AffordableAccredited />
+        </Suspense>
+      </LazySection>
       
       {/* Programs Section */}
       <LazySection label="programs">
@@ -148,11 +152,6 @@ function Home() {
       <LazySection label="call to action">
         <Suspense fallback={<SectionFallback label="call to action" />}>
           <CTA />
-        </Suspense>
-      </LazySection>
-      <LazySection label="footer">
-        <Suspense fallback={<SectionFallback label="footer" />}>
-          <Footer />
         </Suspense>
       </LazySection>
       

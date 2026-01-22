@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp, HelpCircle, BookOpen, Users, Award } from 'lucide-react';
 
 function Accordion() {
@@ -117,7 +118,7 @@ function Accordion() {
                       </button>
                       
                       {openIndex === `${catIndex}-${itemIndex}` && (
-                        <div className="px-6 pb-6 text-gray-600">
+                        <div className="px-6 pb-6 text-gray-600 animate-in slide-in-from-top-2 duration-200">
                           {item.answer}
                         </div>
                       )}
@@ -136,9 +137,12 @@ function Accordion() {
               Our admissions team is ready to assist you with any additional questions about our 
               British curriculum, programs, or enrollment process.
             </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+            <Link 
+              to="/#contact"
+              className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-block"
+            >
               Contact Admissions Team
-            </button>
+            </Link>
           </div>
         </div>
       </div>

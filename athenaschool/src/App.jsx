@@ -1,22 +1,40 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect, Suspense, lazy } from 'react';
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import Home from './pages/Home';
-import About from './pages/About';
-import Programs from './components/Programs';
-import Resources from './pages/Resources';
-import Pathway from './pages/Pathway';
+
+const About = lazy(() => import('./pages/About'));
+const Programs = lazy(() => import('./components/Programs'));
+const Resources = lazy(() => import('./pages/Resources'));
+const Pathway = lazy(() => import('./pages/Pathway'));
+const Contact = lazy(() => import('./pages/Contact'));
+
+function ScrollToTopWrapper({ children }) {
+  const location = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  return children;
+}
 
 function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <Navigation />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/pathway" element={<Pathway />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/programs" element={<Programs />} />
-        <Route path="/resources" element={<Resources />} />
-      </Routes>
+      <Suspense fallback={<div className="py-16 text-center text-gray-500">Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<ScrollToTopWrapper><Home /></ScrollToTopWrapper>} />
+          <Route path="/pathway" element={<ScrollToTopWrapper><Pathway /></ScrollToTopWrapper>} />
+          <Route path="/about" element={<ScrollToTopWrapper><About /></ScrollToTopWrapper>} />
+          <Route path="/programs" element={<ScrollToTopWrapper><Programs /></ScrollToTopWrapper>} />
+          <Route path="/resources" element={<ScrollToTopWrapper><Resources /></ScrollToTopWrapper>} />
+          <Route path="/contact" element={<ScrollToTopWrapper><Contact /></ScrollToTopWrapper>} />
+        </Routes>
+      </Suspense>
+      <Footer />
     </div>
   );
 }

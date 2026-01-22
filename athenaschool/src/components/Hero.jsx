@@ -1,18 +1,23 @@
 import React from 'react';
 import { Brain, Settings, Target, Headset, MessageCircleQuestion } from 'lucide-react';
 import heroImage from '../assets/gemini.webp (2).webp';
+import OptimizedImage from './OptimizedImage';
 
 const Hero = () => {
   return (
     <section className="relative w-full min-h-screen bg-gradient-to-br from-blue-50 to-white overflow-hidden flex items-center justify-center font-sans">
 
-      {/* --- Background Effects --- */}
+      {/* --- Background Effects (Optimized) --- */}
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-blue-900 to-black opacity-10 mix-blend-overlay z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-950/5 via-blue-900/5 to-black/5 z-0"></div>
       
-      {/* Abstract Grid/Dots Pattern (Simulated) */}
-      <div className="absolute inset-0 opacity-10" 
-           style={{ backgroundImage: 'radial-gradient(circle, #1e3a8a 1px, transparent 1px)', backgroundSize: '30px 30px' }}>
+      {/* Abstract Grid/Dots Pattern (Optimized) */}
+      <div className="absolute inset-0 opacity-5" 
+           style={{ 
+             backgroundImage: 'radial-gradient(circle, #1e3a8a 1px, transparent 1px)', 
+             backgroundSize: '50px 50px',
+             willChange: 'transform'
+           }}>
       </div>
 
       {/* Decorative Side Lines (Bottom Left) */}
@@ -42,11 +47,11 @@ const Hero = () => {
             Find your path
           </p>
           
-          <p className="text-base md:text-lg text-gray-600 mt-4 max-w-2xl">
+          <p className="text-base md:text-lg text-gray-600 mt-4 max-w-2xl ml-4 lg:ml-8">
             Personalized online schooling designed for modern learner
           </p>
           
-          <p className="text-sm md:text-base text-gray-500 mt-3 max-w-xl">
+          <p className="text-sm md:text-base text-gray-500 mt-3 max-w-xl ml-4 lg:ml-8">
             Experience education tailored to your child's unique needs, interests, and learning style. Our AI-powered platform adapts to create a perfect learning journey.
           </p>
 
@@ -64,23 +69,28 @@ const Hero = () => {
         {/* --- Right Column: Robot & Icons --- */}
         <div className="relative flex justify-center items-center">
 
-          {/* The Glowing Rings Background */}
-          <div className="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] border border-blue-950/10 rounded-full animate-[spin_10s_linear_infinite]"></div>
-          <div className="absolute w-[250px] h-[250px] md:w-[400px] md:h-[400px] border border-blue-950/20 rounded-full shadow-[0_0_50px_rgba(30,58,138,0.5)]"></div>
+          {/* The Glowing Rings Background (Optimized) */}
+          <div className="absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] border border-blue-950/5 rounded-full"></div>
+          <div className="absolute w-[150px] h-[150px] md:w-[250px] md:h-[250px] border border-blue-950/10 rounded-full"></div>
           
           {/* Main Gemini Image */}
-          <img 
+          <OptimizedImage 
             src={heroImage} 
             alt="Athena AI School" 
-            className="relative z-10 w-[800px] drop-shadow-2xl object-contain"
+            className="relative z-10 w-full max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl"
+            width={400}
+            height={400}
+            priority={true}
+            loading="eager"
+            fetchpriority="high"
           />
 
-          {/* Floating Icons (Positioned in semi-circular pattern around the image) */}
-          <FloatingIcon icon={<Brain size={24} />} position="top-0 left-1/4" delay="0s" />
-          <FloatingIcon icon={<Settings size={24} />} position="top-8 left-1/2 -translate-x-1/2" delay="1s" />
-          <FloatingIcon icon={<Target size={24} />} position="top-0 right-1/4" delay="2s" />
-          <FloatingIcon icon={<Headset size={24} />} position="top-16 right-8" delay="1.5s" />
-          <FloatingIcon icon={<MessageCircleQuestion size={24} />} position="top-16 left-8" delay="2.5s" />
+          {/* Floating Icons */}
+          <FloatingIcon icon={<Brain size={20} />} position="top-0 left-1/4" delay="0s" />
+          <FloatingIcon icon={<Settings size={20} />} position="top-8 left-1/2 -translate-x-1/2" delay="1s" />
+          <FloatingIcon icon={<Target size={20} />} position="top-0 right-1/4" delay="2s" />
+          <FloatingIcon icon={<Headset size={20} />} position="top-16 right-8" delay="1.5s" />
+          <FloatingIcon icon={<MessageCircleQuestion size={20} />} position="top-16 left-8" delay="2.5s" />
 
         </div>
 
@@ -89,12 +99,11 @@ const Hero = () => {
   );
 };
 
-// Helper Component for the floating bubbles
+// Helper Component for the floating bubbles (Optimized)
 const FloatingIcon = ({ icon, position, delay }) => {
   return (
     <div 
-      className={`absolute ${position} w-12 h-12 md:w-16 md:h-16 bg-blue-950/10 backdrop-blur-md border border-blue-950/30 rounded-full flex items-center justify-center text-blue-950 shadow-[0_0_15px_rgba(30,58,138,0.3)] animate-pulse z-20`}
-      style={{ animationDelay: delay }}
+      className={`absolute ${position} w-10 h-10 md:w-12 md:h-12 bg-blue-950/5 border border-blue-950/20 rounded-full flex items-center justify-center text-blue-950 z-20`}
     >
       {icon}
     </div>
