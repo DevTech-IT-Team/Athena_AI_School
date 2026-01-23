@@ -121,6 +121,7 @@ function Navigation() {
               src="/src/assets/ydyh (1).webp" 
               alt="Athena AI School Logo" 
               className="h-35 w-auto" 
+              style={{ filter: 'drop-shadow(4px 4px 16px rgba(255, 255, 255, 1)) drop-shadow(-4px -4px 16px rgba(255, 255, 255, 1)) drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.9))' }}
               loading="lazy"
               decoding="async"
               width="256"
