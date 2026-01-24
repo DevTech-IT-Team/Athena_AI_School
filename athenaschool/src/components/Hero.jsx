@@ -48,7 +48,7 @@ const Hero = () => {
           </p>
           
           <p className="text-base md:text-lg text-gray-600 mt-4 max-w-2xl ml-4 lg:ml-8">
-            Personalized online schooling designed for modern learner
+            PERSONALIZED ONLINE SCHOOLING DESIGNED FOR THE MODERN LEARNER
           </p>
           
           <p className="text-sm md:text-base text-gray-500 mt-3 max-w-xl ml-4 lg:ml-8">
@@ -56,11 +56,11 @@ const Hero = () => {
           </p>
 
           {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-8 ml-8 lg:ml-16">
-            <button className="px-8 py-3 bg-yellow-400 hover:bg-yellow-500 text-black rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">
+          <div className="flex flex-col sm:flex-row gap-4 mt-8 ml-8 lg:ml-16 mb-8">
+            <button className="px-8 py-3 bg-yellow-400 hover:bg-yellow-500 text-black rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
               Enquire Now
             </button>
-            <button className="px-8 py-3 bg-blue-950/10 hover:bg-blue-950/20 border border-blue-950/30 rounded-full text-blue-950 backdrop-blur-md transition-all duration-300">
+            <button className="px-8 py-3 bg-blue-950/10 hover:bg-blue-950/20 border border-blue-950/30 rounded-full text-blue-950 backdrop-blur-md transition-all duration-300 transform hover:scale-105">
               Learn More
             </button>
           </div>
@@ -85,12 +85,12 @@ const Hero = () => {
             fetchpriority="high"
           />
 
-          {/* Floating Icons */}
-          <FloatingIcon icon={<Brain size={20} />} position="top-0 left-1/4" delay="0s" />
-          <FloatingIcon icon={<Settings size={20} />} position="top-8 left-1/2 -translate-x-1/2" delay="1s" />
-          <FloatingIcon icon={<Target size={20} />} position="top-0 right-1/4" delay="2s" />
-          <FloatingIcon icon={<Headset size={20} />} position="top-16 right-8" delay="1.5s" />
-          <FloatingIcon icon={<MessageCircleQuestion size={20} />} position="top-16 left-8" delay="2.5s" />
+          {/* Floating Icons - Properly aligned in circular formation */}
+          <FloatingIcon icon={<Brain size={20} />} position="top-1/9 left-30 -translate-x-1/2.5 -translate-y-1/2" delay="0s" />
+          <FloatingIcon icon={<Settings size={20} />} position="top-0 left-1/2 -translate-x-1/2 -translate-y-full" delay="1s" />
+          <FloatingIcon icon={<Target size={20} />} position="top-1/9 right-35 translate-x-1/2 -translate-y-1/2" delay="2s" />
+          <FloatingIcon icon={<Headset size={20} />} position="bottom-1/2 right-25 translate-x-1/2 translate-y-1/2" delay="1.5s" />
+          <FloatingIcon icon={<MessageCircleQuestion size={20} />} position="bottom-1/2 left-14 translate-x-1/2 translate-y-1/2" delay="2.5s" />
 
         </div>
 

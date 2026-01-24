@@ -16,40 +16,40 @@ const Contact = () => {
                alt="Student Texture" 
                loading="lazy"
                decoding="async"
-               className="w-full h-full object-cover opacity-30 grayscale mix-blend-overlay"
+               className="w-full h-full object-cover"
              />
         </div>
         {/* Bottom Texture */}
         <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-900 -rotate-12 opacity-30 z-0 rounded-tr-[100px]"></div>
 
         {/* Content Container */}
-        <div className="relative z-10 text-center">
-          <div className="mb-2 inline-block px-3 py-1 border border-sky-500 rounded-full text-sky-400 text-xs font-bold uppercase tracking-wider">
+        <div className="relative z-10 text-center px-8">
+          <div className="mb-6 inline-block px-3 py-1 border border-sky-500 rounded-full text-sky-400 text-xs font-bold uppercase tracking-wider">
             Contact Our Experts
           </div>
           
-          <h2 className="text-4xl lg:text-5xl font-extrabold mb-8 tracking-tight">
+          <h2 className="text-4xl lg:text-5xl font-extrabold mb-12 tracking-tight">
             Get In <span className="text-sky-400">Touch</span>
           </h2>
 
-          <div className="space-y-8 mt-12 flex flex-col items-center">
+          <div className="space-y-10 mt-16 flex flex-col items-center">
             {/* Phone */}
-            <div className="flex items-center justify-center gap-4 group">
-              <div className="p-3 bg-white/10 rounded-lg group-hover:bg-sky-500 transition-colors duration-300">
+            <div className="flex items-center justify-center gap-6 group">
+              <div className="flex-shrink-0 p-3 bg-white/10 rounded-lg group-hover:bg-sky-500 transition-colors duration-300">
                 <PhoneIcon className="w-6 h-6 text-white" />
               </div>
-              <div className="text-center">
+              <div className="text-left">
                 <p className="text-xs text-sky-300 font-bold uppercase tracking-wider mb-1">Call Us</p>
                 <p className="text-2xl font-semibold text-white">+91 99999 99999</p>
               </div>
             </div>
 
             {/* Email */}
-            <div className="flex items-center justify-center gap-4 group">
-              <div className="p-3 bg-white/10 rounded-lg group-hover:bg-sky-500 transition-colors duration-300">
+            <div className="flex items-center justify-center gap-6 group">
+              <div className="flex-shrink-0 p-3 bg-white/10 rounded-lg group-hover:bg-sky-500 transition-colors duration-300">
                 <EnvelopeIcon className="w-6 h-6 text-white" />
               </div>
-              <div className="text-center">
+              <div className="text-left">
                 <p className="text-xs text-sky-300 font-bold uppercase tracking-wider mb-1">Email Us</p>
                 <p className="text-xl font-semibold text-white">info@aischool.com</p>
               </div>

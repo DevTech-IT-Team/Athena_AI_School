@@ -11,7 +11,7 @@ const StudentSpotlight = () => {
       name: "Divith Reddy",
       age: "8 years old",
       mainBadge: "Chess Champion",
-      description: "An 8-year-old prodigy, Divith, recently won the U-8 World Chess Championship in Italy. With his love for chess, he is determined to become the world's youngest Grandmaster.",
+      description: "A young prodigy, Divith recently won the U-8 World Chess Championship in Italy. With his love for chess, he is determined to become the world's youngest Grandmaster.",
       tags: ["World Champion", "Chess Prodigy", "Math Genius"],
       image: chessImage, // Local image
       hasVideo: true
@@ -21,7 +21,7 @@ const StudentSpotlight = () => {
       name: "Keya Hatkar",
       age: "13 years old",
       mainBadge: "Award Winner",
-      description: "Thirteen-year-old Keya, recipient of the prestigious Pradhan Mantri Rashtriya Bal Puraskar, is an award-winning author, artist, and social impact entrepreneur.",
+      description: "Keya, recipient of the prestigious Pradhan Mantri Rashtriya Bal Puraskar, is an award-winning author, artist, and social impact entrepreneur.",
       tags: ["Award Winner", "Author", "Artist"],
       image: keyaImage, // Local image
       hasVideo: false
@@ -39,8 +39,8 @@ const StudentSpotlight = () => {
 
         <div className="relative z-10">
           <div className="mb-8">
-            <span className="font-serif text-8xl opacity-20 absolute -top-10 -left-4">01</span>
-            <h2 className="text-sky-300 font-medium tracking-widest text-sm uppercase mb-2 ml-2">Success Stories</h2>
+            <span className="font-serif text-8xl opacity-60 absolute -top-10 -left-4">01</span>
+            <h2 className="text-white font-medium tracking-widest text-sm uppercase mb-2 ml-2">Success Stories</h2>
             <h1 className="text-5xl lg:text-6xl font-serif leading-tight">
               Meet Our <br />
               <span className="text-sky-200 italic">Outstanding</span> <br />
@@ -112,7 +112,7 @@ const StudentSpotlight = () => {
                       <span className="text-sky-300 text-sm font-medium">— {student.age}</span>
                     </div>
                     
-                    <div className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-sky-400 mb-3">
+                    <div className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-white mb-3">
                       <Star className="w-3 h-3 fill-current" />
                       {student.mainBadge}
                     </div>
@@ -136,7 +136,7 @@ const StudentSpotlight = () => {
                         Read Full Story <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                       </button>
                       {student.hasVideo && (
-                        <button className="flex items-center gap-2 text-sm font-semibold text-sky-400 hover:text-white transition-colors">
+                        <button className="flex items-center gap-2 text-sm font-semibold text-white hover:text-sky-300 transition-colors">
                           <PlayCircle className="w-4 h-4" /> Watch Story
                         </button>
                       )}

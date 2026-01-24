@@ -70,7 +70,7 @@ const OurPrograms = () => {
       ]
     },
     {
-      title: "21K Learning FLOWW",
+      title: "Athena Learning FLOWW",
       subtitle: "Future Skills",
       icon: BrainCircuit,
       features: [
@@ -83,7 +83,7 @@ const OurPrograms = () => {
       ]
     },
     {
-      title: "21K Learning Garage",
+      title: "Athena Learning Garage",
       subtitle: "Experiential Learning",
       icon: Wrench,
       features: [

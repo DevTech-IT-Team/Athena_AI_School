@@ -83,14 +83,14 @@ function Home() {
         </Suspense>
       </LazySection>
       
-      {/* Programs Section */}
+      {/* Programs Section 
       <LazySection label="programs">
         <Suspense fallback={<SectionFallback label="programs" />}>
           <div className="py-12 bg-white relative z-10">
             <Programs />
           </div>
         </Suspense>
-      </LazySection>
+      </LazySection>*/}
       
       {/* Features Section */}
       <LazySection label="features">

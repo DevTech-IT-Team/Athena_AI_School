@@ -20,14 +20,13 @@ const ProgramHighlight = () => {
             
             {/* 1. Large Serif Number */}
             <h1 className="text-[120px] leading-none font-serif text-blue-950 opacity-100 font-medium mb-[-20px] z-20 mix-blend-multiply">
-              NO. 1
+              NO.1
             </h1>
 
             {/* 2. Title Section */}
             <div className="relative z-10 pl-4">
               <h2 className="text-4xl font-serif text-blue-950 mb-6">
-                Personalized <br />
-                <span className="italic text-sky-600">Mentorship</span>
+                Personalized Mentorship
               </h2>
               
               {/* Decorative short line */}

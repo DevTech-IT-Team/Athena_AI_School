@@ -76,10 +76,10 @@ const CurriculumOverview = () => {
         <div className="space-y-8">
           <div>
             <h4 className="text-sky-600 font-bold tracking-wider uppercase mb-3 text-sm lg:text-base">
-              British Curriculum Excellence
+              British Curriculum Excellence.
             </h4>
             <h2 className="text-3xl lg:text-5xl font-extrabold text-blue-950 leading-tight mb-6">
-              Following rigorous standards of the UK National Curriculum
+              Following Rigorous, Standards of the UK National Curriculum.
             </h2>
             <p className="text-lg text-slate-700 leading-relaxed">
               <strong className="text-blue-900 block mb-2">World-Class British Education Online</strong>
@@ -97,7 +97,7 @@ const CurriculumOverview = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-blue-950 mb-2">Core Subjects</h3>
-                <p className="text-slate-600">English, Mathematics, Science with specialized instruction</p>
+                <p className="text-slate-600">English, Mathematics, and Science with specialized instruction.</p>
               </div>
             </div>
 
@@ -108,7 +108,7 @@ const CurriculumOverview = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-blue-950 mb-2">Foundation Subjects</h3>
-                <p className="text-slate-600">History, Geography, Art, Music, Computing and more</p>
+                <p className="text-slate-600">History, Geography, Art, Music, Computing, and more.</p>
               </div>
             </div>
 

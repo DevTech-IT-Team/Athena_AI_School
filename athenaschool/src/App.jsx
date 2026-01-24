@@ -9,6 +9,11 @@ const Programs = lazy(() => import('./components/Programs'));
 const Resources = lazy(() => import('./pages/Resources'));
 const Pathway = lazy(() => import('./pages/Pathway'));
 const Contact = lazy(() => import('./pages/Contact'));
+const ApplyNow = lazy(() => import('./pages/ApplyNow'));
+const WhoShouldRegister = lazy(() => import('./pages/WhoShouldRegister'));
+const BatchTimings = lazy(() => import('./pages/BatchTimings'));
+const EssentialRequirements = lazy(() => import('./pages/EssentialRequirements'));
+const Fees = lazy(() => import('./pages/Fees'));
 
 function ScrollToTopWrapper({ children }) {
   const location = useLocation();
@@ -32,6 +37,11 @@ function App() {
           <Route path="/programs" element={<ScrollToTopWrapper><Programs /></ScrollToTopWrapper>} />
           <Route path="/resources" element={<ScrollToTopWrapper><Resources /></ScrollToTopWrapper>} />
           <Route path="/contact" element={<ScrollToTopWrapper><Contact /></ScrollToTopWrapper>} />
+          <Route path="/apply-now" element={<ScrollToTopWrapper><ApplyNow /></ScrollToTopWrapper>} />
+          <Route path="/who-should-register" element={<ScrollToTopWrapper><WhoShouldRegister /></ScrollToTopWrapper>} />
+          <Route path="/batch-timings" element={<ScrollToTopWrapper><BatchTimings /></ScrollToTopWrapper>} />
+          <Route path="/essential-requirements" element={<ScrollToTopWrapper><EssentialRequirements /></ScrollToTopWrapper>} />
+          <Route path="/fees" element={<ScrollToTopWrapper><Fees /></ScrollToTopWrapper>} />
         </Routes>
       </Suspense>
       <Footer />

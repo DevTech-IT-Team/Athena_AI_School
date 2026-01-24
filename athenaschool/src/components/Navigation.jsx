@@ -73,11 +73,11 @@ function Navigation() {
     {
       title: 'Admissions',
       links: [
-        { text: 'Apply Now', href: '#' },
-        { text: 'Admission Process', href: '#' },
-        { text: 'Tuition & Fees', href: '#' },
-        { text: 'Virtual Tour', href: '#' },
-        { text: 'FAQs', href: '#' },
+        { text: 'How to Register', href: '/apply-now' },
+        { text: 'Who Should Register', href: '/who-should-register' },
+        { text: 'Batch Timings', href: '/batch-timings' },
+        { text: 'Essential And Process Requirements', href: '/essential-requirements' },
+        { text: 'Fees', href: '/fees' },
       ]
     },
     {
@@ -141,7 +141,7 @@ function Navigation() {
           </Link>
           <Link
             to="/pathway"
-            className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/pathway' ? 'text-blue-600' : ''}`}
+            className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/pathway' ? 'text-blue-600' : ''}`}
           >
             <BookOpen size={18} />
             <span>Pathway</span>
@@ -153,13 +153,13 @@ function Navigation() {
             <User size={18} />
             <span>About</span>
           </Link>
-          <Link
+          {/* <Link
             to="/programs"
-            className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/programs' ? 'text-blue-600' : ''}`}
+            className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/programs' ? 'text-blue-600' : ''}`}
           >
             <BookOpen size={18} />
             <span>Programs</span>
-          </Link>
+          </Link> */}
           <Link
             to="/resources"
             className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/resources' ? 'text-blue-600' : ''}`}
@@ -169,7 +169,7 @@ function Navigation() {
           </Link>
           <Link 
             to="/contact" 
-            className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/contact' ? 'text-blue-600' : ''}`}
+            className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/contact' ? 'text-blue-600' : ''}`}
           >
             <Phone size={18} />
             <span>Contact</span>
@@ -260,13 +260,23 @@ function Navigation() {
                   <ul className="space-y-1">
                     {column.links.map((link, linkIndex) => (
                       <li key={linkIndex}>
-                        <a
-                          href={link.href}
-                          className="text-gray-700 hover:text-blue-600 hover:underline transition-colors block py-1 whitespace-nowrap"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {link.text}
-                        </a>
+                        {link.href.startsWith('/') ? (
+                          <Link
+                            to={link.href}
+                            className="text-gray-700 hover:text-blue-600 hover:underline transition-colors block py-1 whitespace-nowrap"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {link.text}
+                          </Link>
+                        ) : (
+                          <a
+                            href={link.href}
+                            className="text-gray-700 hover:text-blue-600 hover:underline transition-colors block py-1 whitespace-nowrap"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {link.text}
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -291,13 +301,23 @@ function Navigation() {
                   <ul className="space-y-2">
                     {column.links.map((link, linkIndex) => (
                       <li key={linkIndex}>
-                        <a
-                          href={link.href}
-                          className="text-gray-700 hover:text-blue-600 hover:underline transition-colors block py-1"
-                          onClick={() => setIsMegaMenuOpen(false)}
-                        >
-                          {link.text}
-                        </a>
+                        {link.href.startsWith('/') ? (
+                          <Link
+                            to={link.href}
+                            className="text-gray-700 hover:text-blue-600 hover:underline transition-colors block py-1"
+                            onClick={() => setIsMegaMenuOpen(false)}
+                          >
+                            {link.text}
+                          </Link>
+                        ) : (
+                          <a
+                            href={link.href}
+                            className="text-gray-700 hover:text-blue-600 hover:underline transition-colors block py-1"
+                            onClick={() => setIsMegaMenuOpen(false)}
+                          >
+                            {link.text}
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>

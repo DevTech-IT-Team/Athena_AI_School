@@ -221,13 +221,21 @@ const AboutContent = () => {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
         
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h4 className="text-white mb-4 font-medium tracking-wide">ADMISSIONS OPEN 2026-2027</h4>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-10 max-w-4xl mx-auto leading-tight">
-            We Are Always Ready To <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-100">Shape The Future.</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/30 mb-8">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+            </span>
+            <span className="text-sm font-medium text-white uppercase tracking-wide">
+              ADMISSIONS OPEN 2026-2027
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 max-w-4xl mx-auto leading-tight">
+            We Are Always Ready To 
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-100"> Shape The Future.</span>
           </h2>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
             <a href="/admissions.html" className="bg-white text-sky-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 hover:text-sky-700 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
               Apply Now
             </a>

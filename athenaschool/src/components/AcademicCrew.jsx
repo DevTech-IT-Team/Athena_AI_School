@@ -14,22 +14,22 @@ const AcademicCrew = () => {
           {/* LEFT SIDE: Content */}
           <div className="order-2 lg:order-1 relative z-10">
             {/* Decorative Label */}
-            <div className="inline-block mb-4">
-              <span className="text-sky-500 font-bold tracking-widest uppercase text-xs border-b-2 border-sky-500 pb-1">
+            <div className="inline-block mb-6">
+              <span className="text-sky-500 font-bold tracking-widest uppercase text-xs border-b-2 border-sky-500 pb-2">
                 Leadership & Mentors
               </span>
             </div>
 
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-blue-950 mb-8 leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-blue-950 mb-5 leading-tight">
               Meet Our <br />
               <span className="text-sky-600">Academic Crew</span>
             </h2>
 
-            <p className="text-slate-600 text-lg leading-relaxed mb-6">
+            <p className="text-slate-600 text-lg leading-relaxed mb-8">
               Building the future of learning needs a team of <strong className="text-blue-900">325+ passionate educators</strong> and innovators.
             </p>
             
-            <p className="text-slate-600 text-lg leading-relaxed mb-10">
+            <p className="text-slate-600 text-lg leading-relaxed mb-12">
               At Wisdom School, our leadership and mentors are committed to guiding learners on their unique learning paths. We are here to inspire, mentor, and support our learners every step of the way.
             </p>
 
