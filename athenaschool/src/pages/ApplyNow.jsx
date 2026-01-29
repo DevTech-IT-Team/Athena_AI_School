@@ -2,9 +2,9 @@ import { FileText, Users, Clock, CheckCircle, Package, Play, Download, ArrowRigh
 
 export default function ApplyNow() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 pt-16">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-400 to-blue-600 text-white py-16">
+      <div className="bg-gradient-to-r from-blue-50 to-blue-100 text-blue-950 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">How to Register?</h1>
@@ -208,7 +208,7 @@ export default function ApplyNow() {
 
           {/* CTA Section */}
           <div className="text-center mt-12">
-            <div className="bg-gradient-to-r from-blue-400 to-blue-600 text-white p-8 rounded-lg">
+            <div className="bg-gradient-to-r from-blue-900 to-blue-950 text-white p-8 rounded-lg">
               <h2 className="text-2xl font-bold mb-4">Ready to Begin Your Journey?</h2>
               <p className="mb-6">Join India's first digital school and give your child the education they deserve.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

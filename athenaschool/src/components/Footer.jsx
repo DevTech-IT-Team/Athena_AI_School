@@ -32,48 +32,43 @@ function Footer() {
                 </div>
               </a>
             </div>
-            <p className="text-sm text-gray-600">© 2025 AI School. All rights reserved.</p>
+            <p className="text-sm text-gray-600"> 2025 AI School. All rights reserved.</p>
           </div>
           <div>
             <h4 className="font-bold mb-6 text-xl text-gray-900 border-b border-gray-300 pb-2 flex items-center">
-              <ArrowRight size={18} className="mr-2" /> Quick Links
+              <User size={18} className="mr-2" /> About Us
             </h4>
             <ul className="space-y-3">
-              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><User size={16} className="mr-2" /> About</a></li>
-              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><BookOpen size={16} className="mr-2" /> Academics</a></li>
-              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><GraduationCap size={16} className="mr-2" /> Admissions</a></li>
-              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><User size={16} className="mr-2" /> Connect</a></li>
-              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><BookOpen size={16} className="mr-2" /> Blog</a></li>
+              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">Our Mission</a></li>
+              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">Leadership</a></li>
+              <li><Link to="/affiliations-accreditation" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">Affiliation & Accreditation</Link></li>
+              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">Careers</a></li>
+              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">Blog</a></li>
+              <li><Link to="/faq" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">FAQs</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-bold mb-6 text-xl text-gray-900 border-b border-gray-300 pb-2 flex items-center">
-              <GraduationCap size={18} className="mr-2" /> Programs
+              <GraduationCap size={18} className="mr-2" /> Indian Pathway
             </h4>
             <ul className="space-y-3">
-              <li><Link to="/programs" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><User size={16} className="mr-2" /> All Programs</Link></li>
-              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><User size={16} className="mr-2" /> Early Years</a></li>
-              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><User size={16} className="mr-2" /> Primary</a></li>
-              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><User size={16} className="mr-2" /> Middle School</a></li>
-              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><User size={16} className="mr-2" /> Senior School</a></li>
-              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><BookOpen size={16} className="mr-2" /> Electives</a></li>
+              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">Pre Primary</a></li>
+              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">Primary School</a></li>
+              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">Middle School</a></li>
+              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">Senior School</a></li>
             </ul>
           </div>
           <div>
             <h4 className="font-bold mb-6 text-xl text-gray-900 border-b border-gray-300 pb-2 flex items-center">
-              <User size={18} className="mr-2" /> Connect
+              <BookOpen size={18} className="mr-2" /> British Pathway
             </h4>
             <ul className="space-y-3">
-              <li><Link to="/contact" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><Phone size={16} className="mr-2" /> Contact Us</Link></li>
-              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><User size={16} className="mr-2" /> Careers</a></li>
-              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><BookOpen size={16} className="mr-2" /> FAQ</a></li>
-              <li><Link to="/resources" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><BookOpen size={16} className="mr-2" /> Resources</Link></li>
-              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1 flex items-center"><BookOpen size={16} className="mr-2" /> Privacy Policy</a></li>
+              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">Early Years</a></li>
+              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">British Primary</a></li>
+              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">British Lower Secondary</a></li>
+              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">British Upper Secondary</a></li>
+              <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">British Advanced Levels</a></li>
             </ul>
-            <div className="mt-6 pt-6 border-t border-gray-300">
-              <p className="text-sm text-gray-600 flex items-center mb-2"><Phone size={16} className="mr-2" /> Contact: +91 99999 99999</p>
-              <p className="text-sm text-gray-600 flex items-center"><Mail size={16} className="mr-2" /> Email: info@21kschool.com</p>
-            </div>
           </div>
         </div>
       </div>

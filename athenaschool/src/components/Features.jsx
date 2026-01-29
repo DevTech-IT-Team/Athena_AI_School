@@ -5,8 +5,8 @@ import parentImage from '../assets/relxro.webp';
 
 const ProgramHighlight = () => {
   return (
-    <section className="bg-white px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="max-w-7xl mx-auto relative">
+    <section className="bg-white px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto relative px-4 sm:px-6 lg:px-8">
         
         {/* DECORATIVE GRID LINES (Thin lines characteristic of the reference design) */}
         <div className="absolute top-0 left-1/4 h-full w-px bg-slate-200 hidden lg:block"></div>

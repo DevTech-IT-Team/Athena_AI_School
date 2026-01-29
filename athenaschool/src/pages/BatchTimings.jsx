@@ -28,7 +28,7 @@ export default function BatchTimings() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 py-24 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">

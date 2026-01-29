@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Home, User, BookOpen, Award, Users, Phone } from 'lucide-react';
+import { Menu, X, Home, User, BookOpen, Award, Users, Phone, Heart } from 'lucide-react';
 import logoImg from '../assets/ydyh (1).webp';
 
 function Navigation() {
@@ -83,11 +83,14 @@ function Navigation() {
     {
       title: 'How it Works',
       links: [
-        { text: 'Learning Platform', href: '#' },
-        { text: 'Schedule', href: '#' },
-        { text: 'Support', href: '#' },
-        { text: 'Parent Portal', href: '#' },
-        { text: 'Student Portal', href: '#' },
+        { text: 'How does it work?', href: '/how-it-works' },
+        { text: 'Special Education', href: '/special-education' },
+        { text: 'Technology', href: '/technology' },
+        { text: 'Features', href: '/features' },
+        { text: 'Why online only?', href: '/why-online-only' },
+        { text: 'FAQ', href: '/faq' },
+        { text: 'Affiliations & Accreditation', href: '/affiliations-accreditation' },
+        { text: 'Resources', href: '/resources-downloads' },
       ]
     },
     {
@@ -146,27 +149,20 @@ function Navigation() {
             <BookOpen size={18} />
             <span>Pathway</span>
           </Link>
-          <Link
-            to="/about"
-            className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/about' ? 'text-blue-600' : ''}`}
+          <Link 
+            to="/follow" 
+            className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/follow' ? 'text-blue-600' : ''}`}
           >
-            <User size={18} />
-            <span>About</span>
+            <Heart size={18} />
+            <span>Follow</span>
           </Link>
-          {/* <Link
-            to="/programs"
-            className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/programs' ? 'text-blue-600' : ''}`}
+          {/*<Link 
+            to="/learning-garage" 
+            className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/learning-garage' ? 'text-blue-600' : ''}`}
           >
             <BookOpen size={18} />
-            <span>Programs</span>
-          </Link> */}
-          <Link
-            to="/resources"
-            className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/resources' ? 'text-blue-600' : ''}`}
-          >
-            <Award size={18} />
-            <span>Resources</span>
-          </Link>
+            <span>Learning Garage</span>
+          </Link>*/}
           <Link 
             to="/contact" 
             className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/contact' ? 'text-blue-600' : ''}`}
@@ -212,30 +208,22 @@ function Navigation() {
                 <BookOpen size={18} />
                 <span>Pathway</span>
               </Link>
-              <Link
-                to="/about"
-                className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/about' ? 'text-blue-600' : ''}`}
+              <Link 
+                to="/follow" 
+                className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/follow' ? 'text-blue-600' : ''}`}
                 onClick={() => setIsOpen(false)}
               >
-                <User size={18} />
-                <span>About</span>
+                <Heart size={18} />
+                <span>Follow</span>
               </Link>
-              <Link
-                to="/programs"
-                className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/programs' ? 'text-blue-600' : ''}`}
+              {/*<Link 
+                to="/learning-garage" 
+                className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/learning-garage' ? 'text-blue-600' : ''}`}
                 onClick={() => setIsOpen(false)}
               >
                 <BookOpen size={18} />
-                <span>Programs</span>
-              </Link>
-              <Link
-                to="/resources"
-                className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/resources' ? 'text-blue-600' : ''}`}
-                onClick={() => setIsOpen(false)}
-              >
-                <Award size={18} />
-                <span>Resources</span>
-              </Link>
+                <span>Learning Garage</span>
+              </Link>*/}
               <Link 
                 to="/contact" 
                 className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/contact' ? 'text-blue-600' : ''}`}

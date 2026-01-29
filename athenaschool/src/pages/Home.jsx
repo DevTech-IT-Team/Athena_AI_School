@@ -9,6 +9,7 @@ const Programs = lazy(() => import('../components/Programs'));
 const CTA = lazy(() => import('../components/CTA'));
 const Features = lazy(() => import('../components/Features'));
 const Testimonials = lazy(() => import('../components/Testimonials'));
+const OurPrograms = lazy(() => import('../components/OurPrograms'));
 const StudentSpotlight = lazy(() => import('../components/StudentSpotlight'));
 const AcademicCrew = lazy(() => import('../components/AcademicCrew'));
 const Contact = lazy(() => import('../components/Contact'));
@@ -95,18 +96,25 @@ function Home() {
       {/* Features Section */}
       <LazySection label="features">
         <Suspense fallback={<SectionFallback label="features" />}>
-          <div className="py-12 bg-white relative z-10">
+          
             <Features />
-          </div>
+     
         </Suspense>
       </LazySection>
       
       {/* Testimonials Section */}
       <LazySection label="testimonials">
         <Suspense fallback={<SectionFallback label="testimonials" />}>
-          <div className="py-12 bg-white relative overflow-hidden">
+
             <Testimonials />
-          </div>
+          
+        </Suspense>
+      </LazySection>
+      
+      {/* Our Programs Section */}
+      <LazySection label="our programs">
+        <Suspense fallback={<SectionFallback label="our programs" />}>
+          <OurPrograms />
         </Suspense>
       </LazySection>
       
@@ -127,9 +135,9 @@ function Home() {
       {/* Curriculum Overview */}
       <LazySection label="curriculum overview">
         <Suspense fallback={<SectionFallback label="curriculum overview" />}>
-          <div className="py-12 bg-white">
+          
             <CurriculumOverview />
-          </div>
+          
         </Suspense>
       </LazySection>
       
