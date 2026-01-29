@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, User, BookOpen, Award, Users, Phone, Heart } from 'lucide-react';
 
+import logo from '../assets/ydyh.webp';
+
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
@@ -131,10 +133,10 @@ function Navigation() {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
-            <img 
-              src="/src/assets/ydyh (1).webp" 
-              alt="Athena AI School Logo" 
-              className="h-32 w-auto" 
+            <img
+              src={logo}
+              alt="Athena AI School Logo"
+              className="h-32 w-auto"
               style={{ filter: 'drop-shadow(0px 0px 10px rgba(255, 255, 255, 1)) drop-shadow(-4px -4px 20px rgba(255, 255, 255, 0.9)) drop-shadow(4px 4px 20px rgba(255, 255, 255, 0.9))' }}
             />
           </Link>
@@ -166,7 +168,7 @@ function Navigation() {
       {isOpen && (
         <div className="absolute top-16 left-0 right-0 bg-white shadow-2xl border-t border-gray-100 overflow-y-auto max-h-[calc(100vh-64px)] animate-in slide-in-from-top duration-300">
           <div className="container mx-auto px-6 py-8">
-            
+
             {/* Mobile Only Quick Links */}
             <div className="lg:hidden grid grid-cols-2 gap-4 mb-8">
               <Link to="/" className="flex items-center space-x-2 p-3 bg-gray-50 rounded-lg font-medium text-gray-700" onClick={() => setIsOpen(false)}><Home size={18} /><span>Home</span></Link>
@@ -211,7 +213,7 @@ function Navigation() {
                 </div>
               ))}
             </div>
-            
+
             {/* Bottom Padding for mobile thumb reach */}
             <div className="h-20 lg:hidden"></div>
           </div>

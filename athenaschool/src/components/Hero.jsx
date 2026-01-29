@@ -1,6 +1,6 @@
 import React from 'react';
 import { Brain, Settings, Target, Headset, MessageCircleQuestion } from 'lucide-react';
-import heroImage from '../assets/gemini.webp (2).webp';
+import heroImage from '../assets/gemini.webp';
 import OptimizedImage from './OptimizedImage';
 
 const Hero = () => {
@@ -10,14 +10,14 @@ const Hero = () => {
       {/* --- Background Effects (Optimized) --- */}
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-950/5 via-blue-900/5 to-black/5 z-0"></div>
-      
+
       {/* Abstract Grid/Dots Pattern (Optimized) */}
-      <div className="absolute inset-0 opacity-5" 
-           style={{ 
-             backgroundImage: 'radial-gradient(circle, #1e3a8a 1px, transparent 1px)', 
-             backgroundSize: '50px 50px',
-             willChange: 'transform'
-           }}>
+      <div className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: 'radial-gradient(circle, #1e3a8a 1px, transparent 1px)',
+          backgroundSize: '50px 50px',
+          willChange: 'transform'
+        }}>
       </div>
 
       {/* Decorative Side Lines (Bottom Left) */}
@@ -46,11 +46,11 @@ const Hero = () => {
           <p className="text-lg md:text-2xl text-blue-800 tracking-widest font-light uppercase mt-2 ml-4 lg:ml-8">
             Find your path
           </p>
-          
+
           <p className="text-base md:text-lg text-gray-600 mt-4 max-w-2xl ml-4 lg:ml-8">
             PERSONALIZED ONLINE SCHOOLING DESIGNED FOR THE MODERN LEARNER
           </p>
-          
+
           <p className="text-sm md:text-base text-gray-500 mt-3 max-w-xl ml-4 lg:ml-8">
             Experience education tailored to your child's unique needs, interests, and learning style. Our AI-powered platform adapts to create a perfect learning journey.
           </p>
@@ -72,11 +72,11 @@ const Hero = () => {
           {/* The Glowing Rings Background (Optimized) */}
           <div className="absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] border border-blue-950/5 rounded-full"></div>
           <div className="absolute w-[150px] h-[150px] md:w-[250px] md:h-[250px] border border-blue-950/10 rounded-full"></div>
-          
+
           {/* Main Gemini Image */}
-          <OptimizedImage 
-            src={heroImage} 
-            alt="Athena AI School" 
+          <OptimizedImage
+            src={heroImage}
+            alt="Athena AI School"
             className="relative z-10 w-full max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl"
             width={400}
             height={400}
@@ -102,7 +102,7 @@ const Hero = () => {
 // Helper Component for the floating bubbles (Optimized)
 const FloatingIcon = ({ icon, position, delay }) => {
   return (
-    <div 
+    <div
       className={`absolute ${position} w-10 h-10 md:w-12 md:h-12 bg-blue-950/5 border border-blue-950/20 rounded-full flex items-center justify-center text-blue-950 z-20`}
     >
       {icon}
