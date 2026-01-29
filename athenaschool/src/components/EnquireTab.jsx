@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import EnquiryForm from './EnquiryForm';
 
 function EnquireTab() {
-  const [isPanelOpen, setIsPanelOpen] = useState(false);
+  const [isPanelOpen, setIsPanelOpen] = useState(true);
   
   const togglePanel = () => {
     setIsPanelOpen(!isPanelOpen);

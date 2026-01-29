@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, User, BookOpen, Award, Users, Phone, Heart } from 'lucide-react';
-import logoImg from '../assets/ydyh (1).webp';
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,10 +9,18 @@ function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  // Prevent background scrolling when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isOpen]);
+
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 0);
 
-    // Close mega menu when clicking outside
     const handleClickOutside = (event) => {
       if (!event.target.closest('.mega-menu-container') && !event.target.closest('.mega-menu-toggle')) {
         setIsMegaMenuOpen(false);
@@ -27,7 +34,6 @@ function Navigation() {
     };
   }, []);
 
-  // Add scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -43,40 +49,43 @@ function Navigation() {
     {
       title: 'About',
       links: [
-        { text: 'Our Story', href: '#' },
-        { text: 'Leadership', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'News & Events', href: '#' },
-        { text: 'Partners', href: '#' },
+        { text: 'What sets us apart?', href: '#' },
+        { text: 'Values & Ethos', href: '#' },
+        { text: '21K Group', href: '#' },
+        { text: 'Our Leaders', href: '#' },
+        { text: 'Habits of Mind', href: '#' },
       ]
     },
     {
       title: 'Academics',
       links: [
-        { text: 'Curriculum', href: '#' },
-        { text: 'Learning Approach', href: '#' },
-        { text: 'Assessment', href: '#' },
-        { text: 'Faculty', href: '#' },
-        { text: 'Resources', href: '#' },
+        { text: 'NCF India', href: '#' },
+        { text: 'Learning Culture', href: '#' },
+        { text: 'Pre Primary', href: '#' },
+        { text: 'Primary', href: '#' },
+        { text: 'Middle', href: '#' },
+        { text: 'Senior School', href: '#' },
+        { text: 'Music & Arts Partner', href: '#' },
+        { text: 'Insights NEW', href: '#' },
       ]
     },
     {
       title: 'Electives',
       links: [
-        { text: 'Arts & Music', href: '#' },
-        { text: 'Sports', href: '#' },
-        { text: 'STEM', href: '#' },
-        { text: 'Language', href: '#' },
-        { text: 'Coding', href: '#' },
+        { text: 'Computational Thinking', href: '#' },
+        { text: 'Languages', href: '#' },
+        { text: 'International Benchmark Test', href: '#' },
+        { text: 'FLOWW NEW', href: '#' },
+        { text: 'Learning Garages NEW', href: '#' },
       ]
     },
     {
       title: 'Admissions',
       links: [
-        { text: 'How to Register', href: '/apply-now' },
-        { text: 'Who Should Register', href: '/who-should-register' },
+        { text: 'How to Register?', href: '/apply-now' },
+        { text: 'Who Should Register?', href: '/who-should-register' },
         { text: 'Batch Timings', href: '/batch-timings' },
-        { text: 'Essential And Process Requirements', href: '/essential-requirements' },
+        { text: 'Essential Requirements', href: '/essential-requirements' },
         { text: 'Fees', href: '/fees' },
       ]
     },
@@ -96,21 +105,23 @@ function Navigation() {
     {
       title: 'Being 21K',
       links: [
-        { text: 'Student Life', href: '#' },
-        { text: 'Community', href: '#' },
-        { text: 'Achievements', href: '#' },
-        { text: 'Alumni', href: '#' },
-        { text: 'Testimonials', href: '#' },
+        { text: 'Wall of Love', href: '#' },
+        { text: 'Refer A Parent', href: '#' },
+        { text: 'Learner-Led Podcast', href: '#' },
+        { text: 'Student Spotlight', href: '#' },
+        { text: 'Meet Our Academic Crew', href: '#' },
+        { text: 'Learner Work', href: '#' },
+        { text: 'Parents Speak', href: '#' },
+        { text: 'Press', href: '#' },
+        { text: 'Blog', href: '#' },
+        { text: 'Awards', href: '#' },
+        { text: 'Our Learner Council', href: '#' },
       ]
     },
     {
       title: 'Connect',
       links: [
-        { text: 'Contact Us', href: '#' },
-        { text: 'Support', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Events', href: '#' },
-        { text: 'Webinars', href: '#' },
+        { text: 'Contact Us', href: '/contact' },
       ]
     }
   ];
@@ -123,135 +134,64 @@ function Navigation() {
             <img 
               src="/src/assets/ydyh (1).webp" 
               alt="Athena AI School Logo" 
-              className="h-35 w-auto" 
-              style={{ filter: 'drop-shadow(4px 4px 16px rgba(255, 255, 255, 1)) drop-shadow(-4px -4px 16px rgba(255, 255, 255, 1)) drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.9))' }}
-              loading="lazy"
-              decoding="async"
-              width="256"
-              height="103"
+              className="h-32 w-auto" 
+              style={{ filter: 'drop-shadow(0px 0px 10px rgba(255, 255, 255, 1)) drop-shadow(-4px -4px 20px rgba(255, 255, 255, 0.9)) drop-shadow(4px 4px 20px rgba(255, 255, 255, 0.9))' }}
             />
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex space-x-6 mr-16">
-          <Link
-            to="/"
-            className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/' ? 'text-blue-600' : ''}`}
-          >
-            <Home size={18} />
-            <span>Home</span>
-          </Link>
-          <Link
-            to="/pathway"
-            className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/pathway' ? 'text-blue-600' : ''}`}
-          >
-            <BookOpen size={18} />
-            <span>Pathway</span>
-          </Link>
-          <Link 
-            to="/follow" 
-            className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/follow' ? 'text-blue-600' : ''}`}
-          >
-            <Heart size={18} />
-            <span>Follow</span>
-          </Link>
-          {/*<Link 
-            to="/learning-garage" 
-            className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/learning-garage' ? 'text-blue-600' : ''}`}
-          >
-            <BookOpen size={18} />
-            <span>Learning Garage</span>
-          </Link>*/}
-          <Link 
-            to="/contact" 
-            className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/contact' ? 'text-blue-600' : ''}`}
-          >
-            <Phone size={18} />
-            <span>Contact</span>
-          </Link>
+        {/* Desktop Navigation - Right Side */}
+        <div className="hidden lg:flex space-x-8 ml-auto">
+          <Link to="/" className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/' ? 'text-blue-600' : ''}`}><Home size={18} /><span>Home</span></Link>
+          <Link to="/pathway" className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/pathway' ? 'text-blue-600' : ''}`}><BookOpen size={18} /><span>Pathway</span></Link>
+          <Link to="/follow" className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/follow' ? 'text-blue-600' : ''}`}><Heart size={18} /><span>Follow</span></Link>
+          <Link to="/contact" className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/contact' ? 'text-blue-600' : ''}`}><Phone size={18} /><span>Contact</span></Link>
         </div>
 
-        {/* Hamburger menu button - visible on all screen sizes */}
-        <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+        {/* Hamburger Toggle */}
+        <div className="lg:static ml-4">
           <button
             onClick={() => {
               setIsOpen(!isOpen);
-              setIsMegaMenuOpen(false); // Close mega menu when opening hamburger menu
+              setIsMegaMenuOpen(false);
             }}
-            className="text-gray-700 focus:outline-none"
+            className="p-2 text-gray-700 focus:outline-none hover:bg-gray-100 rounded-lg transition-colors"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Full Screen / Mobile Menu Overlay */}
       {isOpen && (
-        <div className="absolute top-16 left-0 right-0 bg-white shadow-lg py-4">
-          <div className="container mx-auto px-4">
-            {/* Simple Navigation Links - only visible on mobile */}
-            <div className="lg:hidden flex flex-wrap gap-4 mb-8">
-              <Link
-                to="/"
-                className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/' ? 'text-blue-600' : ''}`}
-                onClick={() => setIsOpen(false)}
-              >
-                <Home size={18} />
-                <span>Home</span>
-              </Link>
-              <Link
-                to="/pathway"
-                className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/pathway' ? 'text-blue-600' : ''}`}
-                onClick={() => setIsOpen(false)}
-              >
-                <BookOpen size={18} />
-                <span>Pathway</span>
-              </Link>
-              <Link 
-                to="/follow" 
-                className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/follow' ? 'text-blue-600' : ''}`}
-                onClick={() => setIsOpen(false)}
-              >
-                <Heart size={18} />
-                <span>Follow</span>
-              </Link>
-              {/*<Link 
-                to="/learning-garage" 
-                className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/learning-garage' ? 'text-blue-600' : ''}`}
-                onClick={() => setIsOpen(false)}
-              >
-                <BookOpen size={18} />
-                <span>Learning Garage</span>
-              </Link>*/}
-              <Link 
-                to="/contact" 
-                className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium py-2 ${location.pathname === '/contact' ? 'text-blue-600' : ''}`}
-                onClick={() => setIsOpen(false)}
-              >
-                <Phone size={18} />
-                <span>Contact</span>
-              </Link>
+        <div className="absolute top-16 left-0 right-0 bg-white shadow-2xl border-t border-gray-100 overflow-y-auto max-h-[calc(100vh-64px)] animate-in slide-in-from-top duration-300">
+          <div className="container mx-auto px-6 py-8">
+            
+            {/* Mobile Only Quick Links */}
+            <div className="lg:hidden grid grid-cols-2 gap-4 mb-8">
+              <Link to="/" className="flex items-center space-x-2 p-3 bg-gray-50 rounded-lg font-medium text-gray-700" onClick={() => setIsOpen(false)}><Home size={18} /><span>Home</span></Link>
+              <Link to="/pathway" className="flex items-center space-x-2 p-3 bg-gray-50 rounded-lg font-medium text-gray-700" onClick={() => setIsOpen(false)}><BookOpen size={18} /><span>Pathway</span></Link>
+              <Link to="/follow" className="flex items-center space-x-2 p-3 bg-gray-50 rounded-lg font-medium text-gray-700" onClick={() => setIsOpen(false)}><Heart size={18} /><span>Follow</span></Link>
+              <Link to="/contact" className="flex items-center space-x-2 p-3 bg-gray-50 rounded-lg font-medium text-gray-700" onClick={() => setIsOpen(false)}><Phone size={18} /><span>Contact</span></Link>
             </div>
 
-            {/* Divider */}
-            <div className="border-t border-gray-200 mb-6"></div>
+            <div className="h-px bg-gray-200 mb-8 lg:hidden"></div>
 
-            {/* Mega Menu Content */}
-            <div className="flex flex-wrap gap-8 overflow-x-auto">
+            {/* Responsive Grid for Mega Content */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-10 gap-x-8">
               {menuItems.map((column, index) => (
-                <div key={index} className="flex-shrink-0">
-                  <h3 className="text-lg font-bold text-blue-900 mb-3 pb-2 relative whitespace-nowrap">
+                <div key={index} className="flex flex-col">
+                  <h3 className="text-sm font-bold uppercase tracking-wider text-blue-900 mb-4 flex items-center">
                     {column.title}
-                    <span className="absolute bottom-0 left-0 w-10 h-0.5 bg-yellow-400"></span>
+                    <span className="ml-2 flex-grow h-px bg-yellow-400/50"></span>
                   </h3>
-                  <ul className="space-y-1">
+                  <ul className="space-y-3">
                     {column.links.map((link, linkIndex) => (
                       <li key={linkIndex}>
                         {link.href.startsWith('/') ? (
                           <Link
                             to={link.href}
-                            className="text-gray-700 hover:text-blue-600 hover:underline transition-colors block py-1 whitespace-nowrap"
+                            className="text-gray-600 hover:text-blue-600 transition-colors text-sm md:text-base block"
                             onClick={() => setIsOpen(false)}
                           >
                             {link.text}
@@ -259,7 +199,7 @@ function Navigation() {
                         ) : (
                           <a
                             href={link.href}
-                            className="text-gray-700 hover:text-blue-600 hover:underline transition-colors block py-1 whitespace-nowrap"
+                            className="text-gray-600 hover:text-blue-600 transition-colors text-sm md:text-base block"
                             onClick={() => setIsOpen(false)}
                           >
                             {link.text}
@@ -271,47 +211,9 @@ function Navigation() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      )}
-
-      {/* Mega Menu */}
-      {isMegaMenuOpen && (
-        <div className="mega-menu-container absolute top-full left-0 right-0 bg-white shadow-lg z-40 py-8">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-7 gap-8">
-              {menuItems.map((column, index) => (
-                <div key={index}>
-                  <h3 className="text-lg font-bold text-blue-900 mb-4 pb-2 relative">
-                    {column.title}
-                    <span className="absolute bottom-0 left-0 w-10 h-0.5 bg-yellow-400"></span>
-                  </h3>
-                  <ul className="space-y-2">
-                    {column.links.map((link, linkIndex) => (
-                      <li key={linkIndex}>
-                        {link.href.startsWith('/') ? (
-                          <Link
-                            to={link.href}
-                            className="text-gray-700 hover:text-blue-600 hover:underline transition-colors block py-1"
-                            onClick={() => setIsMegaMenuOpen(false)}
-                          >
-                            {link.text}
-                          </Link>
-                        ) : (
-                          <a
-                            href={link.href}
-                            className="text-gray-700 hover:text-blue-600 hover:underline transition-colors block py-1"
-                            onClick={() => setIsMegaMenuOpen(false)}
-                          >
-                            {link.text}
-                          </a>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+            
+            {/* Bottom Padding for mobile thumb reach */}
+            <div className="h-20 lg:hidden"></div>
           </div>
         </div>
       )}
