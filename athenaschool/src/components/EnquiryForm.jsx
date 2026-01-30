@@ -25,7 +25,7 @@ function EnquiryForm() {
   };
 
   return (
-    <div className="w-[360px] bg-transparent border-0 rounded-lg shadow-none overflow-hidden pt-40">
+    <div className="w-full max-w-[360px] bg-transparent border-0 rounded-lg shadow-none overflow-hidden pt-40">
       {/* Header */}
       <div className="bg-blue-600 py-3">
         <h3 className="text-white text-center font-semibold">Leap ahead with AI School</h3>
