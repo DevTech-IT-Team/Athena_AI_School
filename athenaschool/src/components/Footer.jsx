@@ -9,7 +9,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
             <div className="flex items-center mb-4">
-              <img src={logo} alt="AI School Logo" className="h-60 w-100 mr-10" />
+              <img src={logo} alt="AI School Logo" className="h-48 w-auto object-contain" />
             </div>
             <p className="text-gray-600 mb-6">India's Most Advanced AI-Powered Online School</p>
             <div className="flex space-x-4 mb-6">
