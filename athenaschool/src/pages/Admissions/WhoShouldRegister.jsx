@@ -32,9 +32,9 @@ function WhoShouldRegister() {
         <div className="max-w-4xl mx-auto mb-12">
           <div className="bg-white rounded-xl shadow-lg p-8">
             <p className="text-lg text-gray-700 leading-relaxed">
-              At 21K School, we understand that traditional schooling methodologies may not suit every learner. 
+              At Athena AI School, we understand that traditional schooling methodologies may not suit every learner. 
               Our flexible, personalised model is ideal for families seeking a different approach to education. 
-              Here's how 21K School meets the needs of various types of learners, organized into key categories:
+              Here's how Athena AI School meets the needs of various types of learners, organized into key categories:
             </p>
           </div>
         </div>

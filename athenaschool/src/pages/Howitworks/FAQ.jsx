@@ -14,22 +14,22 @@ export default function FAQ() {
 
   const categories = {
     about: {
-      title: 'About 21K School',
+      title: 'About Athena AI School',
       questions: [
-        'Is 21K School recognised/affiliated?',
-        'Will 21K provide the marksheet and Transfer Certificate?',
-        'What does 21K stand for?',
-        'How does 21K School compare with physical schools?',
-        'Is 21K School only for Homeschooling?',
-        'My physical School also conducts online classes. How is 21K different?',
-        'Is 21K School a Minority School?',
-        'Is 21K School open for everyone irrespective of religion, caste, creed or ethnicity?',
+        'Is Athena AI School recognised/affiliated?',
+        'Will Athena AI provide the marksheet and Transfer Certificate?',
+        'What does Athena AI stand for?',
+        'How does Athena AI School compare with physical schools?',
+        'Is Athena AI School only for Homeschooling?',
+        'My physical School also conducts online classes. How is Athena AI different?',
+        'Is Athena AI School a Minority School?',
+        'Is Athena AI School open for everyone irrespective of religion, caste, creed or ethnicity?',
         'Is this an Indian Organization?',
-        'Who leads 21K School?',
-        'What is the purpose of 21K School',
-        'who is the founder of 21K School',
-        'What is the "New Dawn", 21K\'s new brand identity?',
-        'What is the intent behind the new tagline, "21K School - Where Every Learner Finds Their Path,"'
+        'Who leads Athena AI School?',
+        'What is the purpose of Athena AI School',
+        'who is the founder of Athena AI School',
+        'What is the "New Dawn", Athena AI\'s new brand identity?',
+        'What is the intent behind the new tagline, "Athena AI School - Where Every Learner Finds Their Path,"'
       ]
     },
     academics: {
@@ -45,7 +45,7 @@ export default function FAQ() {
         'What are enrichment classes?',
         'What is activity-based and experiential learning? How will it be delivered online?',
         'How much homework will the learners have in a day?',
-        'In school, my child develops several values and life skills. Will 21K be able to do the same?',
+        'In school, my child develops several values and life skills. Will Athena AI be able to do the same?',
         'What about discipline?',
         'What happens if my child is unable to do his homework?',
         'How will examinations be conducted?',
@@ -67,7 +67,7 @@ export default function FAQ() {
         'What is the learner\'s Learning Kit?',
         'When will the parents get the learning kit?',
         'I am worried about loneliness or lack of socialisation',
-        'Is 21K school\'s learning environment secure and safe?',
+        'Is Athena AI school\'s learning environment secure and safe?',
         'Will my data be protected?',
         'Are your facilitators part-time or full-time?',
         'How do you recruit your facilitators? Are all facilitators well-qualified and trained?',
@@ -90,7 +90,7 @@ export default function FAQ() {
         'Do I need a printer at home?',
         'Who will correct worksheets or check the homework?',
         'Will I get a Progress Report Card?',
-        'Will the 21K School celebrate festivals and other important days?',
+        'Will the Athena AI School celebrate festivals and other important days?',
         'Will the School conduct assembly or daily prayers?',
         'Is there a uniform or dress code for live sessions?',
         'Would learners have access to each other\'s contact details or personal information?',
@@ -103,11 +103,11 @@ export default function FAQ() {
     registration: {
       title: 'Registration',
       questions: [
-        'Is 21K open for learners residing outside India?',
+        'Is Athena AI open for learners residing outside India?',
         'Is the fee refundable?',
-        'Is 21K School for me? How do I decide?',
+        'Is Athena AI School for me? How do I decide?',
         'Who Should register?',
-        'I prefer to send my child to a physical school? How can 21K help?',
+        'I prefer to send my child to a physical school? How can Athena AI help?',
         'How can I pay the fees?',
         'How can I register my child?',
         'I have twins. Do I need to register each child separately?',
@@ -115,14 +115,14 @@ export default function FAQ() {
         'In case I am not satisfied with the Program, how can I discontinue?',
         'Can I register my child in the middle of the academic year?',
         'Can I register only for some subjects?',
-        'What are the positive benefits of schooling through 21K?',
+        'What are the positive benefits of schooling through Athena AI?',
         'Will I be able to seek admission into a traditional school after one year of home-schooling?'
       ]
     },
     miscellaneous: {
       title: 'Miscellaneous',
       questions: [
-        'Does 21K School have a mobile App?',
+        'Does Athena AI School have a mobile App?',
         'What is home-schooling?',
         'Are Online Schools the future?',
         'What is Blended Learning?',
@@ -138,7 +138,7 @@ export default function FAQ() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6">FAQ</h1>
-            <p className="text-xl mb-8">Frequently Asked Questions about 21K School</p>
+            <p className="text-xl mb-8">Frequently Asked Questions about Athena AI School</p>
             <div className="flex flex-wrap gap-4 justify-center">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Enquire Now

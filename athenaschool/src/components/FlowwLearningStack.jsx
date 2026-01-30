@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { BookOpen, Calculator, LineChart, Star, Zap, Globe, Award, CheckCircle2 } from 'lucide-react';
+import vitalyImage from '../assets/vitaly-gariev-tP666CeG03o-unsplash.jpg';
+import johnImage from '../assets/john-FlPc9_VocJ4-unsplash.jpg';
+import kimberlyImage from '../assets/kimberly-farmer-lUaaKCUANVI-unsplash.jpg';
 
 const FlowwLearningStack = () => {
   const [activeTab, setActiveTab] = useState('mastery');
@@ -9,7 +12,7 @@ const FlowwLearningStack = () => {
       
       {/* LEFT SIDE: Fixed Checkerboard (Desktop) */}
       <div className="w-full lg:w-1/2 lg:h-screen lg:sticky lg:top-0 grid grid-cols-2 grid-rows-3 overflow-hidden">
-        <div className="bg-slate-100"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Learning" className="object-cover w-full h-full grayscale" /></div>
+        <div className="bg-slate-100"><img src={vitalyImage} alt="Learning" className="object-cover w-full h-full grayscale" /></div>
         <div className="bg-blue-300 p-6 flex flex-col justify-center border-b border-white">
           <BookOpen className="mb-2 w-6 h-6 text-blue-600" />
           <h3 className="font-bold text-lg">Academic Excellence</h3>
@@ -18,8 +21,8 @@ const FlowwLearningStack = () => {
           <Calculator className="mb-2 w-6 h-6 text-blue-600" />
           <h3 className="font-bold text-lg">Cognitive Logic</h3>
         </div>
-        <div className="bg-slate-100"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="Math" className="object-cover w-full h-full grayscale" /></div>
-        <div className="bg-slate-100"><img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=600&q=80" alt="Habits" className="object-cover w-full h-full grayscale" /></div>
+        <div className="bg-slate-100"><img src={johnImage} alt="Math" className="object-cover w-full h-full grayscale" /></div>
+        <div className="bg-slate-100"><img src={kimberlyImage} alt="Habits" className="object-cover w-full h-full grayscale" /></div>
         <div className="bg-blue-300 p-6 flex flex-col justify-center">
           <Star className="mb-2 w-6 h-6 text-blue-600" />
           <h3 className="font-bold text-lg">Future Habits</h3>

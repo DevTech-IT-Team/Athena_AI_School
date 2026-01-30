@@ -1,4 +1,5 @@
 import React from 'react';
+import alesiaImage from '../assets/alesia-kazantceva-VWcPlbHglYc-unsplash.jpg';
 
 const HeroSection = ({ hero }) => {
   return (
@@ -7,7 +8,7 @@ const HeroSection = ({ hero }) => {
       {/* 1. Background Image Layer */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+          src={alesiaImage} 
           alt="Education Background" 
           className="w-full h-full object-cover opacity-60"
         />

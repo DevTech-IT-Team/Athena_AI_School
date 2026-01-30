@@ -177,7 +177,7 @@ function Fees() {
             <div className="flex items-center gap-3 mb-3">
               <div className="text-2xl">🏫</div>
               <div>
-                <h3 className="font-bold text-lg">21K School</h3>
+                <h3 className="font-bold text-lg">Athena AI School</h3>
                 <p className="text-sm text-gray-600">Indian Curriculum</p>
               </div>
             </div>
@@ -186,7 +186,7 @@ function Fees() {
             <div className="flex items-center gap-3 mb-3">
               <div className="text-2xl">📖</div>
               <div>
-                <h3 className="font-bold text-lg">21K Learning</h3>
+                <h3 className="font-bold text-lg">Athena AI Learning</h3>
                 <p className="text-sm text-gray-600">British Curriculum</p>
               </div>
             </div>

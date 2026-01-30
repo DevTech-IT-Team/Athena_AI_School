@@ -1,5 +1,8 @@
 import React from 'react';
 import { BookOpen, Laptop, Lightbulb } from 'lucide-react';
+import johnImage from '../assets/john-FlPc9_VocJ4-unsplash.jpg';
+import brookeImage from '../assets/brooke-cagle--uHVRvDr7pg-unsplash.jpg';
+import element5Image from '../assets/element5-digital-OyCl7Y4y0Bk-unsplash.jpg';
 
 const BlogCards = () => {
   // Demo Data for Online School
@@ -9,7 +12,7 @@ const BlogCards = () => {
       title: "The Future of Online Education",
       subtitle: "Trends • 5 min read",
       description: "Exploring how technology transforms learning experiences",
-      imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      imageUrl: johnImage,
       icon: <Laptop size={32} className="text-blue-600" />,
     },
     {
@@ -17,7 +20,7 @@ const BlogCards = () => {
       title: "Balancing Screen Time in Digital Learning",
       subtitle: "Wellness • 4 min read",
       description: "Strategies for healthy learning habits",
-      imageUrl: "https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      imageUrl: brookeImage,
       icon: <BookOpen size={32} className="text-blue-600" />,
     },
     {
@@ -25,7 +28,7 @@ const BlogCards = () => {
       title: "Parent's Guide to Choosing Curriculum",
       subtitle: "Guidance • 6 min read",
       description: "Indian vs International curriculum comparison",
-      imageUrl: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      imageUrl: element5Image,
       icon: <Lightbulb size={32} className="text-blue-600" />,
     }
   ];

@@ -69,7 +69,7 @@ export default function ApplyNow() {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-4 text-blue-950">Step-by-Step Registration Process</h2>
             <p className="text-center text-blue-700 mb-12 max-w-3xl mx-auto">
-              Our registration process is designed to make joining 21K School seamless and exciting for both learners and parents.
+              Our registration process is designed to make joining Athena AI School seamless and exciting for both learners and parents.
             </p>
 
             <div className="space-y-8">
@@ -135,9 +135,9 @@ export default function ApplyNow() {
                   5
                 </div>
                 <div className="flex-grow">
-                  <h3 className="text-xl font-semibold mb-2 text-blue-900">Setting Up the 21K Learning Platform</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-blue-900">Setting Up the Athena AI Learning Platform</h3>
                   <p className="text-blue-700">
-                    After payment, set up your personalised 21K Learning Platform, designed to make learning 
+                    After payment, set up your personalised Athena AI Learning Platform, designed to make learning 
                     engaging, interactive, and easily accessible.
                   </p>
                 </div>
@@ -165,7 +165,7 @@ export default function ApplyNow() {
                 <div className="flex-grow">
                   <h3 className="text-xl font-semibold mb-2 text-blue-900">Get Started!</h3>
                   <p className="text-blue-700">
-                    Your child is now ready to embark on their educational journey with 21K School. Happy learning!
+                    Your child is now ready to embark on their educational journey with Athena AI School. Happy learning!
                   </p>
                 </div>
               </div>

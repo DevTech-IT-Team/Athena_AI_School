@@ -2,6 +2,7 @@ import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import FlowwLanding from './FlowwLanding';
 import FlowwCTA from './FlowwCTA';
+import jonathanImage from '../assets/jonathan-klok-JS8RhWVk74Q-unsplash.jpg';
 
 const FlowwTemplate = () => {
   const programs = [
@@ -67,7 +68,7 @@ const FlowwTemplate = () => {
           <div className="flex-1 p-8">
             <div className="relative h-full min-h-[300px] w-full bg-blue-100 overflow-hidden shadow-inner">
                <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                src={jonathanImage} 
                 alt="Students learning in modern classroom" 
                 className="w-full h-full object-cover mix-blend-multiply opacity-80"
               />

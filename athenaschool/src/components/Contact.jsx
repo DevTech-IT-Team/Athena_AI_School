@@ -1,5 +1,6 @@
 import React from 'react';
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
+import pawelImage from '../assets/pawel-czerwinski--0xCCPIbl3M-unsplash.jpg';
 
 const Contact = () => {
   return (
@@ -12,7 +13,7 @@ const Contact = () => {
         {/* Top Texture */}
         <div className="absolute top-[-10%] right-[-20%] w-[400px] h-[600px] bg-slate-900 rotate-12 opacity-50 z-0 overflow-hidden border-l-4 border-sky-500">
              <img 
-               src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop" 
+               src={pawelImage} 
                alt="Student Texture" 
                loading="lazy"
                decoding="async"

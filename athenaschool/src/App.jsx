@@ -6,24 +6,24 @@ import Home from './pages/Home';
 
 const About = lazy(() => import('./pages/About'));
 const Programs = lazy(() => import('./components/Programs'));
-const Resources = lazy(() => import('./pages/Resources'));
 const Pathway = lazy(() => import('./pages/Pathway'));
 const Contact = lazy(() => import('./pages/Contact'));
-const ApplyNow = lazy(() => import('./pages/ApplyNow'));
-const WhoShouldRegister = lazy(() => import('./pages/WhoShouldRegister'));
-const BatchTimings = lazy(() => import('./pages/BatchTimings'));
-const EssentialRequirements = lazy(() => import('./pages/EssentialRequirements'));
-const Fees = lazy(() => import('./pages/Fees'));
-const HowItWorks = lazy(() => import('./pages/HowItWorksSimple'));
-const SpecialEducation = lazy(() => import('./pages/SpecialEducation'));
-const Technology = lazy(() => import('./pages/Technology'));
-const Features = lazy(() => import('./pages/Features'));
-const WhyOnlineOnly = lazy(() => import('./pages/WhyOnlineOnly'));
-const FAQ = lazy(() => import('./pages/FAQ'));
+const ApplyNow = lazy(() => import('./pages/Admissions/ApplyNow'));
+const WhoShouldRegister = lazy(() => import('./pages/Admissions/WhoShouldRegister'));
+const BatchTimings = lazy(() => import('./pages/Admissions/BatchTimings'));
+const EssentialRequirements = lazy(() => import('./pages/Admissions/EssentialRequirements'));
+const Fees = lazy(() => import('./pages/Admissions/Fees'));
+const HowItWorks = lazy(() => import('./pages/Howitworks/HowItWorksSimple'));
+const SpecialEducation = lazy(() => import('./pages/Howitworks/SpecialEducation'));
+const Technology = lazy(() => import('./pages/Howitworks/Technology'));
+const Features = lazy(() => import('./pages/Howitworks/Features'));
+const WhyOnlineOnly = lazy(() => import('./pages/Howitworks/WhyOnlineOnly'));
+const FAQ = lazy(() => import('./pages/Howitworks/FAQ'));
+const AffiliationsAccreditation = lazy(() => import('./pages/Howitworks/AffiliationsAccreditation'));
+const Resources = lazy(() => import('./pages/Howitworks/Resources'));
+const ResourcesDownloads = lazy(() => import('./pages/Howitworks/ResourcesDownloads'));
 const Follow = lazy(() => import('./pages/Follow'));
 const LearningGarage = lazy(() => import('./pages/LearningGarage'));
-const AffiliationsAccreditation = lazy(() => import('./pages/AffiliationsAccreditation'));
-const ResourcesDownloads = lazy(() => import('./pages/ResourcesDownloads'));
 
 function ScrollToTopWrapper({ children }) {
   const location = useLocation();
