@@ -1,5 +1,6 @@
 import React from 'react';
 import { Monitor, Clock, Globe } from 'lucide-react';
+import josephImage from '../assets/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg';
 
 const AthenaFeatureSection = () => {
   const features = [
@@ -45,7 +46,7 @@ const AthenaFeatureSection = () => {
         {/* Floating Image Card */}
         <div className="relative z-10 w-96 h-[28rem] lg:absolute lg:top-1/2 lg:right-[-100px] lg:transform lg:-translate-y-1/2 shadow-2xl rounded-lg overflow-hidden border-4 border-white/10 group">
           <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            src={josephImage} 
             alt="Online Education" 
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />

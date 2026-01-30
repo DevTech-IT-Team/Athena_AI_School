@@ -6,7 +6,7 @@ export default function Features() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6">Features</h1>
-            <p className="text-xl mb-8">A day in the life of 21K School+ Stride - American Curriculum student</p>
+            <p className="text-xl mb-8">A day in the life of Athena AI School+ Stride - American Curriculum student</p>
             <div className="flex flex-wrap gap-4 justify-center">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Enquire Now
@@ -36,7 +36,7 @@ export default function Features() {
           {/* Introduction */}
           <div className="text-center mb-16">
             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              21K School will conduct the classes online along with the following elements of the online program. All these activities / features will be online on our learning platform.
+              Athena AI School will conduct the classes online along with the following elements of the online program. All these activities / features will be online on our learning platform.
             </p>
           </div>
 
@@ -163,9 +163,9 @@ export default function Features() {
             </div>
           </div>
 
-          {/* #Being21K Section */}
+          {/* #BeingAthenaAI Section */}
           <div className="bg-gray-100 rounded-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">#Being21K</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">#BeingAthenaAI</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
                 <div className="bg-blue-100 rounded-lg p-4 mb-4">
@@ -174,7 +174,7 @@ export default function Features() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold mb-2">We enjoy learning even after classes</h3>
-                <p className="text-gray-600 text-sm mb-2">#Being21K</p>
+                <p className="text-gray-600 text-sm mb-2">#BeingAthenaAI</p>
                 <p className="text-gray-500 text-sm">Extended learning opportunities beyond regular class hours</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
@@ -184,7 +184,7 @@ export default function Features() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Learning a new language always fun</h3>
-                <p className="text-gray-600 text-sm mb-2">#Being21K</p>
+                <p className="text-gray-600 text-sm mb-2">#BeingAthenaAI</p>
                     <p className="text-gray-500 text-sm">Interactive language learning sessions</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
@@ -194,7 +194,7 @@ export default function Features() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Our orators brought out their A game</h3>
-                <p className="text-gray-600 text-sm mb-2">#Being21K</p>
+                <p className="text-gray-600 text-sm mb-2">#BeingAthenaAI</p>
                 <p className="text-gray-500 text-sm">Public speaking and debate activities</p>
               </div>
             </div>
@@ -280,7 +280,7 @@ export default function Features() {
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-blue-100 to-blue-200 text-gray-800 rounded-xl p-12 text-center">
             <h2 className="text-3xl font-bold mb-4">Experience the future of online education</h2>
-            <p className="text-lg mb-8">Join 21K School and discover a world of interactive learning possibilities</p>
+            <p className="text-lg mb-8">Join Athena AI School and discover a world of interactive learning possibilities</p>
             <div className="flex flex-wrap gap-4 justify-center">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Enquire Now

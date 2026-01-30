@@ -18,7 +18,7 @@ function EnquireTab() {
   return (
     <>
       <div 
-        className="fixed right-0 top-1/2 transform -translate-y-1/2 z-50 md:block hidden"
+        className="fixed right-0 top-1/2 transform -translate-y-1/2 z-50"
       >
         <div 
           className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-12 px-2 rounded-l-lg cursor-pointer hover:opacity-95 transition-opacity shadow-lg"
@@ -35,9 +35,9 @@ function EnquireTab() {
       
       {/* Slide-out Panel */}
       <div 
-        className={`fixed top-0 right-0 h-full w-[380px] bg-transparent shadow-none z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-[85vw] max-w-[380px] bg-transparent shadow-none z-50 transform transition-transform duration-300 ease-in-out ${
           isPanelOpen ? 'translate-x-0' : 'translate-x-full'
-        } md:block hidden`}
+        }`}
       >
         <div className="h-full flex flex-col bg-transparent">
           <div className="flex p-2 bg-transparent">

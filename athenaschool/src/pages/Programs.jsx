@@ -1,5 +1,5 @@
 import CourseFinder from '../components/CourseFinder';
-import FeeCalculator from '../components/FeeCalculator';
+import FeeCalculator from '../pages/Admissions/FeeCalculator';
 import AdmissionTracker from '../components/AdmissionTracker';
 
 function Programs() {

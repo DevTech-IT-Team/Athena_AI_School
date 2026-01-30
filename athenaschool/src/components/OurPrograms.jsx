@@ -1,5 +1,6 @@
 import React from 'react';
 import { Globe, BookOpen, BrainCircuit, Wrench, ChevronRight } from 'lucide-react';
+import priscillaImage from '../assets/priscilla-du-preez-XkKCui44iM0-unsplash.jpg';
 
 const ProgramCard = ({ title, subtitle, features, icon: Icon }) => {
   return (
@@ -130,7 +131,7 @@ const OurPrograms = () => {
           <div className="relative w-full lg:w-1/2 h-64 lg:h-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-950 to-transparent z-10 lg:w-32"></div>
             <img 
-              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              src={priscillaImage} 
               alt="Student studying with laptop" 
               className="w-full h-full object-cover object-center opacity-80"
             />
