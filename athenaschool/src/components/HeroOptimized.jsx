@@ -1,18 +1,30 @@
-import React, { memo } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 import { Brain, Settings, Target, Headset, MessageCircleQuestion } from 'lucide-react';
-import heroImage from '../assets/gemini.webp (2).webp';
 
 const Hero = memo(() => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageSrc, setImageSrc] = useState(null);
+
+  useEffect(() => {
+    // Use a smaller, optimized version for initial load
+    const smallImage = new Image();
+    smallImage.src = '/src/assets/gemini.webp%20(2).webp';
+    smallImage.onload = () => {
+      setImageSrc(smallImage.src);
+      setImageLoaded(true);
+    };
+  }, []);
+
   return (
     <section className="relative w-full min-h-screen bg-gradient-to-br from-blue-50 to-white overflow-hidden flex items-center justify-center font-sans" style={{ contain: 'layout style paint' }}>
-
-      {/* --- Background Effects (Simplified) --- */}
+      
+      {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-950/3 via-blue-900/3 to-black/3 z-0"></div>
       
-      {/* --- Main Content Container --- */}
+      {/* Main Content Container */}
       <div className="container mx-auto px-6 py-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
 
-        {/* --- Left Column: Text --- */}
+        {/* Left Column: Text */}
         <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-blue-950 tracking-tight drop-shadow-lg ml-4 lg:ml-8">
             Athena AI School
@@ -41,24 +53,31 @@ const Hero = memo(() => {
           </div>
         </div>
 
-        {/* --- Right Column: Robot & Icons --- */}
+        {/* Right Column: Robot & Icons */}
         <div className="relative flex justify-center items-center">
           {/* The Glowing Rings Background */}
           <div className="absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] border border-blue-950/5 rounded-full"></div>
           <div className="absolute w-[150px] h-[150px] md:w-[250px] md:h-[250px] border border-blue-950/10 rounded-full"></div>
           
-          {/* Main Gemini Image */}
-          <img 
-            src={heroImage} 
-            alt="Athena AI School" 
-            className="relative z-10 w-full max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-            style={{ objectFit: 'contain', maxWidth: '100%', height: 'auto' }}
-          />
+          {/* Main Gemini Image with optimized loading */}
+          <div className="relative z-10 w-full max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl">
+            {!imageLoaded && (
+              <div className="w-full h-64 md:h-80 lg:h-96 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg animate-pulse"></div>
+            )}
+            {imageSrc && (
+              <img 
+                src={imageSrc} 
+                alt="Athena AI School" 
+                className="w-full h-auto object-contain transition-opacity duration-300"
+                style={{ opacity: imageLoaded ? 1 : 0 }}
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+              />
+            )}
+          </div>
 
-          {/* Floating Icons - Restored all 5 icons */}
+          {/* Floating Icons - Optimized with reduced animations */}
           <div className="absolute top-10 left-10 w-10 h-10 md:w-12 md:h-12 bg-blue-950/5 border border-blue-950/20 rounded-full flex items-center justify-center text-blue-950 z-20">
             <Brain size={20} />
           </div>

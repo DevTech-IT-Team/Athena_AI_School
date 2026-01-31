@@ -1,7 +1,7 @@
 import React, { Suspense, lazy, useEffect, useRef, useState } from 'react';
 
-// Only critical components imported directly
-const Hero = lazy(() => import('../components/Hero'));
+// Critical above-fold components imported directly
+import Hero from '../components/HeroOptimized';
 const Stats = lazy(() => import('../components/Stats'));
 
 // Everything else lazy loaded
@@ -9,10 +9,10 @@ const Features = lazy(() => import('../components/Features'));
 const Testimonials = lazy(() => import('../components/Testimonials'));
 const CTA = lazy(() => import('../components/CTA'));
 const Contact = lazy(() => import('../components/Contact'));
-const EnquireTab = lazy(() => import('../components/EnquireTab'));
 const OurPrograms = lazy(() => import('../components/OurPrograms'));
 const CurriculumOverview = lazy(() => import('../components/CurriculumOverview'));
 const AcademicCrew = lazy(() => import('../components/AcademicCrew'));
+const StudentSpotlight = lazy(() => import('../components/StudentSpotlight'));
 
 const SectionFallback = ({ label }) => (
   <div className="py-12 text-center text-sm text-gray-500" aria-label={`Loading ${label}`}>
@@ -55,39 +55,20 @@ const LazySection = ({ children, label, placeholderHeight = 360 }) => {
 };
 
 function Home() {
-  const [showAboveFold, setShowAboveFold] = useState(false);
-
-  useEffect(() => {
-    const aboveFoldTimer = setTimeout(() => setShowAboveFold(true), 100);
-    return () => clearTimeout(aboveFoldTimer);
-  }, []);
-
   return (
     <div className="min-h-screen bg-white">
-      <Suspense fallback={null}>
-        <EnquireTab />
-      </Suspense>
-
-      <Suspense fallback={
-        <div className="w-full h-screen bg-white flex items-center justify-center">
-          <div className="text-gray-400">Loading...</div>
-        </div>
-      }>
-        <Hero />
-      </Suspense>
+      <Hero />
       
-      {/* Stats Section - Critical for above fold */}
-      {showAboveFold && (
+      {/* Stats Section - Load immediately */}
+      <div className="py-12 bg-white relative z-10">
         <Suspense fallback={
           <div className="py-12 bg-white flex items-center justify-center">
             <div className="text-gray-400">Loading stats...</div>
           </div>
         }>
-          <div className="py-12 bg-white relative z-10">
-            <Stats />
-          </div>
+          <Stats />
         </Suspense>
-      )}
+      </div>
       
       {/* Our Programs Section */}
       <LazySection label="our programs" placeholderHeight={500}>
@@ -102,6 +83,13 @@ function Home() {
           <div className="py-12 bg-white relative z-10">
             <Features />
           </div>
+        </Suspense>
+      </LazySection>
+      
+      {/* Student Spotlight Section */}
+      <LazySection label="outstanding students" placeholderHeight={600}>
+        <Suspense fallback={<SectionFallback label="outstanding students" />}>
+          <StudentSpotlight />
         </Suspense>
       </LazySection>
       

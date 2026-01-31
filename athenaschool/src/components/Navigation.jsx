@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, User, BookOpen, Award, Users, Phone, Heart } from 'lucide-react';
 
-function Navigation() {
+const Navigation = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -17,6 +17,11 @@ function Navigation() {
       document.body.style.overflow = 'unset';
     }
   }, [isOpen]);
+
+  // Optimize scroll handler with throttling
+  const handleScroll = useCallback(() => {
+    setScrolled(window.scrollY > 50);
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 0);
@@ -35,15 +40,21 @@ function Navigation() {
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+    let timeoutId;
+    const throttledHandleScroll = () => {
+      if (timeoutId) return;
+      timeoutId = setTimeout(() => {
+        handleScroll();
+        timeoutId = null;
+      }, 16); // ~60fps
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', throttledHandleScroll, { passive: true });
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', throttledHandleScroll);
+      if (timeoutId) clearTimeout(timeoutId);
     };
-  }, []);
+  }, [handleScroll]);
 
   const menuItems = [
     {
@@ -127,7 +138,7 @@ function Navigation() {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'} z-50 h-16 flex items-center px-4 md:px-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}`}>
+    <nav className={`fixed top-0 left-0 right-0 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'} z-50 h-16 flex items-center px-4 md:px-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}`} style={{ contain: 'layout style' }}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
@@ -219,6 +230,6 @@ function Navigation() {
       )}
     </nav>
   );
-}
+});
 
 export default Navigation;

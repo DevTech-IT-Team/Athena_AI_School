@@ -9,7 +9,7 @@ export default defineConfig({
     tailwindcss(),
     visualizer({
       filename: "dist/stats.html",
-      open: true,
+      open: false,
       gzipSize: true,
     }),
     {
@@ -27,8 +27,29 @@ export default defineConfig({
     cssCodeSplit: true,
     minify: 'terser',
     sourcemap: false,
+    chunkSizeWarningLimit: 1000,
+    target: 'esnext',
     rollupOptions: {
+      treeshake: {
+        moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        unknownGlobalSideEffects: false,
+      },
       output: {
+        manualChunks: (id) => {
+          if (id.includes('react') || id.includes('react-dom')) {
+            return 'vendor-react';
+          }
+          if (id.includes('react-router-dom')) {
+            return 'vendor-router';
+          }
+          if (id.includes('lucide-react')) {
+            return 'vendor-icons';
+          }
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        },
         assetFileNames: (assetInfo) => {
           if (!assetInfo.name) return 'assets/[name]-[hash][extname]';
           
@@ -49,10 +70,13 @@ export default defineConfig({
         entryFileNames: 'assets/js/[name]-[hash].js',
         manualChunks: (id) => {
           if (id.includes('react') || id.includes('react-dom')) {
-            return 'vendor';
+            return 'vendor-react';
+          }
+          if (id.includes('react-router-dom')) {
+            return 'vendor-router';
           }
           if (id.includes('lucide-react')) {
-            return 'ui';
+            return 'vendor-icons';
           }
           if (id.includes('node_modules')) {
             return 'vendor';
@@ -79,5 +103,11 @@ export default defineConfig({
     fs: {
       strict: true,
     },
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+  },
+  define: {
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
   },
 });
