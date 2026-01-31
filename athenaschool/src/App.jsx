@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, Suspense, lazy } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import EnquireTab from './components/EnquireTab';
 import Home from './pages/Home';
 import ErrorBoundary from './components/ErrorBoundary';
 
@@ -67,6 +68,7 @@ function App() {
           </Routes>
         </Suspense>
         <Footer />
+        <EnquireTab />
       </div>
     </ErrorBoundary>
   );

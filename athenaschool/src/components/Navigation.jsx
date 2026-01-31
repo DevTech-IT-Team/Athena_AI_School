@@ -1,6 +1,7 @@
 import { useState, useEffect, memo, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, User, BookOpen, Award, Users, Phone, Heart } from 'lucide-react';
+import logo from '../assets/ydyh (1).webp';
 
 const Navigation = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
@@ -142,11 +143,14 @@ const Navigation = memo(() => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
-            <img 
-              src="/src/assets/ydyh (1).webp" 
-              alt="Athena AI School Logo" 
-              className="h-32 w-auto" 
-              style={{ filter: 'drop-shadow(0px 0px 10px rgba(255, 255, 255, 1)) drop-shadow(-4px -4px 20px rgba(255, 255, 255, 0.9)) drop-shadow(4px 4px 20px rgba(255, 255, 255, 0.9))' }}
+            <img
+              src={logo}
+              alt="Athena AI School Logo"
+              className="h-16 md:h-20 w-auto"
+              width={200}
+              height={80}
+              loading="eager"
+              decoding="async"
             />
           </Link>
         </div>

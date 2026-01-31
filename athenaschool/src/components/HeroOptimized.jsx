@@ -1,19 +1,9 @@
-import React, { memo, useState, useEffect } from 'react';
+import React, { memo } from 'react';
 import { Brain, Settings, Target, Headset, MessageCircleQuestion } from 'lucide-react';
+import OptimizedImage from './OptimizedImage';
+import heroImage from '../assets/gemini.webp (2).webp';
 
 const Hero = memo(() => {
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageSrc, setImageSrc] = useState(null);
-
-  useEffect(() => {
-    // Use a smaller, optimized version for initial load
-    const smallImage = new Image();
-    smallImage.src = '/src/assets/gemini.webp%20(2).webp';
-    smallImage.onload = () => {
-      setImageSrc(smallImage.src);
-      setImageLoaded(true);
-    };
-  }, []);
 
   return (
     <section className="relative w-full min-h-screen bg-gradient-to-br from-blue-50 to-white overflow-hidden flex items-center justify-center font-sans" style={{ contain: 'layout style paint' }}>
@@ -61,20 +51,17 @@ const Hero = memo(() => {
           
           {/* Main Gemini Image with optimized loading */}
           <div className="relative z-10 w-full max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl">
-            {!imageLoaded && (
-              <div className="w-full h-64 md:h-80 lg:h-96 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg animate-pulse"></div>
-            )}
-            {imageSrc && (
-              <img 
-                src={imageSrc} 
-                alt="Athena AI School" 
-                className="w-full h-auto object-contain transition-opacity duration-300"
-                style={{ opacity: imageLoaded ? 1 : 0 }}
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-              />
-            )}
+            <OptimizedImage
+              src={heroImage}
+              alt="Athena AI School"
+              width={960}
+              height={960}
+              priority
+              fetchpriority="high"
+              loading="eager"
+              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 55vw, 45vw"
+              className="w-full h-auto object-contain"
+            />
           </div>
 
           {/* Floating Icons - Optimized with reduced animations */}

@@ -29,10 +29,6 @@
   <title>Athena AI Online School</title>
   <meta name="description" content="Personalized online schooling designed for the modern learner. Experience education tailored to your child's unique needs, interests, and learning style." />
   
-  <!-- Preload critical resources -->
-  <link rel="preload" href="/src/assets/gemini.webp%20(2).webp" as="image" fetchpriority="high">
-  <link rel="modulepreload" href="/src/main.jsx">
-  
   <!-- Critical JavaScript for performance optimization -->
   <script>
     // Critical inline JavaScript to prevent render-blocking
@@ -45,23 +41,6 @@
           document.fonts.load('800 1em -apple-system')
         ]).then(function() {
           document.documentElement.classList.add('fonts-loaded');
-        });
-      }
-      
-      // Preload critical resources when idle
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(function() {
-          const resources = [
-            '/src/components/Stats.jsx',
-            '/src/components/Features.jsx'
-          ];
-          
-          resources.forEach(resource => {
-            const link = document.createElement('link');
-            link.rel = 'prefetch';
-            link.href = resource;
-            document.head.appendChild(link);
-          });
         });
       }
     })();
