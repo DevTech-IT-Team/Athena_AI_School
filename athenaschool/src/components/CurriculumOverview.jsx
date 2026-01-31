@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpenIcon, AcademicCapIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline';
+import { BookOpen, GraduationCap, ClipboardCheck } from 'lucide-react';
 import penImage from '../assets/download.webp';
 import libraryImage from '../assets/Human.webp';
 import statueImage from '../assets/hand.webp';
@@ -93,7 +93,7 @@ const CurriculumOverview = () => {
             {/* Feature 1 - Core Subjects */}
             <div className="flex items-start">
               <div className="flex-shrink-0 p-3 bg-sky-100 rounded-lg mr-4">
-                <BookOpenIcon className="w-6 h-6 text-sky-700" />
+                <BookOpen className="w-6 h-6 text-sky-700" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-blue-950 mb-2">Core Subjects</h3>
@@ -104,7 +104,7 @@ const CurriculumOverview = () => {
             {/* Feature 2 - Foundation Subjects */}
             <div className="flex items-start">
               <div className="flex-shrink-0 p-3 bg-sky-100 rounded-lg mr-4">
-                <AcademicCapIcon className="w-6 h-6 text-sky-700" />
+                <GraduationCap className="w-6 h-6 text-sky-700" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-blue-950 mb-2">Foundation Subjects</h3>
@@ -115,7 +115,7 @@ const CurriculumOverview = () => {
             {/* Feature 3 - Assessment */}
             <div className="flex items-start">
               <div className="flex-shrink-0 p-3 bg-sky-100 rounded-lg mr-4">
-                <ClipboardDocumentCheckIcon className="w-6 h-6 text-sky-700" />
+                <ClipboardCheck className="w-6 h-6 text-sky-700" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-blue-950 mb-2">Assessment Framework</h3>

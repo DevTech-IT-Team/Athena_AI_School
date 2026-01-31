@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, GraduationCap, BookOpen, User, Mail, Phone, ArrowRight } from 'lucide-react';
-import logo from '../assets/vvx (1).webp';
+import logo from '/assets/images/logos/vvx.webp';
 
 function Footer() {
   return (

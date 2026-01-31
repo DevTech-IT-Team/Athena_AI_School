@@ -1,31 +1,71 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Globe, BookOpen, BrainCircuit, Wrench, ChevronRight } from 'lucide-react';
-import priscillaImage from '../assets/priscilla-du-preez-XkKCui44iM0-unsplash.jpg';
+
+const LazyImage = ({ src, alt, className }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const imgRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.01, rootMargin: '50px' }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={imgRef} className={className}>
+      {isInView && (
+        <img
+          src={src}
+          alt={alt}
+          className={`w-full h-full object-cover object-center transition-opacity duration-500 ${isLoaded ? 'opacity-80' : 'opacity-0'}`}
+          onLoad={() => setIsLoaded(true)}
+          loading="lazy"
+        />
+      )}
+      {!isLoaded && (
+        <div className="w-full h-full bg-gradient-to-br from-blue-50 to-blue-100 animate-pulse" />
+      )}
+    </div>
+  );
+};
 
 const ProgramCard = ({ title, subtitle, features, icon: Icon }) => {
   return (
-    <div className="bg-white rounded-xl shadow-lg border border-blue-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full relative overflow-hidden group">
+    <div className="bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full relative overflow-hidden group">
       {/* Top Accent Line */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-blue-300 group-hover:bg-blue-600 transition-colors duration-300"></div>
+      <div className="absolute top-0 left-0 w-full h-0.5 bg-blue-100 group-hover:bg-blue-400 transition-colors duration-300"></div>
       
       {/* Icon & Header */}
-      <div className="p-6 flex flex-col items-center text-center">
-        <div className="w-14 h-14 rounded-full bg-blue-50 text-blue-950 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center mb-4 shadow-sm">
-          <Icon size={28} />
+      <div className="p-5 flex flex-col items-center text-center">
+        <div className="w-12 h-12 rounded-full bg-blue-50 text-blue-900 group-hover:bg-blue-400 group-hover:text-white transition-colors duration-300 flex items-center justify-center mb-3">
+          <Icon size={24} />
         </div>
-        <h3 className="text-lg font-bold text-blue-950 mb-1">{title}</h3>
-        <p className="text-xs text-blue-600 font-semibold uppercase tracking-wider">{subtitle}</p>
+        <h3 className="text-base font-semibold text-blue-900 mb-1">{title}</h3>
+        <p className="text-xs text-blue-600 font-medium uppercase tracking-wide">{subtitle}</p>
       </div>
 
       {/* Divider */}
-      <div className="w-full h-px bg-blue-50"></div>
+      <div className="w-full h-px bg-gray-50"></div>
 
       {/* Features List */}
-      <div className="p-6 pt-4 flex-grow bg-white">
-        <ul className="space-y-2.5">
-          {features.map((feature, index) => (
-            <li key={index} className="flex items-start text-sm text-gray-600 leading-snug">
-              <span className="mr-2 mt-1.5 w-1.5 h-1.5 bg-blue-300 rounded-full flex-shrink-0" />
+      <div className="p-5 pt-3 flex-grow bg-white">
+        <ul className="space-y-1.5">
+          {features.slice(0, 4).map((feature, index) => (
+            <li key={index} className="flex items-start text-xs text-gray-600 leading-tight">
+              <span className="mr-2 mt-1 w-1 h-1 bg-blue-200 rounded-full flex-shrink-0" />
               <span>{feature}</span>
             </li>
           ))}
@@ -33,9 +73,9 @@ const ProgramCard = ({ title, subtitle, features, icon: Icon }) => {
       </div>
       
       {/* Footer / CTA */}
-      <div className="p-4 bg-blue-50 mt-auto text-center">
-        <button className="text-xs font-bold text-blue-950 hover:text-blue-600 flex items-center justify-center gap-1 mx-auto transition-colors">
-          View Details <ChevronRight size={14} />
+      <div className="p-3 bg-gray-50 mt-auto text-center">
+        <button className="text-xs font-medium text-blue-900 hover:text-blue-600 flex items-center justify-center gap-1 mx-auto transition-colors">
+          View Details <ChevronRight size={12} />
         </button>
       </div>
     </div>
@@ -130,13 +170,13 @@ const OurPrograms = () => {
           {/* Right Image Section */}
           <div className="relative w-full lg:w-1/2 h-64 lg:h-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-950 to-transparent z-10 lg:w-32"></div>
-            <img 
-              src={priscillaImage} 
+            <LazyImage 
+              src="/assets/optimized/priscilla-du-preez-XkKCui44iM0-unsplash (1).webp" 
               alt="Student studying with laptop" 
-              className="w-full h-full object-cover object-center opacity-80"
+              className="w-full h-full"
             />
-             {/* Decorative Box matching user's reference style */}
-             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-300/20 rounded-full blur-3xl z-0"></div>
+             {/* Simplified decorative elements */}
+             <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-blue-100/5 rounded-full blur-2xl z-0"></div>
           </div>
         </div>
       </div>
@@ -144,9 +184,9 @@ const OurPrograms = () => {
       {/* CARDS SECTION 
         Overlapping the Hero section slightly for depth
       */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 -mt-16 relative z-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {programs.map((program, index) => (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 -mt-12 relative z-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {programs.slice(0, 4).map((program, index) => (
             <ProgramCard 
               key={index}
               {...program}

@@ -1,5 +1,5 @@
 import React from 'react';
-import alesiaImage from '../assets/alesia-kazantceva-VWcPlbHglYc-unsplash.jpg';
+import alesiaImage from '../assets/optimized/alesia-kazantceva-VWcPlbHglYc-unsplash.webp';
 
 const PhilosophySection = () => {
   const content = {

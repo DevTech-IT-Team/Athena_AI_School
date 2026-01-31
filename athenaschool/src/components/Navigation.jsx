@@ -51,7 +51,7 @@ function Navigation() {
       links: [
         { text: 'What sets us apart?', href: '#' },
         { text: 'Values & Ethos', href: '#' },
-        { text: '21K Group', href: '#' },
+        { text: 'Athena AI Group', href: '#' },
         { text: 'Our Leaders', href: '#' },
         { text: 'Habits of Mind', href: '#' },
       ]
@@ -103,7 +103,7 @@ function Navigation() {
       ]
     },
     {
-      title: 'Being 21K',
+      title: 'Being Athena AI',
       links: [
         { text: 'Wall of Love', href: '#' },
         { text: 'Refer A Parent', href: '#' },

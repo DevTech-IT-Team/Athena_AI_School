@@ -1,6 +1,6 @@
 import React from 'react';
 import { GraduationCap, Globe, ShieldCheck, Users } from 'lucide-react';
-import robotScene from '../assets/cartoon-ai-robot-scene (2).webp';
+import robotScene from '../assets/optimized/cartoon-ai-robot-scene (2).webp';
 
 const AffordableAccredited = () => {
   return (

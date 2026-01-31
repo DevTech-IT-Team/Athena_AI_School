@@ -1,9 +1,9 @@
 import React from 'react';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-import headOfEducationImage from '../assets/smiley-businesswoman-posing-city-with-arms-crossed.jpg';
-import seniorMentorImage from '../assets/indian-businessman-with-his-white-car.webp';
-import curriculumDirectorImage from '../assets/portrait-businessman-smiling.webp';
-import studentSuccessLeadImage from '../assets/brunette-business-woman-with-wavy-long-hair-blue-eyes-stands-holding-notebook-hands.webp';
+import { ArrowRight } from 'lucide-react';
+import headOfEducationImage from '/assets/images/team/portrait-businessman.webp';
+import seniorMentorImage from '/assets/images/team/indian-businessman.webp';
+import curriculumDirectorImage from '/assets/images/team/portrait-businessman.webp';
+import studentSuccessLeadImage from '/assets/images/team/brunette-businesswoman.webp';
 
 const AcademicCrew = () => {
   return (
@@ -36,7 +36,7 @@ const AcademicCrew = () => {
             {/* CTA Button */}
             <button className="group inline-flex items-center gap-3 px-8 py-4 bg-blue-950 text-white rounded-full font-bold transition-all duration-300 hover:bg-sky-600 hover:shadow-xl hover:shadow-sky-200 hover:-translate-y-1">
               <span>Meet The Crew</span>
-              <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
 

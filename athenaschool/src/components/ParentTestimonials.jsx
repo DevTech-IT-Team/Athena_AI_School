@@ -76,4 +76,4 @@ const ParentTestimonials = () => {
   );
 };
 
-export default ParentTestimonials;
+export default React.memo(ParentTestimonials);

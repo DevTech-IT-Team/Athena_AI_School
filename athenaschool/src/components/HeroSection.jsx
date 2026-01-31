@@ -1,5 +1,6 @@
 import React from 'react';
-import alesiaImage from '../assets/alesia-kazantceva-VWcPlbHglYc-unsplash.jpg';
+import LazyImage from './LazyImage';
+import alesiaImage from '/assets/images/heroes/alesia.webp';
 
 const HeroSection = ({ hero }) => {
   return (
@@ -7,7 +8,7 @@ const HeroSection = ({ hero }) => {
       
       {/* 1. Background Image Layer */}
       <div className="absolute inset-0 z-0">
-        <img 
+        <LazyImage 
           src={alesiaImage} 
           alt="Education Background" 
           className="w-full h-full object-cover opacity-60"
@@ -49,35 +50,22 @@ const HeroSection = ({ hero }) => {
           {/* Main Title */}
           <h1 
             className="text-5xl md:text-7xl font-bold text-blue-950 mb-4 tracking-tight"
-            data-aos="fade-up"
           >
             {hero.title}
           </h1>
 
           {/* Subheading / Tagline */}
-          <h2 
-            className="text-2xl md:text-4xl text-blue-900 font-light mb-8"
-            data-aos="fade-up" 
-            data-aos-delay="100"
-          >
+          <h2 className="text-2xl md:text-4xl text-blue-900 font-light mb-8">
             {hero.schoolName}
           </h2>
 
           {/* Paragraph Text */}
-          <p 
-            className="text-sm md:text-base text-blue-900/80 mb-8 leading-relaxed max-w-lg ml-auto"
-            data-aos="fade-up" 
-            data-aos-delay="200"
-          >
+          <p className="text-sm md:text-base text-blue-900/80 mb-8 leading-relaxed max-w-lg ml-auto">
             {hero.subtitle}
           </p>
 
           {/* The Thick Accent Line */}
-          <div 
-            className="w-24 h-2 bg-blue-950 ml-auto rounded-sm" 
-            data-aos="fade-up" 
-            data-aos-delay="300"
-          ></div>
+          <div className="w-24 h-2 bg-blue-950 ml-auto rounded-sm"></div>
 
         </div>
       </div>
@@ -86,4 +74,4 @@ const HeroSection = ({ hero }) => {
   );
 };
 
-export default HeroSection;
+export default React.memo(HeroSection);
