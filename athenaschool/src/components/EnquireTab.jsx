@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import EnquiryForm from './EnquiryForm';
+import { useState, useEffect, lazy, Suspense } from 'react';
+const EnquiryForm = lazy(() => import('./EnquiryForm'));
 
 function EnquireTab() {
-  const [isPanelOpen, setIsPanelOpen] = useState(true);
+  const [isPanelOpen, setIsPanelOpen] = useState(false);
   
   const togglePanel = () => {
     setIsPanelOpen(!isPanelOpen);
@@ -42,7 +42,9 @@ function EnquireTab() {
         <div className="h-full flex flex-col bg-transparent">
           <div className="flex p-2 bg-transparent">
             <div className="flex items-center justify-center">
-              <EnquiryForm />
+              <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+                <EnquiryForm />
+              </Suspense>
             </div>
           </div>
         </div>

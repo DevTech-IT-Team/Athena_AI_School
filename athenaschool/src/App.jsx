@@ -1,10 +1,11 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, Suspense, lazy } from 'react';
 import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import EnquireTab from './components/EnquireTab';
 import Home from './pages/Home';
 import ErrorBoundary from './components/ErrorBoundary';
+
+const Footer = lazy(() => import('./components/Footer'));
+const EnquireTab = lazy(() => import('./components/EnquireTab'));
 
 const About = lazy(() => import('./pages/About'));
 const Programs = lazy(() => import('./components/Programs'));
@@ -67,8 +68,12 @@ function App() {
             <Route path="/resources-downloads" element={<ScrollToTopWrapper><ResourcesDownloads /></ScrollToTopWrapper>} />
           </Routes>
         </Suspense>
-        <Footer />
-        <EnquireTab />
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
+        <Suspense fallback={null}>
+          <EnquireTab />
+        </Suspense>
       </div>
     </ErrorBoundary>
   );

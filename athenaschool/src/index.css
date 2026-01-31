@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Accessibility: Improve color contrast for WCAG AA compliance */
+:root {
+  --color-gray-500: #525252;
+  --color-gray-600: #3f3f46;
+}
+
 /* Critical CSS for above-the-fold content */
 body {
   margin: 0;

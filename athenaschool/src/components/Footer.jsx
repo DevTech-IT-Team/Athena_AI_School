@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { memo } from 'react';
 import { Facebook, Instagram, Linkedin, GraduationCap, BookOpen, User, Mail, Phone, ArrowRight } from 'lucide-react';
-import logo from '/assets/images/logos/vvx.webp';
+import logo from '/assets/images/logos/vvx-small.webp';
 
 const Footer = memo(() => {
   return (
@@ -36,9 +36,9 @@ const Footer = memo(() => {
             <p className="text-sm text-gray-600"> 2025 AI School. All rights reserved.</p>
           </div>
           <div>
-            <h4 className="font-bold mb-6 text-xl text-gray-900 border-b border-gray-300 pb-2 flex items-center">
+            <h2 className="font-bold mb-6 text-xl text-gray-900 border-b border-gray-300 pb-2 flex items-center">
               <User size={18} className="mr-2" /> About Us
-            </h4>
+            </h2>
             <ul className="space-y-3">
               <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">Our Mission</a></li>
               <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">Leadership</a></li>
@@ -49,9 +49,9 @@ const Footer = memo(() => {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-6 text-xl text-gray-900 border-b border-gray-300 pb-2 flex items-center">
+            <h2 className="font-bold mb-6 text-xl text-gray-900 border-b border-gray-300 pb-2 flex items-center">
               <GraduationCap size={18} className="mr-2" /> Indian Pathway
-            </h4>
+            </h2>
             <ul className="space-y-3">
               <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">Pre Primary</a></li>
               <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">Primary School</a></li>
@@ -60,9 +60,9 @@ const Footer = memo(() => {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-6 text-xl text-gray-900 border-b border-gray-300 pb-2 flex items-center">
+            <h2 className="font-bold mb-6 text-xl text-gray-900 border-b border-gray-300 pb-2 flex items-center">
               <BookOpen size={18} className="mr-2" /> British Pathway
-            </h4>
+            </h2>
             <ul className="space-y-3">
               <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">Early Years</a></li>
               <li><a href="#" className="block text-gray-600 hover:text-black transition-colors duration-300 py-1">British Primary</a></li>

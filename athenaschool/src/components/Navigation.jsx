@@ -1,7 +1,7 @@
 import { useState, useEffect, memo, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, User, BookOpen, Award, Users, Phone, Heart } from 'lucide-react';
-import logo from '../assets/ydyh (1).webp';
+import logo from '../assets/logo-nav.webp';
 
 const Navigation = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
@@ -146,9 +146,9 @@ const Navigation = memo(() => {
             <img
               src={logo}
               alt="Athena AI School Logo"
-              className="h-16 md:h-20 w-auto"
-              width={200}
-              height={80}
+              className="h-24 md:h-32 w-auto"
+              width={320}
+              height={128}
               loading="eager"
               decoding="async"
             />
@@ -171,6 +171,8 @@ const Navigation = memo(() => {
               setIsMegaMenuOpen(false);
             }}
             className="p-2 text-gray-700 focus:outline-none hover:bg-gray-100 rounded-lg transition-colors"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
