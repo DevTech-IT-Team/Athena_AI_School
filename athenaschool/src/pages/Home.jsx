@@ -10,6 +10,9 @@ const Testimonials = lazy(() => import('../components/Testimonials'));
 const CTA = lazy(() => import('../components/CTA'));
 const Contact = lazy(() => import('../components/Contact'));
 const EnquireTab = lazy(() => import('../components/EnquireTab'));
+const OurPrograms = lazy(() => import('../components/OurPrograms'));
+const CurriculumOverview = lazy(() => import('../components/CurriculumOverview'));
+const AcademicCrew = lazy(() => import('../components/AcademicCrew'));
 
 const SectionFallback = ({ label }) => (
   <div className="py-12 text-center text-sm text-gray-500" aria-label={`Loading ${label}`}>
@@ -86,7 +89,14 @@ function Home() {
         </Suspense>
       )}
       
-      {/* Only essential sections for performance */}
+      {/* Our Programs Section */}
+      <LazySection label="our programs" placeholderHeight={500}>
+        <Suspense fallback={<SectionFallback label="our programs" />}>
+          <OurPrograms />
+        </Suspense>
+      </LazySection>
+      
+      {/* Features Section */}
       <LazySection label="features" placeholderHeight={400}>
         <Suspense fallback={<SectionFallback label="features" />}>
           <div className="py-12 bg-white relative z-10">
@@ -95,6 +105,16 @@ function Home() {
         </Suspense>
       </LazySection>
       
+      {/* Curriculum Overview Section */}
+      <LazySection label="curriculum overview" placeholderHeight={400}>
+        <Suspense fallback={<SectionFallback label="curriculum overview" />}>
+          <div className="py-12 bg-white relative z-10">
+            <CurriculumOverview />
+          </div>
+        </Suspense>
+      </LazySection>
+      
+      {/* Testimonials Section */}
       <LazySection label="testimonials" placeholderHeight={400}>
         <Suspense fallback={<SectionFallback label="testimonials" />}>
           <div className="py-12 bg-white relative overflow-hidden">
@@ -103,6 +123,16 @@ function Home() {
         </Suspense>
       </LazySection>
       
+      {/* Academic Crew Section */}
+      <LazySection label="academic crew" placeholderHeight={400}>
+        <Suspense fallback={<SectionFallback label="academic crew" />}>
+          <div className="py-12 bg-white relative z-10">
+            <AcademicCrew />
+          </div>
+        </Suspense>
+      </LazySection>
+      
+      {/* Contact Section */}
       <LazySection label="contact" placeholderHeight={400}>
         <Suspense fallback={<SectionFallback label="contact" />}>
           <div className="bg-white relative z-10">
@@ -111,6 +141,7 @@ function Home() {
         </Suspense>
       </LazySection>
       
+      {/* Call to Action Section */}
       <LazySection label="call to action" placeholderHeight={300}>
         <Suspense fallback={<SectionFallback label="call to action" />}>
           <CTA />
