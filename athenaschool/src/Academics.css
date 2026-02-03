@@ -1,0 +1,503 @@
+/* Academics Page Styles */
+
+.academics-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.academics-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.academics-overlay {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 800px;
+}
+
+.academics-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.academics-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.academics-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 0;
+  opacity: 0.9;
+}
+
+.academics-content {
+  background: white;
+  border-radius: 20px 20px 0 0;
+  margin-top: -50px;
+  position: relative;
+  z-index: 3;
+  padding: 3rem 2rem 4rem;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.academics-breadcrumb {
+  margin-bottom: 2rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.academics-breadcrumb a {
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.academics-breadcrumb a:hover {
+  color: #3b82f6;
+}
+
+.academics-section {
+  margin-bottom: 3rem;
+}
+
+.academics-section h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.academics-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.academics-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.academics-section p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.academics-section ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.academics-section li {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+/* Grid Layouts */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.approach-item {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.approach-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.approach-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.approach-item p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skill-item {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-2px);
+}
+
+.skill-item h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.skill-item p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  text-align: center;
+  padding: 2rem;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-4px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.feature-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 0;
+}
+
+.pathways-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.pathway-item {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.pathway-item:hover {
+  transform: translateY(-4px);
+}
+
+.pathway-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.pathway-item p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+}
+
+/* Tables */
+.program-table {
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.overview-table {
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.subjects-table {
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.academics-section table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.academics-section th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.academics-section td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.academics-section tr:last-child td {
+  border-bottom: none;
+}
+
+.academics-section tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+/* Subjects Grid */
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.subject-item {
+  background: #f3f4f6;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  transition: background-color 0.3s ease;
+}
+
+.subject-item:hover {
+  background: #e5e7eb;
+}
+
+/* Notes Section */
+.notes-section {
+  margin-top: 2rem;
+}
+
+.note-item {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.note-item h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #92400e;
+  margin-bottom: 0.5rem;
+}
+
+.note-item p {
+  font-size: 1rem;
+  color: #78350f;
+  margin-bottom: 0;
+}
+
+/* External Links */
+.external-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.external-link:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Call to Action */
+.academics-cta {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.academics-cta h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: white;
+  color: #667eea;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #f9fafb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  padding: 1rem 2rem;
+  border: 2px solid white;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .academics-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .academics-subtitle {
+    font-size: 1rem;
+  }
+  
+  .academics-content {
+    padding: 2rem 1rem 3rem;
+    margin-top: -30px;
+  }
+  
+  .academics-section h2 {
+    font-size: 1.875rem;
+  }
+  
+  .approach-grid,
+  .skills-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .pathways-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .academics-hero {
+    height: 50vh;
+    min-height: 350px;
+  }
+  
+  .academics-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .academics-content {
+    padding: 1.5rem 1rem 2rem;
+  }
+  
+  .academics-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .academics-section h3 {
+    font-size: 1.25rem;
+  }
+  
+  .academics-section p,
+  .academics-section li {
+    font-size: 1rem;
+  }
+}

@@ -20,7 +20,7 @@ export default function Follow() {
 
   return (
     <div className="min-h-screen">
-      <div className="pt-10 bg-white">
+      <div className="pt-4 bg-white">
         <div ref={registerSection('hero')}>
           <FollowHero />
         </div>
