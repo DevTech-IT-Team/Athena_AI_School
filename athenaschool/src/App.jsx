@@ -3,6 +3,7 @@ import { useEffect, Suspense, lazy } from 'react';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import ErrorBoundary from './components/ErrorBoundary';
+import WallOfLove from './pages/BeingAthena/WallOfLove';
 
 const Footer = lazy(() => import('./components/Footer'));
 const EnquireTab = lazy(() => import('./components/EnquireTab'));
@@ -66,6 +67,7 @@ function App() {
             <Route path="/faq" element={<ScrollToTopWrapper><FAQ /></ScrollToTopWrapper>} />
             <Route path="/affiliations-accreditation" element={<ScrollToTopWrapper><AffiliationsAccreditation /></ScrollToTopWrapper>} />
             <Route path="/resources-downloads" element={<ScrollToTopWrapper><ResourcesDownloads /></ScrollToTopWrapper>} />
+            <Route path="/wall-of-love" element={<ScrollToTopWrapper><WallOfLove/></ScrollToTopWrapper>} />
           </Routes>
         </Suspense>
         <Suspense fallback={null}>

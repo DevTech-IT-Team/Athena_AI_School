@@ -117,7 +117,7 @@ const Navigation = memo(() => {
     {
       title: 'Being Athena AI',
       links: [
-        { text: 'Wall of Love', href: '#' },
+        { text: 'Wall of Love', href: '/wall-of-love' },
         { text: 'Refer A Parent', href: '#' },
         { text: 'Learner-Led Podcast', href: '#' },
         { text: 'Student Spotlight', href: '#' },
