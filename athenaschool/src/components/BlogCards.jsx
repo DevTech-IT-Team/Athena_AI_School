@@ -1,8 +1,9 @@
 import React from 'react';
 import { BookOpen, Laptop, Lightbulb } from 'lucide-react';
-import johnImage from '../assets/john-FlPc9_VocJ4-unsplash.jpg';
-import brookeImage from '../assets/brooke-cagle--uHVRvDr7pg-unsplash.jpg';
-import element5Image from '../assets/element5-digital-OyCl7Y4y0Bk-unsplash.jpg';
+import LazyImage from './LazyImage';
+import johnImage from '/assets/images/heroes/jonathan.webp';
+import brookeImage from '/assets/images/content/brooke.webp';
+import element5Image from '/assets/images/content/3.webp';
 
 const BlogCards = () => {
   // Demo Data for Online School
@@ -59,7 +60,7 @@ const BlogCards = () => {
                 
                 {/* Image Container */}
                 <div className="w-full h-48 rounded-lg overflow-hidden mb-6 transition-transform duration-300 group-hover:scale-105">
-                  <img 
+                  <LazyImage 
                     src={blog.imageUrl} 
                     alt={blog.title}
                     className="w-full h-full object-cover"
@@ -92,4 +93,4 @@ const BlogCards = () => {
   );
 };
 
-export default BlogCards;
+export default React.memo(BlogCards);

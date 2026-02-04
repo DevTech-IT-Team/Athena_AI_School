@@ -1,10 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, User, BookOpen, Award, Users, Phone, Heart } from 'lucide-react';
+import logo from '../assets/ydyh (1).webp';
 
 import logo from '../assets/ydyh.webp';
 
-function Navigation() {
+const Navigation = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -19,6 +20,11 @@ function Navigation() {
       document.body.style.overflow = 'unset';
     }
   }, [isOpen]);
+
+  // Optimize scroll handler with throttling
+  const handleScroll = useCallback(() => {
+    setScrolled(window.scrollY > 50);
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 0);
@@ -37,15 +43,21 @@ function Navigation() {
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+    let timeoutId;
+    const throttledHandleScroll = () => {
+      if (timeoutId) return;
+      timeoutId = setTimeout(() => {
+        handleScroll();
+        timeoutId = null;
+      }, 16); // ~60fps
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', throttledHandleScroll, { passive: true });
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', throttledHandleScroll);
+      if (timeoutId) clearTimeout(timeoutId);
     };
-  }, []);
+  }, [handleScroll]);
 
   const menuItems = [
     {
@@ -53,7 +65,7 @@ function Navigation() {
       links: [
         { text: 'What sets us apart?', href: '#' },
         { text: 'Values & Ethos', href: '#' },
-        { text: '21K Group', href: '#' },
+        { text: 'Athena AI Group', href: '#' },
         { text: 'Our Leaders', href: '#' },
         { text: 'Habits of Mind', href: '#' },
       ]
@@ -105,7 +117,7 @@ function Navigation() {
       ]
     },
     {
-      title: 'Being 21K',
+      title: 'Being Athena AI',
       links: [
         { text: 'Wall of Love', href: '#' },
         { text: 'Refer A Parent', href: '#' },
@@ -129,15 +141,18 @@ function Navigation() {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'} z-50 h-16 flex items-center px-4 md:px-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}`}>
+    <nav className={`fixed top-0 left-0 right-0 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'} z-50 h-16 flex items-center px-4 md:px-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}`} style={{ contain: 'layout style' }}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <img
               src={logo}
               alt="Athena AI School Logo"
-              className="h-32 w-auto"
-              style={{ filter: 'drop-shadow(0px 0px 10px rgba(255, 255, 255, 1)) drop-shadow(-4px -4px 20px rgba(255, 255, 255, 0.9)) drop-shadow(4px 4px 20px rgba(255, 255, 255, 0.9))' }}
+              className="h-16 md:h-20 w-auto"
+              width={200}
+              height={80}
+              loading="eager"
+              decoding="async"
             />
           </Link>
         </div>
@@ -221,6 +236,6 @@ function Navigation() {
       )}
     </nav>
   );
-}
+});
 
 export default Navigation;

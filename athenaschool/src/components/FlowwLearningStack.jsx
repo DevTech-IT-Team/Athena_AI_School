@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { BookOpen, Calculator, LineChart, Star, Zap, Globe, Award, CheckCircle2 } from 'lucide-react';
-import vitalyImage from '../assets/vitaly-gariev-tP666CeG03o-unsplash.jpg';
-import johnImage from '../assets/john-FlPc9_VocJ4-unsplash.jpg';
-import kimberlyImage from '../assets/kimberly-farmer-lUaaKCUANVI-unsplash.jpg';
+import vitalyImage from '../assets/optimized/vitaly-gariev-tP666CeG03o-unsplash.webp';
+import johnImage from '../assets/optimized/jonathan-klok-JS8RhWVk74Q-unsplash.webp';
+import kimberlyImage from '../assets/optimized/kimberly-farmer-lUaaKCUANVI-unsplash.webp';
 
 const FlowwLearningStack = () => {
   const [activeTab, setActiveTab] = useState('mastery');

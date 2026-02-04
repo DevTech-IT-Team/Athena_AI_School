@@ -1,15 +1,17 @@
 import { Link } from 'react-router-dom';
+import { memo } from 'react';
 import { Facebook, Instagram, Linkedin, GraduationCap, BookOpen, User, Mail, Phone, ArrowRight } from 'lucide-react';
+import logo from '/assets/images/logos/vvx.webp';
 import logo from '../assets/vvx.webp';
 
-function Footer() {
+const Footer = memo(() => {
   return (
-    <footer className="bg-gradient-to-br from-white via-gray-50 to-white text-black py-16">
+    <footer className="bg-gradient-to-br from-white via-gray-50 to-white text-black py-16" style={{ contain: 'layout style' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
             <div className="flex items-center mb-4">
-              <img src={logo} alt="AI School Logo" className="h-60 w-100 mr-10" />
+              <img src={logo} alt="AI School Logo" className="h-48 w-auto object-contain" />
             </div>
             <p className="text-gray-600 mb-6">India's Most Advanced AI-Powered Online School</p>
             <div className="flex space-x-4 mb-6">
@@ -74,6 +76,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+});
 
 export default Footer;

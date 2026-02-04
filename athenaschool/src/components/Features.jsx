@@ -1,7 +1,7 @@
 import React from 'react';
-import { ArrowLongRightIcon } from '@heroicons/react/24/outline';
+import { ArrowRight } from 'lucide-react';
 import skillImage from '../assets/skill.webp';
-import parentImage from '../assets/relxro.webp';
+import parentImage from '../assets/optimized/relxro.webp';
 
 const ProgramHighlight = () => {
   return (
@@ -44,7 +44,7 @@ const ProgramHighlight = () => {
               </p>
               <button className="group flex items-center gap-2 text-sky-400 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wide">
                 Meet our mentors
-                <ArrowLongRightIcon className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </button>
             </div>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Monitor, Clock, Globe } from 'lucide-react';
-import josephImage from '../assets/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg';
+import josephImage from '../assets/optimized/joseph-gonzalez-iFgRcqHznqg-unsplash.webp';
 
 const AthenaFeatureSection = () => {
   const features = [

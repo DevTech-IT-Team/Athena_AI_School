@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athena AI School - Preconnect</title>
+    
+    <!-- DNS prefetch and preconnect for external resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Resource hints for critical resources -->
+    <link rel="preload" href="/src/assets/gemini.webp%20(2).webp" as="image">
+    <link rel="modulepreload" href="/src/main.jsx">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; }
+        .hero-loading { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(to bottom right, #eff6ff, #ffffff); }
+        .loading-text { color: #1e3a8a; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+    <div class="hero-loading">
+        <div class="loading-text">Loading Athena AI School...</div>
+    </div>
+</body>
+</html>

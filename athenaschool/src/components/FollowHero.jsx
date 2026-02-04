@@ -37,4 +37,4 @@ const FollowHero = () => {
   );
 };
 
-export default FollowHero;
+export default React.memo(FollowHero);

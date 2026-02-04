@@ -1,6 +1,6 @@
 import React from 'react';
 import backgroundImage from '../assets/bg.webp';
-import successStoryImage from '../assets/relxro.webp';
+import successStoryImage from '../assets/optimized/relxro.webp';
 import { Users as UsersIcon, ArrowRight } from 'lucide-react';
 
 // No testimonial data - CTA only component

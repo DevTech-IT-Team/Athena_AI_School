@@ -1,18 +1,34 @@
 import React, { useEffect } from 'react';
-import { FaGraduationCap, FaBullseye, FaEye, FaUserTie, FaLightbulb, FaHeart, FaUsers, FaTrophy, FaGlobe, FaRocket, FaAward, FaStar, FaCertificate, FaCheckCircle, FaUniversity, FaRobot, FaFlask, FaBook, FaDesktop, FaBasketballBall, FaPalette, FaUtensils, FaChartLine, FaBalanceScale, FaWhatsapp } from 'react-icons/fa';
+import { 
+  GraduationCap, 
+  Target, 
+  Eye, 
+  User, 
+  Lightbulb, 
+  Heart, 
+  Users, 
+  Trophy, 
+  Globe, 
+  Rocket, 
+  Award, 
+  Star, 
+  CheckCircle, 
+  Building, 
+  Bot, 
+  Beaker, 
+  Book, 
+  Monitor, 
+  Circle, 
+  Palette, 
+  Utensils, 
+  TrendingUp, 
+  Scale, 
+  MessageCircle 
+} from 'lucide-react';
 
 const AboutContent = () => {
   useEffect(() => {
-    // Initialize AOS (Placeholder logic preserved)
-    if (typeof window !== 'undefined') {
-      import('aos').then((AOS) => {
-        AOS.default.init({
-          duration: 1000,
-          once: true
-        });
-      });
-    }
-    // Interactive milestone animation logic preserved
+    // Removed AOS for performance - using CSS transitions instead
   }, []);
 
   return (
@@ -23,10 +39,10 @@ const AboutContent = () => {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-sky-200/20 rounded-full blur-3xl -z-10"></div>
         
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gray-900 leading-tight" data-aos="fade-up">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gray-900 leading-tight">
             About<span className="text-sky-500">.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto font-light leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto font-light leading-relaxed">
             India's First AI & English Grammar School. <br />
             Shaping Future Leaders with Innovation and Excellence.
           </p>
@@ -39,19 +55,19 @@ const AboutContent = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             
             {/* Left Side: Visual Block (Replacing Image with Abstract Design) */}
-            <div data-aos="fade-right" className="relative">
+            <div className="relative">
               <div className="bg-gradient-to-br from-sky-100 to-sky-200 rounded-3xl p-10 border border-sky-300 shadow-2xl relative overflow-hidden group hover:border-sky-400 transition-colors duration-500">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-sky-400/20 rounded-bl-full"></div>
                 
                 <div className="relative z-10">
-                   <FaGraduationCap className="text-8xl text-sky-600 mb-6" />
+                   <GraduationCap className="text-8xl text-sky-600 mb-6" />
                    <h3 className="text-4xl font-bold text-gray-900 mb-2">15 Years</h3>
                    <p className="text-gray-700 text-lg">Of Educational Excellence</p>
                    
                    <div className="mt-8 pt-8 border-t border-blue-700">
                       <div className="flex items-center gap-4">
                         <div className="bg-sky-500 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold">
-                          <FaRocket />
+                          <Rocket />
                         </div>
                         <div>
                           <p className="text-gray-900 font-bold">First AI School</p>
@@ -66,7 +82,7 @@ const AboutContent = () => {
             </div>
 
             {/* Right Side: Content */}
-            <div data-aos="fade-left">
+            <div>
               <h4 className="text-sky-600 font-bold uppercase tracking-wider mb-2">Our Story</h4>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">We Always Make The Best Education Accessible.</h2>
               <p className="text-gray-700 mb-6 leading-relaxed">
@@ -91,7 +107,7 @@ const AboutContent = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             
             {/* Left: Values (Styled like Progress Bars/Skills in the image) */}
-            <div data-aos="fade-right">
+            <div>
               <h4 className="text-sky-600 font-bold uppercase tracking-wider mb-2">Our Values</h4>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Core Principles That Guide Us</h2>
               
@@ -116,7 +132,7 @@ const AboutContent = () => {
             </div>
 
             {/* Right: Stats Grid (Matches 2x2 Grid in Image) */}
-            <div data-aos="fade-left" className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 gap-8">
               {[
                 { value: '20+', label: 'Years Experience' },
                 { value: '7,500+', label: 'Happy Students' },
@@ -138,15 +154,15 @@ const AboutContent = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
-            <div data-aos="fade-up" className="bg-gray-50 p-10 rounded-3xl border border-gray-200 hover:border-sky-400 transition-all group">
-              <FaBullseye className="text-5xl text-sky-600 mb-6 group-hover:scale-110 transition-transform" />
+            <div className="bg-gray-50 p-10 rounded-3xl border border-gray-200 hover:border-sky-400 transition-all group">
+              <Target className="text-5xl text-sky-600 mb-6 group-hover:scale-110 transition-transform" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
               <p className="text-gray-700">
                 To provide transformative education that empowers students to become critical thinkers, lifelong learners, and responsible global citizens through innovative teaching methods.
               </p>
             </div>
-            <div data-aos="fade-up" data-aos-delay="100" className="bg-gray-50 p-10 rounded-3xl border border-gray-200 hover:border-sky-400 transition-all group">
-              <FaEye className="text-5xl text-sky-600 mb-6 group-hover:scale-110 transition-transform" />
+            <div className="bg-gray-50 p-10 rounded-3xl border border-gray-200 hover:border-sky-400 transition-all group">
+              <Eye className="text-5xl text-sky-600 mb-6 group-hover:scale-110 transition-transform" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
               <p className="text-gray-700">
                 To be a global leader in education, recognized for our innovative approach to learning, commitment to excellence, and ability to prepare students for tomorrow.
@@ -159,7 +175,7 @@ const AboutContent = () => {
       {/* Leadership Team Cards (Light Theme) */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16" data-aos="fade-up">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Leadership Team</h2>
             <div className="w-20 h-1 bg-sky-500 mx-auto mt-4"></div>
           </div>
@@ -171,9 +187,9 @@ const AboutContent = () => {
               { name: 'Mr. Amit Patel', title: 'Academic Director' },
               { name: 'Dr. Sarah Johnson', title: 'Innovation Dir.' }
             ].map((leader, index) => (
-              <div key={index} data-aos="fade-up" data-aos-delay={index * 100} className="bg-white p-6 rounded-2xl text-center border border-gray-200 hover:-translate-y-2 transition-transform">
+              <div key={index} className="bg-white p-6 rounded-2xl text-center border border-gray-200 hover:-translate-y-2 transition-transform">
                 <div className="w-24 h-24 mx-auto bg-sky-100 rounded-full flex items-center justify-center mb-4 text-sky-600 text-3xl">
-                  <FaUserTie />
+                  <User />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 mb-1">{leader.name}</h4>
                 <p className="text-sky-600 text-sm">{leader.title}</p>
@@ -196,12 +212,12 @@ const AboutContent = () => {
 
           <div className="grid md:grid-cols-3 gap-6">
              {[
-               { icon: FaFlask, title: 'Science Labs' },
-               { icon: FaBook, title: 'Digital Library' },
-               { icon: FaDesktop, title: 'AI & Computer Labs' },
-               { icon: FaBasketballBall, title: 'Sports Complex' },
-               { icon: FaPalette, title: 'Art Studios' },
-               { icon: FaUtensils, title: 'Modern Cafeteria' }
+               { icon: Beaker, title: 'Science Labs' },
+               { icon: Book, title: 'Digital Library' },
+               { icon: Monitor, title: 'AI & Computer Labs' },
+               { icon: Circle, title: 'Sports Complex' },
+               { icon: Palette, title: 'Art Studios' },
+               { icon: Utensils, title: 'Modern Cafeteria' }
              ].map((item, i) => (
                 <div key={i} className="flex items-center p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-sky-400 transition-colors">
                    <div className="p-3 bg-sky-100 rounded-lg text-sky-600 text-xl mr-4">
@@ -253,7 +269,7 @@ const AboutContent = () => {
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 bg-sky-500 text-white p-4 rounded-full shadow-lg hover:bg-sky-400 transition-all duration-300 z-50 animate-bounce"
       >
-        <FaWhatsapp className="text-3xl" />
+        <MessageCircle className="text-3xl" />
       </a>
       
           </div>

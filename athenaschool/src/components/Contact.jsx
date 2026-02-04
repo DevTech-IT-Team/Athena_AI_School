@@ -1,6 +1,6 @@
 import React from 'react';
-import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
-import pawelImage from '../assets/pawel-czerwinski--0xCCPIbl3M-unsplash.jpg';
+import { Mail, Phone } from 'lucide-react';
+import pawelImage from '../assets/optimized/pawel-czerwinski--0xCCPIbl3M-unsplash.webp';
 
 const Contact = () => {
   return (
@@ -37,7 +37,7 @@ const Contact = () => {
             {/* Phone */}
             <div className="flex items-center justify-center gap-6 group">
               <div className="flex-shrink-0 p-3 bg-white/10 rounded-lg group-hover:bg-sky-500 transition-colors duration-300">
-                <PhoneIcon className="w-6 h-6 text-white" />
+                <Phone className="w-6 h-6 text-white" />
               </div>
               <div className="text-left">
                 <p className="text-xs text-sky-300 font-bold uppercase tracking-wider mb-1">Call Us</p>
@@ -48,7 +48,7 @@ const Contact = () => {
             {/* Email */}
             <div className="flex items-center justify-center gap-6 group">
               <div className="flex-shrink-0 p-3 bg-white/10 rounded-lg group-hover:bg-sky-500 transition-colors duration-300">
-                <EnvelopeIcon className="w-6 h-6 text-white" />
+                <Mail className="w-6 h-6 text-white" />
               </div>
               <div className="text-left">
                 <p className="text-xs text-sky-300 font-bold uppercase tracking-wider mb-1">Email Us</p>

@@ -2,7 +2,7 @@ import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import FlowwLanding from './FlowwLanding';
 import FlowwCTA from './FlowwCTA';
-import jonathanImage from '../assets/jonathan-klok-JS8RhWVk74Q-unsplash.jpg';
+import jonathanImage from '../assets/optimized/jonathan-klok-JS8RhWVk74Q-unsplash.webp';
 
 const FlowwTemplate = () => {
   const programs = [
