@@ -57,7 +57,7 @@ const Hero = memo(() => {
               width={960}
               height={960}
               priority
-              fetchpriority="high"
+              fetchPriority="high"
               loading="eager"
               sizes="(max-width: 768px) 90vw, (max-width: 1200px) 55vw, 45vw"
               className="w-full h-auto object-contain"

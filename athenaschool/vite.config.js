@@ -11,6 +11,7 @@ export default defineConfig({
       filename: "dist/stats.html",
       open: false,
       gzipSize: true,
+      brotliSize: true,
     }),
     {
       name: 'service-worker',
@@ -27,8 +28,10 @@ export default defineConfig({
     cssCodeSplit: true,
     minify: 'terser',
     sourcemap: false,
-    chunkSizeWarningLimit: 1000,
-    target: 'esnext',
+    chunkSizeWarningLimit: 500,
+    target: 'es2020',
+    cssMinify: true,
+    reportCompressedSize: true,
     rollupOptions: {
       treeshake: {
         moduleSideEffects: false,
@@ -37,24 +40,25 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'vendor-react';
-          }
-          if (id.includes('react-router-dom')) {
-            return 'vendor-router';
-          }
-          if (id.includes('lucide-react')) {
-            return 'vendor-icons';
-          }
           if (id.includes('node_modules')) {
+            if (id.includes('react-dom')) {
+              return 'vendor-react-dom';
+            }
+            if (id.includes('react-router')) {
+              return 'vendor-router';
+            }
+            if (id.includes('lucide-react')) {
+              return 'vendor-icons';
+            }
+            if (id.includes('react')) {
+              return 'vendor-react';
+            }
             return 'vendor';
           }
         },
         assetFileNames: (assetInfo) => {
           if (!assetInfo.name) return 'assets/[name]-[hash][extname]';
           
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];
           if (/\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/i.test(assetInfo.name)) {
             return `assets/media/[name]-[hash][extname]`;
           }
@@ -64,24 +68,13 @@ export default defineConfig({
           if (/\.(woff2?|eot|ttf|otf)(\?.*)?$/i.test(assetInfo.name)) {
             return `assets/fonts/[name]-[hash][extname]`;
           }
+          if (/\.css$/i.test(assetInfo.name)) {
+            return `assets/css/[name]-[hash][extname]`;
+          }
           return `assets/[name]-[hash][extname]`;
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
-        manualChunks: (id) => {
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'vendor-react';
-          }
-          if (id.includes('react-router-dom')) {
-            return 'vendor-router';
-          }
-          if (id.includes('lucide-react')) {
-            return 'vendor-icons';
-          }
-          if (id.includes('node_modules')) {
-            return 'vendor';
-          }
-        },
       },
     },
     terserOptions: {
@@ -89,9 +82,15 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 2,
+        ecma: 2020,
       },
       mangle: {
         safari10: true,
+      },
+      format: {
+        comments: false,
+        ecma: 2020,
       },
     },
   },
@@ -106,6 +105,7 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom'],
+    exclude: ['lucide-react'],
   },
   define: {
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),

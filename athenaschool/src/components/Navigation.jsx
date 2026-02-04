@@ -1,7 +1,7 @@
 import { useState, useEffect, memo, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, User, BookOpen, Award, Users, Phone, Heart } from 'lucide-react';
-import logo from '../assets/ydyh (1).webp';
+import logo from '../assets/logo-nav.webp';
 
 import logo from '../assets/ydyh.webp';
 
@@ -63,33 +63,49 @@ const Navigation = memo(() => {
     {
       title: 'About',
       links: [
-        { text: 'What sets us apart?', href: '#' },
-        { text: 'Values & Ethos', href: '#' },
-        { text: 'Athena AI Group', href: '#' },
-        { text: 'Our Leaders', href: '#' },
-        { text: 'Habits of Mind', href: '#' },
+        { text: 'What sets us apart?', href: '/what-sets-us-apart' },
+        { text: 'Values & Ethos', href: '/values-and-ethos' },
+        { text: 'Athena AI Group', href: '/athena-ai-group' },
+        { text: 'Our Leaders', href: '/our-leaders' },
+        { text: 'Habits of Mind', href: '/habits-of-mind' },
       ]
     },
     {
-      title: 'Academics',
+      title: 'Academics Indian Pathway',
       links: [
-        { text: 'NCF India', href: '#' },
-        { text: 'Learning Culture', href: '#' },
-        { text: 'Pre Primary', href: '#' },
-        { text: 'Primary', href: '#' },
-        { text: 'Middle', href: '#' },
-        { text: 'Senior School', href: '#' },
-        { text: 'Music & Arts Partner', href: '#' },
+        { text: 'NCF India', href: '/ncf-india' },
+        { text: 'Learning Culture', href: '/learning-culture' },
+        { text: 'Pre Primary', href: '/pre-primary' },
+        { text: 'Primary', href: '/primary' },
+        { text: 'Middle', href: '/middle' },
+        { text: 'Senior School', href: '/senior-school' },
+        { text: 'Music & Arts Partner', href: '/music-arts-partner' },
+      ]
+    },
+    {
+      title: 'Academics British Pathway',
+      links: [
+        { text: 'Cambridge International, UK', href: '/cambridge-international-uk' },
+        { text: 'Edexcel, UK', href: '/edexcel-uk' },
+        { text: 'Early Years', href: '/early-years' },
+        { text: 'British Primary', href: '/british-primary' },
+        { text: 'British Lower Secondary', href: '/british-lower-secondary' },
+        { text: 'British Upper Secondary', href: '/british-upper-secondary' },
+        { text: 'Cambridge IGCSE', href: '/cambridge-igcse' },
+        { text: 'Edexcel International GCSE', href: '/edexcel-international-gcse' },
+        { text: 'British Advanced Levels', href: '/british-advanced-levels' },
+        { text: 'Cambridge Advanced Level', href: '/cambridge-advanced-level' },
+        { text: 'Edexcel International Advanced Level', href: '/edexcel-international-advanced-level' },
         { text: 'Insights NEW', href: '#' },
       ]
     },
     {
       title: 'Electives',
       links: [
-        { text: 'Computational Thinking', href: '#' },
-        { text: 'Languages', href: '#' },
-        { text: 'International Benchmark Test', href: '#' },
-        { text: 'FLOWW NEW', href: '#' },
+        { text: 'Computational Thinking', href: '/computational-thinking' },
+        { text: 'Languages', href: '/languages' },
+        { text: 'International Benchmark Test', href: '/international-benchmark-test' },
+        { text: 'FLOWW NEW', href: '/follow' },
         { text: 'Learning Garages NEW', href: '#' },
       ]
     },
@@ -119,17 +135,17 @@ const Navigation = memo(() => {
     {
       title: 'Being Athena AI',
       links: [
-        { text: 'Wall of Love', href: '#' },
-        { text: 'Refer A Parent', href: '#' },
-        { text: 'Learner-Led Podcast', href: '#' },
-        { text: 'Student Spotlight', href: '#' },
-        { text: 'Meet Our Academic Crew', href: '#' },
-        { text: 'Learner Work', href: '#' },
-        { text: 'Parents Speak', href: '#' },
-        { text: 'Press', href: '#' },
+        { text: 'Wall of Love', href: '/wall-of-love' },
+        { text: 'Refer A Parent', href: '/refer-a-parent' },
+        { text: 'Learner-Led Podcast', href: '/learner-led-podcast' },
+        { text: 'Student Spotlight', href: '/student-spotlight' },
+        { text: 'Meet Our Academic Crew', href: '/meet-our-academic-crew' },
+        { text: 'Learner Work', href: '/learner-work' },
+        { text: 'Parents Speak', href: '/parents-speak' },
+        { text: 'Press', href: '/press' },
         { text: 'Blog', href: '#' },
-        { text: 'Awards', href: '#' },
-        { text: 'Our Learner Council', href: '#' },
+        { text: 'Awards', href: '/awards' },
+        { text: 'Our Learner Council', href: '/our-learner-council' },
       ]
     },
     {
@@ -148,9 +164,10 @@ const Navigation = memo(() => {
             <img
               src={logo}
               alt="Athena AI School Logo"
-              className="h-16 md:h-20 w-auto"
-              width={200}
-              height={80}
+              className="h-24 md:h-32 w-auto"
+              style={{ filter: 'drop-shadow(0 4px 6px rgba(255, 255, 255, 0.8)) drop-shadow(0 2px 4px rgba(255, 255, 255, 0.6))' }}
+              width={320}
+              height={128}
               loading="eager"
               decoding="async"
             />
@@ -159,10 +176,10 @@ const Navigation = memo(() => {
 
         {/* Desktop Navigation - Right Side */}
         <div className="hidden lg:flex space-x-8 ml-auto">
-          <Link to="/" className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/' ? 'text-blue-600' : ''}`}><Home size={18} /><span>Home</span></Link>
-          <Link to="/pathway" className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/pathway' ? 'text-blue-600' : ''}`}><BookOpen size={18} /><span>Pathway</span></Link>
-          <Link to="/follow" className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/follow' ? 'text-blue-600' : ''}`}><Heart size={18} /><span>Follow</span></Link>
-          <Link to="/contact" className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/contact' ? 'text-blue-600' : ''}`}><Phone size={18} /><span>Contact</span></Link>
+          <Link to="/" className={`flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/' ? 'text-blue-600' : ''}`} style={{ filter: 'drop-shadow(0 4px 8px rgba(255, 255, 255, 0.9)) drop-shadow(0 2px 4px rgba(255, 255, 255, 0.7))' }}><Home size={18} /><span>Home</span></Link>
+          <Link to="/pathway" className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/pathway' ? 'text-blue-600' : ''}`} style={{ filter: 'drop-shadow(0 4px 8px rgba(255, 255, 255, 0.9)) drop-shadow(0 2px 4px rgba(255, 255, 255, 0.7))' }}><BookOpen size={18} /><span>Pathway</span></Link>
+          <Link to="/follow" className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/follow' ? 'text-blue-600' : ''}`} style={{ filter: 'drop-shadow(0 4px 8px rgba(255, 255, 255, 0.9)) drop-shadow(0 2px 4px rgba(255, 255, 255, 0.7))' }}><Heart size={18} /><span>Follow</span></Link>
+          <Link to="/contact" className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium ${location.pathname === '/contact' ? 'text-blue-600' : ''}`} style={{ filter: 'drop-shadow(0 4px 8px rgba(255, 255, 255, 0.9)) drop-shadow(0 2px 4px rgba(255, 255, 255, 0.7))' }}><Phone size={18} /><span>Contact</span></Link>
         </div>
 
         {/* Hamburger Toggle */}
@@ -173,6 +190,8 @@ const Navigation = memo(() => {
               setIsMegaMenuOpen(false);
             }}
             className="p-2 text-gray-700 focus:outline-none hover:bg-gray-100 rounded-lg transition-colors"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
