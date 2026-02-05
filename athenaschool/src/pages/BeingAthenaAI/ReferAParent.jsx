@@ -1,118 +1,292 @@
-import React from 'react';
+import React, { useState } from "react";
+import {
+  Plus,
+  Minus,
+  CheckCircle2,
+  Send,
+  RotateCcw,
+  ArrowRight,
+} from "lucide-react";
 
 const ReferAParent = () => {
+  const [isTermsOpen, setIsTermsOpen] = useState(false);
+
   return (
-    <div className="container mx-auto px-4 pt-24 pb-8">
-      <nav className="text-sm mb-4">
-        <span className="text-gray-600">Home</span> &gt; <span className="text-gray-600">Being Athena AI</span> &gt; <span className="text-gray-600">Refer A Parent</span>
-      </nav>
+    <div className="min-h-screen bg-white font-sans selection:bg-blue-100">
+      <div className="container mx-auto px-6 pt-12 pb-20 max-w-7xl">
+        <nav className="text-[10px] mb-10 mt-8 flex items-center gap-2 font-bold tracking-[0.2em] uppercase text-gray-400">
+          <span className="hover:text-[#074D8D] cursor-pointer transition-colors">
+            Home
+          </span>
+          <span className="text-gray-300 font-light">/</span>
+          <span className="hover:text-[#074D8D] cursor-pointer transition-colors">
+            Being Athena AI
+          </span>
+          <span className="text-gray-300 font-light">/</span>
+          <span className="text-[#074D8D]">Refer A Parent</span>
+        </nav>
 
-      <h1 className="text-4xl font-bold mb-6">Refer A Parent</h1>
-      
-      <div className="prose max-w-none">
-        <h2 className="text-2xl font-semibold mb-4">Help a Family Find the Right Path</h2>
-        <h3 className="text-xl font-semibold mb-4">Refer a Parent. Earn ₹7,500. Make a Difference.</h3>
-        <p className="text-lg mb-6">
-          Refer a friend, colleague, or family member today.
-        </p>
-        
-        <p className="text-lg mb-6">
-          We'll guide them, support them—and if their child joins Athena AI, you earn ₹7,500.
-        </p>
-
-        <div className="space-y-4 mb-8">
-          <div className="flex items-center space-x-3">
-            <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
+        <div className="grid lg:grid-cols-12 gap-12 mb-32 items-start">
+          <div className="lg:col-span-7">
+            <h1 className="text-[#074D8D] text-5xl md:text-7xl font-black mb-6 tracking-tight leading-[1.05]">
+              Help a Family Find <br />
+              <span className="text-[#2563EB]">the Right Path</span>
+            </h1>
+            <h2 className="text-[#074D8D] text-xl md:text-2xl font-bold mb-8 opacity-90">
+              Refer a Parent. Earn ₹7,500. Make a Difference.
+            </h2>
+            <div className="space-y-4 text-gray-500 text-lg mb-10 leading-relaxed max-w-xl">
+              <p>Refer a friend, colleague, or family member today.</p>
+              <p>
+                We'll guide them, support them—and if their child joins Athena
+                AI, you earn ₹7,500.
+              </p>
             </div>
-            <span className="text-lg">No limits.</span>
-          </div>
-          
-          <div className="flex items-center space-x-3">
-            <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
+
+            <div className="grid sm:grid-cols-2 gap-4 mb-12">
+              {[
+                "No limits.",
+                "No extra steps.",
+                "Just shared purpose.",
+                "Rewards that matter.",
+              ].map((text, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-3 bg-white p-4 rounded-xl border border-gray-100 shadow-sm"
+                >
+                  <CheckCircle2
+                    size={20}
+                    className="text-[#FFC107]"
+                    fill="currentColor"
+                    stroke="white"
+                  />
+                  <span className="font-bold text-[#074D8D] text-[11px] uppercase tracking-wider">
+                    {text}
+                  </span>
+                </div>
+              ))}
             </div>
-            <span className="text-lg">No extra steps.</span>
+
+            <button className="group bg-[#074D8D] text-white px-8 py-5 rounded-xl font-bold text-xs uppercase tracking-[0.2em] shadow-xl hover:bg-[#063d70] transition-all flex items-center gap-3">
+              Refer Now and Grow Together
+              <ArrowRight
+                size={16}
+                className="group-hover:translate-x-1 transition-transform"
+              />
+            </button>
           </div>
-          
-          <div className="flex items-center space-x-3">
-            <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
+
+          <div className="lg:col-span-5">
+            <div className="bg-white rounded-[2rem] p-10 shadow-[0_30px_60px_rgba(0,0,0,0.06)] border border-gray-100 relative overflow-hidden">
+              <h3 className="text-[#074D8D] font-black text-xl mb-8 relative z-10">
+                Get your Unique Referral Code
+              </h3>
+              <div className="space-y-6 relative z-10">
+                <div>
+                  <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest block mb-3">
+                    Registered Primary Email *
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="example@mail.com"
+                    className="w-full px-6 py-4 rounded-xl border border-gray-100 bg-gray-50/50 focus:bg-white focus:ring-4 focus:ring-blue-50 focus:border-[#074D8D] transition-all outline-none"
+                  />
+                </div>
+                <p className="text-[11px] text-gray-400 leading-relaxed italic">
+                  Submit your registered primary contact E-mail ID in the box
+                  above to generate your unique referral code that can be shared
+                  over social media, WhatsApp, or friends.
+                </p>
+                <div className="flex gap-3 pt-4">
+                  <button className="flex-1 bg-[#5D5DFF] text-white py-4 rounded-xl text-[11px] font-black uppercase tracking-widest hover:bg-blue-600 shadow-lg transition-all flex items-center justify-center gap-2">
+                    <Send size={14} /> Submit
+                  </button>
+                  <button className="px-6 border border-gray-200 text-gray-400 py-4 rounded-xl text-[11px] font-black uppercase tracking-widest hover:bg-gray-50 transition-all flex items-center justify-center gap-2">
+                    <RotateCcw size={14} /> Reset
+                  </button>
+                </div>
+              </div>
             </div>
-            <span className="text-lg">Just shared purpose—and rewards that matter.</span>
           </div>
         </div>
 
-        <div className="bg-blue-50 p-6 rounded-lg mb-8">
-          <h3 className="text-xl font-semibold mb-4">Refer Now and let's grow the Athena AI community together</h3>
-          <p className="text-lg mb-4">7500+ happy students</p>
-        </div>
-
-        <h3 className="text-xl font-semibold mb-4">Together, let's create a brighter tomorrow for our children.</h3>
-        
-        <p className="text-lg mb-6">
-          Athena AI School is re-imagining education with our transparent, personalised and flexible learning model. We are Asia's leading online school with a mission is to provide a secure, quality education that nurtures every child's potential.
-        </p>
-
-        <p className="text-lg mb-6">
-          Founded in 2020, today, our community includes 7500+ happy students from 500+ cities and 78+ countries. We thank you for being part of this journey. We understand the importance of an engaged community and want you to be a part of it. We are offering you a chance to get rewarded for your referrals and help our mission reach further. Share your Athena AI School experience with family and friends who could benefit from quality online education and earn referral rewards.
-        </p>
-
-        <h3 className="text-xl font-semibold mb-4">Recommend a friend to Athena AI School</h3>
-
-        <h4 className="text-lg font-semibold mb-4">Our Promise to you & your Friend</h4>
-        <p className="text-lg mb-6">
-          When you recommend a friend to Athena AI School, please tell them we'll be in touch. We will make a single connection with them to talk about our school programmes offered and personalised learning. If they're interested, we'll continue the conversation. If they aren't, we promise to let it end there because we value your trust and respect your friendship.
-        </p>
-
-        <h4 className="text-lg font-semibold mb-4">How does this work?</h4>
-
-        <div className="space-y-6 mb-8">
-          <div className="border-l-4 border-blue-500 pl-4">
-            <h5 className="text-lg font-semibold mb-2">FILL UP THE REFERRAL FORM</h5>
-            <p className="text-gray-600">to generate your own referral link that you can share with your friends and family</p>
+        <div className="space-y-40 mb-40">
+          <div className="flex flex-col md:flex-row items-center gap-20">
+            <div className="w-full md:w-1/2">
+              <img
+                src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=1000&auto=format&fit=crop"
+                alt="Student"
+                className="w-full h-[450px] object-cover rounded-[2.5rem] shadow-2xl"
+              />
+            </div>
+            <div className="w-full md:w-1/2">
+              <h2 className="text-[#074D8D] text-4xl font-black mb-8 leading-tight">
+                Together, let's create a <br />
+                <span className="underline decoration-[#FFC107] decoration-4 underline-offset-8">
+                  brighter tomorrow
+                </span>{" "}
+                for our children.
+              </h2>
+              <div className="space-y-6 text-gray-500 text-lg leading-relaxed">
+                <p>
+                  Athena AI School is re-imagining education with our
+                  transparent, personalised and flexible learning model.
+                </p>
+                <p>
+                  Founded in{" "}
+                  <span className="text-[#074D8D] font-bold">2020</span>, today,
+                  our community includes{" "}
+                  <span className="text-[#FFC107] font-extrabold underline">
+                    7500+
+                  </span>{" "}
+                  happy students from 500+ cities and 78+ countries.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div className="border-l-4 border-green-500 pl-4">
-            <h5 className="text-lg font-semibold mb-2">GET FEE WAIVER OF Rs. 7,500</h5>
-            <p className="text-gray-600">For every successful referral (* INR 7,500 for every confirmed admission)</p>
-          </div>
-
-          <div className="border-l-4 border-purple-500 pl-4">
-            <h5 className="text-lg font-semibold mb-2">GET AMAZING REWARDS!</h5>
-            <p className="text-gray-600">Referrals on before 31st May, 2025</p>
+          <div className="flex flex-col md:flex-row items-center gap-20">
+            <div className="w-full md:w-1/2 order-2 md:order-1 text-right">
+              <h2 className="text-[#074D8D] text-4xl font-black mb-8 leading-tight">
+                Our Promise to <span className="text-[#FFC107]">you</span>{" "}
+                <br />& your Friend
+              </h2>
+              <p className="text-gray-500 text-lg leading-relaxed">
+                When you recommend a friend to Athena AI School, please tell
+                them we'll be in touch. We will make a single connection with
+                them to talk about our school programmes offered and
+                personalised learning. If they're interested, we'll continue the
+                conversation; if not, we value your privacy and won't reach out
+                further.
+              </p>
+            </div>
+            <div className="w-full md:w-1/2 order-1 md:order-2">
+              <img
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1000&auto=format&fit=crop"
+                alt="Friends connecting"
+                className="w-full h-[450px] object-cover rounded-[2.5rem] shadow-2xl"
+              />
+            </div>
           </div>
         </div>
 
-        <h3 className="text-xl font-semibold mb-4">Recommend a friend to Athena AI School</h3>
-        
-        <div className="bg-yellow-50 p-6 rounded-lg mb-6">
-          <h4 className="text-lg font-semibold mb-2">Exciting Reward:</h4>
-          <p className="text-lg mb-4">
-            For every successful admission using your referral code, you'll earn a rebate of ₹7,500 on the final instalment of fees!
-          </p>
-          <p className="text-lg">
-            Take the first step to earn and grow our community—enter your email ID now!
-          </p>
-          <p className="text-sm text-gray-600 mt-2">Terms and conditions apply.</p>
+        <div className="mb-40 bg-gray-50 rounded-[3rem] p-16 md:p-24 text-center border border-gray-100">
+          <h3 className="text-[#074D8D] text-2xl font-black mb-20 uppercase tracking-[0.4em]">
+            How does this work?
+          </h3>
+          <div className="grid md:grid-cols-3 gap-16">
+            {[
+              {
+                img: "https://cdn-icons-png.flaticon.com/512/3121/3121530.png",
+                title: "FILL UP THE REFERRAL FORM",
+                desc: "to generate your own referral link to share",
+              },
+              {
+                img: "https://cdn-icons-png.flaticon.com/512/2168/2168531.png",
+                title: "GET FEE WAIVER OF Rs. 7,500",
+                desc: "For every successful confirmed admission",
+              },
+              {
+                img: "https://cdn-icons-png.flaticon.com/512/1162/1162280.png",
+                title: "GET AMAZING REWARDS!",
+                desc: "Referrals on before 31st May, 2025",
+              },
+            ].map((item, idx) => (
+              <div key={idx} className="flex flex-col items-center">
+                <div className="mb-10 p-8 bg-white rounded-3xl shadow-lg w-48 h-48 flex items-center justify-center">
+                  <img src={item.img} alt="icon" className="h-24 opacity-80" />
+                </div>
+                <h4 className="text-[#FFC107] font-black text-[10px] uppercase tracking-widest mb-4">
+                  {item.title}
+                </h4>
+                <p className="text-[11px] text-gray-400 font-bold max-w-[200px]">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="space-y-4">
-          <button className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors font-medium">
-            Get your Unique Referral Code
-          </button>
-          
-          <p className="text-lg">Or, just share the contact details of interested parents—fill this quick form and we'll do the rest</p>
-          
-          <button className="px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors font-medium">
-            Share Parent Details
-          </button>
+        <div className="flex flex-col md:flex-row items-center gap-16 mb-40">
+          <div className="w-full md:w-5/12">
+            <img
+              src="https://images.unsplash.com/photo-1549463591-14cc58d1ec7d?q=80&w=1000&auto=format&fit=crop"
+              alt="Gift reward"
+              className="w-full h-87.5 object-cover rounded-4xl shadow-2xl"
+            />
+          </div>
+          <div className="w-full md:w-7/12">
+            <h3 className="text-[#074D8D] text-4xl font-black mb-8 uppercase tracking-tighter">
+              Exciting <span className="text-[#FFC107]">Reward</span>:
+            </h3>
+            <div className="space-y-6 text-gray-500 text-lg leading-relaxed mb-10">
+              <p>
+                For every successful admission using your referral code, you'll
+                earn a rebate of ₹7,500 on the final instalment of fees!
+              </p>
+              <p className="text-sm font-bold uppercase tracking-widest text-[#074D8D]/60 italic">
+                Grow our community—enter your email ID now!
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              <button className="bg-[#FFC107] text-white px-10 py-4 rounded-xl font-black text-[10px] uppercase tracking-[0.2em] shadow-lg">
+                Get your Unique Referral Code
+              </button>
+              <button className="bg-[#074D8D] text-white px-10 py-4 rounded-xl font-black text-[10px] uppercase tracking-[0.2em] shadow-lg">
+                Share Parent Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto border-t border-gray-100 pt-16">
+          <div
+            className="flex items-center justify-between cursor-pointer py-6 group"
+            onClick={() => setIsTermsOpen(!isTermsOpen)}
+          >
+            <h4 className="text-gray-900 font-black text-sm uppercase tracking-[0.3em] group-hover:text-[#074D8D] transition-colors">
+              Terms & Conditions
+            </h4>
+            <div
+              className={`p-2 rounded-full transition-all ${isTermsOpen ? "bg-[#074D8D] text-white rotate-180" : "bg-gray-50 text-gray-400"}`}
+            >
+              {isTermsOpen ? <Minus size={20} /> : <Plus size={20} />}
+            </div>
+          </div>
+
+          <div
+            className={`overflow-hidden transition-all duration-700 ${isTermsOpen ? "max-h-[2000px] mt-10 opacity-100" : "max-h-0 opacity-0"}`}
+          >
+            <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 pb-20">
+              {[
+                "The Student Referral Program is open to all parents, or legal guardians enrolled in Athena AI School.",
+                "Employees and associates cannot participate in the Student Referral Program directly.",
+                "A tuition fee waiver will be given for referring new families/students.",
+                "Referred students cannot have a sibling currently or previously enrolled.",
+                "All referrals must be acknowledged using the unique referral link only during admission.",
+                "The tuition fee waiver will be applied to your last Instalment of the academic year.",
+                "The Tuition fee waiver is applied only to the Annual School Tuition Fees.",
+                "The benefits are passed only to the younger child if a parent has more than one child.",
+                "Referral rebates cannot be combined with any other promotions or discounts.",
+              ].map((text, idx) => (
+                <div
+                  key={idx}
+                  className="flex gap-4 items-start p-4 rounded-2xl bg-gray-50/50 border border-gray-100"
+                >
+                  <div className="bg-[#BCA47A] rounded-full p-1 mt-1 shrink-0">
+                    <CheckCircle2
+                      size={10}
+                      className="text-white"
+                      fill="currentColor"
+                    />
+                  </div>
+                  <p className="text-gray-500 text-[13px] leading-relaxed">
+                    {text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
