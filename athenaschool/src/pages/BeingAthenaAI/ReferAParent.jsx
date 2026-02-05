@@ -77,7 +77,7 @@ const ReferAParent = () => {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="bg-white rounded-[2rem] p-10 shadow-[0_30px_60px_rgba(0,0,0,0.06)] border border-gray-100 relative overflow-hidden">
+            <div className="bg-white rounded-4xl p-10 shadow-[0_30px_60px_rgba(0,0,0,0.06)] border border-gray-100 relative overflow-hidden">
               <h3 className="text-[#074D8D] font-black text-xl mb-8 relative z-10">
                 Get your Unique Referral Code
               </h3>
@@ -116,7 +116,7 @@ const ReferAParent = () => {
               <img
                 src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=1000&auto=format&fit=crop"
                 alt="Student"
-                className="w-full h-[450px] object-cover rounded-[2.5rem] shadow-2xl"
+                className="w-full h-112.5 object-cover rounded-[2.5rem] shadow-2xl"
               />
             </div>
             <div className="w-full md:w-1/2">
@@ -164,7 +164,7 @@ const ReferAParent = () => {
               <img
                 src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1000&auto=format&fit=crop"
                 alt="Friends connecting"
-                className="w-full h-[450px] object-cover rounded-[2.5rem] shadow-2xl"
+                className="w-full h-112.5 object-cover rounded-[2.5rem] shadow-2xl"
               />
             </div>
           </div>
@@ -199,7 +199,7 @@ const ReferAParent = () => {
                 <h4 className="text-[#FFC107] font-black text-[10px] uppercase tracking-widest mb-4">
                   {item.title}
                 </h4>
-                <p className="text-[11px] text-gray-400 font-bold max-w-[200px]">
+                <p className="text-[11px] text-gray-400 font-bold max-w-50">
                   {item.desc}
                 </p>
               </div>
@@ -255,7 +255,7 @@ const ReferAParent = () => {
           </div>
 
           <div
-            className={`overflow-hidden transition-all duration-700 ${isTermsOpen ? "max-h-[2000px] mt-10 opacity-100" : "max-h-0 opacity-0"}`}
+            className={`overflow-hidden transition-all duration-700 ${isTermsOpen ? "max-h-500 mt-10 opacity-100" : "max-h-0 opacity-0"}`}
           >
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 pb-20">
               {[
