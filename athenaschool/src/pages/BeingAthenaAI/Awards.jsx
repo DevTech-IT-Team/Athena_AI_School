@@ -1,118 +1,175 @@
-import React from 'react';
+import React from "react";
+import {
+  Download,
+  MessageSquare,
+  Trophy,
+  Star,
+  Medal,
+  Award,
+} from "lucide-react";
 
 const Awards = () => {
-  const categories = [
+  const sidebarCategories = [
     "Refer and Earn",
     "Meet Our Academic Crew",
     "Parents Speak",
     "Press",
     "Awards",
-    "Our Learner Council"
+    "Our Learner Council",
   ];
 
   const awards = [
     {
       title: "Best Curriculum School Award",
-      description: "Athena AI School has won Star Education Award 2024 in the Best Curriculum School Award category."
+      description:
+        "Athena AI School has won Star Education Award 2024 in the Best Curriculum School Award category.",
     },
     {
       title: "HolonIQ South Asia EdTech 100",
-      description: "Named one of the most promising EdTech startups in South Asia by HolonIQ, a leading global intelligence platform in education."
+      description:
+        "Named one of the most promising EdTech startups in South Asia by HolonIQ.",
     },
     {
       title: "ETHR World Award",
-      description: "Won The Economic Times-Future Ready Organisations Awards under the \"Startup Category\"."
+      description:
+        'Won The Economic Times-Future Ready Organisations Awards under the "Startup Category".',
     },
     {
       title: "Grand Jury Summit Award",
-      description: "Awarded India's #1 Leading Online School of India in the Education World India School Grand Jury Award."
+      description:
+        "Awarded India's #1 Leading Online School of India in the Education World India School Grand Jury Award.",
     },
     {
       title: "Indian Education Award",
-      description: "Awarded for Excellence and Innovation in Online Teaching (K12) at Entrepreneur's Indian Education Awards."
+      description:
+        "Awarded for Excellence and Innovation in Online Teaching (K12) at Entrepreneur's Indian Education Awards.",
     },
     {
       title: "Most Innovative School",
-      description: "Athena AI School Awarded as the Most Innovative school in India."
+      description:
+        "Athena AI School Awarded as the Most Innovative school in India.",
     },
-    {
-      title: "Future Ready Organization",
-      description: "Listed as one of India's Most Prestigious companies in The Economic Times Future Ready Organization."
-    },
-    {
-      title: "Bribooks Literary Leadership Award",
-      description: "Athena AI School awarded Bribooks Literary leadership award."
-    },
-    {
-      title: "STEM Research & Innovation Award",
-      description: "Won the STEM Research & Innovation Award for Excellence in the National Astronomy Challenge."
-    },
-    {
-      title: "Mental Health Innovation Award",
-      description: "Athena AI School Wins Gold Award for Mental Health Innovation."
-    }
   ];
 
   return (
-    <div className="container mx-auto px-4 pt-24 pb-8">
-      <nav className="text-sm mb-4">
-        <span className="text-gray-600">Home</span> &gt; <span className="text-gray-600">Being Athena AI</span> &gt; <span className="text-gray-600">Awards</span>
-      </nav>
+    <div className="min-h-screen bg-[#FDFDFD] font-sans text-[#333]">
+      <div className="relative h-100 w-full flex items-center justify-center bg-[#002147] mt-14">
+        <img
+          src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&q=80&w=2000"
+          className="absolute inset-0 w-full h-full object-cover opacity-50 grayscale-[0.2]"
+          alt="Awards and Recognition"
+          onError={(e) => {
+            e.target.style.display = "none";
+          }}
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
+        <h1 className="relative z-10 text-white text-5xl font-bold tracking-tight">
+          Awards
+        </h1>
+      </div>
 
-      <h1 className="text-4xl font-bold mb-6">Awards</h1>
-      
-      <div className="prose max-w-none">
-        <div className="mb-8">
-          <div className="flex flex-wrap gap-2 mb-6">
-            {categories.map((category, index) => (
-              <span key={index} className="px-3 py-1 bg-gray-100 rounded-full text-sm">{category}</span>
-            ))}
-          </div>
-        </div>
+      <div className="container mx-auto px-4 max-w-7xl -mt-20 relative z-20">
+        <div className="bg-white rounded-t-[40px] shadow-2xl overflow-hidden min-h-225 border-x border-t border-gray-100">
+          <div className="flex flex-col lg:flex-row">
+            <div className="w-full lg:w-80 bg-[#F4F7F9] p-8 border-r border-gray-100">
+              <ul className="space-y-1">
+                {sidebarCategories.map((item, i) => (
+                  <li
+                    key={i}
+                    className={`p-3 text-sm font-semibold cursor-pointer rounded transition-colors ${item === "Awards" ? "bg-[#003366] text-white shadow-md" : "text-gray-700 hover:bg-gray-200"}`}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
 
-        <div className="bg-blue-50 p-6 rounded-lg mb-8">
-          <p className="text-lg italic">"When you see your child looking forward to his classes, you know the school is doing something really right."</p>
-          <div className="flex gap-4 mt-4">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Enquire Now</button>
-            <button className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">Download Prospectus</button>
-          </div>
-        </div>
-
-        <h2 className="text-2xl font-semibold mb-6">Our Achievements</h2>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {awards.map((award, index) => (
-            <div key={index} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-yellow-200 rounded-full mb-4 mx-auto flex items-center justify-center">
-                <svg className="w-8 h-8 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                </svg>
+              <div className="mt-12 space-y-4">
+                <div className="border-t-4 border-[#FFB400] pt-4">
+                  <p className="text-[11px] italic text-gray-500 mb-6 text-center leading-relaxed font-medium">
+                    "When you see your child looking forward to his classes, you
+                    know the school is doing something really right."
+                  </p>
+                </div>
+                <button className="w-full bg-[#FFB400] text-white py-4 rounded-md font-bold text-[10px] uppercase tracking-widest hover:bg-[#e5a200] shadow-sm flex items-center justify-center gap-2">
+                  <MessageSquare size={14} /> Enquire Now
+                </button>
+                <button className="w-full bg-[#FFB400] text-white py-4 rounded-md font-bold text-[10px] uppercase tracking-widest hover:bg-[#e5a200] shadow-sm flex items-center justify-center gap-2">
+                  <Download size={14} /> Prospectus
+                </button>
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-center">{award.title}</h3>
-              <p className="text-gray-700 text-sm text-center">{award.description}</p>
             </div>
-          ))}
-        </div>
 
-        <div className="bg-gray-100 p-6 rounded-lg mt-12">
-          <h3 className="text-xl font-semibold mb-4">Recognition & Excellence</h3>
-          <p className="text-gray-700 mb-4">
-            Athena AI School has been consistently recognized for excellence in education innovation, 
-            curriculum development, and student wellness. Our awards reflect our commitment to providing 
-            world-class online education that prepares students for the future.
-          </p>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-white p-4 rounded">
-              <h4 className="font-medium mb-2">Industry Leadership</h4>
-              <p className="text-sm text-gray-600">Recognized by leading organizations for innovation and excellence in K-12 online education</p>
-            </div>
-            <div className="bg-white p-4 rounded">
-              <h4 className="font-medium mb-2">Student Wellbeing</h4>
-              <p className="text-sm text-gray-600">Awarded for our commitment to mental health and holistic student development</p>
+            <div className="flex-1 p-10">
+              <nav className="text-[11px] mb-8 flex items-center gap-2 font-bold uppercase tracking-widest text-gray-400">
+                <span>Home</span>
+                <span className="text-gray-300">&gt;</span>
+                <span className="text-gray-400">Being Athena</span>
+                <span className="text-gray-300">&gt;</span>
+                <span className="text-[#074D8D]">Awards</span>
+              </nav>
+
+              <h2 className="text-[#003366] text-3xl font-bold mb-10">
+                Awards
+              </h2>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                {awards.map((award, idx) => (
+                  <div
+                    key={idx}
+                    className="group p-8 border border-gray-100 rounded-2xl bg-white hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center"
+                  >
+                    {/* Award Icon Badge */}
+                    <div className="w-20 h-20 bg-yellow-50 rounded-full mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Trophy className="text-[#FFB400] w-10 h-10" />
+                    </div>
+
+                    <h3 className="text-[#003366] text-xl font-bold mb-3">
+                      {award.title}
+                    </h3>
+                    <div className="w-12 h-1 bg-[#FFB400] mb-4 rounded-full opacity-50" />
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {award.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-20 bg-[#F9FBFC] rounded-3xl p-10 border border-gray-100">
+                <div className="flex items-center gap-3 mb-6">
+                  <Medal className="text-[#003366]" />
+                  <h3 className="text-[#003366] text-2xl font-bold">
+                    Recognition & Excellence
+                  </h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed mb-10 text-sm italic">
+                  Athena AI School has been consistently recognized for
+                  excellence in education innovation, curriculum development,
+                  and student wellness.
+                </p>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-white p-6 rounded-xl shadow-sm border-t-4 border-[#003366]">
+                    <h4 className="font-bold text-[#003366] mb-2 uppercase text-xs tracking-widest">
+                      Industry Leadership
+                    </h4>
+                    <p className="text-gray-500 text-xs">
+                      Recognized for innovation in K-12 online education.
+                    </p>
+                  </div>
+                  <div className="bg-white p-6 rounded-xl shadow-sm border-t-4 border-[#FFB400]">
+                    <h4 className="font-bold text-[#003366] mb-2 uppercase text-xs tracking-widest">
+                      Student Wellbeing
+                    </h4>
+                    <p className="text-gray-500 text-xs">
+                      Awarded for commitment to mental health and development.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div className="h-20" />
     </div>
   );
 };
