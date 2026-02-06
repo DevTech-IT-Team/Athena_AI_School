@@ -99,11 +99,11 @@ function WallOfLove() {
           <span className="hover:text-gray-600 cursor-pointer transition-colors">
             Home
           </span>
-          <span className="text-gray-300">/</span>
+          <span className="text-gray-300"> &gt; </span>
           <span className="hover:text-gray-600 cursor-pointer transition-colors">
             Being Athena AI
           </span>
-          <span className="text-gray-300">/</span>
+          <span className="text-gray-300"> &gt; </span>
           <span className="text-[#074D8D]">Wall of Love</span>
         </nav>
 

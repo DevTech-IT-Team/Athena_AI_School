@@ -18,11 +18,11 @@ const ReferAParent = () => {
           <span className="hover:text-[#074D8D] cursor-pointer transition-colors">
             Home
           </span>
-          <span className="text-gray-300 font-light">/</span>
+          <span className="text-gray-300 font-light">&gt; </span>
           <span className="hover:text-[#074D8D] cursor-pointer transition-colors">
             Being Athena AI
           </span>
-          <span className="text-gray-300 font-light">/</span>
+          <span className="text-gray-300 font-light"> &gt; </span>
           <span className="text-[#074D8D]">Refer A Parent</span>
         </nav>
 
