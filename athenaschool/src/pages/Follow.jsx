@@ -1,6 +1,20 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, startTransition } from 'react';
 import { useProgressiveLoading } from '../hooks/useProgressiveLoading';
 import FollowHero from '../components/FollowHero';
+
+// Prefetch heavy components on idle to improve perceived performance
+const prefetchComponents = () => {
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(() => {
+      startTransition(() => {
+        import('../components/FlowwEnrollmentUI');
+        import('../components/FlowwDifferent');
+        import('../components/FlowwLearningStack');
+        import('../components/FlowwTemplate');
+      });
+    });
+  }
+};
 
 // Lazy load all sections except hero
 const FlowwEnrollmentUI = lazy(() => import('../components/FlowwEnrollmentUI'));
@@ -17,6 +31,11 @@ const SectionPlaceholder = ({ height = "h-64" }) => (
 
 export default function Follow() {
   const { visibleSections, registerSection } = useProgressiveLoading();
+
+  // Start prefetching heavy components after mount
+  React.useEffect(() => {
+    prefetchComponents();
+  }, []);
 
   return (
     <div className="min-h-screen">

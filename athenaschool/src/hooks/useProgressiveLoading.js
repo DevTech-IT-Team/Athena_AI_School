@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, startTransition } from 'react';
 
 export const useProgressiveLoading = (threshold = 0.1) => {
   const [visibleSections, setVisibleSections] = useState(new Set(['hero']));
@@ -16,7 +16,9 @@ export const useProgressiveLoading = (threshold = 0.1) => {
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            setVisibleSections(prev => new Set([...prev, sectionId]));
+            startTransition(() => {
+              setVisibleSections(prev => new Set([...prev, sectionId]));
+            });
             observer.unobserve(element);
             observers.delete(sectionId);
           }

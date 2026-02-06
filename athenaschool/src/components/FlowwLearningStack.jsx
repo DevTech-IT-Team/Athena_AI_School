@@ -1,18 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef, memo } from 'react';
 import { BookOpen, Calculator, LineChart, Star, Zap, Globe, Award, CheckCircle2 } from 'lucide-react';
 import vitalyImage from '../assets/optimized/vitaly-gariev-tP666CeG03o-unsplash.webp';
 import johnImage from '../assets/optimized/jonathan-klok-JS8RhWVk74Q-unsplash.webp';
 import kimberlyImage from '../assets/optimized/kimberly-farmer-lUaaKCUANVI-unsplash.webp';
+import OptimizedImage from './OptimizedImage';
 
 const FlowwLearningStack = () => {
   const [activeTab, setActiveTab] = useState('mastery');
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen bg-white font-sans text-blue-950">
-      
-      {/* LEFT SIDE: Fixed Checkerboard (Desktop) */}
-      <div className="w-full lg:w-1/2 lg:h-screen lg:sticky lg:top-0 grid grid-cols-2 grid-rows-3 overflow-hidden">
-        <div className="bg-slate-100"><img src={vitalyImage} alt="Learning" className="object-cover w-full h-full grayscale" /></div>
+    <div ref={sectionRef} className="flex flex-col lg:flex-row min-h-screen bg-white font-sans text-blue-950">
+      {!isVisible ? (
+        <div className="flex items-center justify-center w-full h-96">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        </div>
+      ) : (
+        <>
+          {/* LEFT SIDE: Fixed Checkerboard (Desktop) */}
+          <div className="w-full lg:w-1/2 lg:h-screen lg:sticky lg:top-0 grid grid-cols-2 grid-rows-3 overflow-hidden">
+        <div className="bg-slate-100">
+          <OptimizedImage
+            src={vitalyImage}
+            alt="Learning"
+            className="w-full h-full grayscale"
+            width={1200}
+            height={1200}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            objectFit="cover"
+            priority={true}
+            fetchPriority="high"
+          />
+        </div>
         <div className="bg-blue-300 p-6 flex flex-col justify-center border-b border-white">
           <BookOpen className="mb-2 w-6 h-6 text-blue-600" />
           <h3 className="font-bold text-lg">Academic Excellence</h3>
@@ -21,8 +59,30 @@ const FlowwLearningStack = () => {
           <Calculator className="mb-2 w-6 h-6 text-blue-600" />
           <h3 className="font-bold text-lg">Cognitive Logic</h3>
         </div>
-        <div className="bg-slate-100"><img src={johnImage} alt="Math" className="object-cover w-full h-full grayscale" /></div>
-        <div className="bg-slate-100"><img src={kimberlyImage} alt="Habits" className="object-cover w-full h-full grayscale" /></div>
+        <div className="bg-slate-100">
+          <OptimizedImage
+            src={johnImage}
+            alt="Math"
+            className="w-full h-full grayscale"
+            width={1200}
+            height={1200}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            objectFit="cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="bg-slate-100">
+          <OptimizedImage
+            src={kimberlyImage}
+            alt="Habits"
+            className="w-full h-full grayscale"
+            width={1200}
+            height={1200}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            objectFit="cover"
+            loading="lazy"
+          />
+        </div>
         <div className="bg-blue-300 p-6 flex flex-col justify-center">
           <Star className="mb-2 w-6 h-6 text-blue-600" />
           <h3 className="font-bold text-lg">Future Habits</h3>
@@ -169,8 +229,10 @@ const FlowwLearningStack = () => {
           </button>
         </main>
       </div>
+    </>
+  )}
     </div>
   );
 };
 
-export default FlowwLearningStack;
+export default memo(FlowwLearningStack);
