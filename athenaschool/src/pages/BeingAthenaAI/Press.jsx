@@ -1,130 +1,169 @@
-import React from 'react';
+import React from "react";
+import { Download, MessageSquare } from "lucide-react";
 
 const Press = () => {
-  const categories = [
+  const sidebarCategories = [
     "Refer and Earn",
     "Meet Our Academic Crew",
     "Parents Speak",
     "Press",
     "Awards",
-    "Our Learner Council"
+    "Our Learner Council",
   ];
 
   const coverage = [
-    "Athena AI Forbes India",
-    "Athena AI Meta Facebook",
-    "Athena AI ANI News",
-    "Athena AI Times of India",
-    "Athena AI The Hindu",
-    "Athena AI Hindustan Times",
-    "Athena AI ANI News",
-    "Athena AI Silicon India",
-    "Athena AI APN News",
-    "Athena AI BW Education",
-    "Athena AI Financial Express",
-    "Athena AI Hans India",
+    "Forbes India",
+    "Meta Facebook",
+    "ANI News",
+    "Times of India",
+    "The Hindu",
+    "Hindustan Times",
+    "Silicon India",
+    "APN News",
+    "BW Education",
+    "Financial Express",
+    "Hans India",
     "Relocate Magazine",
-    "Athena AI Republic World",
-    "Athena AI The Print",
-    "Athena AI Live Mint",
-    "Athena AI Indian Express",
-    "Athena AI School",
-    "Athena AI BW Education",
-    "Athena AI Brainfeed",
-    "Athena AI Times of India",
-    "Athena AI Education World",
-    "Athena AI Times of India",
-    "Athena AI BW Education",
-    "Athena AI Times of India",
-    "Stride + Athena AI",
-    "Athena AI BW Education",
-    "Athena AI Daily Hunt",
-    "Athena AI Edu Times",
-    "Athena AI Gadgets Innovations",
-    "Athena AI Social Nama",
-    "Athena AI India Education Diary",
-    "Athena AI Audience Reports"
   ];
 
-  const awards = [
-    "Athena AI India Education Diary",
-    "Galvanize",
-    "Athena AI ANI",
-    "Athena AI Business Standard",
-    "Athena AI Business World",
-    "Athena AI Yahoo Finance",
-    "Athena AI Nyooz",
-    "Athena AI Magzter",
-    "Athena AI Mangalore Mirror",
-    "Athena AI The Truth One"
+  const sections = [
+    {
+      title: "Athena AI School",
+      items: ["Daily Hunt", "Edu Times", "Social Nama", "The Print"],
+    },
+    {
+      title: "Stride + Athena AI",
+      items: [
+        "Live Mint",
+        "Indian Express",
+        "Republic World",
+        "Education World",
+      ],
+    },
+    {
+      title: "Galvanize",
+      items: ["Business Standard", "Yahoo Finance", "Nyooz", "Magzter"],
+    },
   ];
 
   return (
-    <div className="container mx-auto px-4 pt-24 pb-8">
-      <nav className="text-sm mb-4">
-        <span className="text-gray-600">Home</span> &gt; <span className="text-gray-600">Being Athena AI</span> &gt; <span className="text-gray-600">Press</span>
-      </nav>
+    <div className="min-h-screen bg-[#FDFDFD] font-sans text-[#333]">
+      <div className="relative h-100 w-full flex items-center justify-center bg-[#001529] mt-16">
+        <img
+          src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=2000"
+          className="absolute inset-0 w-full h-full object-cover opacity-60"
+          alt="Press Hero"
+          onError={(e) => {
+            e.target.style.display = "none";
+          }} // Fallback if image fails
+        />
+        <div className="absolute inset-0 bg-linear-to-b from-black/40 to-black/10" />
+        <h1 className="relative z-10 text-white text-5xl font-bold tracking-tight drop-shadow-md">
+          Press
+        </h1>
+      </div>
 
-      <h1 className="text-4xl font-bold mb-6">Press</h1>
-      
-      <div className="prose max-w-none">
-        <div className="mb-8">
-          <div className="flex flex-wrap gap-2 mb-6">
-            {categories.map((category, index) => (
-              <span key={index} className="px-3 py-1 bg-gray-100 rounded-full text-sm">{category}</span>
-            ))}
-          </div>
-        </div>
+      <div className="container mx-auto px-4 max-w-7xl -mt-20 relative z-20">
+        <div className="bg-white rounded-t-[40px] shadow-[0_-10px_40px_rgba(0,0,0,0.1)] overflow-hidden min-h-250 border-x border-t border-gray-100">
+          <div className="flex flex-col lg:flex-row">
+            <div className="w-full lg:w-80 bg-[#F4F7F9] p-8 border-r border-gray-100">
+              <ul className="space-y-1">
+                {sidebarCategories.map((item, i) => (
+                  <li
+                    key={i}
+                    className={`p-3 text-sm font-semibold cursor-pointer rounded transition-colors ${item === "Press" ? "bg-[#003366] text-white" : "text-gray-700 hover:bg-gray-200"}`}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
 
-        <div className="bg-blue-50 p-6 rounded-lg mb-8">
-          <p className="text-lg italic">"When you see your child looking forward to his classes, you know the school is doing something really right."</p>
-          <div className="flex gap-4 mt-4">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Enquire Now</button>
-            <button className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">Download Prospectus</button>
-          </div>
-        </div>
-
-        <h2 className="text-2xl font-semibold mb-6">Coverage</h2>
-        
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
-          {coverage.map((item, index) => (
-            <div key={index} className="border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-gray-200 rounded mb-3 mx-auto"></div>
-              <h3 className="text-sm font-medium text-center">{item}</h3>
+              <div className="mt-12 space-y-4">
+                <div className="border-t-4 border-[#FFB400] pt-4">
+                  <p className="text-[11px] italic text-gray-500 mb-6 text-center leading-relaxed font-medium">
+                    "When you see your child looking forward to his classes, you
+                    know the school is doing something really right."
+                  </p>
+                </div>
+                <button className="w-full bg-[#FFB400] text-white py-4 rounded-md font-bold text-[10px] uppercase tracking-widest hover:bg-[#e5a200] shadow-sm flex items-center justify-center gap-2">
+                  <MessageSquare size={14} /> Enquire Now
+                </button>
+                <button className="w-full bg-[#FFB400] text-white py-4 rounded-md font-bold text-[10px] uppercase tracking-widest hover:bg-[#e5a200] shadow-sm flex items-center justify-center gap-2">
+                  <Download size={14} /> Prospectus
+                </button>
+              </div>
             </div>
-          ))}
-        </div>
 
-        <h2 className="text-2xl font-semibold mb-6">Awards</h2>
-        
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
-          {awards.map((item, index) => (
-            <div key={index} className="border rounded-lg p-4 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-gray-200 rounded mb-3 mx-auto"></div>
-              <h3 className="text-sm font-medium text-center">{item}</h3>
-            </div>
-          ))}
-        </div>
+            <div className="flex-1 p-10">
+              <nav className="text-[11px] mb-8 flex items-center gap-2 font-bold uppercase tracking-widest text-gray-400">
+                <span>Home</span>
+                <span className="text-gray-300"> &gt; </span>
+                <span className="text-gray-400">Being Athena</span>
+                <span className="text-gray-300"> &gt; </span>
+                <span className="text-[#074D8D]">Press</span>
+              </nav>
 
-        <div className="bg-gray-100 p-6 rounded-lg mt-12">
-          <h3 className="text-xl font-semibold mb-4">Media Recognition</h3>
-          <p className="text-gray-700 mb-4">
-            Athena AI School has been recognized and featured by leading media outlets across India and internationally. 
-            Our innovative approach to online education and commitment to excellence has earned us coverage in prestigious 
-            publications and news channels.
-          </p>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-white p-4 rounded">
-              <h4 className="font-medium mb-2">National Recognition</h4>
-              <p className="text-sm text-gray-600">Featured in Times of India, The Hindu, Indian Express, and other leading national publications</p>
-            </div>
-            <div className="bg-white p-4 rounded">
-              <h4 className="font-medium mb-2">Industry Awards</h4>
-              <p className="text-sm text-gray-600">Recognized by education industry leaders for innovation and excellence in online learning</p>
+              <h2 className="text-[#003366] text-3xl font-bold mb-2">Press</h2>
+              <p className="text-gray-500 font-semibold mb-10">Coverage</p>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+                {coverage.map((name, idx) => (
+                  <div
+                    key={idx}
+                    className="h-24 bg-white border border-gray-200 flex flex-col items-center justify-center p-4 hover:border-[#FFB400] transition-all group shadow-sm rounded-sm"
+                  >
+                    <div className="w-8 h-8 bg-gray-100 rounded-full mb-2 group-hover:bg-[#FFF9E6] flex items-center justify-center">
+                      <div className="w-3 h-3 bg-gray-300 group-hover:bg-[#FFB400] rounded-full" />
+                    </div>
+                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-tighter text-center group-hover:text-gray-600">
+                      {name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {sections.map((sec, sIdx) => (
+                <div key={sIdx} className="mb-12">
+                  <h4 className="text-gray-700 font-bold mb-6 border-b border-gray-100 pb-2 text-sm">
+                    {sec.title}
+                  </h4>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {sec.items.map((item, i) => (
+                      <div
+                        key={i}
+                        className="bg-[#F8FAFC] border border-gray-100 p-4 flex flex-col items-center justify-center h-20 rounded shadow-inner opacity-80 hover:opacity-100 transition-opacity"
+                      >
+                        <span className="text-[9px] text-gray-500 font-black uppercase tracking-widest italic">
+                          {item}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+
+              <div className="mt-20 border-t border-gray-100 pt-10">
+                <h2 className="text-[#003366] text-2xl font-bold mb-8">
+                  Awards
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  <div className="bg-white border-2 border-dashed border-gray-200 p-6 flex flex-col items-center justify-center h-40 rounded-xl">
+                    <div className="w-12 h-12 bg-yellow-50 rounded-full flex items-center justify-center mb-3">
+                      <span className="text-yellow-600 font-bold text-xl">
+                        ★
+                      </span>
+                    </div>
+                    <span className="text-[10px] text-gray-400 font-bold text-center uppercase">
+                      Education Excellence Award
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div className="h-20" />
     </div>
   );
 };
