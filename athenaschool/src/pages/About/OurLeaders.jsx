@@ -1,96 +1,128 @@
 import React from 'react';
+import { ArrowUpRight, MessageCircle } from 'lucide-react';
 
 const OurLeaders = () => {
-  const categories = [
-    "What sets us apart?",
-    "Values & Ethos",
-    "Our Leaders",
-    "Habits of Mind"
-  ];
+  const categories = ["What sets us apart?", "Values & Ethos", "Our Leaders", "Habits of Mind"];
 
   const leaders = [
     {
       name: "Yeshwanth Raj Parasmal",
-      title: "Founder & Chief Executive Officer",
-      description: "Yeshwanth is a value-driven entrepreneur with over 20 years of experience in the education sector. He is passionate about transforming the way we see education in India. He has facilitated the establishment and management of over 75 educational institutions in India, including tribal and naxal affected areas. Yeshwanth has completed MBA in Education Management from the University of Southampton, UK and is recognised widely as a leader in the sector. He was honoured with the UK Global Alumni Awards (finalist) in 2022."
+      title: "Founder & CEO",
+      description: "Yeshwanth is a value-driven entrepreneur with over 20 years of experience. He has facilitated over 75 educational institutions and was a UK Global Alumni Awards finalist in 2022.",
+      image: "/api/placeholder/400/300"
     },
     {
       name: "Dr Senthil Kumaran",
       title: "Non-Executive Director",
-      description: "With over 30 years of educational experience, Dr. Senthil launched the groundbreaking Learners Confluence in India, a program aimed at fostering peer learning and knowledge sharing among teachers. Formerly the Principal Counsellor at CII Institute of Quality, he facilitated educational excellence initiatives nationally and internationally. He is an authority in various excellence frameworks i.e. EFQM, MBNQA, DSIB-KHDA, QCI-NABET, QMS, NBA, NAAC & CII Education Excellence Framework."
-    },
-    {
-      name: "Dinesh Kumar",
-      title: "Non-Executive Director",
-      description: "Education For All. This is the mission that drives Dinesh Kumar. As a Silicon Valley professional and USC alumni with over ten years of experience working for companies like NVIDIA, HP, and various other startups. He possesses the expertise necessary to build a competitive yet enriching learning platform. He is passionate about technology and is particularly invested in using it to solve the genuine issues we face in the world today."
-    },
-    {
-      name: "Aruna Shetty",
-      title: "Head of Schools",
-      description: "Ms. Aruna Shetty, currently serving as the Head of School, boasts over 18 years of diverse experience across international educational boards, including International Baccalaureate, Cambridge Assessment International Education (CAIE), American curriculum, and Indian Boards such as NIOS. Ms. Shetty advocates for an inclusive educational environment and her overarching vision is to facilitate a transformative learning experience for her students, equipping them to make a positive impact on the world around them."
+      description: "An authority in excellence frameworks like EFQM and NAAC, Dr. Senthil has 30+ years of experience and launched the groundbreaking Learners Confluence in India.",
+      image: "/api/placeholder/400/300"
     }
   ];
 
   return (
-    <div className="container mx-auto px-4 pt-24 pb-8">
-      <nav className="text-sm mb-4">
-        <span className="text-gray-600">Home</span> &gt; <span className="text-gray-600">About</span> &gt; <span className="text-gray-600">Our Leaders</span>
-      </nav>
-
-      <h1 className="text-4xl font-bold mb-6">Our Leaders</h1>
-      
-      <div className="prose max-w-none">
-        <div className="mb-8">
-          <div className="flex flex-wrap gap-2 mb-6">
-            {categories.map((category, index) => (
-              <span key={index} className="px-3 py-1 bg-gray-100 rounded-full text-sm">{category}</span>
-            ))}
+    <div className="bg-white min-h-screen font-sans text-slate-900 pb-20">
+      <main className="container mx-auto px-6 md:px-12 pt-20">
+        {/* Breadcrumb */}
+        <nav className="text-xs tracking-widest uppercase text-blue-300 mb-8">
+          Home / About / <span className="text-slate-950 font-bold">Our Leaders</span>
+        </nav>
+      {/* HEADER SECTION - Inspired by Foli Top Layout */}
+      <header className="max-w-7xl mx-auto mb-16 pt-16">
+        <div className="flex justify-between items-start mb-8">
+          <div>
+            <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-tight leading-none mb-4">
+              Our Leaders: Shaping <span className="text-blue-400">Educational</span> <br />
+              Excellence Worldwide
+            </h1>
+            <div className="flex flex-wrap gap-2 mt-6">
+              {categories.map((cat, i) => (
+                <button key={i} className={`px-4 py-1 rounded-full text-xs font-medium border ${cat === "Our Leaders" ? 'bg-blue-950 text-white' : 'border-blue-200 text-blue-950'}`}>
+                  {String(i + 1).padStart(2, '0')} {cat}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="hidden md:flex flex-col items-center gap-2">
+            <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center overflow-hidden border border-blue-200">
+               <MessageCircle className="text-blue-600 w-6 h-6" />
+            </div>
+            <span className="text-[10px] font-bold">Have a question?</span>
           </div>
         </div>
 
-        <div className="bg-blue-50 p-6 rounded-lg mb-8">
-          <p className="text-lg italic">"When you see your child looking forward to his classes, you know the school is doing something really right."</p>
-          <div className="flex gap-4 mt-4">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Enquire Now</button>
-            <button className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">Download Prospectus</button>
-          </div>
+        <div className="space-y-4">
+          <p className="text-blue-900 leading-relaxed text-lg">
+            At Athena, we harness cutting-edge pedagogical methodologies to power a sustainable future. 
+            Our leaders guide the way in human-centric education and academic innovation.
+          </p>
+          <button className="flex items-center gap-2 font-bold border-b-2 border-blue-950 pb-1 hover:text-blue-400 transition-colors">
+            Read more <ArrowUpRight size={16} />
+          </button>
         </div>
+      </header>
 
-        <h2 className="text-2xl font-semibold mb-6">Trailblazing Paths to Excellence</h2>
-        
-        <div className="mb-8">
-          <h3 className="text-xl font-semibold mb-4">Chief Executive Officer</h3>
-        </div>
-
-        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {leaders.map((leader, index) => (
-            <div key={index} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <div className="w-24 h-24 bg-gray-200 rounded-full mb-4 mx-auto"></div>
-              <h3 className="text-xl font-semibold mb-2 text-center">{leader.name}</h3>
-              <p className="text-blue-600 font-medium mb-3 text-center">{leader.title}</p>
-              <p className="text-gray-700 text-sm">{leader.description}</p>
+      {/* LEADERS GRID - Inspired by Foli "Eco-Power Solutions" Section */}
+      <section className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6 mb-20">
+        {leaders.map((leader, index) => (
+          <div key={index} className="bg-blue-50 p-8 flex flex-col md:flex-row gap-6 relative overflow-hidden group">
+            <div className="flex-1 z-10">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-blue-400">Executive Board</span>
+              <h2 className="text-3xl font-bold mt-2 mb-4">{leader.name}</h2>
+              <p className="text-sm text-blue-900 mb-6 opacity-80">{leader.description}</p>
+              <div className="flex items-center gap-2 bg-white w-fit px-4 py-2">
+                <span className="text-xs font-bold text-blue-950">{leader.title}</span>
+              </div>
             </div>
-          ))}
-        </div>
-
-        <div className="bg-gray-100 p-6 rounded-lg mt-12">
-          <h3 className="text-xl font-semibold mb-4">#Being Athena AI</h3>
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="bg-white p-4 rounded">
-              <h4 className="font-medium mb-2">Scholastic Report - Guide Video</h4>
-              <p className="text-sm text-gray-600">Comprehensive guidance for scholastic reporting and assessment</p>
-            </div>
-            <div className="bg-white p-4 rounded">
-              <h4 className="font-medium mb-2">Learning a new language always fun</h4>
-              <p className="text-sm text-gray-600">Making language learning engaging and enjoyable for all learners</p>
-            </div>
-            <div className="bg-white p-4 rounded">
-              <h4 className="font-medium mb-2">Our orators brought out their a game</h4>
-              <p className="text-sm text-gray-600">Showcasing exceptional public speaking and communication skills</p>
+            <div className="w-full md:w-48 h-64 overflow-hidden relative">
+               <img src={leader.image} alt={leader.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+               <div className="absolute bottom-4 right-4 bg-white p-2 shadow-lg">
+                  <ArrowUpRight size={20} />
+               </div>
             </div>
           </div>
+        ))}
+      </section>
+
+      {/* STATS/IMPACT SECTION - Inspired by Foli Green Cards */}
+      <section className="max-w-7xl mx-auto mb-20">
+        <h3 className="text-2xl font-bold mb-8 uppercase tracking-tighter">Impact: Transforming Lives</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-blue-300 p-8 text-white flex flex-col justify-between h-80">
+            <h4 className="text-7xl font-bold italic">95%</h4>
+            <p className="font-medium leading-tight">Our students report increased confidence and academic engagement.</p>
+            <div className="flex justify-between items-center pt-4 border-t border-white/30">
+              <span className="text-[10px] font-black uppercase">Success Rate</span>
+              <ArrowUpRight size={18} />
+            </div>
+          </div>
+          <div className="bg-blue-950 p-8 text-white flex flex-col justify-between h-80">
+            <h4 className="text-7xl font-bold italic">30+</h4>
+            <p className="font-medium leading-tight">Years of combined leadership experience in global education.</p>
+            <div className="flex justify-between items-center pt-4 border-t border-white/30">
+              <span className="text-[10px] font-black uppercase">Expertise</span>
+              <ArrowUpRight size={18} />
+            </div>
+          </div>
+          <div className="bg-white p-8 text-blue-950 flex flex-col justify-between h-80">
+            <h4 className="text-7xl font-bold italic">0%</h4>
+            <p className="font-medium leading-tight">Compromise on the "Habits of Mind" and student-first philosophy.</p>
+            <div className="flex justify-between items-center pt-4 border-t border-blue-950">
+              <span className="text-[10px] font-black uppercase">Compromise</span>
+              <ArrowUpRight size={18} />
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* FOOTER CALL TO ACTION */}
+      <footer className="max-w-7xl mx-auto flex justify-between items-center border-t border-blue-100 pt-8">
+        <div className="text-4xl font-black text-blue-950">Athena AI</div>
+        <div className="flex gap-4">
+           <button className="bg-blue-950 text-white px-8 py-3 rounded-full font-bold text-sm hover:bg-blue-800 transition-colors">Enquire Now</button>
+           <button className="border border-blue-950 px-8 py-3 rounded-full font-bold text-sm hover:bg-blue-50">Download Prospectus</button>
+        </div>
+      </footer>
+      </main>
     </div>
   );
 };

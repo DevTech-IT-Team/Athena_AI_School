@@ -1,107 +1,136 @@
 import React from 'react';
 
 const WhatSetsUsApart = () => {
-  const categories = [
-    "What sets us apart?",
-    "Values & Ethos",
-    "Our Leaders",
-    "Habits of Mind"
-  ];
+  const categories = ["What sets us apart?", "Values & Ethos", "Our Leaders", "Habits of Mind"];
 
   const features = [
-    {
-      title: "Deep, Transformative Learning",
-      description: "Immersive educational experiences that go beyond surface-level knowledge"
-    },
-    {
-      title: "A World of Flexibility",
-      description: "Learn anytime, anywhere with schedules that adapt to your lifestyle"
-    },
-    {
-      title: "Facilitators Who Inspire",
-      description: "Dedicated educators who nurture curiosity and drive excellence"
-    },
-    {
-      title: "A Dynamic, Research-Driven Curriculum",
-      description: "Cutting-edge educational approaches backed by research and innovation"
-    },
-    {
-      title: "Personalised Learning, Tailored for You",
-      description: "Customized educational paths that match individual learning styles and goals"
-    }
+    { title: "Deep Learning", description: "Immersive educational experiences that go beyond surface-level knowledge" },
+    { title: "World of Flexibility", description: "Learn anytime, anywhere with schedules that adapt to your lifestyle" },
+    { title: "Inspiring Facilitators", description: "Dedicated educators who nurture curiosity and drive excellence" },
+    { title: "Dynamic Curriculum", description: "Cutting-edge educational approaches backed by research and innovation" },
+    { title: "Personalised Learning", description: "Customized educational paths that match individual learning styles" }
   ];
 
   return (
-    <div className="container mx-auto px-4 pt-24 pb-8">
-      <nav className="text-sm mb-4">
-        <span className="text-gray-600">Home</span> &gt; <span className="text-gray-600">About</span> &gt; <span className="text-gray-600">What sets us apart?</span>
-      </nav>
-
-      <h1 className="text-4xl font-bold mb-6">What sets us apart?</h1>
-      
-      <div className="prose max-w-none">
-        <div className="mb-8">
-          <div className="flex flex-wrap gap-2 mb-6">
-            {categories.map((category, index) => (
-              <span key={index} className="px-3 py-1 bg-gray-100 rounded-full text-sm">{category}</span>
+    <div className="min-h-screen bg-white font-sans text-slate-900 pb-20">
+      {/* Navigation & Header - Minimalist Style */}
+      <header className="container mx-auto px-6 pt-16 pb-12">
+        <nav className="text-xs tracking-widest uppercase text-blue-300 mb-8">
+          Home / About / <span className="text-slate-950 font-bold">What sets us apart?</span>
+        </nav>
+        
+        <div className="flex flex-col md:flex-row justify-between items-end border-b border-gray-100 pb-12">
+          <div className="max-w-2xl">
+            <h1 className="text-6xl font-black text-slate-950 leading-tight mb-4">
+              What Sets <br/><span className="text-blue-950">Us Apart?</span>
+            </h1>
+            <p className="text-lg text-slate-600 leading-relaxed">
+              At Athena AI School, we go beyond the boundaries of traditional education, 
+              reaching over 7,500 learners across 78+ countries.
+            </p>
+          </div>
+          <div className="flex gap-4 mt-8 md:mt-0">
+            {categories.map((cat, i) => (
+              <button key={i} className="text-[10px] font-bold tracking-tighter uppercase px-4 py-2 border border-slate-200 hover:bg-slate-950 hover:text-white transition-all">
+                {cat}
+              </button>
             ))}
           </div>
         </div>
+      </header>
 
-        <div className="bg-blue-50 p-6 rounded-lg mb-8">
-          <p className="text-lg italic">"The future is online, where are you?"</p>
-          <div className="flex gap-4 mt-4">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Enquire Now</button>
-            <button className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">Download Prospectus</button>
+      {/* Hero Section - Inspired by "Our Business" slide */}
+      <section className="container mx-auto px-6 py-12 grid md:grid-cols-2 gap-12 items-center">
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold uppercase tracking-tight border-l-4 border-blue-950 pl-6">
+            Empowering Tomorrow's <br/>Global Learners
+          </h2>
+          <p className="text-slate-600 leading-relaxed">
+            Our journey began in June 2020 with a mission to make high-quality, personalized, 
+            and transparent education accessible to all—anytime, anywhere. Today, we're a 
+            global community that empowers learners to explore and thrive.
+          </p>
+          <div className="flex gap-4 pt-4">
+            <button className="bg-slate-950 text-white px-8 py-4 font-bold text-sm uppercase tracking-widest hover:bg-blue-900 transition-colors">
+              Enquire Now
+            </button>
+            <button className="bg-blue-950 text-white px-8 py-4 font-bold text-sm uppercase tracking-widest hover:bg-blue-900 transition-colors">
+              Prospectus
+            </button>
           </div>
         </div>
-
-        <h2 className="text-2xl font-semibold mb-6">What Makes Athena AI School Different?</h2>
         
-        <div className="mb-8">
-          <h3 className="text-xl font-semibold mb-4">Empowering Tomorrow's Global Learners</h3>
-          <p className="text-gray-700 mb-4">
-            At Athena AI School, we go beyond the boundaries of traditional education. As an accredited online K-12 school, we offer curricula from India and Britain to learners aged 3 to 18 years, reaching over 7,500 learners across 500 cities in 78+ countries. Our learners come from diverse backgrounds and cultures, united in our innovative, inclusive, and dynamic learning spaces.
-          </p>
-          <p className="text-gray-700 mb-4">
-            Our journey began in June 2020 with a mission to make high-quality, personalized, and transparent education accessible to all—anytime, anywhere. Today, we're a global community that empowers learners to explore and thrive through immersive, real-world learning experiences designed to help them succeed in an ever-evolving world.
-          </p>
+        {/* Decorative Grid - Inspired by the 4-box layout in image */}
+        <div className="grid grid-cols-2 gap-1">
+          <div className="aspect-square bg-blue-950 p-8 flex flex-col justify-end text-white">
+            <h4 className="font-bold uppercase text-xs tracking-widest">Innovation</h4>
+          </div>
+          <div className="aspect-square bg-slate-100 p-8 flex flex-col justify-end">
+            <h4 className="font-bold uppercase text-xs tracking-widest">Global</h4>
+          </div>
+          <div className="aspect-square bg-slate-950 p-8 flex flex-col justify-end text-white">
+            <h4 className="font-bold uppercase text-xs tracking-widest">Inclusive</h4>
+          </div>
+          <div className="aspect-square bg-blue-950 p-8 flex flex-col justify-end text-white">
+            <h4 className="font-bold uppercase text-xs tracking-widest">Growth</h4>
+          </div>
         </div>
+      </section>
 
-        <h2 className="text-2xl font-semibold mb-6">Our Key Features</h2>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {features.map((feature, index) => (
-            <div key={index} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-blue-100 rounded-full mb-4 mx-auto flex items-center justify-center">
-                <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-                </svg>
+      {/* Features - Inspired by the "Analysis" node diagram */}
+      <section className="bg-slate-50 py-24">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-sm font-black uppercase tracking-[0.3em] text-blue-950 mb-2">Key Features</h2>
+            <p className="text-4xl font-bold text-slate-950">Why Athena AI is Different</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {features.map((f, i) => (
+              <div key={i} className="bg-white p-10 group hover:bg-slate-950 transition-all duration-300 border-b-4 border-transparent hover:border-blue-950">
+                <h3 className="text-xl font-bold mb-4 group-hover:text-white">{f.title}</h3>
+                <p className="text-slate-500 group-hover:text-slate-300 text-sm leading-relaxed">
+                  {f.description}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-center">{feature.title}</h3>
-              <p className="text-gray-700 text-center text-sm">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="bg-gray-100 p-6 rounded-lg mt-12">
-          <h3 className="text-xl font-semibold mb-4">#Being Athena AI</h3>
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="bg-white p-4 rounded">
-              <h4 className="font-medium mb-2">Make Some Rain While The Sun Shines Outside</h4>
-              <p className="text-sm text-gray-600">Making the most of every learning opportunity, regardless of circumstances</p>
-            </div>
-            <div className="bg-white p-4 rounded">
-              <h4 className="font-medium mb-2">A Little Play in Between Classes</h4>
-              <p className="text-sm text-gray-600">Balancing structured learning with creative play and exploration</p>
-            </div>
-            <div className="bg-white p-4 rounded">
-              <h4 className="font-medium mb-2">Why did you choose Athena AI online school for your children?</h4>
-              <p className="text-sm text-gray-600">Hearing from parents about their experience with our online education</p>
+            ))}
+            
+            {/* Quote Card - Timeline inspired */}
+            <div className="bg-blue-950 p-10 flex flex-col justify-center">
+               <p className="text-2xl font-black text-white leading-tight italic">
+                 "The future is online, where are you?"
+               </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Footer-style section - Inspired by S.W.O.T slide */}
+      <section className="container mx-auto px-6 py-24 grid md:grid-cols-2 gap-16">
+        <div className="relative">
+          <span className="absolute -top-12 -left-4 text-[12rem] font-black text-slate-100 -z-10">A</span>
+          <h3 className="text-3xl font-bold uppercase mb-8">#Being Athena AI</h3>
+          <div className="space-y-8">
+            <div className="border-l-2 border-slate-950 pl-6">
+              <h4 className="font-bold uppercase text-xs tracking-widest mb-2">Resilience</h4>
+              <p className="text-sm text-slate-600">Make Some Rain While The Sun Shines Outside</p>
+            </div>
+            <div className="border-l-2 border-slate-950 pl-6">
+              <h4 className="font-bold uppercase text-xs tracking-widest mb-2">Balance</h4>
+              <p className="text-sm text-slate-600">A Little Play in Between Classes</p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="bg-slate-950 p-12 text-white">
+          <h3 className="text-xl font-bold mb-6">Why Parents Choose Us?</h3>
+          <p className="text-slate-400 text-sm italic mb-8">
+            "Hearing from parents about their experience with our online education helps us maintain 
+            our gold standard in K-12 schooling."
+          </p>
+          <div className="h-1 w-12 bg-blue-950"></div>
+        </div>
+      </section>
     </div>
   );
 };
