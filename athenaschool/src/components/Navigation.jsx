@@ -96,7 +96,6 @@ const Navigation = memo(() => {
         { text: 'British Advanced Levels', href: '/british-advanced-levels' },
         { text: 'Cambridge Advanced Level', href: '/cambridge-advanced-level' },
         { text: 'Edexcel International Advanced Level', href: '/edexcel-international-advanced-level' },
-        { text: 'Insights NEW', href: '#' },
       ]
     },
     {
