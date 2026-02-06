@@ -3,8 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, User, BookOpen, Award, Users, Phone, Heart } from 'lucide-react';
 import logo from '../assets/logo-nav.webp';
 
-import logo from '../assets/ydyh.webp';
-
 const Navigation = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
