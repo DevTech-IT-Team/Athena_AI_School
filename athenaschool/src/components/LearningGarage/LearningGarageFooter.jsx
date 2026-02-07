@@ -60,8 +60,8 @@ const LearningGarageFooter = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-blue-400" />
-                <a href="mailto:info@21kschool.com" className="text-gray-300 hover:text-white transition-colors">
-                  info@21kschool.com
+                <a href="mailto:info@athenaschool.com" className="text-gray-300 hover:text-white transition-colors">
+                  info@athenaschool.com
                 </a>
               </div>
               <div className="flex items-start gap-3">
