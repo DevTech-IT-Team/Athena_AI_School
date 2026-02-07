@@ -1,5 +1,7 @@
 import React from "react";
 import { Play, Download, MessageSquare } from "lucide-react";
+import ParentPageHeroBg from '../../assets/optimized/parents-speak.webp';
+
 
 const ParentsSpeak = () => {
   const sidebarCategories = [
@@ -34,7 +36,7 @@ const ParentsSpeak = () => {
     <div className="min-h-screen bg-[#FDFDFD] font-sans text-[#333]">
       <div className="relative h-112.5 w-full flex items-center justify-center mt-14">
         <img
-          src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=2000"
+          src={ParentPageHeroBg}
           className="absolute inset-0 w-full h-full object-cover grayscale-[0.1] brightness-[0.5]"
           alt="Parents Speak Banner"
         />

@@ -1,5 +1,7 @@
 import React from "react";
 import { Download, MessageSquare } from "lucide-react";
+import PressHeroBg from '../../assets/optimized/press.webp';
+
 
 const Press = () => {
   const sidebarCategories = [
@@ -50,7 +52,7 @@ const Press = () => {
     <div className="min-h-screen bg-[#FDFDFD] font-sans text-[#333]">
       <div className="relative h-100 w-full flex items-center justify-center bg-[#001529] mt-16">
         <img
-          src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=2000"
+          src={PressHeroBg}
           className="absolute inset-0 w-full h-full object-cover opacity-60"
           alt="Press Hero"
           onError={(e) => {

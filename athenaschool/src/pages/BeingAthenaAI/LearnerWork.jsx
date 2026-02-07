@@ -1,5 +1,7 @@
 import React from "react";
 import { Play, Download, MessageSquare } from "lucide-react";
+import LearnerHeroBg from '../../assets/optimized/learner-works.webp';
+
 
 const LearnerWork = () => {
   const learners = [
@@ -39,7 +41,7 @@ const LearnerWork = () => {
     <div className="min-h-screen bg-[#FDFDFD] font-sans text-[#333]">
       <div className="relative h-100 w-full flex items-center justify-center mt-14">
         <img
-          src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80&w=2000"
+          src={LearnerHeroBg}
           className="absolute inset-0 w-full h-full object-cover"
           alt="Learner Work Banner"
         />

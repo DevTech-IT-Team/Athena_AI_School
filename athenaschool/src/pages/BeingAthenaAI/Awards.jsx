@@ -7,6 +7,8 @@ import {
   Medal,
   Award,
 } from "lucide-react";
+import AwardsHeroBg from '../../assets/optimized/awards.webp';
+
 
 const Awards = () => {
   const sidebarCategories = [
@@ -55,7 +57,7 @@ const Awards = () => {
     <div className="min-h-screen bg-[#FDFDFD] font-sans text-[#333]">
       <div className="relative h-100 w-full flex items-center justify-center bg-[#002147] mt-14">
         <img
-          src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&q=80&w=2000"
+          src={AwardsHeroBg}
           className="absolute inset-0 w-full h-full object-cover opacity-50 grayscale-[0.2]"
           alt="Awards and Recognition"
           onError={(e) => {

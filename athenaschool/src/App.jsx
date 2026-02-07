@@ -3,6 +3,7 @@ import { useEffect, Suspense, lazy } from 'react';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import ErrorBoundary from './components/ErrorBoundary';
+import BlogComingSoon from './pages/BeingAthenaAI/BlogCommingSoon';
 
 const Footer = lazy(() => import('./components/Footer'));
 const EnquireTab = lazy(() => import('./components/EnquireTab'));
@@ -138,6 +139,7 @@ function App() {
             <Route path="/athena-ai-group" element={<ScrollToTopWrapper><AthenaAIGroup /></ScrollToTopWrapper>} />
             <Route path="/our-leaders" element={<ScrollToTopWrapper><OurLeaders /></ScrollToTopWrapper>} />
             <Route path="/habits-of-mind" element={<ScrollToTopWrapper><HabitsOfMind /></ScrollToTopWrapper>} />
+            <Route path="/blog" element={<ScrollToTopWrapper><BlogComingSoon /></ScrollToTopWrapper>} />
           </Routes>
         </Suspense>
         <Suspense fallback={null}>

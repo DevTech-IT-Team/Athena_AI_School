@@ -9,6 +9,7 @@ import {
   Video,
   Search,
 } from "lucide-react";
+import AcademicHeroBg from '../../assets/optimized/academic-crew.webp';
 
 const AcademicCrewPage = () => {
   const staff = [
@@ -37,7 +38,7 @@ const AcademicCrewPage = () => {
     <div className="min-h-screen bg-[#FDFDFD] font-sans">
       <div className="relative h-100 w-full flex items-center justify-center mt-16">
         <img
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=2000"
+          src={AcademicHeroBg}
           className="absolute inset-0 w-full h-full object-cover shadow-inner"
           alt="Academic Crew Banner"
         />

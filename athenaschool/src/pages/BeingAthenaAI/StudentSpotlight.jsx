@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react"; // Added useState and useEffect
 import { ChevronRight } from "lucide-react";
+import studentHeroBg from '../../assets/optimized/student-spotlight.webp';
+import spotlightImg1 from '../../assets/optimized/spotlight-img1.webp';
+import spotlightImg2 from '../../assets/optimized/spotlight-img2.webp';
+import spotlightImg3 from '../../assets/optimized/spotlight-img3.webp';
+
 
 const StudentSpotlight = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -9,7 +14,7 @@ const StudentSpotlight = () => {
       name: "Adarsh",
       grade: "Grade 7",
       curriculum: "Indian",
-      img: "https://images.unsplash.com/photo-1503919919749-64292629620f?auto=format&fit=crop&q=80&w=400",
+      img: spotlightImg1,
       description:
         "Adarsh - Grade 7 MC has won U 14 tournament on the new year open tournament conducted by Boston Indians open tournament...",
     },
@@ -17,7 +22,7 @@ const StudentSpotlight = () => {
       name: "Aishwarya Jingade",
       grade: "Grade 6",
       curriculum: "Indian",
-      img: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=400",
+      img: spotlightImg2,
       description:
         "I started roller skating in 2021 in the month of november in a skating ground near my house. Now it's almost the end 2022...",
     },
@@ -25,7 +30,7 @@ const StudentSpotlight = () => {
       name: "Ananya Vishwesh",
       grade: "Grade 6",
       curriculum: "British",
-      img: "https://images.unsplash.com/photo-1491309059938-b4abc2ca3d61?auto=format&fit=crop&q=80&w=400",
+      img: spotlightImg3,
       description:
         "Ananya Vishwesh participated and represented the school in Azadi ka Amrut Mahotsav and 125th Anniversary of Swami Vivekananda's return...",
     },
@@ -33,7 +38,7 @@ const StudentSpotlight = () => {
       name: "Manishka Dubey",
       grade: "Grade 5",
       curriculum: "American",
-      img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400",
+      img: spotlightImg3,
       description:
         "Manishka Dubey, the youngest winner of the Inventor Challenge by Colors Infinity TV and a Gold Medalist at the International Innovation Expo.",
     },
@@ -41,7 +46,7 @@ const StudentSpotlight = () => {
       name: "Maria",
       grade: "Grade 2",
       curriculum: "Indian",
-      img: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=400",
+      img: spotlightImg2,
       description:
         "Maria has written and published a book for 'Bri Books National Young Authors Fair' titled 'The Day She Saw Santa'...",
     },
@@ -49,7 +54,7 @@ const StudentSpotlight = () => {
       name: "Pranjal Dedhia",
       grade: "Grade 6",
       curriculum: "Indian",
-      img: "https://images.unsplash.com/photo-1612872080536-f211f6c77fca?auto=format&fit=crop&q=80&w=400",
+      img: spotlightImg1,
       description:
         "Pranjal won a silver medal in the U13 Maharashtra State-Level tournament and was named the Most Promising player.",
     },
@@ -83,7 +88,7 @@ const StudentSpotlight = () => {
     <div className="min-h-screen bg-white mt-14">
       <div className="relative h-112.5 w-full flex items-center justify-center overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=2000"
+          src={studentHeroBg}
           className="absolute inset-0 w-full h-full object-cover brightness-[0.4]"
           alt="Students learning"
         />

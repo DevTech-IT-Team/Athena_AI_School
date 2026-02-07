@@ -140,7 +140,7 @@ const Navigation = memo(() => {
         { text: 'Learner Work', href: '/learner-work' },
         { text: 'Parents Speak', href: '/parents-speak' },
         { text: 'Press', href: '/press' },
-        { text: 'Blog', href: '#' },
+        { text: 'Blog', href: '/blog' },
         { text: 'Awards', href: '/awards' },
         { text: 'Our Learner Council', href: '/our-learner-council' },
       ]

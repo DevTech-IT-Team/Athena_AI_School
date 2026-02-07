@@ -7,6 +7,10 @@ import {
   RotateCcw,
   ArrowRight,
 } from "lucide-react";
+import ReferParentImg1 from '../../assets/optimized/refer-page-image1.webp';
+import ReferParentImg2 from '../../assets/optimized/refer-page-image2.webp';
+import RewardImg from '../../assets/optimized/rewards.webp';
+
 
 const ReferAParent = () => {
   const [isTermsOpen, setIsTermsOpen] = useState(false);
@@ -114,8 +118,9 @@ const ReferAParent = () => {
           <div className="flex flex-col md:flex-row items-center gap-20">
             <div className="w-full md:w-1/2">
               <img
-                src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=1000&auto=format&fit=crop"
+                src={ReferParentImg1}
                 alt="Student"
+                loading="lazy"
                 className="w-full h-112.5 object-cover rounded-[2.5rem] shadow-2xl"
               />
             </div>
@@ -162,7 +167,8 @@ const ReferAParent = () => {
             </div>
             <div className="w-full md:w-1/2 order-1 md:order-2">
               <img
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1000&auto=format&fit=crop"
+                src={ReferParentImg2}
+                loading="lazy"
                 alt="Friends connecting"
                 className="w-full h-112.5 object-cover rounded-[2.5rem] shadow-2xl"
               />
@@ -210,8 +216,9 @@ const ReferAParent = () => {
         <div className="flex flex-col md:flex-row items-center gap-16 mb-40">
           <div className="w-full md:w-5/12">
             <img
-              src="https://images.unsplash.com/photo-1549463591-14cc58d1ec7d?q=80&w=1000&auto=format&fit=crop"
+              src={RewardImg}
               alt="Gift reward"
+              loading="lazy"
               className="w-full h-87.5 object-cover rounded-4xl shadow-2xl"
             />
           </div>

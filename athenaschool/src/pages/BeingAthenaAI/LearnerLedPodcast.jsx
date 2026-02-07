@@ -1,5 +1,7 @@
 import React from "react";
 import { Play, Headphones } from "lucide-react";
+import PodcastBg from '../../assets/optimized/podcast.webp';
+
 
 const LearnerLedPodcast = () => {
   return (
@@ -49,22 +51,116 @@ const LearnerLedPodcast = () => {
       </div>
 
       <div className="container mx-auto px-6 mb-24 max-w-7xl">
-        <div className="flex flex-col md:flex-row items-center gap-16">
-          <div className="w-full md:w-1/2">
-            <h2 className="text-[#074D8D] text-3xl font-black mb-6 leading-tight">
-              The Echo of Athena AI
+        <div className="flex flex-col lg:flex-row items-center gap-16">
+          <div className="w-full lg:w-1/2">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-0.5 w-8 bg-[#FFB400]"></div>
+              <span className="text-[#FFB400] text-[10px] font-black uppercase tracking-[0.3em]">
+                Official Series
+              </span>
+            </div>
+
+            <h2 className="text-[#074D8D] text-4xl md:text-5xl font-black mb-6 leading-tight">
+              The Echo of <br />
+              Athena AI
             </h2>
-            <p className="text-gray-500 text-lg leading-relaxed mb-8">
-              It's a learner-led podcast, conceptualized, coordinated, and
-              conducted by the Students of Athena AI School.
-            </p>
+
+            <div className="space-y-6 text-gray-500 text-lg leading-relaxed mb-10">
+              <p>
+                It's a{" "}
+                <span className="text-[#074D8D] font-bold border-b-2 border-[#FFB400]">
+                  learner-led podcast
+                </span>
+                , conceptualized, coordinated, and conducted by the Students of
+                Athena AI School.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
+                <div className="relative pl-6">
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#FFB400] rounded-full"></div>
+                  <h4 className="text-[#074D8D] font-bold text-sm uppercase tracking-wider">
+                    Concept
+                  </h4>
+                  <p className="text-xs text-gray-400 mt-1 leading-relaxed">
+                    Strategic vision and episode planning led by the Learner
+                    Board.
+                  </p>
+                </div>
+                <div className="relative pl-6">
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#074D8D] rounded-full"></div>
+                  <h4 className="text-[#074D8D] font-bold text-sm uppercase tracking-wider">
+                    Engagement
+                  </h4>
+                  <p className="text-xs text-gray-400 mt-1 leading-relaxed">
+                    Connecting learners with global educators and founders.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="w-full md:w-1/2">
-            <img
-              src="https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&q=80&w=1000"
-              className="w-full h-87.5 object-cover rounded-4xl shadow-lg"
-              alt="Student Voice"
-            />
+
+          <div className="w-full lg:w-1/2">
+            <div className="relative group">
+              <div className="relative z-10 overflow-hidden rounded-[2.5rem] shadow-2xl bg-[#001D3D] aspect-4/5 md:aspect-auto md:h-125">
+               
+                <img
+                  src={PodcastBg}
+                  loading="lazy"
+                  className="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
+                  alt="Athena AI Podcast Studio"
+                />
+
+                <div className="absolute inset-0 bg-linear-to-t from-[#001D3D] via-[#001D3D]/20 to-transparent" />
+
+                <div className="absolute top-0 right-0 p-8">
+                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center">
+                    <div className="w-2 h-2 bg-[#FFB400] rounded-full animate-ping"></div>
+                  </div>
+                </div>
+
+                <div className="absolute bottom-12 left-12 right-12">
+                  <p className="text-[#FFB400] font-black text-[10px] uppercase tracking-[0.4em] mb-4">
+                    Behind The Scenes
+                  </p>
+                  <h3 className="text-white text-3xl font-bold italic leading-tight mb-4">
+                    Giving a Voice to the <br />
+                    Future of Education.
+                  </h3>
+                  <div className="h-1 w-20 bg-[#FFB400] rounded-full"></div>
+                </div>
+              </div>
+
+              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl z-20 border border-gray-100 hidden md:block">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-blue-50 rounded-xl">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#074D8D"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                      <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                      <line x1="12" x2="12" y1="19" y2="22" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">
+                      Learner Driven
+                    </p>
+                    <p className="text-[#074D8D] font-bold text-sm uppercase">
+                      100% Student Produced
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute -inset-4 border-2 border-gray-100 rounded-[3rem] -z-10 group-hover:border-[#FFB400]/20 transition-colors duration-500"></div>
+            </div>
           </div>
         </div>
       </div>
