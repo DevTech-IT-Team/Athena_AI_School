@@ -1,128 +1,199 @@
-import React from 'react';
+import React, { useState, useEffect } from "react"; // Added useState and useEffect
+import { ChevronRight } from "lucide-react";
+import studentHeroBg from '../../assets/optimized/student-spotlight.webp';
+import spotlightImg1 from '../../assets/optimized/spotlight-img1.webp';
+import spotlightImg2 from '../../assets/optimized/spotlight-img2.webp';
+import spotlightImg3 from '../../assets/optimized/spotlight-img3.webp';
+
 
 const StudentSpotlight = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const students = [
     {
       name: "Adarsh",
       grade: "Grade 7",
       curriculum: "Indian",
-      description: "Adarsh - Grade 7 MC has won U 14 tournament on the new year open tournament conducted by Boston Indians open tournament..."
+      img: spotlightImg1,
+      description:
+        "Adarsh - Grade 7 MC has won U 14 tournament on the new year open tournament conducted by Boston Indians open tournament...",
     },
     {
       name: "Aishwarya Jingade",
       grade: "Grade 6",
       curriculum: "Indian",
-      description: "I started roller skating in 2021 in the month of november in a skating groung near my house . now it's almost the end 2022 and I have..."
+      img: spotlightImg2,
+      description:
+        "I started roller skating in 2021 in the month of november in a skating ground near my house. Now it's almost the end 2022...",
     },
     {
       name: "Ananya Vishwesh",
       grade: "Grade 6",
       curriculum: "British",
-      description: "Ananya Vishwesh of grade 6 MC participated and represented Athena AI school in Azadi ka Amrut Mahotsav and 125th..."
+      img: spotlightImg3,
+      description:
+        "Ananya Vishwesh participated and represented the school in Azadi ka Amrut Mahotsav and 125th Anniversary of Swami Vivekananda's return...",
     },
     {
       name: "Manishka Dubey",
       grade: "Grade 5",
       curriculum: "American",
-      description: "Manishka Dubey the ( YOUNGEST)WINNER(Cheque of 10 lakh) OF THE INVENTOR CHALLENGE BY COLORS INFINITY TV..."
+      img: spotlightImg3,
+      description:
+        "Manishka Dubey, the youngest winner of the Inventor Challenge by Colors Infinity TV and a Gold Medalist at the International Innovation Expo.",
     },
     {
       name: "Maria",
       grade: "Grade 2",
       curriculum: "Indian",
-      description: "Maria of Grade 2  has written and published a book for \"Bri Books National Young Authors' Fair \"The Day She Saw Santa\"..."
+      img: spotlightImg2,
+      description:
+        "Maria has written and published a book for 'Bri Books National Young Authors Fair' titled 'The Day She Saw Santa'...",
     },
     {
       name: "Pranjal Dedhia",
       grade: "Grade 6",
       curriculum: "Indian",
-      description: "Pranjal Dedhia of Grade 6 MB has won a silver medal in the U13 Maharashtra State-Level tournament and the Most Promising player..."
+      img: spotlightImg1,
+      description:
+        "Pranjal won a silver medal in the U13 Maharashtra State-Level tournament and was named the Most Promising player.",
     },
-    {
-      name: "Ravyanshi Singh",
-      grade: "Grade 4",
-      curriculum: "Indian",
-      description: "Ravyanshi Singh is an author with a keen interest in exploring information related to science, folk culture, natural languages, writing scripts..."
-    },
-    {
-      name: "Sameeksha Sinha",
-      grade: "Grade 3",
-      curriculum: "Indian",
-      description: "SAMEEKSHA SINHA (Gold Medal in Malavalli National Level Karate Championship - 2022) ..."
-    },
-    {
-      name: "Siri Vinay Bandakka",
-      grade: "",
-      curriculum: "Indian",
-      description: "Siri Vinay Bandakka who has won two Gold medals in the 38th Karnataka Roller Skating Championship. And not just that, ..."
-    },
-    {
-      name: "Vaidic Mukherjee",
-      grade: "Grade 2",
-      curriculum: "Indian",
-      description: "Vaidic Mukherjee (2210020646), Grade 2 received an invitation and participation along with his winning a prize..."
-    },
-    {
-      name: "Yashvi",
-      grade: "Grade 8",
-      curriculum: "Indian",
-      description: "Yashvi of Grade 8 AA has achieved the 2nd place in Under 15 State Chess Championship held in Hyderabad..."
-    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % students.length);
+    }, 5000); // Interval set to 5 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [students.length]);
+
+  const sidebarList = [
+    "Adarsh",
+    "Aadvik Srivastava",
+    "Alisha",
+    "Aishwarya Jingade",
+    "Ananya Vishwesh",
+    "Manishka Dubey",
+    "Maria",
+    "Pranjal Dedhia",
+    "Ravyanshi Singh",
+    "Sameeksha Sinha",
+    "Siri Vinay Bandakka",
+    "Vaidic Mukherjee",
+    "Yashvi",
   ];
 
   return (
-    <div className="container mx-auto px-4 pt-24 pb-8">
-      <nav className="text-sm mb-4">
-        <span className="text-gray-600">Home</span> &gt; <span className="text-gray-600">Being Athena AI</span> &gt; <span className="text-gray-600">Student Spotlight</span>
-      </nav>
-
-      <h1 className="text-4xl font-bold mb-6">Student Spotlight</h1>
-      
-      <div className="prose max-w-none">
-        <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-6">Featured Students</h2>
-          
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">Adarsh</h3>
-              <p className="text-gray-600 mb-3">Adarsh - Grade 7 MC has won U 14 tournament on the new year open tournament conducted by Boston Indians open tournament</p>
-              <button className="text-blue-600 hover:text-blue-800 font-medium">Read More</button>
-            </div>
-            
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">Ananya Vishwesh</h3>
-              <p className="text-gray-600 mb-3">Ananya Vishwesh of grade 6 MC participated and represented Athena AI school in Azadi ka Amrut Mahotsav and 125th Anniversary of Swami Vivekananda's return to India - a cultural inter school event conducted by Ramakrishna Math - a recitation competition - Swami Vivekananda's Chicago Addresses and grabbed the 3rd place.</p>
-              <button className="text-blue-600 hover:text-blue-800 font-medium">Read More</button>
-            </div>
-            
-            <div className="border rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-2">Manishka Dubey</h3>
-              <p className="text-gray-600 mb-3">Manishka Dubey the (YOUNGEST) WINNER(Cheque of 10 lakh) OF THE INVENTOR CHALLENGE BY COLORS INFINITY TV also the YONGEST INNOVATOR who WON GOLD MEDAL IN INEX INDIA INTERNATIONAL INNOVATION AND INVENTION EXPO GOA</p>
-              <button className="text-blue-600 hover:text-blue-800 font-medium">Read More</button>
-            </div>
-          </div>
+    <div className="min-h-screen bg-white mt-14">
+      <div className="relative h-112.5 w-full flex items-center justify-center overflow-hidden">
+        <img
+          src={studentHeroBg}
+          className="absolute inset-0 w-full h-full object-cover brightness-[0.4]"
+          alt="Students learning"
+        />
+        <div className="relative z-10 text-center text-white px-6">
+          <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-4">
+            STUDENT SPOTLIGHT
+          </h1>
+          <div className="h-1.5 w-24 bg-[#FFC107] mx-auto rounded-full" />
         </div>
+      </div>
 
-        <div className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Student Spotlight</h2>
-          <div className="flex flex-wrap gap-2 mb-8">
-            {["Adarsh", "Aadvik Srivastava", "Alisha", "Aishwarya Jingade", "Ananya Vishwesh", "Manishka Dubey", "Maria", "Pranjal Dedhia", "Ravyanshi Singh", "Sameeksha Sinha", "Siri Vinay Bandakka", "Vaidic Mukherjee", "Yashvi"].map((student, index) => (
-              <span key={index} className="px-3 py-1 bg-gray-100 rounded-full text-sm">{student}</span>
-            ))}
-          </div>
-        </div>
+      <div className="container mx-auto px-6 py-12 max-w-7xl">
+        <nav className="text-[11px] mb-8 flex items-center gap-2 font-bold uppercase tracking-widest text-gray-400">
+          <span>Home</span>
+          <span className="text-gray-300">&gt; </span>
+          <span className="text-gray-400">Being Athena</span>
+          <span className="text-gray-300"> &gt;</span>
+          <span className="text-[#074D8D]">Student Spotlight</span>
+        </nav>
 
-        <h2 className="text-2xl font-semibold mb-6">All Student Spotlights</h2>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {students.map((student, index) => (
-            <div key={index} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold mb-2">{student.name}</h3>
-              <p className="text-gray-600 text-sm mb-3">{student.grade} | {student.curriculum}</p>
-              <p className="text-gray-700 mb-4">{student.description}</p>
-              <button className="text-blue-600 hover:text-blue-800 font-medium">Read More</button>
+        <div className="flex flex-col lg:flex-row gap-12">
+          <aside className="w-full lg:w-1/4 bg-gray-50 rounded-2xl overflow-hidden shadow-sm self-start">
+            <div className="bg-[#1e3a8a] p-5 text-white font-bold text-center text-sm tracking-widest uppercase">
+              Student Spotlight
             </div>
-          ))}
+            <ul className="py-2">
+              {sidebarList.map((item, idx) => (
+                <li
+                  key={idx}
+                  className="border-b border-gray-100 last:border-0"
+                >
+                  <button className="w-full text-left px-6 py-4 text-[12px] font-bold text-gray-600 hover:bg-blue-50 hover:text-[#074D8D] transition-colors flex justify-between items-center group">
+                    {item}
+                    <ChevronRight
+                      size={14}
+                      className="opacity-0 group-hover:opacity-100 transition-opacity"
+                    />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </aside>
+
+          <main className="w-full lg:w-3/4">
+            <div className="bg-white rounded-4xl shadow-xl overflow-hidden mb-16 border border-gray-100 flex flex-col md:flex-row">
+              <div className="md:w-1/2 h-64 md:h-auto overflow-hidden">
+                <img
+                  src={students[currentIndex].img}
+                  className="w-full h-full object-cover transition-all duration-700"
+                  alt={students[currentIndex].name}
+                />
+              </div>
+              <div className="md:w-1/2 p-10 flex flex-col justify-center">
+                <h2 className="text-[#074D8D] text-3xl font-black mb-4">
+                  {students[currentIndex].name}
+                </h2>
+                <p className="text-gray-500 text-sm leading-relaxed mb-6">
+                  {students[currentIndex].description}
+                </p>
+                <button className="bg-[#074D8D] text-white px-8 py-3 rounded-lg text-[10px] font-black uppercase tracking-widest hover:bg-[#FFC107] hover:text-[#074D8D] transition-all w-fit">
+                  Read More
+                </button>
+
+                <div className="flex gap-2 mt-8">
+                  {students.map((_, idx) => (
+                    <div
+                      key={idx}
+                      className={`h-2 rounded-full transition-all duration-300 ${currentIndex === idx ? "w-4 bg-[#074D8D]" : "w-2 bg-gray-300"}`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {students.map((student, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl shadow-md border border-gray-50 overflow-hidden flex flex-col group"
+                >
+                  <div className="h-48 overflow-hidden">
+                    <img
+                      src={student.img}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      alt={student.name}
+                    />
+                  </div>
+                  <div className="p-6 flex flex-col grow text-center">
+                    <h3 className="text-[#074D8D] text-lg font-black mb-1">
+                      {student.name}
+                    </h3>
+                    <p className="text-gray-400 text-[10px] font-bold uppercase tracking-wider mb-4">
+                      {student.grade} | {student.curriculum}
+                    </p>
+                    <p className="text-gray-500 text-xs leading-relaxed mb-6 grow line-clamp-3">
+                      {student.description}
+                    </p>
+                    <button className="bg-[#1e3a8a] text-white px-6 py-3 rounded-lg text-[9px] font-black uppercase tracking-widest self-center hover:bg-[#FFC107] hover:text-[#074D8D] transition-all">
+                      Read More
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </main>
         </div>
       </div>
     </div>
