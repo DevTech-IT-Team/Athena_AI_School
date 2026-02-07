@@ -6,12 +6,9 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Athena AI Online School | India's Most Advanced AI-Powered Online School</title>
-  <meta name="description" content="Athena AI School offers personalized online schooling designed for the modern learner. Experience AI-powered education tailored to your child's unique needs, interests, and learning style. CBSE & British curriculum available." />
-  <meta name="keywords" content="online school, AI school, CBSE online, British curriculum, personalized learning, online education India" />
-  <meta name="author" content="Athena AI School" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Athena AI Online School | Personalized AI-Powered Education" />
-  <meta property="og:description" content="India's Most Advanced AI-Powered Online School. Personalized learning for Pre-Primary to Senior School." />
+  <!-- Preconnect to external domains if any -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://athenaschool.in" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -28,18 +25,40 @@
   
   <!-- Critical CSS inline -->
   <style>
-    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; background: white; }
     #root { min-height: 100vh; }
-    .lazy-load { opacity: 0; transition: opacity 0.3s; }
-    .lazy-loaded { opacity: 1; }
+    .min-h-screen { min-height: 100vh; }
+    .bg-white { background-color: white; }
+    .flex { display: flex; }
+    .items-center { align-items: center; }
+    .justify-center { justify-content: center; }
+    .text-center { text-align: center; }
+    .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+    .text-gray-500 { color: #6b7280; }
+    .animate-spin { animation: spin 1s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .rounded-full { border-radius: 9999px; }
+    .border-b-2 { border-bottom-width: 2px; }
+    .border-blue-600 { border-color: #2563eb; }
+    .h-8 { height: 2rem; }
+    .w-8 { width: 2rem; }
   </style>
   
+  <!-- Defer non-critical CSS -->
   <link href="/src/index.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="/src/index.css" rel="stylesheet"></noscript>
 
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; background: white;">
+      <div style="text-align: center; padding: 2rem;">
+        <div style="width: 40px; height: 40px; border: 3px solid #e5e7eb; border-top: 3px solid #2563eb; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto;"></div>
+        <p style="margin-top: 1rem; color: #6b7280; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;">Loading Athena AI...</p>
+      </div>
+    </div>
+  </div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

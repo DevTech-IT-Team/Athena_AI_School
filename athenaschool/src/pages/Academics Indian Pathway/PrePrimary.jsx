@@ -1,58 +1,64 @@
 import React from 'react';
+import '../../Academics.css';
 
 const PrePrimary = () => {
   return (
-    <div className="container mx-auto px-4 pt-24 pb-8">
-      <nav className="text-sm mb-4">
-        <span className="text-gray-600">Home</span> &gt; <span className="text-gray-600">Pre Primary</span>
-      </nav>
+    <>
+      <div className="academics-page">
+        <div className="relative h-[60vh] min-h-[400px] bg-gradient-to-br from-white via-blue-400 to-blue-950 flex items-center justify-center text-center overflow-hidden">
+          <div className="relative z-10 px-8 max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">Pre Primary</h1>
+            <p className="text-lg md:text-xl font-light opacity-90">NCF India</p>
+          </div>
+          <div className="absolute inset-0 bg-black/30"></div>
+        </div>
 
-      <h1 className="text-4xl font-bold mb-2">Pre Primary</h1>
-      <p className="text-gray-600 mb-8">NCF India</p>
+        <div className="academics-content">
+          <div className="academics-breadcrumb">
+            <a href="/">Home</a> &gt; Pre Primary
+          </div>
 
-      <div className="flex flex-wrap gap-6 text-sm text-gray-700 mb-10">
-        <span>Learning Culture</span>
-        <span>Primary</span>
-        <span>Pre Primary</span>
-        <span>Middle</span>
-        <span>Senior School</span>
-        <span>Our Partners</span>
-        <span>Music &amp; Arts Partner</span>
+      <div className="academics-nav">
+        <a href="/academics/learning-culture" className="nav-link">Learning Culture</a>
+        <a href="/academics/primary" className="nav-link">Primary</a>
+        <a href="/academics/pre-primary" className="nav-link active">Pre Primary</a>
+        <a href="/academics/middle" className="nav-link">Middle</a>
+        <a href="/academics/senior-school" className="nav-link">Senior School</a>
+        <a href="/academics/ncf-india" className="nav-link">NCF India</a>
+        <a href="/academics/music-arts-partner" className="nav-link">Music & Arts Partner</a>
       </div>
 
-      <div className="bg-gray-50 p-6 rounded-lg mb-10">
-        <p className="text-gray-800 mb-4">
+      <div className="academics-quote">
+        <p className="quote-text">
           &quot;The change I have seen in my children is phenomenal. They want to explore more about topics taught in school!&quot;
         </p>
-        <div className="flex flex-wrap gap-3">
-          <button className="px-4 py-2 rounded-md bg-blue-600 text-white font-medium">Enquire Now</button>
-          <button className="px-4 py-2 rounded-md bg-white border border-gray-300 text-gray-800 font-medium">Download Prospectus</button>
+        <div className="cta-buttons">
+          <button className="btn-primary">Enquire Now</button>
+          <button className="btn-secondary">Download Prospectus</button>
         </div>
       </div>
 
-      <div className="prose max-w-none">
-        <p className="text-sm text-gray-600">Home Pre Primary</p>
-
+      <div className="academics-section">
         <h2>Pre Primary</h2>
-        <h3>The moment you log in you know you are in good hands.</h3>
+        <p className="section-description">The moment you log in you know you are in good hands.</p>
 
-        <p>
+        <p className="section-text">
           The Pre-Primary Program caters to learners aged 3 to 5 years. It includes the following Grades:
         </p>
 
-        <ul>
+        <ul className="program-list">
           <li>Nursery</li>
           <li>KG1 / LKG</li>
           <li>KG2 / UKG</li>
         </ul>
 
-        <p>
+        <p className="section-text">
           The Pre-Primary Curriculum provides an age-appropriate, activity-based academic plan for every grade. The curriculum content is based on the National Curriculum Framework, alongside best educational practices with an emphasis on every child's unique learning styles. Values, morals, and ethics for the preschoolers are weaved into our programs with stories &amp; narratives to nurture &amp; build a strong character, independent mind and confident leaders of tomorrow.
         </p>
 
-        <p>The main subject areas are:</p>
+        <p className="section-text">The main subject areas are:</p>
 
-        <ul>
+        <ul className="program-list">
           <li>Communication and Language</li>
           <li>Personal, Social and Emotional Development</li>
           <li>Literacy</li>
@@ -62,13 +68,13 @@ const PrePrimary = () => {
           <li>Music and Movement</li>
         </ul>
 
-        <p>
+        <p className="section-text">
           Only English Language is taught in Pre-Primary. From Grade 1 onward, learners have the opportunity to explore additional languages as part of their primary education.
         </p>
 
-        <p>Learning Material Kit delivered home for written work and home works:</p>
+        <p className="section-text">Learning Material Kit delivered home for written work and home works:</p>
 
-        <ul>
+        <ul className="program-list">
           <li>Engaging, Skill-based Set of Concept Books and Workbooks</li>
           <li>Learner Merchandise - ID card, Almanac and Annual Planner</li>
           <li>Based on National Curriculum Framework</li>
@@ -78,23 +84,27 @@ const PrePrimary = () => {
           <li>1-2 Hours of Live Engaging Classes, Monday to Friday</li>
           <li>Academic structure and support to parents for stress-free learning</li>
         </ul>
+      </div>
 
-        <div className="bg-blue-100 p-4 rounded-lg mb-6">
-          <h3 className="text-xl font-semibold mb-2">#Being Athena AI</h3>
+      <div className="social-highlights">
+        <div className="highlight-card blue">
+          <h3>#Being Athena AI</h3>
           <p>Understanding rainforests with yug</p>
         </div>
 
-        <div className="bg-green-100 p-4 rounded-lg mb-6">
-          <h3 className="text-xl font-semibold mb-2">#Being Athena AI</h3>
+        <div className="highlight-card green">
+          <h3>#Being Athena AI</h3>
           <p>It is never too early to take up responsibility</p>
         </div>
 
-        <div className="bg-purple-100 p-4 rounded-lg">
-          <h3 className="text-xl font-semibold mb-2">#Being Athena AI</h3>
+        <div className="highlight-card purple">
+          <h3>#Being Athena AI</h3>
           <p>Actions Speak louder than words</p>
         </div>
       </div>
-    </div>
+        </div>
+      </div>
+    </>
   );
 };
 

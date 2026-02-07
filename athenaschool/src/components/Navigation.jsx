@@ -94,7 +94,6 @@ const Navigation = memo(() => {
         { text: 'British Advanced Levels', href: '/british-advanced-levels' },
         { text: 'Cambridge Advanced Level', href: '/cambridge-advanced-level' },
         { text: 'Edexcel International Advanced Level', href: '/edexcel-international-advanced-level' },
-        { text: 'Insights NEW', href: '#' },
       ]
     },
     {
@@ -200,7 +199,7 @@ const Navigation = memo(() => {
       {isOpen && (
         <div className="absolute top-16 left-0 right-0 bg-white shadow-2xl border-t border-gray-100 overflow-y-auto max-h-[calc(100vh-64px)] animate-in slide-in-from-top duration-300">
           <div className="container mx-auto px-6 py-8">
-            
+
             {/* Mobile Only Quick Links */}
             <div className="lg:hidden grid grid-cols-2 gap-4 mb-8">
               <Link to="/" className="flex items-center space-x-2 p-3 bg-gray-50 rounded-lg font-medium text-gray-700" onClick={() => setIsOpen(false)}><Home size={18} /><span>Home</span></Link>
@@ -245,7 +244,7 @@ const Navigation = memo(() => {
                 </div>
               ))}
             </div>
-            
+
             {/* Bottom Padding for mobile thumb reach */}
             <div className="h-20 lg:hidden"></div>
           </div>

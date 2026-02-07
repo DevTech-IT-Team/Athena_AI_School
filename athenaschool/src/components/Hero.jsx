@@ -8,7 +8,7 @@ const Hero = memo(() => {
 
       {/* --- Background Effects (Simplified) --- */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-950/3 via-blue-900/3 to-black/3 z-0"></div>
-      
+
       {/* --- Main Content Container --- */}
       <div className="container mx-auto px-6 py-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
 
@@ -21,11 +21,11 @@ const Hero = memo(() => {
           <p className="text-lg md:text-2xl text-blue-800 tracking-widest font-light uppercase mt-2 ml-4 lg:ml-8">
             Find your path
           </p>
-          
+
           <p className="text-base md:text-lg text-gray-600 mt-4 max-w-2xl ml-4 lg:ml-8">
             PERSONALIZED ONLINE SCHOOLING DESIGNED FOR THE MODERN LEARNER
           </p>
-          
+
           <p className="text-sm md:text-base text-gray-500 mt-3 max-w-xl ml-4 lg:ml-8">
             Experience education tailored to your child's unique needs, interests, and learning style. Our AI-powered platform adapts to create a perfect learning journey.
           </p>
@@ -46,11 +46,11 @@ const Hero = memo(() => {
           {/* The Glowing Rings Background */}
           <div className="absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] border border-blue-950/5 rounded-full"></div>
           <div className="absolute w-[150px] h-[150px] md:w-[250px] md:h-[250px] border border-blue-950/10 rounded-full"></div>
-          
+
           {/* Main Gemini Image */}
-          <img 
-            src={heroImage} 
-            alt="Athena AI School" 
+          <img
+            src={heroImage}
+            alt="Athena AI School"
             className="relative z-10 w-full max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl"
             loading="eager"
             fetchpriority="high"

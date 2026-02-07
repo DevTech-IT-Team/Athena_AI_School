@@ -5,11 +5,12 @@ const BritishLowerSecondary = () => {
   return (
     <>
       <div className="academics-page">
-        <div className="academics-hero">
-          <div className="academics-overlay">
-            <h1>British Lower Secondary</h1>
-            <p className="academics-subtitle">Developing intellectually curious, independent-minded young learners</p>
+        <div className="relative h-[60vh] min-h-[400px] bg-gradient-to-br from-white via-blue-400 to-blue-950 flex items-center justify-center text-center overflow-hidden">
+          <div className="relative z-10 px-8 max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">British Lower Secondary</h1>
+            <p className="text-lg md:text-xl font-light opacity-90">Developing intellectually curious, independent-minded young learners</p>
           </div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
         <div className="academics-content">
