@@ -149,13 +149,13 @@ const LearnerLedPodcast = () => {
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-[#1E3A8A] p-12 rounded-2xl text-center group cursor-pointer hover:bg-[#1e40af] transition-all">
-            <button className="bg-white text-[#1E3A8A] px-12 py-4 rounded-xl font-black text-[12px] uppercase tracking-[0.2em] group-hover:bg-[#FFC107] group-hover:text-white transition-all shadow-lg">
+            <button className="bg-white text-[#1E3A8A] px-12 py-4 rounded-xl font-black text-[12px] uppercase tracking-[0.2em] group-hover:bg-[#FFC107]transition-all group-hover:scale-105 shadow-lg">
               Indian Curriculum
             </button>
           </div>
 
           <div className="bg-[#4C1D95] p-12 rounded-2xl text-center group cursor-pointer hover:bg-[#5b21b6] transition-all">
-            <button className="bg-white text-[#4C1D95] px-12 py-4 rounded-xl font-black text-[12px] uppercase tracking-[0.2em] group-hover:bg-[#FFC107] group-hover:text-white transition-all shadow-lg">
+            <button className="bg-white text-[#4C1D95] px-12 py-4 rounded-xl font-black text-[12px] uppercase tracking-[0.2em] group-hover:bg-[#FFC107] group-hover:scale-105 transition-all shadow-lg">
               British Curriculum
             </button>
           </div>
