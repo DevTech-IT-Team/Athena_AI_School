@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Globe, BookOpen, BrainCircuit, Wrench, ChevronRight } from 'lucide-react';
-import priscillaImage from '../assets/optimized/priscilla-du-preez-XkKCui44iM0-unsplash (1).webp';
+import robotImage from '/assets/images/cartoon-ai-robot-scene (3).webp';
 
 const LazyImage = ({ src, alt, className }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -172,8 +172,8 @@ const OurPrograms = () => {
           <div className="relative w-full lg:w-1/2 h-64 lg:h-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-950 to-transparent z-10 lg:w-32"></div>
             <LazyImage 
-              src={priscillaImage} 
-              alt="Student studying with laptop" 
+              src={robotImage} 
+              alt="AI Learning Robot" 
               className="w-full h-full"
             />
              {/* Simplified decorative elements */}

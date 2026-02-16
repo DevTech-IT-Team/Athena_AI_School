@@ -79,11 +79,7 @@ const CTASection = () => {
         
         {/* Optional "Badge" at the top like the reference image */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/50 border border-blue-700/50 backdrop-blur-md mb-16">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
-            </span>
-            <span className="text-sm font-medium text-sky-200 uppercase tracking-wide">
+            <span className="text-sm font-bold text-white uppercase tracking-wide">
                 Admissions Open for 2026
             </span>
         </div>

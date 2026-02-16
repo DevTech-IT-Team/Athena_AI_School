@@ -1,8 +1,8 @@
 import React from 'react';
 import { PlayCircle, ArrowRight, Trophy, Star } from 'lucide-react';
-import personalizedImage from '../assets/optimized/3.webp';
+import personalizedImage from '/assets/images/ariel-HkN64BISuQA-unsplash.webp';
 import chessImage from '../assets/optimized/2.webp';
-import keyaImage from '../assets/optimized/1.webp';
+import watercolorImage from '/assets/images/watercolor-painting-artist-his-studio.webp';
 
 const StudentSpotlight = () => {
   const students = [
@@ -23,7 +23,7 @@ const StudentSpotlight = () => {
       mainBadge: "Award Winner",
       description: "Keya, recipient of the prestigious Pradhan Mantri Rashtriya Bal Puraskar, is an award-winning author, artist, and social impact entrepreneur.",
       tags: ["Award Winner", "Author", "Artist"],
-      image: keyaImage, // Local image
+      image: watercolorImage, // Watercolor artist image
       hasVideo: false
     }
   ];

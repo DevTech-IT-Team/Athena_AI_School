@@ -76,10 +76,10 @@ const CurriculumOverview = () => {
         <div className="space-y-8">
           <div>
             <h4 className="text-sky-600 font-bold tracking-wider uppercase mb-3 text-sm lg:text-base">
-              British Curriculum Excellence.
+              British Curriculum Excellence
             </h4>
             <h2 className="text-3xl lg:text-5xl font-extrabold text-blue-950 leading-tight mb-6">
-              Following Rigorous, Standards of the UK National Curriculum.
+              Following Rigorous, Standards of the UK National Curriculum
             </h2>
             <p className="text-lg text-slate-700 leading-relaxed">
               <strong className="text-blue-900 block mb-2">World-Class British Education Online</strong>

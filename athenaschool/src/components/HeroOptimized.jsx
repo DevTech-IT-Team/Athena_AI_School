@@ -86,11 +86,11 @@ const HeroOptimized = () => {
           />
 
           {/* Floating Icons - Properly aligned in circular formation */}
-          <FloatingIcon icon={<Brain size={20} />} position="top-1/9 left-30 -translate-x-1/2.5 -translate-y-1/2" delay="0s" />
-          <FloatingIcon icon={<Settings size={20} />} position="top-0 left-1/2 -translate-x-1/2 -translate-y-full" delay="1s" />
-          <FloatingIcon icon={<Target size={20} />} position="top-1/9 right-35 translate-x-1/2 -translate-y-1/2" delay="2s" />
-          <FloatingIcon icon={<Headset size={20} />} position="bottom-1/2 right-25 translate-x-1/2 translate-y-1/2" delay="1.5s" />
-          <FloatingIcon icon={<MessageCircleQuestion size={20} />} position="bottom-1/2 left-14 translate-x-1/2 translate-y-1/2" delay="2.5s" />
+          <FloatingIcon icon={<Brain size={28} />} position="top-1/9 left-30 -translate-x-1/2.5 -translate-y-1/2" delay="0s" />
+          <FloatingIcon icon={<Settings size={28} />} position="top-0 left-1/2 -translate-x-1/2 -translate-y-full" delay="1s" />
+          <FloatingIcon icon={<Target size={28} />} position="top-1/9 right-35 translate-x-1/2 -translate-y-1/2" delay="2s" />
+          <FloatingIcon icon={<Headset size={28} />} position="bottom-1/2 right-25 translate-x-1/2 translate-y-1/2" delay="1.5s" />
+          <FloatingIcon icon={<MessageCircleQuestion size={28} />} position="bottom-1/2 left-14 translate-x-1/2 translate-y-1/2" delay="2.5s" />
 
         </div>
 
