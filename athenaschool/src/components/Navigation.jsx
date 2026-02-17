@@ -5,7 +5,6 @@ import logo from '../assets/logo-nav.webp';
 
 const Navigation = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -29,7 +28,7 @@ const Navigation = memo(() => {
 
     const handleClickOutside = (event) => {
       if (!event.target.closest('.mega-menu-container') && !event.target.closest('.mega-menu-toggle')) {
-        setIsMegaMenuOpen(false);
+        // Menu closing logic handled elsewhere or removed if unused
       }
     };
 
@@ -188,7 +187,6 @@ const Navigation = memo(() => {
           <button
             onClick={() => {
               setIsOpen(!isOpen);
-              setIsMegaMenuOpen(false);
             }}
             className="p-2 text-gray-700 focus:outline-none hover:bg-gray-100 rounded-lg transition-colors"
             aria-label={isOpen ? "Close menu" : "Open menu"}

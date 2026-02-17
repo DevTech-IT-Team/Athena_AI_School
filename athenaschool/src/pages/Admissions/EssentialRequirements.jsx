@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Wifi, Monitor, Home, Package, Volume2, Users, CheckCircle, ArrowRight, AlertCircle } from 'lucide-react';
 
 export default function EssentialRequirements() {
@@ -101,7 +100,7 @@ export default function EssentialRequirements() {
           {requirements.map((requirement, index) => {
             const colors = getColorClasses(requirement.color);
             const Icon = requirement.icon;
-            
+
             return (
               <div key={index} className={`${colors.bg} rounded-2xl p-8 border-2 ${colors.border} hover:shadow-lg transition-all duration-300 hover:scale-105`}>
                 <div className={`${colors.iconBg} w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto`}>
@@ -188,7 +187,7 @@ export default function EssentialRequirements() {
           <blockquote className="text-2xl font-light mb-6">
             "Our vision is to make 16 years of schooling meaningful and joyful for all."
           </blockquote>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg transition-colors flex items-center justify-center">
               Enquire Now

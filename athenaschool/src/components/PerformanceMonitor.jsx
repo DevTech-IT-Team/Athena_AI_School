@@ -12,10 +12,10 @@ const PerformanceMonitor = () => {
           }
         }
       });
-      
+
       try {
         observer.observe({ entryTypes: ['paint'] });
-      } catch (e) {
+      } catch (_e) {
         console.log('Performance monitoring not supported');
       }
 
@@ -25,10 +25,10 @@ const PerformanceMonitor = () => {
         const lastEntry = entries[entries.length - 1];
         console.log(`LCP: ${lastEntry.startTime.toFixed(2)}ms`);
       });
-      
+
       try {
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (e) {
+      } catch (_e) {
         console.log('LCP monitoring not supported');
       }
 
@@ -42,10 +42,10 @@ const PerformanceMonitor = () => {
         }
         console.log(`CLS: ${clsValue.toFixed(3)}`);
       });
-      
+
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (e) {
+      } catch (_e) {
         console.log('CLS monitoring not supported');
       }
     };

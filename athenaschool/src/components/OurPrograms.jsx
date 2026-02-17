@@ -43,16 +43,16 @@ const LazyImage = ({ src, alt, className }) => {
   );
 };
 
-const ProgramCard = ({ title, subtitle, features, icon: Icon }) => {
+const ProgramCard = ({ title, subtitle, features, icon: _Icon }) => {
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full relative overflow-hidden group">
       {/* Top Accent Line */}
       <div className="absolute top-0 left-0 w-full h-0.5 bg-blue-100 group-hover:bg-blue-400 transition-colors duration-300"></div>
-      
+
       {/* Icon & Header */}
       <div className="p-5 flex flex-col items-center text-center">
         <div className="w-12 h-12 rounded-full bg-blue-50 text-blue-900 group-hover:bg-blue-400 group-hover:text-white transition-colors duration-300 flex items-center justify-center mb-3">
-          <Icon size={24} />
+          <_Icon size={24} />
         </div>
         <h3 className="text-base font-semibold text-blue-900 mb-1">{title}</h3>
         <p className="text-xs text-blue-600 font-medium uppercase tracking-wide">{subtitle}</p>
@@ -72,7 +72,7 @@ const ProgramCard = ({ title, subtitle, features, icon: Icon }) => {
           ))}
         </ul>
       </div>
-      
+
       {/* Footer / CTA */}
       <div className="p-3 bg-gray-50 mt-auto text-center">
         <button className="text-xs font-medium text-blue-900 hover:text-blue-600 flex items-center justify-center gap-1 mx-auto transition-colors">
@@ -141,20 +141,20 @@ const OurPrograms = () => {
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-800">
-      
+
       {/* HERO SECTION 
         Split layout: Text on Left, Image on Right
       */}
       <div className="relative bg-blue-950 overflow-hidden">
         <div className="absolute inset-0 bg-blue-900/10"></div> {/* Texture overlay if needed */}
-        
+
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row">
-          
+
           {/* Left Content */}
           <div className="flex-1 p-8 py-16 lg:py-24 lg:pr-12 relative z-10 flex flex-col justify-center">
-             {/* Left Accent Bar */}
+            {/* Left Accent Bar */}
             <div className="absolute left-0 top-20 bottom-20 w-2 bg-blue-300 hidden lg:block rounded-r"></div>
-            
+
             <div className="lg:pl-8">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/50 border border-blue-800 text-blue-300 text-sm font-medium mb-6">
                 <span>📘</span> Our Programs
@@ -171,13 +171,13 @@ const OurPrograms = () => {
           {/* Right Image Section */}
           <div className="relative w-full lg:w-1/2 h-64 lg:h-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-950 to-transparent z-10 lg:w-32"></div>
-            <LazyImage 
-              src={robotImage} 
-              alt="AI Learning Robot" 
+            <LazyImage
+              src={robotImage}
+              alt="AI Learning Robot"
               className="w-full h-full"
             />
-             {/* Simplified decorative elements */}
-             <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-blue-100/5 rounded-full blur-2xl z-0"></div>
+            {/* Simplified decorative elements */}
+            <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-blue-100/5 rounded-full blur-2xl z-0"></div>
           </div>
         </div>
       </div>
@@ -188,7 +188,7 @@ const OurPrograms = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 -mt-12 relative z-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {programs.slice(0, 4).map((program, index) => (
-            <ProgramCard 
+            <ProgramCard
               key={index}
               {...program}
             />
