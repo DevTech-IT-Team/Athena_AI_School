@@ -64,6 +64,10 @@ const ValuesAndEthos = lazy(() => import('./pages/About/ValuesAndEthos'));
 const AthenaAIGroup = lazy(() => import('./pages/About/AthenaAIGroup'));
 const OurLeaders = lazy(() => import('./pages/About/OurLeaders'));
 const HabitsOfMind = lazy(() => import('./pages/About/HabitsOfMind'));
+const AthenaAISchool = lazy(() => import('./pages/About/AthenaAISchool'));
+const MissionBridge = lazy(() => import('./pages/About/MissionBridge'));
+const WhyOnlineSchool = lazy(() => import('./pages/About/WhyOnlineSchool'));
+const OurVision = lazy(() => import('./pages/About/OurVision'));
 
 function ScrollToTopWrapper({ children }) {
   const location = useLocation();
@@ -135,6 +139,10 @@ function App() {
             <Route path="/awards" element={<ScrollToTopWrapper><Awards /></ScrollToTopWrapper>} />
             <Route path="/our-learner-council" element={<ScrollToTopWrapper><OurLearnerCouncil /></ScrollToTopWrapper>} />
             <Route path="/what-sets-us-apart" element={<ScrollToTopWrapper><WhatSetsUsApart /></ScrollToTopWrapper>} />
+            <Route path="/athena-ai-school" element={<ScrollToTopWrapper><AthenaAISchool /></ScrollToTopWrapper>} />
+            <Route path="/our-vision" element={<ScrollToTopWrapper><OurVision /></ScrollToTopWrapper>} />
+            <Route path="/mission-bridge" element={<ScrollToTopWrapper><MissionBridge /></ScrollToTopWrapper>} />
+            <Route path="/why-online-school" element={<ScrollToTopWrapper><WhyOnlineSchool /></ScrollToTopWrapper>} />
             <Route path="/values-and-ethos" element={<ScrollToTopWrapper><ValuesAndEthos /></ScrollToTopWrapper>} />
             <Route path="/athena-ai-group" element={<ScrollToTopWrapper><AthenaAIGroup /></ScrollToTopWrapper>} />
             <Route path="/our-leaders" element={<ScrollToTopWrapper><OurLeaders /></ScrollToTopWrapper>} />

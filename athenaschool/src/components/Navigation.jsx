@@ -61,6 +61,10 @@ const Navigation = memo(() => {
     {
       title: 'About',
       links: [
+        { text: 'Athena AI School', href: '/athena-ai-school' },
+        { text: 'Our Vision', href: '/our-vision' },
+        { text: 'Mission Bridge', href: '/mission-bridge' },
+        { text: 'Why Online School', href: '/why-online-school' },
         { text: 'What sets us apart?', href: '/what-sets-us-apart' },
         { text: 'Values & Ethos', href: '/values-and-ethos' },
         { text: 'Athena AI Group', href: '/athena-ai-group' },
