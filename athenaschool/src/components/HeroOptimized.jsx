@@ -100,7 +100,7 @@ const HeroOptimized = () => {
 };
 
 // Helper Component for the floating bubbles (Optimized)
-const FloatingIcon = ({ icon, position, delay }) => {
+const FloatingIcon = ({ icon, position, delay: _delay }) => {
   return (
     <div
       className={`absolute ${position} w-10 h-10 md:w-12 md:h-12 bg-blue-950/5 border border-blue-950/20 rounded-full flex items-center justify-center text-blue-950 z-20`}

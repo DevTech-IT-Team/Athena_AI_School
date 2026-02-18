@@ -7,8 +7,7 @@ export const reportWebVitals = (onPerfEntry) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Report basic timing metrics
       const timing = performance.timing;
-      const navigation = performance.navigation;
-      
+
       const metrics = {
         // Navigation timing
         domContentLoaded: timing.domContentLoadedEventEnd - timing.navigationStart,
@@ -16,7 +15,7 @@ export const reportWebVitals = (onPerfEntry) => {
         firstPaint: 0,
         firstContentfulPaint: 0
       };
-      
+
       // Try to get paint timing
       const paintEntries = performance.getEntriesByType('paint');
       paintEntries.forEach(entry => {
@@ -27,7 +26,7 @@ export const reportWebVitals = (onPerfEntry) => {
           metrics.firstContentfulPaint = entry.startTime;
         }
       });
-      
+
       onPerfEntry(metrics);
     }
   }
@@ -48,7 +47,7 @@ export const monitorResourceTiming = () => {
         }
       });
     });
-    
+
     observer.observe({ entryTypes: ['resource'] });
     return observer;
   }
@@ -63,7 +62,7 @@ export const monitorLCP = () => {
       const lastEntry = entries[entries.length - 1];
       console.log('LCP:', lastEntry.startTime);
     });
-    
+
     observer.observe({ entryTypes: ['largest-contentful-paint'] });
     return observer;
   }
@@ -81,7 +80,7 @@ export const monitorFID = () => {
         }
       });
     });
-    
+
     observer.observe({ entryTypes: ['first-input'] });
     return observer;
   }
@@ -101,7 +100,7 @@ export const monitorCLS = () => {
       });
       console.log('CLS:', clsValue);
     });
-    
+
     observer.observe({ entryTypes: ['layout-shift'] });
     return observer;
   }

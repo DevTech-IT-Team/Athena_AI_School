@@ -1,8 +1,6 @@
-import { useState } from 'react';
 import { Clock, Users, Calendar, Info, ArrowRight } from 'lucide-react';
 
 export default function BatchTimings() {
-  const [selectedGrade, setSelectedGrade] = useState(null);
 
   const gradeData = [
     {
@@ -51,7 +49,7 @@ export default function BatchTimings() {
               Option to change your Section (batch) once a month and for a maximum of three times a year.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-400">
             <div className="flex items-center mb-3">
               <Clock className="text-blue-400 mr-3" size={24} />
@@ -61,7 +59,7 @@ export default function BatchTimings() {
               Duration of live classes is age-appropriate and as per international standards.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-400">
             <div className="flex items-center mb-3">
               <Users className="text-blue-400 mr-3" size={24} />
@@ -84,7 +82,7 @@ export default function BatchTimings() {
               Select any one Section at the time of registration
             </p>
           </div>
-          
+
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead className="bg-blue-100 border-b-2 border-blue-300">
@@ -147,7 +145,7 @@ export default function BatchTimings() {
           <blockquote className="text-2xl font-light text-blue-700 italic mb-6">
             "Our vision is to make 16 years of schooling meaningful and joyful for all."
           </blockquote>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors flex items-center justify-center">
               Enquire Now

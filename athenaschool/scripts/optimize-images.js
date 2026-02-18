@@ -20,7 +20,7 @@ const optimizeImage = async (inputPath, outputPath) => {
       .webp({ quality: 75, effort: 6 })
       .resize({ width: 1200, withoutEnlargement: true })
       .toFile(outputPath);
-    
+
     console.log(`Optimized: ${path.basename(inputPath)} -> ${path.basename(outputPath)}`);
   } catch (error) {
     console.error(`Error optimizing ${inputPath}:`, error);
@@ -28,15 +28,15 @@ const optimizeImage = async (inputPath, outputPath) => {
 };
 
 const optimizeAllImages = async () => {
-  const files = fs.readdirSync(inputDir);
-  const imageFiles = files.filter(file => 
-    file.endsWith('.jpg') || file.endsWith('.jpeg') || file.endsWith('.png') || file.endsWith('.webp')
-  );
+  // const files = fs.readdirSync(inputDir);
+  // const imageFiles = files.filter(file => 
+  //   file.endsWith('.jpg') || file.endsWith('.jpeg') || file.endsWith('.png') || file.endsWith('.webp')
+  // );
 
   // Focus on the largest images first
   const largeImages = [
     'relxro.webp',
-    'brooke-cagle--uHVRvDr7pg-unsplash.webp', 
+    'brooke-cagle--uHVRvDr7pg-unsplash.webp',
     'priscilla-du-preez-XkKCui44iM0-unsplash (1).webp',
     'cartoon-ai-robot-scene (2).webp',
     'jonathan-klok-JS8RhWVk74Q-unsplash.webp',
