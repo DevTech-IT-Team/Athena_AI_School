@@ -10,6 +10,7 @@ const Testimonials = lazy(() => import('../components/Testimonials'));
 const CTA = lazy(() => import('../components/CTA'));
 const Contact = lazy(() => import('../components/Contact'));
 const OurPrograms = lazy(() => import('../components/OurPrograms'));
+const AthenaAI = lazy(() => import('../components/AthenaAI'));
 const CurriculumOverview = lazy(() => import('../components/CurriculumOverview'));
 const AcademicCrew = lazy(() => import('../components/AcademicCrew'));
 const StudentSpotlight = lazy(() => import('../components/StudentSpotlight'));
@@ -74,6 +75,13 @@ function Home() {
       <LazySection label="our programs" placeholderHeight={500}>
         <Suspense fallback={<SectionFallback label="our programs" />}>
           <OurPrograms />
+        </Suspense>
+      </LazySection>
+      
+      {/* Athena AI Section */}
+      <LazySection label="athena ai" placeholderHeight={1200}>
+        <Suspense fallback={<SectionFallback label="athena ai" />}>
+          <AthenaAI />
         </Suspense>
       </LazySection>
       
