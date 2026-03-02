@@ -112,7 +112,7 @@ const OurPrograms = () => {
       ]
     },
     {
-      title: "Athena Learning FLOWW",
+      title: "AWisdom Learning FLOWW",
       subtitle: "Future Skills",
       icon: BrainCircuit,
       features: [
@@ -125,7 +125,7 @@ const OurPrograms = () => {
       ]
     },
     {
-      title: "Athena Learning Garage",
+      title: "AWisdom Learning Garage",
       subtitle: "Experiential Learning",
       icon: Wrench,
       features: [

@@ -44,7 +44,7 @@ const InternationalBenchmarkTest = () => {
           {/* Introduction */}
           <div className="text-center mb-12">
             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-6">
-              Athena AI School has adopted the International Benchmark Test (IBT) conducted by one of the world's leading educational research centres, Australian Council for Educational Research (ACER), to diagnose, analyse and compare learner learning against global bench-marks.
+              WisdomAI School has adopted the International Benchmark Test (IBT) conducted by one of the world's leading educational research centres, Australian Council for Educational Research (ACER), to diagnose, analyse and compare learner learning against global bench-marks.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-6">
@@ -138,22 +138,22 @@ const InternationalBenchmarkTest = () => {
             </div>
           </div>
 
-          {/* #AthenaAISchool Section */}
+          {/* #WisdomAISchool Section */}
           <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">#AthenaAISchool</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">#WisdomAISchool</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-gradient-to-br from-orange-100 to-orange-200 p-6 rounded-xl hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-orange-900 mb-2">#AthenaAISchool</h3>
+                <h3 className="text-xl font-semibold text-orange-900 mb-2">#WisdomAISchool</h3>
                 <p className="text-gray-700">Times are changing...</p>
               </div>
 
               <div className="bg-gradient-to-br from-pink-100 to-pink-200 p-6 rounded-xl hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-pink-900 mb-2">#AthenaAISchool</h3>
+                <h3 className="text-xl font-semibold text-pink-900 mb-2">#WisdomAISchool</h3>
                 <p className="text-gray-700">Why did you choose an online school? (Mrs Seemple Sunela)</p>
               </div>
 
               <div className="bg-gradient-to-br from-indigo-100 to-indigo-200 p-6 rounded-xl hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-indigo-900 mb-2">#AthenaAISchool</h3>
+                <h3 className="text-xl font-semibold text-indigo-900 mb-2">#WisdomAISchool</h3>
                 <p className="text-gray-700">Dhanush has something to say and we all should listen</p>
               </div>
             </div>

@@ -3,7 +3,7 @@ import React from 'react';
 const FlowwDifferent = () => {
   const data = [
     { title: "Live, Engaging Classes", desc: "Interactive sessions with exceptional facilitators who bring learning to life" },
-    { title: "Athena AI School's Unique Pedagogy", desc: "Proven teaching methods designed for deep understanding and application" },
+    { title: "WisdomAI School's Unique Pedagogy", desc: "Proven teaching methods designed for deep understanding and application" },
     { title: "AI-Powered Personalisation", desc: "Technology that adapts to each learner's pace and learning style" },
     { title: "Small Batches of 24-26", desc: "Age-appropriate groups for active participation and meaningful feedback" },
     { title: "Flexible Timings", desc: "Multiple batches and session timings to suit your family's schedule" },
@@ -24,7 +24,7 @@ const FlowwDifferent = () => {
             What Makes FLOWW Different
           </h3>
           <p className="text-blue-900/80 max-w-2xl mx-auto text-lg">
-            FLOWW leverages Athena AI School's unique pedagogy, technology and human connections to nurture deep understanding
+            FLOWW leverages WisdomAI School's unique pedagogy, technology and human connections to nurture deep understanding
           </p>
         </div>
 

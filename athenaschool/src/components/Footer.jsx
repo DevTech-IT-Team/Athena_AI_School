@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { memo } from 'react';
 import { Facebook, Instagram, Linkedin, GraduationCap, BookOpen, User, Mail, Phone, ArrowRight } from 'lucide-react';
-import logo from '/assets/images/logos/vvx-small.webp';
+import logo from '/assets/images/logos/Gemini_Generated_Image_qp7yu0qp7yu0qp7y-removebg-preview.png';
 
 const Footer = memo(() => {
   return (
@@ -10,7 +10,7 @@ const Footer = memo(() => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
             <div className="flex items-center mb-4">
-              <img src={logo} alt="AI School Logo" className="h-48 w-auto object-contain" />
+              <img src={logo} alt="WisdomAISchool Logo" className="h-48 w-auto object-contain" />
             </div>
             <p className="text-gray-600 mb-6">India's Most Advanced AI-Powered Online School</p>
             <div className="flex space-x-4 mb-6">
@@ -33,7 +33,7 @@ const Footer = memo(() => {
                 </div>
               </a>
             </div>
-            <p className="text-sm text-gray-600"> 2025 AI School. All rights reserved.</p>
+            <p className="text-sm text-gray-600"> 2025 WisdomAISchool. All rights reserved.</p>
           </div>
           <div>
             <h2 className="font-bold mb-6 text-xl text-gray-900 border-b border-gray-300 pb-2 flex items-center">

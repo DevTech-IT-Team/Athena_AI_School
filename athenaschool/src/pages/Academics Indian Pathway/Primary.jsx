@@ -40,7 +40,7 @@ const Primary = () => {
 
       <div className="academics-section">
         <h2>Primary</h2>
-        <p className="section-description">The Primary Program at Athena AI School is designed for learners aged 6 to 10 years (Grade 1 to 5), a crucial stage in their personal, social, and academic growth. At this age, learners benefit from a curriculum that is both challenging and creative, providing them with clear goals that inspire focus and motivation to reach their full potential.</p>
+        <p className="section-description">The Primary Program at WisdomAI School is designed for learners aged 6 to 10 years (Grade 1 to 5), a crucial stage in their personal, social, and academic growth. At this age, learners benefit from a curriculum that is both challenging and creative, providing them with clear goals that inspire focus and motivation to reach their full potential.</p>
 
         <p className="section-text">The Primary Program covers the following subjects:</p>
 
@@ -54,7 +54,7 @@ const Primary = () => {
           <li>Digital Media &amp; Arts</li>
           <li>Music &amp; Movement</li>
           <li>Physical Fitness &amp; Mindfulness</li>
-          <li>Athena AI Skills Program</li>
+          <li>WisdomAI Skills Program</li>
           <li>Computational Thinking &amp; Coding</li>
         </ul>
 
@@ -67,7 +67,7 @@ const Primary = () => {
           <li>Science</li>
           <li>Social Studies</li>
           <li>Selective Activity (Digital Media &amp; Arts/ Music &amp; Movement/ Physical Fitness &amp; Mindfulness)</li>
-          <li>Athena AI Skills Program</li>
+          <li>WisdomAI Skills Program</li>
           <li>Computational Thinking &amp; Coding</li>
         </ul>
 
@@ -139,17 +139,17 @@ const Primary = () => {
 
       <div className="social-highlights">
         <div className="highlight-card blue">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>Learning a new skill is always exciting</p>
         </div>
 
         <div className="highlight-card green">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>A Little art and a little maths</p>
         </div>
 
         <div className="highlight-card purple">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>Tiya Grade-2A Shows us there is more than one way to learn the tables</p>
         </div>
       </div>

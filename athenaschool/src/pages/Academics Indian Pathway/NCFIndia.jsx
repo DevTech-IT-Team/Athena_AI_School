@@ -43,7 +43,7 @@ const NCFIndia = () => {
         <p className="section-description">Developing intellectually curious, independent-minded young adults</p>
 
         <p className="section-text">
-          Athena AI School follows the National Curriculum Framework (NCF) of India. The NCF is designed by National Council of Educational Research and Training (NCERT) and approved by the Ministry of Education, Government of India.
+          WisdomAI School follows the National Curriculum Framework (NCF) of India. The NCF is designed by National Council of Educational Research and Training (NCERT) and approved by the Ministry of Education, Government of India.
         </p>
 
         <p className="section-text">
@@ -67,23 +67,23 @@ const NCFIndia = () => {
         </p>
 
         <p className="section-text">
-          Under the new National Education Policy (NEP) announced in 2020, the Government of India has announced that a new National Curriculum Framework will be introduced soon. Athena AI School is committed to adopt and follow the new NCF when it comes into force.
+          Under the new National Education Policy (NEP) announced in 2020, the Government of India has announced that a new National Curriculum Framework will be introduced soon. WisdomAI School is committed to adopt and follow the new NCF when it comes into force.
         </p>
       </div>
 
       <div className="social-highlights">
         <div className="highlight-card blue">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>Dhanush has something to say and we all should listen</p>
         </div>
 
         <div className="highlight-card green">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>Diy Session With Grade - II</p>
         </div>
 
         <div className="highlight-card purple">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>Early to bed, Early to rise</p>
         </div>
       </div>

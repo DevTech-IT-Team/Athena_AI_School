@@ -68,7 +68,7 @@ const LearnerWork = () => {
 
               <div className="mt-12 space-y-3">
                 <p className="text-[11px] italic text-gray-500 mb-4 text-center leading-relaxed">
-                  "A day in the life of Athena AI School+ Stride - British
+                  "A day in the life of WisdomAI School+ Stride - British
                   Curriculum student"
                 </p>
                 <button className="w-full bg-[#FFB400] text-white py-4 rounded-md font-bold text-xs uppercase tracking-widest hover:bg-[#e5a200] transition-colors shadow-sm flex items-center justify-center gap-2">
@@ -84,7 +84,7 @@ const LearnerWork = () => {
               <nav className="text-[11px] mb-8 flex items-center gap-2 font-bold uppercase tracking-widest text-gray-400">
                 <span>Home</span>
                 <span className="text-gray-300">&gt;</span>
-                <span className="text-gray-400">Being Athena</span>
+                <span className="text-gray-400">Being Wisdom</span>
                 <span className="text-gray-300">&gt;</span>
                 <span className="text-[#074D8D]">Learner Work</span>
               </nav>
@@ -126,7 +126,7 @@ const LearnerWork = () => {
           <div className="p-10 border-t border-gray-100 bg-[#F9FBFC]">
             <div className="mb-8 border-l-4 border-[#FFB400] pl-4">
               <h3 className="text-[#003366] text-xl font-bold">
-                #ATHENA_AI Spotlight
+                #WisdomAI Spotlight
               </h3>
             </div>
 
@@ -158,7 +158,7 @@ const LearnerWork = () => {
                       </div>
                     </div>
                     <div className="absolute top-0 left-0 bg-[#FFB400] px-3 py-1 text-[9px] font-black text-white uppercase tracking-wider">
-                      #ATHENA_AI
+                      #WisdomAI
                     </div>
                   </div>
                   <p className="mt-4 text-sm font-semibold text-gray-700 leading-snug group-hover:text-[#004A99] transition-colors">

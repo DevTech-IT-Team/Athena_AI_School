@@ -1,6 +1,6 @@
 # Howitworks Folder
 
-This folder contains all how-it-works related components and pages for Athena AI School, providing comprehensive information about how our online education system functions.
+This folder contains all how-it-works related components and pages for WisdomAI School, providing comprehensive information about how our online education system functions.
 
 ## Files Overview
 

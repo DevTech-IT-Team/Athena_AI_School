@@ -5,21 +5,21 @@ const LearningGarageWho = () => {
     {
       icon: "🎒",
       title: "Learners aged 5–18",
-      description: "K-12 Learners from Athena AI School & beyond."
+      description: "K-12 Learners from WisdomAI School & beyond."
     },
     {
       icon: "🎓",
-      title: "Athena AI School Learners",
-      description: "Special benefits for Athena AI School Learners."
+      title: "WisdomAI School Learners",
+      description: "Special benefits for WisdomAI School Learners."
     },
     {
       icon: "🚀",
-      title: "Non-Athena AI School Learners",
+      title: "Non-WisdomAI School Learners",
       description: "Everyone is welcome to join our garages."
     },
     {
       icon: "📜",
-      title: "Athena AI School Alumni",
+      title: "WisdomAI School Alumni",
       description: "Our Alumni are welcome to join."
     }
   ];

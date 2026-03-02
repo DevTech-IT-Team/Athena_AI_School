@@ -10,7 +10,7 @@ const MissionBridge = () => {
         <aside className="md:col-span-4 bg-blue-50 p-8 md:p-12 flex flex-col justify-between border-r border-blue-100">
           <div>
             <h1 className="text-sm font-sans font-black uppercase tracking-[0.5em] text-blue-900 mb-20">
-              Athena AI School
+              WisdomAI School
             </h1>
             <h2 className="text-6xl md:text-7xl font-bold text-blue-900 leading-none italic">
               Our<br />Mission
@@ -30,7 +30,7 @@ const MissionBridge = () => {
           {/* Mission Statement */}
           <section className="mb-16">
             <p className="text-2xl md:text-3xl leading-snug text-blue-900 font-medium mb-8">
-              At Athena AI, our mission is to empower young learners by integrating high-level 
+              At WisdomAI, our mission is to empower young learners by integrating high-level 
               Artificial Intelligence into the core of early childhood education.
             </p>
             <p className="text-lg text-slate-600 leading-relaxed max-w-2xl">
@@ -71,7 +71,7 @@ const MissionBridge = () => {
                 Our Commitment to You
               </p>
               <p className="text-sm mt-4 text-blue-50 opacity-80 leading-relaxed">
-                We stay at the cutting edge, constantly updating our Athena AI modules to ensure 
+                We stay at the cutting edge, constantly updating our WisdomAI modules to ensure 
                 students are prepared for a life of continuous leadership in a digital age.
               </p>
             </div>
@@ -81,7 +81,7 @@ const MissionBridge = () => {
 
       {/* Page Numbering Style Footer */}
       <footer className="max-w-6xl mx-auto mt-8 flex justify-between items-center px-4 text-[10px] font-sans text-slate-400 uppercase tracking-widest">
-        <span>Athena AI Education Group</span>
+        <span>WisdomAI Education Group</span>
         <span className="font-bold text-blue-900">Module 01 / Page 04</span>
       </footer>
     </div>

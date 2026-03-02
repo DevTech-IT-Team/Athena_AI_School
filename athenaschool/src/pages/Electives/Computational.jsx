@@ -44,13 +44,13 @@ const Computational = () => {
           {/* Introduction */}
           <div className="text-center mb-12">
             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              While learners must have flexibility in choosing their individual learning pathways, certain subjects and skills are essential for all learners to become successful, innovative, adaptable, and productive individuals in today's rapidly-changing world. One such vital skill is Computational Thinking. At Athena AI School, we have introduced Computational Thinking and Coding as integral parts of our academic program for learners from Grade 1 to Grade 8. This initiative reflects the importance of computational thinking, problem-solving, and critical reasoning skills in our digital era. It is a versatile skill that can be applied across various areas of the curriculum, from kindergarten to university level.
+              While learners must have flexibility in choosing their individual learning pathways, certain subjects and skills are essential for all learners to become successful, innovative, adaptable, and productive individuals in today's rapidly-changing world. One such vital skill is Computational Thinking. At WisdomAI School, we have introduced Computational Thinking and Coding as integral parts of our academic program for learners from Grade 1 to Grade 8. This initiative reflects the importance of computational thinking, problem-solving, and critical reasoning skills in our digital era. It is a versatile skill that can be applied across various areas of the curriculum, from kindergarten to university level.
             </p>
           </div>
 
           <div className="text-center mb-12">
             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              Athena AI School is dedicated to teaching computing, which enhances problem-solving abilities, computational thinking, and critical reasoning skills. The primary goal of teaching computational thinking is to develop the ability to solve problems and express solutions as algorithms that are precise and understandable by both humans and machines. With this objective in mind, the principles of computational thinking are taught through the following themes:
+              WisdomAI School is dedicated to teaching computing, which enhances problem-solving abilities, computational thinking, and critical reasoning skills. The primary goal of teaching computational thinking is to develop the ability to solve problems and express solutions as algorithms that are precise and understandable by both humans and machines. With this objective in mind, the principles of computational thinking are taught through the following themes:
             </p>
           </div>
 
@@ -96,26 +96,26 @@ const Computational = () => {
           {/* Conclusion */}
           <div className="bg-blue-50 rounded-xl p-8 mb-12">
             <p className="text-lg text-gray-800 leading-relaxed text-center">
-              By embedding these themes into our curriculum, Athena AI School ensures that learners are equipped with the skills necessary to navigate and succeed in the digital world. Our approach not only prepares learners for future academic endeavours but also fosters a mindset of innovation and adaptability.
+              By embedding these themes into our curriculum, WisdomAI School ensures that learners are equipped with the skills necessary to navigate and succeed in the digital world. Our approach not only prepares learners for future academic endeavours but also fosters a mindset of innovation and adaptability.
             </p>
           </div>
 
-          {/* #AthenaAISchool Section */}
+          {/* #AWisdomAISchool Section */}
           <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">#AthenaAISchool</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">#AWisdomAISchool</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-blue-900 mb-2">#AthenaAISchool</h3>
+                <h3 className="text-xl font-semibold text-blue-900 mb-2">#AWisdomAISchool</h3>
                 <p className="text-gray-700">Learning a new skill is always exciting</p>
               </div>
 
               <div className="bg-gradient-to-br from-green-100 to-green-200 p-6 rounded-xl hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-green-900 mb-2">#AthenaAISchool</h3>
+                <h3 className="text-xl font-semibold text-green-900 mb-2">#AWisdomAISchool</h3>
                 <p className="text-gray-700">Understanding rainforests with yug</p>
               </div>
 
               <div className="bg-gradient-to-br from-purple-100 to-purple-200 p-6 rounded-xl hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold text-purple-900 mb-2">#AthenaAISchool</h3>
+                <h3 className="text-xl font-semibold text-purple-900 mb-2">#AWisdomAISchool</h3>
                 <p className="text-gray-700">It is never too early to take up responsibility</p>
               </div>
             </div>

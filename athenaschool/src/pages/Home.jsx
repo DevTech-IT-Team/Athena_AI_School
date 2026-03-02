@@ -78,9 +78,9 @@ function Home() {
         </Suspense>
       </LazySection>
       
-      {/* Athena AI Section */}
-      <LazySection label="athena ai" placeholderHeight={1200}>
-        <Suspense fallback={<SectionFallback label="athena ai" />}>
+      {/* WisdomAI Section */}
+      <LazySection label="wisdomai" placeholderHeight={1200}>
+        <Suspense fallback={<SectionFallback label="wisdomai" />}>
           <AthenaAI />
         </Suspense>
       </LazySection>

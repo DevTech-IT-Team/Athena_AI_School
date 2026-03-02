@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AthenaAIGroup = () => {
+const AWisdomAIGroup = () => {
   const categories = [
     "What sets us apart?",
     "Values & Ethos",
@@ -10,12 +10,12 @@ const AthenaAIGroup = () => {
 
   const institutions = [
     {
-      name: "Athena AI School",
-      description: "Asia's leading online-only school, Athena AI School offers both structured and flexible learning paths customized to each learner's unique journey. With a digital-first foundation, we focus on academic excellence and the holistic development of every learner's potential. Ranked India's #1 Leading Online School in the Education World India School Grand Jury Awards 2021-22, we emphasize an education that is seamless, relevant, and accessible to all."
+      name: "WisdomAI School",
+      description: "Asia's leading online-only school, WisdomAI School offers both structured and flexible learning paths customized to each learner's unique journey. With a digital-first foundation, we focus on academic excellence and the holistic development of every learner's potential. Ranked India's #1 Leading Online School in the Education World India School Grand Jury Awards 2021-22, we emphasize an education that is seamless, relevant, and accessible to all."
     },
     {
-      name: "Athena AI Skills",
-      description: "In a rapidly changing world, upskilling and reskilling are essential. Athena AI Skills provides leading courses that prepare individuals, professionals, and even retired military personnel for the demands of tomorrow. With global partnerships in fields like software engineering and data science, Athena AI Skills empowers learners to stay ahead in their careers, equipped with the skills that matter most."
+      name: "WisdomAI Skills",
+      description: "In a rapidly changing world, upskilling and reskilling are essential. WisdomAI Skills provides leading courses that prepare individuals, professionals, and even retired military personnel for the demands of tomorrow. With global partnerships in fields like software engineering and data science, WisdomAI Skills empowers learners to stay ahead in their careers, equipped with the skills that matter most."
     }
   ];
 
@@ -24,12 +24,12 @@ const AthenaAIGroup = () => {
       <main className="container mx-auto px-6 md:px-12 pt-20">
         {/* Breadcrumb */}
         <nav className="text-xs tracking-widest uppercase text-blue-300 mb-8">
-          Home / About / <span className="text-slate-950 font-bold">Athena AI Group</span>
+          Home / About / <span className="text-slate-950 font-bold">WisdomAI Group</span>
         </nav>
         {/* 2. PRIMARY HERO HEADER - Inspired by "Lorem, Ipsum & Dolor" */}
         <section className="mb-12">
           <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-blue-900 mb-16">
-            Athena AI, <br />
+            WisdomAI, <br />
             School & Skills
           </h1>
 
@@ -69,7 +69,7 @@ const AthenaAIGroup = () => {
                     free from the constraints of a one-size-fits-all approach.
                   </p>
                   <p className="text-sm leading-relaxed text-slate-600">
-                    Athena AI School is redefining what education can be—an adaptive, 
+                    WisdomAI School is redefining what education can be—an adaptive, 
                     forward-thinking journey designed to prepare young minds for a 
                     future where technology and creativity converge.
                   </p>
@@ -128,4 +128,4 @@ const AthenaAIGroup = () => {
   );
 };
 
-export default AthenaAIGroup;
+export default AWisdomAIGroup;

@@ -111,7 +111,7 @@ const OurLearnerCouncil = () => {
               <nav className="text-[11px] mb-8 flex items-center gap-2 font-bold uppercase tracking-widest text-gray-400">
                 <span>Home</span>
                 <span className="text-gray-300">&gt;</span>
-                <span className="text-gray-400">Being Athena</span>
+                <span className="text-gray-400">Being Wisdom</span>
                 <span className="text-gray-300">&gt;</span>
                 <span className="text-[#074D8D]">Our Learner Council</span>
               </nav>
@@ -146,13 +146,13 @@ const OurLearnerCouncil = () => {
                 <div className="space-y-4 text-gray-600 text-sm leading-relaxed">
                   <p>
                     To instil the skills of leadership among the learners, the
-                    first-ever School Learner Board was created in Athena AI
+                    first-ever School Learner Board was created in WisdomAI
                     School in the month of August 2021 after a lot of hard work
                     and planning put in by the election committee and the
                     management.
                   </p>
                   <p>
-                    Athena AI School learners are divided into four houses
+                    WisdomAI School learners are divided into four houses
                     namely{" "}
                     <strong>
                       Apple house, Amazon house, Google house, and Microsoft
@@ -187,12 +187,12 @@ const OurLearnerCouncil = () => {
                   <div className="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm">
                     <h4 className="text-[#003366] font-bold mb-3 flex items-center gap-2">
                       <Zap className="text-[#FFB400] w-4 h-4" /> The Echo of
-                      Athena AI
+                      WisdomAI
                     </h4>
                     <p>
                       The most important and outstanding achievement of the
                       members of the school learner board was the planning and
-                      execution of 'The Echo of Athena AI' i.e. the first
+                      execution of 'The Echo of WisdomAI' i.e. the first
                       learner-led podcast. Three successful episodes, under the
                       series 'Behind The Scenes', have already been released and
                       available to watch.
@@ -256,7 +256,7 @@ const OurLearnerCouncil = () => {
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
                     <ShieldCheck className="text-[#FFB400] w-8 h-8" /> #Being
-                    Athena AI
+                    WisdomAI
                   </h3>
                   <div className="grid md:grid-cols-3 gap-8">
                     <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-md">

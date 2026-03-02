@@ -12,7 +12,7 @@ const OurVision = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl text-center">
             <h1 className="text-5xl md:text-7xl font-black text-blue-900 leading-tight mb-6">
-              ATHENA <span className="text-blue-600">AI SCHOOL</span>
+              Wisdom <span className="text-blue-600">AI SCHOOL</span>
             </h1>
             <div className="h-1 w-24 bg-blue-600 mx-auto mb-8"></div>
             <h2 className="text-2xl md:text-3xl font-bold text-slate-700 mb-4">Our Vision</h2>
@@ -25,7 +25,7 @@ const OurVision = () => {
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="bg-blue-50 border-l-4 border-blue-900 p-8 md:p-12 rounded-r-lg">
             <p className="text-lg md:text-xl leading-relaxed text-slate-700 mb-6">
-              At Athen AI, our vision is to redefine early childhood education by creating a world
+              At WisdomAI, our vision is to redefine early childhood education by creating a world
               where every child, from Nursery to Grade 5, is not just a consumer of technology, but
               a confident creator of it.
             </p>
@@ -121,7 +121,7 @@ const OurVision = () => {
           <div className="bg-gradient-to-br from-blue-900 to-sky-900 text-white p-12 rounded-lg shadow-2xl">
             <p className="text-lg md:text-xl leading-relaxed mb-8">
               Our goal is to be the global gold standard for primary tech-integrated education. We
-              want to ensure that by the time an Athen AI student reaches the end of K5, they
+              want to ensure that by the time a WisdomAI student reaches the end of K5, they
               possess the critical thinking, digital literacy, and innovative mindset required to excel
               in a rapidly changing 21st-century landscape.
             </p>
@@ -139,7 +139,7 @@ const OurVision = () => {
       {/* --- FOOTER --- */}
       <footer className="bg-blue-900 py-12 border-t border-blue-800">
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-blue-300 font-black text-xl">ATHENA AI SCHOOL</p>
+          <p className="text-blue-300 font-black text-xl">WISDOMAI SCHOOL</p>
           <p className="text-blue-400 text-sm">© 2026 Vision for Future Education. All rights reserved.</p>
         </div>
       </footer>

@@ -9,7 +9,7 @@ const LearningGarageFAQ = () => {
     "How many sessions can my child attend in a day?",
     "How do certifications work?",
     "Are passes refundable or transferable?",
-    "Do Athena AI School learners and alumni get benefits?"
+    "Do WisdomAI School learners and alumni get benefits?"
   ];
 
   const toggleFAQ = (index) => {

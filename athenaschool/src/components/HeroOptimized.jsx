@@ -40,7 +40,7 @@ const HeroOptimized = () => {
         {/* --- Left Column: Text --- */}
         <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-blue-950 tracking-tight drop-shadow-lg ml-4 lg:ml-8">
-            Athena AI School
+            WisdomAI School
           </h1>
           <div className="h-1 w-32 bg-blue-950 my-4 rounded-full lg:hidden"></div>
           <p className="text-lg md:text-2xl text-blue-800 tracking-widest font-light uppercase mt-2 ml-4 lg:ml-8">
@@ -76,7 +76,7 @@ const HeroOptimized = () => {
           {/* Main Gemini Image */}
           <OptimizedImage
             src={heroImage}
-            alt="Athena AI School"
+            alt="WisdomAI School"
             className="relative z-10 w-full max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl"
             width={400}
             height={400}

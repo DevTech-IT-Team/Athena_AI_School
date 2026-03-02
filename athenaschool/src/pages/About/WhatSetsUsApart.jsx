@@ -25,7 +25,7 @@ const WhatSetsUsApart = () => {
               What Sets <br/><span className="text-blue-950">Us Apart?</span>
             </h1>
             <p className="text-lg text-slate-600 leading-relaxed">
-              At Athena AI School, we go beyond the boundaries of traditional education, 
+              At WisdomAI School, we go beyond the boundaries of traditional education, 
               reaching over 7,500 learners across 78+ countries.
             </p>
           </div>
@@ -82,7 +82,7 @@ const WhatSetsUsApart = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-sm font-black uppercase tracking-[0.3em] text-blue-950 mb-2">Key Features</h2>
-            <p className="text-4xl font-bold text-slate-950">Why Athena AI is Different</p>
+            <p className="text-4xl font-bold text-slate-950">Why WisdomAI is Different</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -109,7 +109,7 @@ const WhatSetsUsApart = () => {
       <section className="container mx-auto px-6 py-24 grid md:grid-cols-2 gap-16">
         <div className="relative">
           <span className="absolute -top-12 -left-4 text-[12rem] font-black text-slate-100 -z-10">A</span>
-          <h3 className="text-3xl font-bold uppercase mb-8">#Being Athena AI</h3>
+          <h3 className="text-3xl font-bold uppercase mb-8">#Being WisdomAI</h3>
           <div className="space-y-8">
             <div className="border-l-2 border-slate-950 pl-6">
               <h4 className="font-bold uppercase text-xs tracking-widest mb-2">Resilience</h4>

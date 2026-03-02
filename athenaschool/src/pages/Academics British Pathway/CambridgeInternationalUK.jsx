@@ -77,7 +77,7 @@ const CambridgeInternationalUK = () => {
             </div>
 
             <p className="text-gray-700 mb-4">
-              Athena AI School offers two different curriculum for learners aged 3 to 18. The curriculum offered have distinct pathways to provide greater choice and voice to the learners.
+              WisdomAI School offers two different curriculum for learners aged 3 to 18. The curriculum offered have distinct pathways to provide greater choice and voice to the learners.
             </p>
           </div>
 
@@ -141,15 +141,15 @@ const CambridgeInternationalUK = () => {
           </div>
 
           <div className="academics-section">
-            <h2>Athena AI School's Commitment</h2>
+            <h2>WisdomAI School's Commitment</h2>
             <p className="text-gray-700 mb-4">
-              Athena AI School is committed to preparing learners for success in an increasingly interconnected world.
+              WisdomAI School is committed to preparing learners for success in an increasingly interconnected world.
             </p>
             <p className="text-gray-700 mb-4">
-              Athena AI takes pride in its diverse learner body and strives to create an inclusive environment where all learners feel valued and respected. Athena AI School provides an academically rigorous curriculum that prepares learners worldwide for top colleges and universities. In addition, Athena AI offers a wide range of extracurricular activities that allow learners to explore their passions and develop as well-rounded individuals.
+              WisdomAI takes pride in its diverse learner body and strives to create an inclusive environment where all learners feel valued and respected. WisdomAI School provides an academically rigorous curriculum that prepares learners worldwide for top colleges and universities. In addition, WisdomAI offers a wide range of extracurricular activities that allow learners to explore their passions and develop as well-rounded individuals.
             </p>
             <p className="text-gray-700">
-              Our facilitators will guide each child in finding answers to those questions inside and outside the classroom. They will also develop techniques in collaborative working and independent study. By fostering a love of learning in each child, Athena AI is committed to developing 21st-century citizens who will be prepared to impact the world positively.
+              Our facilitators will guide each child in finding answers to those questions inside and outside the classroom. They will also develop techniques in collaborative working and independent study. By fostering a love of learning in each child, WisdomAI is committed to developing 21st-century citizens who will be prepared to impact the world positively.
             </p>
           </div>
         </div>

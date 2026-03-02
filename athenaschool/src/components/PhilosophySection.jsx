@@ -6,7 +6,7 @@ const PhilosophySection = () => {
     philosophy: {
       title: "Different Minds, Different Goals",
       subtitle: "One Tailored Path to Success",
-      description: "Our alumni are proof that unique journeys lead to extraordinary destinations. From diverse goals to tailored paths, Athena AI School online learners have gone on to thrive in top colleges and careers, showcasing the power of personalized inclusive education."
+      description: "Our alumni are proof that unique journeys lead to extraordinary destinations. From diverse goals to tailored paths, WisdomAI School online learners have gone on to thrive in top colleges and careers, showcasing the power of personalized inclusive education."
     }
   };
 

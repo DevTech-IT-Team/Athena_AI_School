@@ -16,7 +16,7 @@ const AffordableAccredited = () => {
             <div className="relative h-[500px] w-full md:w-[90%] rounded-sm overflow-hidden shadow-2xl border-4 border-slate-950">
               <img
                 src={robotScene}
-                alt="AI Robot Scene - Athena AI School"
+                alt="AI Robot Scene - WisdomAI School"
                 loading="lazy"
                 decoding="async"
                 className="object-cover w-full h-full"

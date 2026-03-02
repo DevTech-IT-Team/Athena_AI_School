@@ -31,7 +31,7 @@ const ValuesAndEthos = () => {
           <h1 className="text-blue-300 font-bold tracking-widest text-sm mb-4 uppercase">Values & Ethos</h1>
           <h2 className="text-5xl font-extrabold text-blue-950 mb-6 leading-tight">Personalized education direct to your home.</h2>
           <p className="text-slate-500 leading-relaxed text-lg">
-            At Athena AI School, our vision is to create a world where every child embarks on a journey of self-discovery, empowered to shape their future.
+            At WisdomAI School, our vision is to create a world where every child embarks on a journey of self-discovery, empowered to shape their future.
           </p>
         </div>
         <div className="flex-1 bg-blue-100 p-8">
@@ -93,7 +93,7 @@ const ValuesAndEthos = () => {
       <section className="bg-blue-950 text-white py-16 px-8">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-blue-300 font-bold uppercase tracking-widest text-sm mb-4">#Being Athena AI</h2>
+            <h2 className="text-blue-300 font-bold uppercase tracking-widest text-sm mb-4">#Being WisdomAI</h2>
             <p className="text-slate-300 mb-8">Reimagining school as a 16-year journey of meaningful, joyful experiences, fostering growth for learners and families alike.</p>
           </div>
           <div className="space-y-4">

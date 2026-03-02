@@ -54,7 +54,7 @@ const Middle = () => {
         </ul>
 
         <p className="section-text">
-          The syllabus for Middle School at Athena AI School is delivered based on the guidelines set under the National Curriculum Framework following CBSE Pattern and it covers these subjects:
+          The syllabus for Middle School at WisdomAI School is delivered based on the guidelines set under the National Curriculum Framework following CBSE Pattern and it covers these subjects:
         </p>
 
         <ul className="program-list">
@@ -67,7 +67,7 @@ const Middle = () => {
           <li>Computational Thinking &amp; Coding</li>
           <li>Selective Activity (Digital Media and Arts/ Music &amp; Movement)</li>
           <li>Physical Fitness &amp; Mindfulness</li>
-          <li>Athena AI Skills Program</li>
+          <li>WisdomAI Skills Program</li>
         </ul>
 
         <p className="section-text">
@@ -75,7 +75,7 @@ const Middle = () => {
         </p>
 
         <p className="section-text">
-          At Athena AI School, at this stage, the learners will work on experiential learning in the sciences, mathematics, arts, social sciences and humanities.
+          At WisdomAI School, at this stage, the learners will work on experiential learning in the sciences, mathematics, arts, social sciences and humanities.
         </p>
 
         <h3>Language Choices</h3>
@@ -149,18 +149,18 @@ const Middle = () => {
 
       <div className="social-highlights">
         <div className="highlight-card blue">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>Make Some Rain While The Sun Shines Outside</p>
         </div>
 
         <div className="highlight-card green">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>A Little Play in Between Classes</p>
         </div>
 
         <div className="highlight-card purple">
-          <h3>#Being Athena AI</h3>
-          <p>Why did you choose Athena AI online school for your children?</p>
+          <h3>#Being WisdomAI</h3>
+          <p>Why did you choose WisdomAI online school for your children?</p>
         </div>
       </div>
         </div>

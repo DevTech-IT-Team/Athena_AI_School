@@ -6,10 +6,10 @@ const LearningGarageAbout = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-            What is Athena AI Learning Garage?
+            What is WisdomAI Learning Garage?
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Athena AI Learning Garage is a hands-on learning space where children learn by doing. 
+            WisdomAI Learning Garage is a hands-on learning space where children learn by doing. 
             Learners build real projects, explore new ideas, and gain confidence through guided, practical experiences.
           </p>
         </div>
@@ -49,7 +49,7 @@ const LearningGarageAbout = () => {
             </div>
             <div className="flex items-center gap-2">
               <span className="text-green-500">✓</span>
-              <span>Trusted by families from the Athena AI School community and beyond</span>
+              <span>Trusted by families from the WisdomAI School community and beyond</span>
             </div>
           </div>
         </div>

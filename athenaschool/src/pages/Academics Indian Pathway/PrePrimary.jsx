@@ -88,17 +88,17 @@ const PrePrimary = () => {
 
       <div className="social-highlights">
         <div className="highlight-card blue">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>Understanding rainforests with yug</p>
         </div>
 
         <div className="highlight-card green">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>It is never too early to take up responsibility</p>
         </div>
 
         <div className="highlight-card purple">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>Actions Speak louder than words</p>
         </div>
       </div>

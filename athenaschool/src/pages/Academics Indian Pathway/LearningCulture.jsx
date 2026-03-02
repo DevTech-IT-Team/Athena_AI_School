@@ -43,7 +43,7 @@ const LearningCulture = () => {
         <p className="section-description">Developing intellectually curious, independent-minded individuals</p>
 
         <p className="section-text">
-          Grounded in a tradition of teaching excellence, Athena AI School puts the learners first at all times. At Athena AI School, we intend to build a culture of openness and genuine caring that enables children to discover and celebrate the joy of learning.
+          Grounded in a tradition of teaching excellence, WisdomAI School puts the learners first at all times. At WisdomAI School, we intend to build a culture of openness and genuine caring that enables children to discover and celebrate the joy of learning.
         </p>
 
         <h3>Some of the components of the Program are:</h3>
@@ -66,23 +66,23 @@ const LearningCulture = () => {
         </ul>
 
         <p className="section-text">
-          At Athena AI School, the emphasis is on trusting learners and valuing their lived experiences. We encourage honesty in learning and offer personalised learning pathways that allow learners the freedom to progress at their own pace. The facilitator–learner relationship is built on transparency, mutual respect, and trust.
+          At WisdomAI School, the emphasis is on trusting learners and valuing their lived experiences. We encourage honesty in learning and offer personalised learning pathways that allow learners the freedom to progress at their own pace. The facilitator–learner relationship is built on transparency, mutual respect, and trust.
         </p>
       </div>
 
       <div className="social-highlights">
         <div className="highlight-card blue">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>Times are changing...</p>
         </div>
 
         <div className="highlight-card green">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>Why did you choose an online school? (Mrs Seemple Sunela)</p>
         </div>
 
         <div className="highlight-card purple">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>Starting the weekend with love we get from our learners</p>
         </div>
       </div>

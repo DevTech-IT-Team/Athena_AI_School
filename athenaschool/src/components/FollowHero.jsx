@@ -19,7 +19,7 @@ const FollowHero = () => {
         {/* Content */}
         <div className="z-10 flex flex-col items-center gap-5">
           <h1 className="text-4xl font-bold tracking-tight text-blue-950 md:text-6xl lg:text-7xl">
-            Athena AI Learning FLOWW
+            WisdomAI Learning FLOWW
           </h1>
           
           <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-sky-300 md:text-lg">
@@ -28,7 +28,7 @@ const FollowHero = () => {
 
           <p className="mt-5 max-w-2xl text-sm leading-relaxed text-blue-950/80 md:text-base">
             Foundational & future skills for learners who want to grow beyond the classroom. 
-            Athena AI FLOWW prepares children with strong foundational and future skills without 
+            WisdomAI FLOWW prepares children with strong foundational and future skills without 
             requiring them to leave the comfort of their existing schools.
           </p>
         </div>

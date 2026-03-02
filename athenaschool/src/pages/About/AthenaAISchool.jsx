@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AthenaAISchool = () => {
+const AWisdomAISchool = () => {
   return (
     <div className="bg-white text-slate-900 font-sans selection:bg-blue-300">
       {/* SECTION 1: HERO / COVER */}
@@ -8,7 +8,7 @@ const AthenaAISchool = () => {
         <div className="flex flex-col justify-center p-12 border-r border-blue-900">
           <span className="text-blue-600 font-bold tracking-widest uppercase mb-4">Established 2024</span>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-blue-900 leading-tight">
-            ATHENA <br /> AI SCHOOL
+            WISDOM <br /> AI SCHOOL
           </h1>
           <p className="mt-8 text-xl text-blue-800 max-w-md italic">
             "Empowering little minds to master the big world of technology."
@@ -29,7 +29,7 @@ const AthenaAISchool = () => {
           </div>
           <div className="md:col-span-8 space-y-8 text-lg leading-relaxed text-slate-700">
             <p className="text-2xl text-blue-900 font-medium">
-              At Athena AI, we believe that the journey to greatness starts early. 
+              At WisdomAI, we believe that the journey to greatness starts early. 
               We are a specialized online school designed for children from Nursery to K5.
             </p>
             <p>
@@ -105,7 +105,7 @@ const AthenaAISchool = () => {
         <div className="max-w-2xl mx-auto space-y-6">
           <h2 className="text-3xl font-serif">Our Promise</h2>
           <p className="text-blue-200 leading-relaxed">
-            At Athena AI, we are committed to shaping the next generation of innovators. 
+            At WisdomAI, we are committed to shaping the next generation of innovators. 
             We provide the tools, the guidance, and the inspiration to help your child grow.
           </p>
           <div className="pt-10">
@@ -119,4 +119,4 @@ const AthenaAISchool = () => {
   );
 };
 
-export default AthenaAISchool;
+export default AWisdomAISchool;

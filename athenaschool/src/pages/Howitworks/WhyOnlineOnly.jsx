@@ -36,13 +36,13 @@ export default function WhyOnlineOnly() {
           {/* Introduction */}
           <div className="text-center mb-16">
             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              The decision to be an online-only school was made after extensive research, discussions, and surveys with stakeholders, including facilitators, staff, learners, and parents. Various factors often create unnecessary hurdles for parents and children seeking quality education. While cities may attract the best facilitators, those living in other areas may have to settle for less qualified faculty. Additionally, issues like long commutes and health challenges can hinder access to education. Therefore, Athena AI School chose to be location-agnostic, bringing world-class education to your doorstep, no matter where you are.
+              The decision to be an online-only school was made after extensive research, discussions, and surveys with stakeholders, including facilitators, staff, learners, and parents. Various factors often create unnecessary hurdles for parents and children seeking quality education. While cities may attract the best facilitators, those living in other areas may have to settle for less qualified faculty. Additionally, issues like long commutes and health challenges can hinder access to education. Therefore, WisdomAI School chose to be location-agnostic, bringing world-class education to your doorstep, no matter where you are.
             </p>
           </div>
 
           {/* Not Suitable For Everyone */}
           <div className="bg-yellow-50 rounded-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-yellow-900 mb-6">Is Athena AI School Right for Everyone?</h2>
+            <h2 className="text-3xl font-bold text-yellow-900 mb-6">Is WisdomAI School Right for Everyone?</h2>
             <p className="text-gray-700 mb-4">
               Being online-only may not be suitable for everyone. If you are satisfied with the traditional school system and have access to quality education at an affordable price, then we might not be the right fit for you.
             </p>
@@ -53,7 +53,7 @@ export default function WhyOnlineOnly() {
 
           {/* Ideal For Section */}
           <div className="bg-green-50 rounded-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-green-900 mb-8">Athena AI School is ideal for:</h2>
+            <h2 className="text-3xl font-bold text-green-900 mb-8">WisdomAI School is ideal for:</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-start gap-3">
@@ -235,9 +235,9 @@ export default function WhyOnlineOnly() {
             </div>
           </div>
 
-          {/* #BeingAthenaAI Section */}
+          {/* #BeingAWisdomAI Section */}
           <div className="bg-gray-100 rounded-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">#BeingAthenaAI</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">#BeingAWisdomAI</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
                 <div className="bg-blue-100 rounded-lg p-4 mb-4">
@@ -246,7 +246,7 @@ export default function WhyOnlineOnly() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold mb-2">We enjoy learning even after classes</h3>
-                <p className="text-gray-600 text-sm mb-2">#BeingAthenaAI</p>
+                <p className="text-gray-600 text-sm mb-2">#BeingAWisdomAI</p>
                 <p className="text-gray-500 text-sm">Extended learning opportunities beyond regular class hours</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
@@ -256,7 +256,7 @@ export default function WhyOnlineOnly() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Learning a new language always fun</h3>
-                <p className="text-gray-600 text-sm mb-2">#BeingAthenaAI</p>
+                <p className="text-gray-600 text-sm mb-2">#BeingAWisdomAI</p>
                 <p className="text-gray-500 text-sm">Interactive language learning sessions</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
@@ -266,7 +266,7 @@ export default function WhyOnlineOnly() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Our orators brought out their A game</h3>
-                <p className="text-gray-600 text-sm mb-2">#BeingAthenaAI</p>
+                <p className="text-gray-600 text-sm mb-2">#BeingAWisdomAI</p>
                 <p className="text-gray-500 text-sm">Public speaking and debate activities</p>
               </div>
             </div>
@@ -275,7 +275,7 @@ export default function WhyOnlineOnly() {
           {/* Call to Action */}
           <div className="bg-gradient-to-r from-blue-100 to-blue-200 text-gray-800 rounded-xl p-12 text-center">
             <h2 className="text-3xl font-bold mb-4">Unlock limitless learning possibilities, join us online!</h2>
-            <p className="text-lg mb-8">Discover if Athena AI School is the right fit for your child's educational journey</p>
+            <p className="text-lg mb-8">Discover if WisdomAI School is the right fit for your child's educational journey</p>
             <div className="flex flex-wrap gap-4 justify-center">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Talk to Our Counsellor

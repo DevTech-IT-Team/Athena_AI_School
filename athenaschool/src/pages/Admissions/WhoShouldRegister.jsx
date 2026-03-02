@@ -32,9 +32,9 @@ function WhoShouldRegister() {
         <div className="max-w-4xl mx-auto mb-12">
           <div className="bg-white rounded-xl shadow-lg p-8">
             <p className="text-lg text-gray-700 leading-relaxed">
-              At Athena AI School, we understand that traditional schooling methodologies may not suit every learner. 
+              At WisdomAI School, we understand that traditional schooling methodologies may not suit every learner. 
               Our flexible, personalised model is ideal for families seeking a different approach to education. 
-              Here's how Athena AI School meets the needs of various types of learners, organized into key categories:
+              Here's how WisdomAI School meets the needs of various types of learners, organized into key categories:
             </p>
           </div>
         </div>

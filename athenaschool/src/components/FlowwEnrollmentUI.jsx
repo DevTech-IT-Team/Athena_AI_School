@@ -59,7 +59,7 @@ const FlowwEnrollmentUI = () => {
         </h1>
 
         <p className="text-blue-100/80 leading-relaxed text-lg mb-10">
-          Whether they study with Athena AI School or any other school. It complements formal schooling 
+          Whether they study with WisdomAI School or any other school. It complements formal schooling 
           irrespective of the curriculum or board, preparing children for future skills and 
           depth in concepts foundational for success.
         </p>

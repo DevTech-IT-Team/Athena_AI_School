@@ -6,7 +6,7 @@ export default function Technology() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6">Technology</h1>
-            <p className="text-xl mb-8">Discover Personalised Learning at Athena AI School</p>
+            <p className="text-xl mb-8">Discover Personalised Learning at WisdomAI School</p>
             <div className="flex flex-wrap gap-4 justify-center">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Enquire Now
@@ -36,7 +36,7 @@ export default function Technology() {
           {/* Introduction */}
           <div className="text-center mb-16">
             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              Athena AI School Program is delivered in a secured way with end-to-end encryption of all live sessions and chat. Each Learner / Parent has a unique ID and Password. Learners can connect from anywhere, any device at a time and place convenient to them.
+              WisdomAI School Program is delivered in a secured way with end-to-end encryption of all live sessions and chat. Each Learner / Parent has a unique ID and Password. Learners can connect from anywhere, any device at a time and place convenient to them.
             </p>
           </div>
 
@@ -160,7 +160,7 @@ export default function Technology() {
 
           {/* Video Section */}
           <div className="bg-gray-100 rounded-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">#BeingAthenaAI</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">#BeingAWisdomAI</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
                 <div className="bg-blue-100 rounded-lg p-4 mb-4">
@@ -169,8 +169,8 @@ export default function Technology() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Athena AI Video - Virtual Classes</h3>
-                <p className="text-gray-600 text-sm mb-2">#BeingAthenaAI</p>
+                <h3 className="text-lg font-semibold mb-2">WisdomAI Video - Virtual Classes</h3>
+                <p className="text-gray-600 text-sm mb-2">#BeingAWisdomAI</p>
                 <p className="text-gray-500 text-sm">Experience our virtual classroom environment</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
@@ -179,8 +179,8 @@ export default function Technology() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Athena AI Learning Portal Homework Module</h3>
-                <p className="text-gray-600 text-sm mb-2">#BeingAthenaAI</p>
+                <h3 className="text-lg font-semibold mb-2">WisdomAI Learning Portal Homework Module</h3>
+                <p className="text-gray-600 text-sm mb-2">#BeingAWisdomAI</p>
                 <p className="text-gray-500 text-sm">Manage and track homework assignments</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
@@ -189,8 +189,8 @@ export default function Technology() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Athena AI Learning Portal - Schedule</h3>
-                <p className="text-gray-600 text-sm mb-2">#BeingAthenaAI</p>
+                <h3 className="text-lg font-semibold mb-2">WisdomAI Learning Portal - Schedule</h3>
+                <p className="text-gray-600 text-sm mb-2">#BeingAWisdomAI</p>
                 <p className="text-gray-500 text-sm">How to see the Schedule of Classes</p>
               </div>
             </div>

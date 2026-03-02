@@ -27,7 +27,7 @@ const BritishUpperSecondary = () => {
 
           <div className="academics-section">
             <h2>Available Pathways</h2>
-            <p>The Upper Secondary Level at Athena AI School offers full-time and part-time learners the following pathways:</p>
+            <p>The Upper Secondary Level at WisdomAI School offers full-time and part-time learners the following pathways:</p>
             <div className="pathways-grid">
               <div className="pathway-item">
                 <h3>Cambridge IGCSE</h3>
@@ -55,10 +55,10 @@ const BritishUpperSecondary = () => {
               Pearson Edexcel International GCSEs are globally recognised qualifications with academic content and assessment designed specifically for international learners. International GCSEs are part of iProgress, the complete series of Pearson Edexcel academic qualifications for 5 to 19-year-olds for international schools.
             </p>
             <p>
-              Both Cambridge and Edexcel offer a wide range of subjects. Learners can choose to study 1 or more subjects with Athena AI School with a combination of different pathways. Learners registering on 5 or more subjects are considered full-time learners, and such learners are generally not registered with any other schools.
+              Both Cambridge and Edexcel offer a wide range of subjects. Learners can choose to study 1 or more subjects with WisdomAI School with a combination of different pathways. Learners registering on 5 or more subjects are considered full-time learners, and such learners are generally not registered with any other schools.
             </p>
             <p>
-              Learners studying with another school or as private candidates may opt to study one or more subjects online through Athena AI School. This broadens opportunities for learners to demonstrate their learning, particularly for university undergraduate programmes. A more comprehensive choice of subjects at the IGCSE level will help learners select the right combination of Advanced Level subjects. The increased number of subjects available, and the ability to study them flexibly, means that learners can tailor their studies to match their interests and career aspirations. In addition, the online delivery of courses means that learners can study at their own pace and in their own time. This enhances the learning experience and opens up opportunities for those who might not otherwise have access to such programmes.
+              Learners studying with another school or as private candidates may opt to study one or more subjects online through WisdomAI School. This broadens opportunities for learners to demonstrate their learning, particularly for university undergraduate programmes. A more comprehensive choice of subjects at the IGCSE level will help learners select the right combination of Advanced Level subjects. The increased number of subjects available, and the ability to study them flexibly, means that learners can tailor their studies to match their interests and career aspirations. In addition, the online delivery of courses means that learners can study at their own pace and in their own time. This enhances the learning experience and opens up opportunities for those who might not otherwise have access to such programmes.
             </p>
           </div>
 
@@ -113,7 +113,7 @@ const BritishUpperSecondary = () => {
                   </tr>
                   <tr>
                     <td><strong>Learning kit:</strong></td>
-                    <td>Option to purchase Books through Athena AI School, delivered to home</td>
+                    <td>Option to purchase Books through WisdomAI School, delivered to home</td>
                   </tr>
                 </tbody>
               </table>

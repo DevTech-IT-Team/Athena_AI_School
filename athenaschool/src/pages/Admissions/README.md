@@ -1,6 +1,6 @@
 # Admissions Folder
 
-This folder contains all admissions-related components and pages for Athena AI School.
+This folder contains all admissions-related components and pages for WisdomAI School.
 
 ## Files Overview
 

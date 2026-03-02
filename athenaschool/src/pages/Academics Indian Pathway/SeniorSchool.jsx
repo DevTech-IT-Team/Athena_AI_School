@@ -40,7 +40,7 @@ const SeniorSchool = () => {
 
       <div className="academics-section">
         <h2>Senior School</h2>
-        <p className="section-description">Athena AI School offers the Senior School Programme under Indian Curriculum through NIOS as a Private Candidate. NIOS, or National Institute of Open Schooling, is a National Board established by the Government of India. NIOS is an &quot;Open School&quot; to cater to the needs of a heterogeneous group of Learners up to the pre-degree level. It was started as a project with in-built flexibilities by the Central Board of Secondary Education (CBSE) in 1979. In 1986, the National Policy on Education suggested strengthening the Open School System for extending open learning facilities in a phased manner at the secondary level all over the country as an independent system with its curriculum and examination leading to certification.</p>
+        <p className="section-description">WisdomAI School offers the Senior School Programme under Indian Curriculum through NIOS as a Private Candidate. NIOS, or National Institute of Open Schooling, is a National Board established by the Government of India. NIOS is an &quot;Open School&quot; to cater to the needs of a heterogeneous group of Learners up to the pre-degree level. It was started as a project with in-built flexibilities by the Central Board of Secondary Education (CBSE) in 1979. In 1986, the National Policy on Education suggested strengthening the Open School System for extending open learning facilities in a phased manner at the secondary level all over the country as an independent system with its curriculum and examination leading to certification.</p>
 
         <p className="section-text">
           Consequently, the Ministry of Education (MOE), Government of India, set up the National Open School (NOS) in November 1989. The pilot project of CBSE on Open Schools was amalgamated with NOS. Through a Resolution (No. F.5-24/90 Sch.3 dated 14 September 1990, published in the Gazette of India on 20 October 1990), the National Open School (NOS) was vested with the authority to register, examine and certify Learners registered with it up to pre-degree level courses. In July 2002, the Ministry of Education (MOE) amended the nomenclature of the organisation from the National Open School (NOS) to the National Institute of Open Schooling (NIOS) with a mission to provide relevant continuing education at the school stage, up to pre-degree level through Open Learning system to prioritised client groups as an alternative to the formal system, in pursuance of the normative national policy documents and in response.
@@ -65,7 +65,7 @@ const SeniorSchool = () => {
         <h3>Learning Kit</h3>
         <h3>Learner Resources</h3>
         <h3>Quick Overview</h3>
-        <h3>Frequently Asked Questions about NIOS at Athena AI School</h3>
+        <h3>Frequently Asked Questions about NIOS at WisdomAI School</h3>
         <h3>Success Stories</h3>
 
         <ul className="program-list">
@@ -80,18 +80,18 @@ const SeniorSchool = () => {
 
       <div className="social-highlights">
         <div className="highlight-card blue">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>Make Some Rain While The Sun Shines Outside</p>
         </div>
 
         <div className="highlight-card green">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>A Little Play in Between Classes</p>
         </div>
 
         <div className="highlight-card purple">
-          <h3>#Being Athena AI</h3>
-          <p>Why did you choose Athena AI online school for your children?</p>
+          <h3>#Being WisdomAI</h3>
+          <p>Why did you choose WisdomAI online school for your children?</p>
         </div>
       </div>
         </div>

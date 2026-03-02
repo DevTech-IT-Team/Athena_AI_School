@@ -22,7 +22,7 @@ function Fees() {
       {/* SECTION 1: HERO (Inspired by "Corporate Business Company" Slide) */}
       <section className="relative flex flex-col md:flex-row min-h-[70vh]">
         <div className="w-full md:w-1/2 bg-[#020617] (blue-950) p-12 md:p-24 flex flex-col justify-center text-white">
-          <span className="text-blue-300 font-bold tracking-widest uppercase mb-4 text-sm">Investment in Excellence</span>
+          <span className="text-blue-300 font-bold tracking-widest uppercase mb-4 text-sm">Investment in WisdomAI Excellence</span>
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
             Future-Proof <br />Education.
           </h1>
@@ -70,25 +70,25 @@ function Fees() {
                 onClick={() => setSelectedSchoolType('21kschool')}
                 className={`flex-1 flex items-center justify-center gap-3 py-4 px-6 rounded-xl transition-all ${selectedSchoolType === '21kschool' ? 'bg-blue-950 text-white' : 'hover:bg-slate-100 text-slate-600'}`}>
                 <span className="text-xl">🏫</span>
-                <span className="font-bold">Athena AI School</span>
+                <span className="font-bold">WisdomAISchool</span>
               </button>
               <button
                 onClick={() => setSelectedSchoolType('21klearning')}
                 className={`flex-1 flex items-center justify-center gap-3 py-4 px-6 rounded-xl transition-all ${selectedSchoolType === '21klearning' ? 'bg-blue-950 text-white' : 'hover:bg-slate-100 text-slate-600'}`}>
                 <span className="text-xl">📖</span>
-                <span className="font-bold">Athena AI Learning</span>
+                <span className="font-bold">WisdomAI Learning</span>
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 4: ATHENA AI LEARNING */}
+      {/* SECTION 4: WISDOMAI LEARNING */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-6">
 
           <div className="max-w-6xl mx-auto">
-            {/* Athena AI Learning Content */}
+            {/* WisdomAI Learning Content */}
             {selectedSchoolType === '21klearning' && (
               <>
                 {/* Program Type Toggle */}
@@ -119,9 +119,9 @@ function Fees() {
                 {/* Pricing Cards */}
                 {selectedLearning === 'capstone' && (
                   <div className="grid md:grid-cols-2 gap-8">
-                    {/* Athena AI School */}
+                    {/* WisdomAISchool */}
                     <div className="bg-blue-950 rounded-2xl p-8 text-white">
-                      <div className="text-blue-300 text-sm font-bold uppercase mb-4">Athena AI School Students</div>
+                      <div className="text-blue-300 text-sm font-bold uppercase mb-4">WisdomAISchool Students</div>
                       <div className="space-y-4">
                         <div className="flex justify-between items-center pb-4 border-b border-blue-900">
                           <span className="text-blue-200">Grades 1-6</span>
@@ -133,9 +133,9 @@ function Fees() {
                         </div>
                       </div>
                     </div>
-                    {/* Non-Athena AI School */}
+                    {/* Non-WisdomAISchool */}
                     <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
-                      <div className="text-slate-500 text-sm font-bold uppercase mb-4">Non-Athena AI School Students +18% GST</div>
+                      <div className="text-slate-500 text-sm font-bold uppercase mb-4">Non-WisdomAISchool Students +18% GST</div>
                       <div className="space-y-4">
                         <div className="flex justify-between items-center pb-4 border-b border-slate-100">
                           <span className="text-slate-600">Grades 1-6</span>
@@ -152,9 +152,9 @@ function Fees() {
 
                 {selectedLearning === 'languages' && (
                   <div className="grid md:grid-cols-2 gap-8">
-                    {/* Athena AI School */}
+                    {/* WisdomAISchool */}
                     <div className="bg-blue-950 rounded-2xl p-8 text-white">
-                      <div className="text-blue-300 text-sm font-bold uppercase mb-4">Athena AI School</div>
+                      <div className="text-blue-300 text-sm font-bold uppercase mb-4">WisdomAISchool</div>
                       <div className="space-y-4">
                         <div className="flex justify-between items-center pb-4 border-b border-blue-900">
                           <span className="text-blue-200">Indian (1-8)</span>
@@ -166,9 +166,9 @@ function Fees() {
                         </div>
                       </div>
                     </div>
-                    {/* Non-Athena AI School */}
+                    {/* Non-WisdomAISchool */}
                     <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
-                      <div className="text-slate-500 text-sm font-bold uppercase mb-4">Non-Athena AI School Students +18% GST</div>
+                      <div className="text-slate-500 text-sm font-bold uppercase mb-4">Non-WisdomAISchool Students +18% GST</div>
                       <div className="space-y-4">
                         <div className="flex justify-between items-center pb-4 border-b border-slate-100">
                           <span className="text-slate-600">Indian (1-8)</span>
@@ -185,17 +185,17 @@ function Fees() {
 
                 {selectedLearning === 'mastery' && (
                   <div className="grid md:grid-cols-2 gap-8">
-                    {/* Athena AI School */}
+                    {/* WisdomAISchool */}
                     <div className="bg-blue-950 rounded-2xl p-8 text-white">
-                      <div className="text-blue-300 text-sm font-bold uppercase mb-4">Athena AI School Students</div>
+                      <div className="text-blue-300 text-sm font-bold uppercase mb-4">WisdomAISchool Students</div>
                       <div className="text-center py-4">
                         <div className="text-4xl font-black mb-2">₹21,999</div>
                         <div className="text-blue-200">per subject/year</div>
                       </div>
                     </div>
-                    {/* Non-Athena AI School */}
+                    {/* Non-WisdomAISchool */}
                     <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
-                      <div className="text-slate-500 text-sm font-bold uppercase mb-4">Non-Athena AI School Students +18% GST</div>
+                      <div className="text-slate-500 text-sm font-bold uppercase mb-4">Non-WisdomAISchool Students +18% GST</div>
                       <div className="text-center py-4">
                         <div className="text-4xl font-black text-blue-950 mb-2">₹24,499</div>
                         <div className="text-slate-500">per subject/year</div>
@@ -247,28 +247,28 @@ function Fees() {
         </div>
       </section>
 
-      {/* SECTION: ATHENA AI LEARNING FAQ */}
+      {/* SECTION: WISDOMAI LEARNING FAQ */}
       {selectedSchoolType === '21klearning' && (
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6 max-w-4xl">
             <div className="mb-16 text-center">
               <h2 className="text-3xl font-black text-blue-950 uppercase tracking-tighter italic mb-4">Frequently Asked Questions</h2>
-              <p className="text-slate-500">Everything you need to know about Athena AI Learning programs</p>
+              <p className="text-slate-500">Everything you need to know about WisdomAI Learning programs</p>
               <div className="h-1 w-20 bg-blue-300 mx-auto mt-6"></div>
             </div>
 
             <div className="space-y-4">
               {[
                 { q: "What are Capstone Programs?", a: "Capstone Programs are specialized courses in Financial Literacy, AI, Public Speaking, and more. They help students develop essential 21st-century skills beyond traditional academics." },
-                { q: "Who can enroll in Athena AI Learning?", a: "Athena AI Learning programs are open to all students - both Athena AI School students and non-Athena AI learners who want to enhance their skills and knowledge." },
+                { q: "Who can enroll in WisdomAI Learning?", a: "WisdomAI Learning programs are open to all students - both WisdomAISchool students and non-WisdomAI learners who want to enhance their skills and knowledge." },
                 { q: "How does One-on-One Tutoring work?", a: "Our One-on-One Tutoring provides personalized attention with dedicated educators who tailor the learning experience to your child's specific needs and learning pace." },
                 { q: "Can I combine multiple programs?", a: "Yes! You can enroll in multiple programs simultaneously. Many students combine Capstone Programs with Language courses or Mastery Pathway for comprehensive learning." },
-                { q: "What are Athena AI Learning programmes and how do they support my child's learning?", a: "Athena AI Learning programmes are supplementary educational programs designed to enhance traditional schooling. They focus on skill development, practical knowledge, and personalized learning approaches." },
+                { q: "What are WisdomAI Learning programmes and how do they support my child's learning?", a: "WisdomAI Learning programmes are supplementary educational programs designed to enhance traditional schooling. They focus on skill development, practical knowledge, and personalized learning approaches." },
                 { q: "How do Mastery Pathway help learners improve academically?", a: "Mastery Pathway provides structured, in-depth learning in core subjects with personalized pacing. Students master concepts before advancing, ensuring strong foundational knowledge." },
                 { q: "What is included in Capstone and Language programmes?", a: "Capstone programmes include specialized skill courses with hands-on projects. Language programmes include interactive sessions, practice materials, and cultural context for comprehensive language learning." },
-                { q: "Are these learning programmes suitable for both Athena AI School and non-Athena AI learners?", a: "Absolutely! These programs are designed for all learners. Athena AI School students get integrated access, while non-Athena AI learners can join as standalone enrichment programs." },
+                { q: "Are these learning programmes suitable for both WisdomAISchool and non-WisdomAI learners?", a: "Absolutely! These programs are designed for all learners. WisdomAISchool students get integrated access, while non-WisdomAI learners can join as standalone enrichment programs." },
                 { q: "How is learning progress tracked and shared with parents?", a: "Parents receive regular progress reports, assessment results, and personalized feedback. Our digital platform allows real-time tracking of your child's achievements and areas for improvement." },
-                { q: "Do these programmes run alongside regular school learning?", a: "Yes, all Athena AI Learning programs are designed to complement regular schooling. Flexible scheduling ensures they enhance rather than conflict with your child's existing academic commitments." }
+                { q: "Do these programmes run alongside regular school learning?", a: "Yes, all WisdomAI Learning programs are designed to complement regular schooling. Flexible scheduling ensures they enhance rather than conflict with your child's existing academic commitments." }
               ].map((faq, index) => (
                 <div key={index} className="border border-slate-200 rounded-xl overflow-hidden">
                   <button
@@ -596,7 +596,7 @@ function Fees() {
                   { q: "What payment options are available?", a: "We offer flexible payment options including full annual payment (with 5% discount) or convenient monthly instalments to suit your budget." },
                   { q: "How do scholarships work?", a: "Scholarships are awarded based on entrance assessments and academic merit. They can be combined with sibling discounts and loyalty bonuses for maximum savings." },
                   { q: "What is the Cambridge Learner Fee?", a: "The Cambridge Learner Fee covers registration, examination entries, and certification costs for British Pathway students taking IGCSE and A-Level exams." },
-                  { q: "What's the difference between the Indian and British Pathways?", a: "The Indian Pathway follows the National Curriculum Framework (NCF), while the British Pathway follows Cambridge IGCSE and A-Levels with international recognition." },
+                  { q: "What's the difference between WisdomAIndian and British Pathways?", a: "The Indian Pathway follows the National Curriculum Framework (NCF), while the British Pathway follows Cambridge IGCSE and A-Levels with international recognition." },
                   { q: "What does the total annual fee cover?", a: "The total fee includes tuition, learning support, assessments, textbooks, activities, and for British Pathway - Cambridge resources and learner fees." },
                   { q: "Can I pay in instalments or only upfront?", a: "You can choose between full upfront payment (5% discount) or flexible monthly instalments spread across the academic year." },
                   { q: "What is the one-time registration fee?", a: "A one-time registration fee of ₹999 applies for all new admissions to cover administrative and onboarding costs." },
@@ -643,7 +643,7 @@ function Fees() {
             </div>
           </div>
           <div className="mt-24 pt-12 border-t border-blue-900 flex justify-between text-xs font-bold text-blue-400 uppercase tracking-widest">
-            <span>Athena AI School © 2026</span>
+            <span>WisdomAISchool © 2026</span>
             <div className="flex gap-8">
               <span>Privacy Policy</span>
               <span>Terms of Service</span>

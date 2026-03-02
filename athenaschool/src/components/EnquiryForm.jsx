@@ -115,7 +115,7 @@ function EnquiryForm() {
               required
               className="mt-0.5 mr-1.5"
             />
-            By submitting, I agree to Athena AI School's terms, privacy & data use.
+            By submitting, I agree to WisdomAI School's terms, privacy & data use.
           </label>
         </div>
       </form>

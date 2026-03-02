@@ -28,8 +28,8 @@ const LearningGarageCTA = () => {
               <div className="text-3xl mb-4">📧</div>
               <h4 className="text-xl font-bold mb-2">Email Support</h4>
               <p className="mb-4">Send us an email and we'll get back to you soon</p>
-              <a href="mailto:info@athenaschool.com" className="text-yellow-300 hover:text-yellow-200 underline">
-                info@athenaschool.com
+              <a href="mailto:info@Wisdomschool.com" className="text-yellow-300 hover:text-yellow-200 underline">
+                info@Wisdomschool.com
               </a>
             </div>
 

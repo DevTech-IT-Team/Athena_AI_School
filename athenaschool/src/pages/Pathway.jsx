@@ -33,10 +33,10 @@ function Pathway() {
 
       // Add critical performance meta tags
       const metaTags = [
-        { name: 'description', content: 'British and Indian Pathway - Excellence Delivered, Consistently at Athena AI School' },
+        { name: 'description', content: 'British and Indian Pathway - Excellence Delivered, Consistently at WisdomAI School' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'theme-color', content: '#0284c7' },
-        { property: 'og:title', content: 'British and Indian Pathway - Athena AI School' },
+        { property: 'og:title', content: 'British and Indian Pathway - WisdomAI School' },
         { property: 'og:description', content: 'Excellence Delivered, Consistently' },
         { property: 'og:type', content: 'website' }
       ];

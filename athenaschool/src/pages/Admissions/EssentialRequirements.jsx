@@ -23,7 +23,7 @@ export default function EssentialRequirements() {
     {
       icon: Package,
       title: "Learning Kit",
-      description: "Learning Kit (ordered online after registration and delivered at home by Athena AI School)",
+      description: "Learning Kit (ordered online after registration and delivered at home by WisdomAI School)",
       color: "orange"
     },
     {

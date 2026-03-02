@@ -139,12 +139,12 @@ function App() {
             <Route path="/awards" element={<ScrollToTopWrapper><Awards /></ScrollToTopWrapper>} />
             <Route path="/our-learner-council" element={<ScrollToTopWrapper><OurLearnerCouncil /></ScrollToTopWrapper>} />
             <Route path="/what-sets-us-apart" element={<ScrollToTopWrapper><WhatSetsUsApart /></ScrollToTopWrapper>} />
-            <Route path="/athena-ai-school" element={<ScrollToTopWrapper><AthenaAISchool /></ScrollToTopWrapper>} />
+            <Route path="/Wisdom-ai-school" element={<ScrollToTopWrapper><AthenaAISchool /></ScrollToTopWrapper>} />
             <Route path="/our-vision" element={<ScrollToTopWrapper><OurVision /></ScrollToTopWrapper>} />
             <Route path="/mission-bridge" element={<ScrollToTopWrapper><MissionBridge /></ScrollToTopWrapper>} />
             <Route path="/why-online-school" element={<ScrollToTopWrapper><WhyOnlineSchool /></ScrollToTopWrapper>} />
             <Route path="/values-and-ethos" element={<ScrollToTopWrapper><ValuesAndEthos /></ScrollToTopWrapper>} />
-            <Route path="/athena-ai-group" element={<ScrollToTopWrapper><AthenaAIGroup /></ScrollToTopWrapper>} />
+            <Route path="/Wisdom-ai-group" element={<ScrollToTopWrapper><AthenaAIGroup /></ScrollToTopWrapper>} />
             <Route path="/our-leaders" element={<ScrollToTopWrapper><OurLeaders /></ScrollToTopWrapper>} />
             <Route path="/habits-of-mind" element={<ScrollToTopWrapper><HabitsOfMind /></ScrollToTopWrapper>} />
             <Route path="/blog" element={<ScrollToTopWrapper><BlogComingSoon /></ScrollToTopWrapper>} />

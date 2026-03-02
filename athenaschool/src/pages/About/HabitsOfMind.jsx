@@ -88,7 +88,7 @@ const HabitsOfMind = () => {
                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524a1 1 0 01-1.4 0zM6 18a1 1 0 001-1h4a1 1 0 110 2H7a1 1 0 01-1-1z"/></svg>
               </div>
               <h3 className="text-xl font-black text-blue-950 mb-4 uppercase tracking-tight">Community of Excellence</h3>
-              <p className="text-slate-600 leading-relaxed">Athena AI School is the first School in Asia to receive this prestigious certification of excellence.</p>
+              <p className="text-slate-600 leading-relaxed">WisdomAI School is the first School in Asia to receive this prestigious certification of excellence.</p>
             </div>
             <div className="bg-slate-50 border border-slate-200 p-8 hover:border-blue-300 transition-colors">
               <div className="w-16 h-16 bg-blue-300 text-blue-950 flex items-center justify-center mb-6">
@@ -127,7 +127,7 @@ const HabitsOfMind = () => {
         <div className="bg-slate-900 p-12 mb-20 text-white overflow-hidden relative">
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-300/10 -mr-20 -mt-20"></div>
           <h3 className="text-3xl font-black mb-10 flex items-center gap-3">
-             <span className="text-blue-300">#</span>Being Athena AI
+             <span className="text-blue-300">#</span>Being WisdomAI
           </h3>
           <div className="grid md:grid-cols-3 gap-8 relative z-10">
             {[

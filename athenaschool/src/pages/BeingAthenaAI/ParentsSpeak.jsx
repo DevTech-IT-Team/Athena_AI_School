@@ -15,19 +15,19 @@ const ParentsSpeak = () => {
 
   const parentVideos = [
     {
-      title: "Hear what parents think about Athena AI School",
+      title: "Hear what parents think about WisdomAI School",
       img: "https://images.unsplash.com/photo-1581579186913-45ac3e6efe93?auto=format&fit=crop&q=80&w=600",
     },
     {
-      title: "Hear what parents think about Athena AI School",
+      title: "Hear what parents think about WisdomAI School",
       img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=600",
     },
     {
-      title: "Let's hear what parents think about Athena AI School",
+      title: "Let's hear what parents think about WisdomAI School",
       img: "https://images.unsplash.com/photo-1484981138541-3d074aa97716?auto=format&fit=crop&q=80&w=600",
     },
     {
-      title: "Let's hear what parents think about Athena AI School",
+      title: "Let's hear what parents think about WisdomAI School",
       img: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=600",
     },
   ];
@@ -63,7 +63,7 @@ const ParentsSpeak = () => {
               <div className="mt-12 space-y-4">
                 <div className="border-t-4 border-t-[#FFB400] pt-4">
                   <p className="text-[11px] italic text-gray-600 mb-6 text-center leading-relaxed">
-                    "How do your classes prepare you for the future? Athena AI
+                    "How do your classes prepare you for the future? WisdomAI
                     School + Stride student answers."
                   </p>
                 </div>
@@ -80,7 +80,7 @@ const ParentsSpeak = () => {
               <nav className="text-[11px] mb-8 flex items-center gap-2 font-bold uppercase tracking-widest text-gray-400">
                 <span>Home</span>
                 <span className="text-gray-300">&gt;</span>
-                <span className="text-gray-400">Being Athena</span>
+                <span className="text-gray-400">Being Wisdom</span>
                 <span className="text-gray-300">&gt;</span>
                 <span className="text-[#074D8D]">Parents Speak</span>
               </nav>
@@ -123,7 +123,7 @@ const ParentsSpeak = () => {
             <div className="mb-8 flex items-center gap-3">
               <div className="h-8 w-1 bg-[#FFB400]" />
               <h3 className="text-[#003366] text-xl font-bold">
-                #ATHENA_AI Stories
+                #Wisdom Stories
               </h3>
             </div>
 
@@ -147,7 +147,7 @@ const ParentsSpeak = () => {
                     <img src={vid.img} className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
                     <div className="absolute top-0 left-0 bg-[#FFB400] px-2 py-0.5 text-[8px] font-black text-white uppercase tracking-tighter">
-                      #ATHENA_AI
+                      #Wisdom
                     </div>
                     <div className="absolute inset-0 flex items-center justify-center">
                       <Play

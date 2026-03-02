@@ -36,7 +36,7 @@ const ProgramHighlight = () => {
             {/* 3. Dark Blue Content Box (Overlapping style) */}
             <div className="bg-blue-950 text-white p-8 md:p-12 shadow-2xl relative lg:-mr-20 z-20 mt-8">
               <span className="text-sky-400 text-xs font-bold tracking-widest uppercase mb-2 block">
-                The Athena Method
+                The Wisdom Method
               </span>
               <h3 className="text-xl font-bold mb-4">1-on-1 Academic Guidance</h3>
               <p className="text-blue-100/80 leading-relaxed text-sm mb-6">

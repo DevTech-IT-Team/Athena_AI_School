@@ -104,7 +104,7 @@ const StudentSpotlight = () => {
         <nav className="text-[11px] mb-8 flex items-center gap-2 font-bold uppercase tracking-widest text-gray-400">
           <span>Home</span>
           <span className="text-gray-300">&gt; </span>
-          <span className="text-gray-400">Being Athena</span>
+          <span className="text-gray-400">Being Wisdom</span>
           <span className="text-gray-300"> &gt;</span>
           <span className="text-[#074D8D]">Student Spotlight</span>
         </nav>

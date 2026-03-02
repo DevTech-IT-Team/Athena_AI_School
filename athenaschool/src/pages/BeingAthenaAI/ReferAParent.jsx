@@ -24,7 +24,7 @@ const ReferAParent = () => {
           </span>
           <span className="text-gray-300 font-light">&gt; </span>
           <span className="hover:text-[#074D8D] cursor-pointer transition-colors">
-            Being Athena AI
+            Being WisdomAI
           </span>
           <span className="text-gray-300 font-light"> &gt; </span>
           <span className="text-[#074D8D]">Refer A Parent</span>
@@ -42,7 +42,7 @@ const ReferAParent = () => {
             <div className="space-y-4 text-gray-500 text-lg mb-10 leading-relaxed max-w-xl">
               <p>Refer a friend, colleague, or family member today.</p>
               <p>
-                We'll guide them, support them—and if their child joins Athena
+                We'll guide them, support them—and if their child joins Wisdom
                 AI, you earn ₹7,500.
               </p>
             </div>
@@ -134,7 +134,7 @@ const ReferAParent = () => {
               </h2>
               <div className="space-y-6 text-gray-500 text-lg leading-relaxed">
                 <p>
-                  Athena AI School is re-imagining education with our
+                  WisdomAI School is re-imagining education with our
                   transparent, personalised and flexible learning model.
                 </p>
                 <p>
@@ -157,7 +157,7 @@ const ReferAParent = () => {
                 <br />& your Friend
               </h2>
               <p className="text-gray-500 text-lg leading-relaxed">
-                When you recommend a friend to Athena AI School, please tell
+                When you recommend a friend to WisdomAI School, please tell
                 them we'll be in touch. We will make a single connection with
                 them to talk about our school programmes offered and
                 personalised learning. If they're interested, we'll continue the
@@ -266,7 +266,7 @@ const ReferAParent = () => {
           >
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 pb-20">
               {[
-                "The Student Referral Program is open to all parents, or legal guardians enrolled in Athena AI School.",
+                "The Student Referral Program is open to all parents, or legal guardians enrolled in WisdomAI School.",
                 "Employees and associates cannot participate in the Student Referral Program directly.",
                 "A tuition fee waiver will be given for referring new families/students.",
                 "Referred students cannot have a sibling currently or previously enrolled.",

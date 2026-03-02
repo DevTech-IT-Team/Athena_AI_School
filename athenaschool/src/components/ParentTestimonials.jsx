@@ -6,14 +6,14 @@ const testimonials = [
     id: 1,
     name: "Sadiq Khan",
     location: "Parent of Zoya - Class 3 - Gurgaon",
-    text: "Athena AI School has been an incredible journey for my daughter. The flexibility of online learning combined with high-tech AI tools has helped her excel beyond traditional methods.",
+    text: "WisdomAI School has been an incredible journey for my daughter. The flexibility of online learning combined with high-tech AI tools has helped her excel beyond traditional methods.",
     rating: 5,
   },
   {
     id: 2,
     name: "Anita Sharma",
     location: "Parent of Aryan - Class 7 - Mumbai",
-    text: "The personalized attention Aryan receives is unmatched. Athena AI School's curriculum is forward-thinking, and the transition to virtual classrooms was completely seamless.",
+    text: "The personalized attention Aryan receives is unmatched. WisdomAI School's curriculum is forward-thinking, and the transition to virtual classrooms was completely seamless.",
     rating: 5,
   },
   {
@@ -61,7 +61,7 @@ const ParentTestimonials = () => {
             Parent Success Stories
           </h2>
           <h1 className="text-white text-4xl md:text-5xl font-extrabold">
-            Why Parents Love <span className="text-blue-600">Athena AI School</span>
+            Why Parents Love <span className="text-blue-600">WisdomAI School</span>
           </h1>
         </div>
 

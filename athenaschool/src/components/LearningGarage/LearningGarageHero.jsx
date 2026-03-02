@@ -8,7 +8,7 @@ const LearningGarageHero = () => {
           <div className="w-24 h-24 bg-white rounded-full mx-auto mb-6 flex items-center justify-center">
             <span className="text-4xl font-bold text-blue-900">LG</span>
           </div>
-          <h1 className="text-sm font-medium mb-2 text-sky-600">By Athena AI School</h1>
+          <h1 className="text-sm font-medium mb-2 text-sky-600">By WisdomAI School</h1>
         </div>
         
         <h2 className="text-4xl md:text-6xl font-bold mb-4">
@@ -16,7 +16,7 @@ const LearningGarageHero = () => {
         </h2>
         
         <p className="text-lg md:text-xl max-w-3xl mx-auto mb-12 text-gray-700 leading-relaxed">
-          A hands-on, inclusive physical learning space where learners aged 5–18 explore, build, and learn through robotics, electronics, Design, AI & IoT. Welcoming all learners from the Athena AI School family and beyond to explore this exciting world of innovation.
+          A hands-on, inclusive physical learning space where learners aged 5–18 explore, build, and learn through robotics, electronics, Design, AI & IoT. Welcoming all learners from the WisdomAI School family and beyond to explore this exciting world of innovation.
         </p>
 
         <div className="bg-yellow-400 text-blue-900 rounded-lg p-6 max-w-2xl mx-auto mb-8">

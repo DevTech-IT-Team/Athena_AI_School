@@ -30,7 +30,7 @@ const LearningGarageNavbar = () => {
               </div>
               <div>
                 <h1 className="text-lg font-bold text-blue-900">Learning Garage</h1>
-                <p className="text-xs text-gray-600">by Athena AI School</p>
+                <p className="text-xs text-gray-600">by WisdomAI School</p>
               </div>
             </div>
           </div>

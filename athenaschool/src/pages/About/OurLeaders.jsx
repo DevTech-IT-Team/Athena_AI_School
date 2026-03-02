@@ -52,7 +52,7 @@ const OurLeaders = () => {
 
         <div className="space-y-4">
           <p className="text-blue-900 leading-relaxed text-lg">
-            At Athena, we harness cutting-edge pedagogical methodologies to power a sustainable future. 
+            At Wisdom, we harness cutting-edge pedagogical methodologies to power a sustainable future. 
             Our leaders guide the way in human-centric education and academic innovation.
           </p>
           <button className="flex items-center gap-2 font-bold border-b-2 border-blue-950 pb-1 hover:text-blue-400 transition-colors">
@@ -116,7 +116,7 @@ const OurLeaders = () => {
 
       {/* FOOTER CALL TO ACTION */}
       <footer className="max-w-7xl mx-auto flex justify-between items-center border-t border-blue-100 pt-8">
-        <div className="text-4xl font-black text-blue-950">Athena AI</div>
+        <div className="text-4xl font-black text-blue-950">WisdomAI</div>
         <div className="flex gap-4">
            <button className="bg-blue-950 text-white px-8 py-3 rounded-full font-bold text-sm hover:bg-blue-800 transition-colors">Enquire Now</button>
            <button className="border border-blue-950 px-8 py-3 rounded-full font-bold text-sm hover:bg-blue-50">Download Prospectus</button>

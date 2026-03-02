@@ -24,7 +24,7 @@ const Awards = () => {
     {
       title: "Best Curriculum School Award",
       description:
-        "Athena AI School has won Star Education Award 2024 in the Best Curriculum School Award category.",
+        "WisdomAI School has won Star Education Award 2024 in the Best Curriculum School Award category.",
     },
     {
       title: "HolonIQ South Asia EdTech 100",
@@ -49,7 +49,7 @@ const Awards = () => {
     {
       title: "Most Innovative School",
       description:
-        "Athena AI School Awarded as the Most Innovative school in India.",
+        "WisdomAI School Awarded as the Most Innovative school in India.",
     },
   ];
 
@@ -105,7 +105,7 @@ const Awards = () => {
               <nav className="text-[11px] mb-8 flex items-center gap-2 font-bold uppercase tracking-widest text-gray-400">
                 <span>Home</span>
                 <span className="text-gray-300">&gt;</span>
-                <span className="text-gray-400">Being Athena</span>
+                <span className="text-gray-400">Being Wisdom</span>
                 <span className="text-gray-300">&gt;</span>
                 <span className="text-[#074D8D]">Awards</span>
               </nav>
@@ -144,7 +144,7 @@ const Awards = () => {
                   </h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed mb-10 text-sm italic">
-                  Athena AI School has been consistently recognized for
+                  WisdomAI School has been consistently recognized for
                   excellence in education innovation, curriculum development,
                   and student wellness.
                 </p>

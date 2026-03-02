@@ -44,7 +44,7 @@ const FlowwLanding = () => {
         {/* Header Section */}
         <header className="mb-16">
           <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-2 flex items-center gap-2">
-            The Athena Difference
+            The Wisdom Difference
           </h1>
           <h2 className="text-lg md:text-xl font-medium text-sky-600 mb-6">
             Powered by the Learning Pyramid for Success

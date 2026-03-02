@@ -61,8 +61,8 @@ const AthenaElegantLayout = () => {
       <HeroSection hero={pathwayContent.hero} />
 
       {/* ---------------- ATHENA FEATURE SECTION ---------------- */}
-      <LazySection label="athena features" placeholderHeight={520}>
-        <Suspense fallback={<SectionFallback label="athena features" />}>
+      <LazySection label="Wisdom features" placeholderHeight={520}>
+        <Suspense fallback={<SectionFallback label="Wisdom features" />}>
           <AthenaFeatureSection />
         </Suspense>
       </LazySection>

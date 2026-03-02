@@ -34,7 +34,7 @@ const EdexcelUK = () => {
           <div className="academics-section">
             <h2>iProgress with Pearson Edexcel</h2>
             <p>
-              iProgress with Pearson Edexcel is a complete international curriculum from 5-19 years old in international schools like Athena AI School. The iProgress family includes iPrimary, iLowerSecondary, International GCSE (IG), GCSE, International Advanced level (IAL), and GCE A level, and delivers a consistent learning journey for learners and facilitators, everywhere in the world. These are internationalised versions of the latest English National Curriculum, created specifically with EAL learners in mind and explicitly designed to prepare learners for International GCSE and beyond.
+              iProgress with Pearson Edexcel is a complete international curriculum from 5-19 years old in international schools like WisdomAI School. The iProgress family includes iPrimary, iLowerSecondary, International GCSE (IG), GCSE, International Advanced level (IAL), and GCE A level, and delivers a consistent learning journey for learners and facilitators, everywhere in the world. These are internationalised versions of the latest English National Curriculum, created specifically with EAL learners in mind and explicitly designed to prepare learners for International GCSE and beyond.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ const EdexcelUK = () => {
           <div className="academics-section">
             <h2>Our Affiliation</h2>
             <p>
-              Athena AI School is an approved center of Edexcel bearing affiliation number 94883
+              WisdomAI School is an approved center of Edexcel bearing affiliation number 94883
             </p>
           </div>
 

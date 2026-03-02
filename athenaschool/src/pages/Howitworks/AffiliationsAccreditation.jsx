@@ -29,9 +29,9 @@ const AffiliationsAccreditation = () => {
         <div className="max-w-6xl mx-auto">
           {/* Introduction */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Athena AI School</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">WisdomAI School</h2>
             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              Athena AI School is a formal recognised and accredited K-12 School offering Indian and British Curriculum online for learners aged 3 to 18 years in India and abroad.
+              WisdomAI School is a formal recognised and accredited K-12 School offering Indian and British Curriculum online for learners aged 3 to 18 years in India and abroad.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mt-4">
               We are changing how children learn and grow. With more than 6,000 learners from 500 cities - all over the world studying with us, we have an Indian and British curriculum that is just as traditional in its approach to education as any other school system – but with better learning outcomes! With our unique, cutting-edge platform you will find all the elements of a school delivered in an exciting manner. We use the best facilitators and state-of-the-art technology to educate learners on their own time with no hassle or regret!
@@ -65,7 +65,7 @@ const AffiliationsAccreditation = () => {
             </h3>
             <div className="space-y-4 text-gray-700">
               <p>
-                The Athena AI school follows the National Curriculum Framework of India up-to middle school curriculum. It also uses a system based on NIOS as a private candidate for exit level examinations in Grade 10 and 12, where Marks Sheets and Pass Certificates are issued by NIOS, an autonomous body under Government of India.
+                The WisdomAI school follows the National Curriculum Framework of India up-to middle school curriculum. It also uses a system based on NIOS as a private candidate for exit level examinations in Grade 10 and 12, where Marks Sheets and Pass Certificates are issued by NIOS, an autonomous body under Government of India.
               </p>
               <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
                 <p className="font-semibold text-blue-900">
@@ -82,7 +82,7 @@ const AffiliationsAccreditation = () => {
               British Curriculum
             </h3>
             <p className="text-gray-700 mb-6">
-              Athena AI School's British Curriculum includes both Pearson Edexcel and Cambridge Assessment International Education (CAIE).
+              WisdomAI School's British Curriculum includes both Pearson Edexcel and Cambridge Assessment International Education (CAIE).
             </p>
 
             {/* Pearson Edexcel */}
@@ -90,7 +90,7 @@ const AffiliationsAccreditation = () => {
               <h4 className="text-xl font-semibold text-gray-900 mb-4">Pearson Edexcel</h4>
               <div className="space-y-3 text-gray-700">
                 <p>
-                  Athena AI School is affiliated and recognised by Pearson Edexcel, the largest awarding organisation in the UK. Pearson Edexcel enjoys Extensive worldwide recognition and is regulated by Ofqual.
+                  WisdomAI School is affiliated and recognised by Pearson Edexcel, the largest awarding organisation in the UK. Pearson Edexcel enjoys Extensive worldwide recognition and is regulated by Ofqual.
                 </p>
                 <p>
                   Pearson Edexcel International qualifications come from the same team that provides the UK regulated versions and therefore ensures comparability to the UK versions and alignment to the UK government's intentions to raise standards.
@@ -100,7 +100,7 @@ const AffiliationsAccreditation = () => {
                 </p>
                 <div className="bg-green-50 border-l-4 border-green-600 p-4 rounded">
                   <p className="font-semibold text-green-900">
-                    Athena AI School is an approved centre of Edexcel bearing affiliation number <span className="font-mono">94883</span>.
+                    WisdomAI School is an approved centre of Edexcel bearing affiliation number <span className="font-mono">94883</span>.
                   </p>
                 </div>
               </div>
@@ -111,14 +111,14 @@ const AffiliationsAccreditation = () => {
               <h4 className="text-xl font-semibold text-gray-900 mb-4">Cambridge Assessment International Education</h4>
               <div className="space-y-3 text-gray-700">
                 <p>
-                  Athena AI School is also approved by Cambridge Assessment International Education to offer Cambridge International Examinations fully online. Athena AI School is now part of a community of 10,000 Cambridge International Schools in more than 160 countries, who are dedicated to helping learners develop a lasting passion for learning, as well as the skills they need for life.
+                  WisdomAI School is also approved by Cambridge Assessment International Education to offer Cambridge International Examinations fully online. WisdomAI School is now part of a community of 10,000 Cambridge International Schools in more than 160 countries, who are dedicated to helping learners develop a lasting passion for learning, as well as the skills they need for life.
                 </p>
                 <p>
                   The Cambridge Pathway combines a world-class curriculum, high-quality support for facilitators and integrated assessment, including Cambridge IGCSE and Cambridge International AS & A Level qualifications, which are recognised by universities worldwide.
                 </p>
                 <div className="bg-green-50 border-l-4 border-green-600 p-4 rounded">
                   <p className="font-semibold text-green-900">
-                    Athena AI School is an approved online school of Cambridge with affiliation number <span className="font-mono">IA702</span>.
+                    WisdomAI School is an approved online school of Cambridge with affiliation number <span className="font-mono">IA702</span>.
                   </p>
                 </div>
               </div>

@@ -85,7 +85,7 @@ const AcademicCrewPage = () => {
               <nav className="text-[11px] mb-8 flex items-center gap-2 font-bold uppercase tracking-widest text-gray-400">
                 <span>Home</span>
                 <span className="text-gray-300"> &gt;</span>
-                <span className="text-gray-400">Being Athena</span>
+                <span className="text-gray-400">Being WisdomAI</span>
                 <span className="text-gray-300">&gt;</span>
                 <span className="text-[#074D8D]">Meet Our Academic Crew</span>
               </nav>
@@ -162,7 +162,7 @@ const AcademicCrewPage = () => {
                       </div>
                     </div>
                     <div className="absolute top-0 left-0 bg-[#FFB400] px-3 py-1 text-[10px] font-bold text-white uppercase">
-                      #Athena AI School
+                      #WisdomAI School
                     </div>
                   </div>
                   <p className="mt-4 text-sm font-semibold text-gray-700 line-clamp-2">

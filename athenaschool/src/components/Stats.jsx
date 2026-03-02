@@ -6,12 +6,12 @@ function Stats() {
           <div className="text-center">
             <div className="text-6xl font-bold text-blue-600 mb-4">7500+</div>
             <div className="text-xl font-semibold text-gray-800 mb-2">Learners</div>
-            <div className="text-gray-600">Growing with Athena AI School</div>
+            <div className="text-gray-600">Growing with WisdomAI School</div>
           </div>
           <div className="text-center">
             <div className="text-6xl font-bold text-blue-600 mb-4">500+</div>
             <div className="text-xl font-semibold text-gray-800 mb-2">Cities</div>
-            <div className="text-gray-600">From cities where parents trust Athena AI School</div>
+            <div className="text-gray-600">From cities where parents trust WisdomAI School</div>
           </div>
           <div className="text-center">
             <div className="text-6xl font-bold text-blue-600 mb-4">78+</div>

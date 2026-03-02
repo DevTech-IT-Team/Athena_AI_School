@@ -13,14 +13,14 @@ const WhyOnlineSchool = () => {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
               <span className="h-px w-12 bg-blue-300"></span>
-              <span className="text-blue-900 font-bold tracking-[0.2em] uppercase text-sm">Athena AI School</span>
+              <span className="text-blue-900 font-bold tracking-[0.2em] uppercase text-sm">WisdomAI School</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-black text-blue-900 leading-tight mb-6">
               The World is Changing. <br />
               <span className="text-blue-600">So is Education.</span>
             </h1>
             <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-8 max-w-2xl">
-              While traditional schools have their place, Athen AI offers a modern alternative designed specifically for the digital age. We provide a unique blend of safety, flexibility, and advanced learning.
+              While traditional schools have their place, WisdomAI offers a modern alternative designed specifically for the digital age. We provide a unique blend of safety, flexibility, and advanced learning.
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="bg-blue-900 hover:bg-blue-800 text-white font-bold px-6 py-3 rounded-sm transition-all uppercase text-sm tracking-wider">
@@ -38,7 +38,7 @@ const WhyOnlineSchool = () => {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black text-blue-900 uppercase">Why Choose Athen AI?</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-blue-900 uppercase">Why Choose WisdomAI?</h2>
             <div className="h-1.5 w-24 bg-blue-300 mx-auto mt-4"></div>
           </div>
 
@@ -115,7 +115,7 @@ const WhyOnlineSchool = () => {
                 <tr className="bg-blue-900 text-white">
                   <th className="p-6 font-bold uppercase tracking-wider text-sm">Feature</th>
                   <th className="p-6 font-bold uppercase tracking-wider text-sm border-l border-blue-800">Traditional School</th>
-                  <th className="p-6 font-bold uppercase tracking-wider text-sm bg-blue-600">Athen AI Online</th>
+                  <th className="p-6 font-bold uppercase tracking-wider text-sm bg-blue-600">WisdomAI Online</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
@@ -148,7 +148,7 @@ const WhyOnlineSchool = () => {
       {/* --- FOOTER CTA --- */}
       <footer className="bg-blue-900 py-12 border-t border-blue-800">
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-blue-300 font-black text-xl">ATHENA AI SCHOOL</p>
+          <p className="text-blue-300 font-black text-xl">WISDOMAI SCHOOL</p>
           <p className="text-blue-400 text-sm">© 2026 Future Ready Education. All rights reserved.</p>
         </div>
       </footer>

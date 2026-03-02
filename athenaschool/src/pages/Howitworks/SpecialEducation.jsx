@@ -6,7 +6,7 @@ export default function SpecialEducation() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6">Special Education</h1>
-            <p className="text-xl mb-8">Special Education Practices at Athena AI School</p>
+            <p className="text-xl mb-8">Special Education Practices at WisdomAI School</p>
             <div className="flex flex-wrap gap-4 justify-center">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Enquire Now
@@ -36,7 +36,7 @@ export default function SpecialEducation() {
           {/* Introduction */}
           <div className="text-center mb-16">
             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              While it is true that every child has the innate ability to learn, at Athena AI school, we recognise that learning is most effective and pleasurable when it occurs in a way and pace that the child is comfortable with. To realise this, our school has a Counselling Department, which recognises that each child is unique in their own way and the traditional one size fits all approach needs to be disregarded.
+              While it is true that every child has the innate ability to learn, at WisdomAI school, we recognise that learning is most effective and pleasurable when it occurs in a way and pace that the child is comfortable with. To realise this, our school has a Counselling Department, which recognises that each child is unique in their own way and the traditional one size fits all approach needs to be disregarded.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mt-4">
               Our Counselling Team has specially trained and qualified counsellors, remedial educators, and special educators who work in tandem with the facilitators and parents to accommodate every child's needs and create a comfortable learning space for all the learners.
@@ -50,13 +50,13 @@ export default function SpecialEducation() {
               Inclusive education, in its essence, means a space for learning, where learners with and without any comorbidities attend classes together. The term inclusion refers to equality and equity, i.e. the provision of equal opportunities for all learners whilst being mindful of their concerns and challenges and creating mechanisms to help them through the same.
             </p>
             <p className="text-gray-700">
-              At Athena AI School, learners from diverse backgrounds and varying physical and cognitive concerns are part of the same classroom. The programme is structured so that all learners, with or without any difficulties, have an equal opportunity to learn, grow, and flourish. The learners are encouraged to participate and work together, leading to a two-fold effect where learners with special needs can interact with and learn from their peers and grow in an environment wherein learners learn to accept and celebrate our differences.
+              At WisdomAI School, learners from diverse backgrounds and varying physical and cognitive concerns are part of the same classroom. The programme is structured so that all learners, with or without any difficulties, have an equal opportunity to learn, grow, and flourish. The learners are encouraged to participate and work together, leading to a two-fold effect where learners with special needs can interact with and learn from their peers and grow in an environment wherein learners learn to accept and celebrate our differences.
             </p>
           </div>
 
           {/* Eligibility */}
           <div className="bg-green-50 rounded-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-green-900 mb-6">Is my child eligible for special needs education at Athena AI School?</h2>
+            <h2 className="text-3xl font-bold text-green-900 mb-6">Is my child eligible for special needs education at WisdomAI School?</h2>
             <p className="text-gray-700 mb-6">
               As our school is inclusive, we can accommodate learners with varying special needs. However, being an online school, we also recognise our limitations, and thus there are certain areas wherein we cannot be the best fit for your child.
             </p>
@@ -194,7 +194,7 @@ export default function SpecialEducation() {
 
           {/* Parent Testimonials */}
           <div className="bg-gray-100 rounded-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Parents sharing their experiences at Athena AI school:</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Parents sharing their experiences at WisdomAI school:</h2>
             <div className="space-y-6">
               <div className="bg-white rounded-lg p-6 shadow-sm">
                 <p className="text-gray-700 italic mb-2">"The team has been superb and amazingly helpful! Thank you for everything!"</p>
@@ -205,7 +205,7 @@ export default function SpecialEducation() {
                 <p className="text-sm text-gray-600">- The parent of the learner in Grade 5 (Indian Curriculum)</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <p className="text-gray-700 italic mb-2">"We are really delighted and happy by our decision to choose Athena AI school for AAA's academics. Thanking all of you for making us successful. Truly appreciate the support mechanism provided to AAA.."</p>
+                <p className="text-gray-700 italic mb-2">"We are really delighted and happy by our decision to choose WisdomAI school for AAA's academics. Thanking all of you for making us successful. Truly appreciate the support mechanism provided to AAA.."</p>
                 <p className="text-sm text-gray-600">- The parent of the learner in Grade 4 (Indian Curriculum)</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">

@@ -21,7 +21,7 @@ const EarlyYears = () => {
           <div className="academics-section">
             <h2>Early Years</h2>
             <p>
-              The early years of a child's education are vital for developing their critical thinking and problem-solving skills. We at Athena AI School have created an environment in which our young learners feel empowered to ask questions, safe to meet challenges head on, and accompanied on their journey towards reaching their full potential.
+              The early years of a child's education are vital for developing their critical thinking and problem-solving skills. We at WisdomAI School have created an environment in which our young learners feel empowered to ask questions, safe to meet challenges head on, and accompanied on their journey towards reaching their full potential.
             </p>
             <p>
               The Early Years Curriculum provides an age-appropriate, activity-based academic plan for every grade. The curriculum content is based on the U.K. designed and globally accepted framework of Early Years Foundation Stage (EYFS), alongside best educational practices with an emphasis on every child's unique learning styles. Values, morals, and ethics for the preschoolers are weaved into our programs with stories & narratives using the Principles of 16 Habits of Mind, (by Art Costa and Bena Kallick) to nurture & build a strong character, independent mind and confident leaders of tomorrow.
@@ -82,7 +82,7 @@ const EarlyYears = () => {
           <div className="academics-section">
             <h2>Our Approach</h2>
             <p>
-              Our small class sizes permit our facilitators to tailor their lessons to suit individuals' abilities and learning styles. The positive and supportive environment throughout our school and the personal attention each learner receives form the basis of Athena AI school's difference and are cornerstones of our success.
+              Our small class sizes permit our facilitators to tailor their lessons to suit individuals' abilities and learning styles. The positive and supportive environment throughout our school and the personal attention each learner receives form the basis of WisdomAI school's difference and are cornerstones of our success.
             </p>
             <p>
               Learners will transition to Primary Years with a solid academic foundation upon which to build and the confidence and curiosity to strive for ever greater academic heights.

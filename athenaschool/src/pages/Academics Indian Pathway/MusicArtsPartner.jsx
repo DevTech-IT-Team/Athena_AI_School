@@ -40,7 +40,7 @@ const MusicArtsPartner = () => {
       <div className="academics-section">
         <h2>Our Music & Arts Partners</h2>
         <p className="section-description">
-          Athena AI School collaborates with renowned music and arts academies across India to provide world-class creative education opportunities for our students.
+          WisdomAI School collaborates with renowned music and arts academies across India to provide world-class creative education opportunities for our students.
         </p>
 
         <div className="approach-grid">
@@ -317,17 +317,17 @@ const MusicArtsPartner = () => {
 
       <div className="social-highlights">
         <div className="highlight-card blue">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>Palchin Patil wants to master it all in 2021</p>
         </div>
 
         <div className="highlight-card green">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>Teamwork makes us all winners</p>
         </div>
 
         <div className="highlight-card purple">
-          <h3>#Being Athena AI</h3>
+          <h3>#Being WisdomAI</h3>
           <p>We enjoy learning even after classes</p>
         </div>
       </div>

@@ -36,17 +36,17 @@ export default function HowItWorks() {
           {/* Introduction */}
           <div className="text-center mb-16">
             <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              For starters over a thousand parents have registered their children at Athena AI School including two of the founders! So, yes it works - but it is not for everyone. Before we get into whether Athena AI School is right for your child let's walk you over how online school actually functions.
+              For starters over a thousand parents have registered their children at WisdomAI School including two of the founders! So, yes it works - but it is not for everyone. Before we get into whether WisdomAI School is right for your child let's walk you over how online school actually functions.
             </p>
           </div>
 
           {/* School Overview */}
           <div className="bg-blue-50 rounded-xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-blue-900 mb-6">Athena AI School Overview</h2>
+            <h2 className="text-3xl font-bold text-blue-900 mb-6">WisdomAI School Overview</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <p className="text-gray-700 mb-4">
-                  <strong>Athena AI School is your virtual school.</strong> Presently, we are registering learners for Nursery through Grade 12.
+                  <strong>WisdomAI School is your virtual school.</strong> Presently, we are registering learners for Nursery through Grade 12.
                 </p>
                 <p className="text-gray-700 mb-4">
                   The School follows an annual academic calendar and conducts live classes online for 1-4 hours, 5-6 days a week (depending on the Grade)
@@ -320,12 +320,12 @@ export default function HowItWorks() {
               We offer a wide range of options to study Second and Third Language. For more details, click here:
             </p>
             <a 
-              href="https://www.athenaaischool.com/languages/" 
+              href="https://www.Wisdomaischool.com/languages/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-600 hover:underline font-medium"
             >
-              https://www.athenaaischool.com/languages/
+              https://www.Wisdomaischool.com/languages/
             </a>
           </div>
 
@@ -333,33 +333,33 @@ export default function HowItWorks() {
           <div className="bg-green-50 rounded-xl p-8 mb-16">
             <h3 className="text-2xl font-bold mb-4">Senior School</h3>
             <p className="text-gray-700 mb-4">
-              Interested learners for Grade 9 and above at Athena AI School can register with NIOS as a Private Candidate. Presently, this option is available only for learners residing in India. For more details please visit:
+              Interested learners for Grade 9 and above at WisdomAI School can register with NIOS as a Private Candidate. Presently, this option is available only for learners residing in India. For more details please visit:
             </p>
             <a 
-              href="https://www.athenaaischool.com/senior-school/" 
+              href="https://www.Wisdomaischool.com/senior-school/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-blue-600 hover:underline font-medium"
             >
-              https://www.athenaaischool.com/senior-school/
+              https://www.Wisdomaischool.com/senior-school/
             </a>
           </div>
 
           {/* Webinars Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">#BeingAthenaAI</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">#BeingWisdomAI</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="text-blue-600 font-medium mb-2">#BeingAthenaAI</div>
-                <h3 className="text-lg font-semibold mb-2">Athena AI School Webinar on Homeschooling</h3>
+                <div className="text-blue-600 font-medium mb-2">#BeingWisdomAI</div>
+                <h3 className="text-lg font-semibold mb-2">WisdomAI School Webinar on Homeschooling</h3>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="text-blue-600 font-medium mb-2">#BeingAthenaAI</div>
-                <h3 className="text-lg font-semibold mb-2">Athena AI School Introduction of Facilitators</h3>
+                <div className="text-blue-600 font-medium mb-2">#BeingWisdomAI</div>
+                <h3 className="text-lg font-semibold mb-2">WisdomAI School Introduction of Facilitators</h3>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="text-blue-600 font-medium mb-2">#BeingAthenaAI</div>
-                <h3 className="text-lg font-semibold mb-2">Demonstration of the new Athena AI Learning Portal</h3>
+                <div className="text-blue-600 font-medium mb-2">#BeingWisdomAI</div>
+                <h3 className="text-lg font-semibold mb-2">Demonstration of the new WisdomAI Learning Portal</h3>
                 <p className="text-sm text-gray-600">10 October 2020</p>
               </div>
             </div>

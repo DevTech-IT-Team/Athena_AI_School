@@ -1,7 +1,7 @@
 import { useState, useEffect, memo, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, User, BookOpen, Award, Users, Phone, Heart } from 'lucide-react';
-import logo from '../assets/logo-nav.webp';
+import logo from '/assets/images/logos/Gemini_Generated_Image_mqgnxhmqgnxhmqgn-removebg-preview.png';
 
 const Navigation = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,13 +60,13 @@ const Navigation = memo(() => {
     {
       title: 'About',
       links: [
-        { text: 'Athena AI School', href: '/athena-ai-school' },
+        { text: 'WisdomAISchool', href: '/Wisdom-ai-school' },
         { text: 'Our Vision', href: '/our-vision' },
         { text: 'Mission Bridge', href: '/mission-bridge' },
         { text: 'Why Online School', href: '/why-online-school' },
         { text: 'What sets us apart?', href: '/what-sets-us-apart' },
         { text: 'Values & Ethos', href: '/values-and-ethos' },
-        { text: 'Athena AI Group', href: '/athena-ai-group' },
+        { text: 'WisdomAISchool Group', href: '/Wisdom-ai-group' },
         { text: 'Our Leaders', href: '/our-leaders' },
         { text: 'Habits of Mind', href: '/habits-of-mind' },
       ]
@@ -133,7 +133,7 @@ const Navigation = memo(() => {
       ]
     },
     {
-      title: 'Being Athena AI',
+      title: 'Being WisdomAI',
       links: [
         { text: 'Wall of Love', href: '/wall-of-love' },
         { text: 'Refer A Parent', href: '/refer-a-parent' },
@@ -163,8 +163,8 @@ const Navigation = memo(() => {
           <Link to="/" className="flex items-center">
             <img
               src={logo}
-              alt="Athena AI School Logo"
-              className="h-24 md:h-32 w-auto"
+              alt="WisdomAISchool Logo"
+              className="h-12 md:h-14 w-auto"
               style={{ filter: 'drop-shadow(0 4px 6px rgba(255, 255, 255, 0.8)) drop-shadow(0 2px 4px rgba(255, 255, 255, 0.6))' }}
               width={320}
               height={128}

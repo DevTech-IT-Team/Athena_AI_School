@@ -6,14 +6,14 @@ const LearningGaragePricing = () => {
       name: "Starter (6 sessions)",
       validity: "30 days",
       non21kPrice: "₹2,400 + 18% GST",
-      athenaPrice: "₹1,920 + 18% GST",
+      WisdomPrice: "₹1,920 + 18% GST",
       status: "Coming Soon"
     },
     {
       name: "Explorer (12 sessions)",
       validity: "Early Bird Offer\nValid till 31st Jan 2026",
       non21kPrice: "₹4,320 + 18% GST",
-      athenaPrice: "₹3,456 + 18% GST",
+      WisdomPrice: "₹3,456 + 18% GST",
       status: "FREE",
       popular: true
     },
@@ -21,7 +21,7 @@ const LearningGaragePricing = () => {
       name: "Builder (24 sessions)",
       validity: "20% benefit\n90 days",
       non21kPrice: "₹7,680 + 18% GST",
-      athenaPrice: "₹6,144 + 18% GST",
+      WisdomPrice: "₹6,144 + 18% GST",
       status: "Coming Soon"
     }
   ];
@@ -48,11 +48,11 @@ const LearningGaragePricing = () => {
           <h3 className="text-2xl font-bold text-blue-900 mb-6 text-center">Per-Session Pricing (90 mins)</h3>
           <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             <div className="bg-white rounded-lg p-6 border border-gray-200">
-              <h4 className="text-lg font-bold text-gray-700 mb-2">Non-Athena AI School Learners</h4>
+              <h4 className="text-lg font-bold text-gray-700 mb-2">Non-WisdomAI School Learners</h4>
               <p className="text-2xl font-bold text-blue-900">₹400 + 18% GST</p>
             </div>
             <div className="bg-blue-50 rounded-lg p-6 border border-blue-200">
-              <h4 className="text-lg font-bold text-blue-900 mb-2">Athena AI School Learners & Alumni</h4>
+              <h4 className="text-lg font-bold text-blue-900 mb-2">WisdomAI School Learners & Alumni</h4>
               <p className="text-2xl font-bold text-blue-900">₹320 + 18% GST</p>
             </div>
           </div>
@@ -73,8 +73,8 @@ const LearningGaragePricing = () => {
                 <tr>
                   <th className="px-6 py-4 text-left">Pass</th>
                   <th className="px-6 py-4 text-left">Validity</th>
-                  <th className="px-6 py-4 text-left">Non-Athena AI School</th>
-                  <th className="px-6 py-4 text-left">Athena AI School & Alumni</th>
+                  <th className="px-6 py-4 text-left">Non-WisdomAI School</th>
+                  <th className="px-6 py-4 text-left">WisdomAI School & Alumni</th>
                 </tr>
               </thead>
               <tbody>
@@ -100,7 +100,7 @@ const LearningGaragePricing = () => {
                         <span className="text-green-600 font-bold">FREE</span>
                       ) : (
                         <div>
-                          <div>{pass.athenaPrice}</div>
+                          <div>{pass.WisdomPrice}</div>
                           <div className="text-sm text-gray-500">{pass.status}</div>
                         </div>
                       )}

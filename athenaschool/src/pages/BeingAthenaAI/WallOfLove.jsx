@@ -74,7 +74,7 @@ function WallOfLove() {
     ][i % 5],
     platform: "google",
     review:
-      "The curriculum at Athena AI Online School is incredibly engaging. My teachers are lovely and awesome—they teach very nicely by explaining everything clearly! I've seen a lot of improvement in my skills.",
+      "The curriculum at WisdomAI Online School is incredibly engaging. My teachers are lovely and awesome—they teach very nicely by explaining everything clearly! I've seen a lot of improvement in my skills.",
   }));
 
   const LINKEDIN_REVIEWS = Array.from({ length: 10 }, (_, i) => ({
@@ -89,7 +89,7 @@ function WallOfLove() {
     ],
     platform: "linkedin",
     review:
-      "Athena AI Online School has completely changed our perspective on digital education. The focus on creativity and skill-based learning is exactly what students need today.",
+      "WisdomAI Online School has completely changed our perspective on digital education. The focus on creativity and skill-based learning is exactly what students need today.",
   }));
 
   return (
@@ -101,7 +101,7 @@ function WallOfLove() {
           </span>
           <span className="text-gray-300"> &gt; </span>
           <span className="hover:text-gray-600 cursor-pointer transition-colors">
-            Being Athena AI
+            Being WisdomAI
           </span>
           <span className="text-gray-300"> &gt; </span>
           <span className="text-[#074D8D]">Wall of Love</span>
@@ -109,7 +109,7 @@ function WallOfLove() {
 
         <div className="text-center mb-24">
           <h1 className="text-4xl md:text-6xl font-extrabold text-[#074D8D] mb-6 tracking-tight leading-tight">
-            Athena AI Online School Reviews
+            WisdomAI Online School Reviews
           </h1>
           <p className="text-gray-500 text-lg md:text-xl max-w-3xl mx-auto font-normal leading-relaxed">
             We are loved by parents, students, and the larger community who
@@ -127,7 +127,7 @@ function WallOfLove() {
           <div className="flex flex-col items-center mb-16">
             <div className="flex items-center justify-center gap-4 mb-3">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
-                Athena AI Online School
+                WisdomAI Online School
               </h2>
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
@@ -167,7 +167,7 @@ function WallOfLove() {
           <div className="flex flex-col items-center mb-16">
             <div className="flex items-center justify-center gap-4 mb-3">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">
-                Athena AI Online School
+                WisdomAI Online School
               </h2>
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"

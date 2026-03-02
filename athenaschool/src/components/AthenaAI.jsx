@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AthenaAISchool = () => {
+const AWisdomAISchool = () => {
   return (
     <div className="bg-white text-blue-900 font-serif selection:bg-blue-100">
       
@@ -10,7 +10,7 @@ const AthenaAISchool = () => {
           <div>
             <span className="uppercase tracking-[0.3em] text-sm font-sans font-bold text-blue-400 block mb-6">Established 2024</span>
             <h1 className="text-4xl md:text-6xl lg:text-8xl leading-none font-black tracking-tighter mb-6">
-              ATHENA <br /> <span className="text-blue-500">AI</span>
+              WISDOM <br /> <span className="text-blue-500">AI</span>
             </h1>
             <p className="text-3xl italic leading-tight text-slate-700 max-w-md">
               "Empowering little minds to master the big world of technology."
@@ -36,7 +36,7 @@ const AthenaAISchool = () => {
           <h3 className="text-blue-400 uppercase font-sans tracking-widest mb-4">About Us</h3>
           <h2 className="text-5xl mb-8 leading-tight">Nurturing Little <br/> Geniuses</h2>
           <p className="text-xl text-slate-600 leading-relaxed max-w-lg">
-            At Athena AI, we believe that the journey to greatness starts early. We are a specialized online school designed for children from Nursery to K5.
+            At WisdomAI, we believe that the journey to greatness starts early. We are a specialized online school designed for children from Nursery to K5.
           </p>
         </div>
         <div className="relative p-8 md:p-20 flex items-center justify-center">
@@ -126,4 +126,4 @@ const AthenaAISchool = () => {
   );
 };
 
-export default AthenaAISchool;
+export default AWisdomAISchool;

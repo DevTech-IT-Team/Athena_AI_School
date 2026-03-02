@@ -13,7 +13,7 @@ const LearnerLedPodcast = () => {
           </span>
           <span className="text-gray-300 font-light"> &gt; </span>
           <span className="hover:text-[#074D8D] cursor-pointer transition-colors">
-            Being Athena AI
+            Being WisdomAI
           </span>
           <span className="text-gray-300 font-light"> &gt;</span>
           <span className="text-[#074D8D]">Learner-Led Podcast</span>
@@ -62,7 +62,7 @@ const LearnerLedPodcast = () => {
 
             <h2 className="text-[#074D8D] text-4xl md:text-5xl font-black mb-6 leading-tight">
               The Echo of <br />
-              Athena AI
+              WisdomAI
             </h2>
 
             <div className="space-y-6 text-gray-500 text-lg leading-relaxed mb-10">
@@ -72,7 +72,7 @@ const LearnerLedPodcast = () => {
                   learner-led podcast
                 </span>
                 , conceptualized, coordinated, and conducted by the Students of
-                Athena AI School.
+                WisdomAI School.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
@@ -107,7 +107,7 @@ const LearnerLedPodcast = () => {
                   src={PodcastBg}
                   loading="lazy"
                   className="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
-                  alt="Athena AI Podcast Studio"
+                  alt="WisdomAI Podcast Studio"
                 />
 
                 <div className="absolute inset-0 bg-linear-to-t from-[#001D3D] via-[#001D3D]/20 to-transparent" />
@@ -222,7 +222,7 @@ const LearnerLedPodcast = () => {
                   Behind-The-Scenes With The Co-Founders
                 </h5>
                 <p className="text-gray-400 text-xs mt-1">
-                  The Echo of Athena AI
+                  The Echo of WisdomAI
                 </p>
               </div>
               <div className="mt-12 bg-white/10 rounded-lg p-3 flex items-center gap-4">
@@ -241,7 +241,7 @@ const LearnerLedPodcast = () => {
 
       <div className="container mx-auto px-6 mb-32 max-w-7xl">
         <h3 className="text-[#074D8D] text-2xl font-black mb-10 text-center uppercase tracking-tight">
-          Learn more about Athena AI School
+          Learn more about WisdomAI School
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-[#1E3A8A] p-12 rounded-2xl text-center group cursor-pointer hover:bg-[#1e40af] transition-all">
