@@ -10,7 +10,7 @@ const Testimonials = lazy(() => import('../components/Testimonials'));
 const CTA = lazy(() => import('../components/CTA'));
 const Contact = lazy(() => import('../components/Contact'));
 const OurPrograms = lazy(() => import('../components/OurPrograms'));
-const AthenaAI = lazy(() => import('../components/AthenaAI'));
+const AffordableAccredited = lazy(() => import('../components/AffordableAccredited'));
 const CurriculumOverview = lazy(() => import('../components/CurriculumOverview'));
 const AcademicCrew = lazy(() => import('../components/AcademicCrew'));
 const StudentSpotlight = lazy(() => import('../components/StudentSpotlight'));
@@ -59,7 +59,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Hero />
-      
+
       {/* Stats Section - Load immediately */}
       <div className="py-12 bg-white relative z-10">
         <Suspense fallback={
@@ -70,21 +70,21 @@ function Home() {
           <Stats />
         </Suspense>
       </div>
-      
+
       {/* Our Programs Section */}
       <LazySection label="our programs" placeholderHeight={500}>
         <Suspense fallback={<SectionFallback label="our programs" />}>
           <OurPrograms />
         </Suspense>
       </LazySection>
-      
-      {/* WisdomAI Section */}
-      <LazySection label="wisdomai" placeholderHeight={1200}>
-        <Suspense fallback={<SectionFallback label="wisdomai" />}>
-          <AthenaAI />
+
+      {/* Affordable & Accredited Section */}
+      <LazySection label="affordable accredited" placeholderHeight={800}>
+        <Suspense fallback={<SectionFallback label="affordable accredited" />}>
+          <AffordableAccredited />
         </Suspense>
       </LazySection>
-      
+
       {/* Features Section */}
       <LazySection label="features" placeholderHeight={400}>
         <Suspense fallback={<SectionFallback label="features" />}>
@@ -93,14 +93,14 @@ function Home() {
           </div>
         </Suspense>
       </LazySection>
-      
+
       {/* Student Spotlight Section */}
       <LazySection label="outstanding students" placeholderHeight={600}>
         <Suspense fallback={<SectionFallback label="outstanding students" />}>
           <StudentSpotlight />
         </Suspense>
       </LazySection>
-      
+
       {/* Curriculum Overview Section */}
       <LazySection label="curriculum overview" placeholderHeight={400}>
         <Suspense fallback={<SectionFallback label="curriculum overview" />}>
@@ -109,7 +109,7 @@ function Home() {
           </div>
         </Suspense>
       </LazySection>
-      
+
       {/* Testimonials Section */}
       <LazySection label="testimonials" placeholderHeight={400}>
         <Suspense fallback={<SectionFallback label="testimonials" />}>
@@ -118,7 +118,7 @@ function Home() {
           </div>
         </Suspense>
       </LazySection>
-      
+
       {/* Academic Crew Section */}
       <LazySection label="academic crew" placeholderHeight={400}>
         <Suspense fallback={<SectionFallback label="academic crew" />}>
@@ -127,7 +127,7 @@ function Home() {
           </div>
         </Suspense>
       </LazySection>
-      
+
       {/* Contact Section */}
       <LazySection label="contact" placeholderHeight={400}>
         <Suspense fallback={<SectionFallback label="contact" />}>
@@ -136,7 +136,7 @@ function Home() {
           </div>
         </Suspense>
       </LazySection>
-      
+
       {/* Call to Action Section */}
       <LazySection label="call to action" placeholderHeight={300}>
         <Suspense fallback={<SectionFallback label="call to action" />}>
