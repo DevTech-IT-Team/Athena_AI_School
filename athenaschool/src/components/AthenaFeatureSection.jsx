@@ -73,7 +73,7 @@ const AWisdomFeatureSection = () => {
           
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-12 relative inline-block">
-            Why AWisdom School is better
+            Why Wisdom School is better
             <span className="absolute -bottom-2 left-0 w-1/3 h-1 bg-sky-400 rounded-full"></span>
           </h2>
 
