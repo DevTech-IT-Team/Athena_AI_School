@@ -1,7 +1,6 @@
 import { useState, useEffect, memo, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, User, BookOpen, Award, Users, Phone, Heart } from 'lucide-react';
-import logo from '/assets/images/logos/Gemini_Generated_Image_mqgnxhmqgnxhmqgn-removebg-preview.png';
 
 const Navigation = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,13 +59,13 @@ const Navigation = memo(() => {
     {
       title: 'About',
       links: [
-        { text: 'WisdomAISchool', href: '/Wisdom-ai-school' },
+        { text: 'k12onlineschool', href: '/k12-online-school' },
         { text: 'Our Vision', href: '/our-vision' },
         { text: 'Mission Bridge', href: '/mission-bridge' },
         { text: 'Why Online School', href: '/why-online-school' },
         { text: 'What sets us apart?', href: '/what-sets-us-apart' },
         { text: 'Values & Ethos', href: '/values-and-ethos' },
-        { text: 'WisdomAISchool Group', href: '/Wisdom-ai-group' },
+        { text: 'k12onlineschool Group', href: '/k12-online-group' },
         { text: 'Our Leaders', href: '/our-leaders' },
         { text: 'Habits of Mind', href: '/habits-of-mind' },
       ]
@@ -133,7 +132,7 @@ const Navigation = memo(() => {
       ]
     },
     {
-      title: 'Being WisdomAI',
+      title: 'Being k12onlineschool',
       links: [
         { text: 'Wall of Love', href: '/wall-of-love' },
         { text: 'Refer A Parent', href: '/refer-a-parent' },
@@ -160,17 +159,10 @@ const Navigation = memo(() => {
     <nav className={`fixed top-0 left-0 right-0 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'} z-50 h-16 flex items-center px-4 md:px-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}`} style={{ contain: 'layout style' }}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <Link to="/" className="flex items-center">
-            <img
-              src={logo}
-              alt="WisdomAISchool Logo"
-              className="h-12 md:h-14 w-auto"
-              style={{ filter: 'drop-shadow(0 4px 6px rgba(255, 255, 255, 0.8)) drop-shadow(0 2px 4px rgba(255, 255, 255, 0.6))' }}
-              width={320}
-              height={128}
-              loading="eager"
-              decoding="async"
-            />
+          <Link to="/" className="flex items-center group py-2">
+            <span className="text-2xl font-black tracking-tight text-blue-950 group-hover:text-blue-600 transition-colors">
+              k12<span className="text-sky-600">online</span>school
+            </span>
           </Link>
         </div>
 

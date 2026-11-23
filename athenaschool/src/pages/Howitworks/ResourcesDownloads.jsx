@@ -4,14 +4,14 @@ import { Download, FileText, Award, Shield, BookOpen, ExternalLink } from 'lucid
 const ResourcesDownloads = () => {
   const resources = [
     {
-      title: "WisdomAI School Brochure",
+      title: "k12onlineschool Brochure",
       description: "Comprehensive information about our school, curriculum, and programs",
       icon: BookOpen,
       color: "bg-blue-600",
-      file: "WisdomAI-School-Brochure.pdf"
+      file: "k12onlineschool-School-Brochure.pdf"
     },
     {
-      title: "WisdomAI School Annual Report 2020-2021",
+      title: "k12onlineschool Annual Report 2020-2021",
       description: "Detailed annual report covering achievements and developments",
       icon: FileText,
       color: "bg-green-600",
@@ -94,7 +94,7 @@ const ResourcesDownloads = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Download Resources</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Access important documents, certifications, and information about WisdomAI School. 
+              Access important documents, certifications, and information about k12onlineschool. 
               All resources are available for download in PDF format.
             </p>
           </div>

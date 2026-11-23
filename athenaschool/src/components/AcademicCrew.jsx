@@ -30,7 +30,7 @@ const AcademicCrew = () => {
             </p>
             
             <p className="text-slate-600 text-lg leading-relaxed mb-12">
-              At Wisdom School, our leadership and mentors are committed to guiding learners on their unique learning paths. We are here to inspire, mentor, and support our learners every step of the way.
+              At k12onlineschool, our leadership and mentors are committed to guiding learners on their unique learning paths. We are here to inspire, mentor, and support our learners every step of the way.
             </p>
 
             {/* CTA Button */}

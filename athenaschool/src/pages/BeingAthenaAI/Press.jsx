@@ -30,11 +30,11 @@ const Press = () => {
 
   const sections = [
     {
-      title: "WisdomAI School",
+      title: "k12onlineschool",
       items: ["Daily Hunt", "Edu Times", "Social Nama", "The Print"],
     },
     {
-      title: "Stride + WisdomAI",
+      title: "Stride + k12onlineschool",
       items: [
         "Live Mint",
         "Indian Express",
@@ -100,7 +100,7 @@ const Press = () => {
               <nav className="text-[11px] mb-8 flex items-center gap-2 font-bold uppercase tracking-widest text-gray-400">
                 <span>Home</span>
                 <span className="text-gray-300"> &gt; </span>
-                <span className="text-gray-400">Being Wisdom</span>
+                <span className="text-gray-400">Being k12onlineschool</span>
                 <span className="text-gray-300"> &gt; </span>
                 <span className="text-[#074D8D]">Press</span>
               </nav>

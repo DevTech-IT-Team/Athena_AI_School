@@ -14,7 +14,7 @@ const LearningGarageFooter = () => {
               </div>
               <div>
                 <h3 className="text-lg font-bold">Learning Garage</h3>
-                <p className="text-sm text-gray-400">by WisdomAI School</p>
+                <p className="text-sm text-gray-400">by k12onlineschool</p>
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
@@ -60,8 +60,8 @@ const LearningGarageFooter = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-blue-400" />
-                <a href="mailto:info@Wisdomschool.com" className="text-gray-300 hover:text-white transition-colors">
-                  info@Wisdomschool.com
+                <a href="mailto:info@k12onlineschool.com" className="text-gray-300 hover:text-white transition-colors">
+                  info@k12onlineschool.com
                 </a>
               </div>
               <div className="flex items-start gap-3">
@@ -79,7 +79,7 @@ const LearningGarageFooter = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Learning Garage by WisdomAI School. All rights reserved.
+              © 2024 Learning Garage by k12onlineschool. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>

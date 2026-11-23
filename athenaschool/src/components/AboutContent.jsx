@@ -86,7 +86,7 @@ const AboutContent = () => {
               <h4 className="text-sky-600 font-bold uppercase tracking-wider mb-2">Our Story</h4>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">We Always Make The Best Education Accessible.</h2>
               <p className="text-gray-700 mb-6 leading-relaxed">
-                Founded in 2010, Wisdom School emerged from a vision to revolutionize education in India. From a humble beginning with 50 students, we have grown into a premier institution with over 7500 students.
+                Founded in 2010, k12onlineschool emerged from a vision to revolutionize education in India. From a humble beginning with 50 students, we have grown into a premier institution with over 7500 students.
               </p>
               <p className="text-gray-700 mb-8 leading-relaxed">
                 We are India's First AI & English Grammar School, creating an environment that prepares students not just for exams, but for life.

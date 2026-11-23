@@ -2,25 +2,25 @@ export const pathwayContent = {
   hero: {
     title: "British and Indian Pathway",
     subtitle: "Excellence Delivered, Consistently",
-    schoolName: "WisdomAI School"
+    schoolName: "k12onlineschool"
   },
   
   academicCrew: {
     title: "Meet Our Academic Team",
-    description: "Building the future of learning needs a team of 325+ passionate educators and innovators. At WisdomAI School, an online school dedicated to excellence, our leadership and mentors are committed to guiding learners on their unique learning paths.",
+    description: "Building the future of learning needs a team of 325+ passionate educators and innovators. At k12onlineschool, an online school dedicated to excellence, our leadership and mentors are committed to guiding learners on their unique learning paths.",
     cta: "Meet The Team"
   },
 
   philosophy: {
     title: "Different Minds, Different Goals",
     subtitle: "One Tailored Path to Success",
-    description: "Our alumni are proof that unique journeys lead to extraordinary destinations. From diverse goals to tailored paths, WisdomAI School online learners have gone on to thrive in top colleges and careers, showcasing the power of personalized inclusive education."
+    description: "Our alumni are proof that unique journeys lead to extraordinary destinations. From diverse goals to tailored paths, k12onlineschool online learners have gone on to thrive in top colleges and careers, showcasing the power of personalized inclusive education."
   },
 
   faqs: [
     {
-      question: "Is WisdomAI School affiliated?",
-      answer: "Yes, WisdomAI School is accredited and recognized by leading educational bodies including Cambridge International, Pearson Edexcel, and NIOS.",
+      question: "Is k12onlineschool affiliated?",
+      answer: "Yes, k12onlineschool is accredited and recognized by leading educational bodies including Cambridge International, Pearson Edexcel, and NIOS.",
       category: "Accreditation"
     },
     {
@@ -29,32 +29,32 @@ export const pathwayContent = {
       category: "Curriculum"
     },
     {
-      question: "How does WisdomAI School promote equal education?",
+      question: "How does k12onlineschool promote equal education?",
       answer: "We provide inclusive education with personalized learning paths, ensuring every student gets equal opportunities regardless of their background or learning style through adaptive technologies and customized support.",
       category: "Philosophy"
     },
     {
-      question: "How much does WisdomAI School cost?",
+      question: "How much does k12onlineschool cost?",
       answer: "Our fee structure varies based on grade level, curriculum choice, and program selection. We offer transparent pricing and flexible payment plans. Contact our admissions team for a detailed fee breakdown.",
       category: "Admissions"
     },
     {
-      question: "How to enroll in WisdomAI School?",
+      question: "How to enroll in k12onlineschool?",
       answer: "Enroll through our streamlined online process: 1) Submit application form, 2) Provide academic records, 3) Attend orientation, 4) Complete onboarding. Our team guides you at every step.",
       category: "Admissions"
     },
     {
-      question: "How does WisdomAI School work?",
+      question: "How does k12onlineschool work?",
       answer: "We combine live interactive classes with recorded lessons, personalized learning plans, and continuous assessment through our advanced platform accessible 24/7 from any device.",
       category: "Operations"
     },
     {
-      question: "How to pay WisdomAI School fees?",
+      question: "How to pay k12onlineschool fees?",
       answer: "Multiple secure options: online portal, bank transfer, UPI, or installment plans. We provide payment reminders and receipts through our parent portal.",
       category: "Admissions"
     },
     {
-      question: "What are the benefits of choosing WisdomAI School?",
+      question: "What are the benefits of choosing k12onlineschool?",
       answer: "Global curriculum access, flexible scheduling, personalized attention, experienced faculty, comprehensive support, and preparation for international opportunities.",
       category: "Benefits"
     }

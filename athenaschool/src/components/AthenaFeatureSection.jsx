@@ -2,7 +2,7 @@ import React from 'react';
 import { Monitor, Clock, Globe } from 'lucide-react';
 import josephImage from '../assets/optimized/joseph-gonzalez-iFgRcqHznqg-unsplash.webp';
 
-const AWisdomFeatureSection = () => {
+const k12onlineschoolFeatureSection = () => {
   const features = [
     {
       id: 1,
@@ -23,7 +23,7 @@ const AWisdomFeatureSection = () => {
     {
       id: 3,
       title: "Future Ready Education",
-      description: "Offering globally recognized curriculums with a future-oriented approach, WisdomAI School prepares learners for success not only academically but in a rapidly evolving world. It enables us cater to both local and global educational standards, opening doors to international opportunities.",
+      description: "Offering globally recognized curriculums with a future-oriented approach, k12onlineschool prepares learners for success not only academically but in a rapidly evolving world. It enables us cater to both local and global educational standards, opening doors to international opportunities.",
       icon: <Globe className="w-6 h-6" />,
       iconColor: "text-indigo-500",
       bgColor: "bg-indigo-50"
@@ -73,7 +73,7 @@ const AWisdomFeatureSection = () => {
           
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-12 relative inline-block">
-            Why Wisdom School is better
+            Why k12onlineschool is better
             <span className="absolute -bottom-2 left-0 w-1/3 h-1 bg-sky-400 rounded-full"></span>
           </h2>
 
@@ -110,4 +110,4 @@ const AWisdomFeatureSection = () => {
   );
 };
 
-export default AWisdomFeatureSection;
+export default k12onlineschoolFeatureSection;

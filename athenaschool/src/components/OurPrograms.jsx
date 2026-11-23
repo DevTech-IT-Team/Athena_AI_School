@@ -112,7 +112,7 @@ const OurPrograms = () => {
       ]
     },
     {
-      title: "Wisdom Learning FLOWW",
+      title: "k12onlineschool Learning FLOWW",
       subtitle: "Future Skills",
       icon: BrainCircuit,
       features: [
@@ -125,7 +125,7 @@ const OurPrograms = () => {
       ]
     },
     {
-      title: "Wisdom Learning Garage",
+      title: "k12onlineschool Learning Garage",
       subtitle: "Experiential Learning",
       icon: Wrench,
       features: [

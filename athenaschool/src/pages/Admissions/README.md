@@ -1,6 +1,6 @@
 # Admissions Folder
 
-This folder contains all admissions-related components and pages for WisdomAI School.
+This folder contains all admissions-related components and pages for k12onlineschool.
 
 ## Files Overview
 

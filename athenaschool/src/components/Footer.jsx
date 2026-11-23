@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { memo } from 'react';
 import { Facebook, Instagram, Linkedin, GraduationCap, BookOpen, User, Mail, Phone, MapPin } from 'lucide-react';
-import logo from '/assets/images/logos/Gemini_Generated_Image_qp7yu0qp7yu0qp7y-removebg-preview.png';
 
 const Footer = memo(() => {
   return (
@@ -10,7 +9,9 @@ const Footer = memo(() => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           <div>
             <div className="flex items-center mb-4">
-              <img src={logo} alt="WisdomAISchool Logo" className="h-40 w-auto object-contain" />
+              <Link to="/" className="text-2xl font-black tracking-tight text-gray-900 hover:text-blue-600 transition-colors">
+                k12<span className="text-sky-600">online</span>school
+              </Link>
             </div>
             <p className="text-gray-600 mb-6 text-sm">India's Most Advanced AI-Powered Online School</p>
             <div className="flex space-x-3 mb-6">
@@ -106,7 +107,7 @@ const Footer = memo(() => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-600">
-          <p>© 2025 WisdomAISchool. All rights reserved.</p>
+          <p>© 2025 k12onlineschool. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <Link to="/contact" className="hover:text-black transition-colors">Contact Us</Link>
             <Link to="/faq" className="hover:text-black transition-colors">FAQs</Link>

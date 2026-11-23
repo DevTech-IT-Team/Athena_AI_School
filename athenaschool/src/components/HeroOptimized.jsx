@@ -38,29 +38,29 @@ const HeroOptimized = () => {
       <div className="container mx-auto px-6 py-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
 
         {/* --- Left Column: Text --- */}
-        <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-blue-950 tracking-tight drop-shadow-lg ml-4 lg:ml-8">
-            WisdomAI School
+        <div className="text-center lg:text-left flex flex-col items-center lg:items-start max-w-full">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black text-blue-950 tracking-tight drop-shadow-sm max-w-full break-words">
+            k12<span className="text-sky-600">online</span>school
           </h1>
-          <div className="h-1 w-32 bg-blue-950 my-4 rounded-full lg:hidden"></div>
-          <p className="text-lg md:text-2xl text-blue-800 tracking-widest font-light uppercase mt-2 ml-4 lg:ml-8">
+          <div className="h-1 w-24 bg-sky-500 my-4 rounded-full lg:hidden"></div>
+          <p className="text-base sm:text-lg md:text-xl text-blue-800 tracking-widest font-light uppercase mt-2">
             Find your path
           </p>
 
-          <p className="text-base md:text-lg text-gray-600 mt-4 max-w-2xl ml-4 lg:ml-8">
+          <p className="text-sm sm:text-base md:text-lg text-gray-700 font-medium mt-4 max-w-xl">
             PERSONALIZED ONLINE SCHOOLING DESIGNED FOR THE MODERN LEARNER
           </p>
 
-          <p className="text-sm md:text-base text-gray-500 mt-3 max-w-xl ml-4 lg:ml-8">
+          <p className="text-xs sm:text-sm md:text-base text-gray-500 mt-2 max-w-lg leading-relaxed">
             Experience education tailored to your child's unique needs, interests, and learning style. Our AI-powered platform adapts to create a perfect learning journey.
           </p>
 
           {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-8 ml-8 lg:ml-16 mb-8">
-            <button className="px-8 py-3 bg-yellow-400 hover:bg-yellow-500 text-black rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+          <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-4">
+            <button className="px-8 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
               Enquire Now
             </button>
-            <button className="px-8 py-3 bg-blue-950/10 hover:bg-blue-950/20 border border-blue-950/30 rounded-full text-blue-950 backdrop-blur-md transition-all duration-300 transform hover:scale-105">
+            <button className="px-8 py-3 bg-blue-950/10 hover:bg-blue-950/20 border border-blue-950/30 rounded-full text-blue-950 font-semibold backdrop-blur-md transition-all duration-300 transform hover:scale-105">
               Learn More
             </button>
           </div>
@@ -76,7 +76,7 @@ const HeroOptimized = () => {
           {/* Main Gemini Image */}
           <OptimizedImage
             src={heroImage}
-            alt="WisdomAI School"
+            alt="k12onlineschool"
             className="relative z-10 w-full max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl"
             width={400}
             height={400}

@@ -5,21 +5,21 @@ const LearningGarageWho = () => {
     {
       icon: "🎒",
       title: "Learners aged 5–18",
-      description: "K-12 Learners from WisdomAI School & beyond."
+      description: "K-12 Learners from k12onlineschool & beyond."
     },
     {
       icon: "🎓",
-      title: "WisdomAI School Learners",
-      description: "Special benefits for WisdomAI School Learners."
+      title: "k12onlineschool Learners",
+      description: "Special benefits for k12onlineschool Learners."
     },
     {
       icon: "🚀",
-      title: "Non-WisdomAI School Learners",
+      title: "Non-k12onlineschool Learners",
       description: "Everyone is welcome to join our garages."
     },
     {
       icon: "📜",
-      title: "WisdomAI School Alumni",
+      title: "k12onlineschool Alumni",
       description: "Our Alumni are welcome to join."
     }
   ];
