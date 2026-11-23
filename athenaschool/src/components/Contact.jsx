@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import pawelImage from '../assets/optimized/pawel-czerwinski--0xCCPIbl3M-unsplash.webp';
 
 const Contact = () => {
@@ -7,7 +7,7 @@ const Contact = () => {
     <section className="min-h-screen flex flex-col lg:flex-row relative">
       
       {/* LEFT SIDE: Visuals & Contact Info (Blue 950 Theme) */}
-      <div className="lg:w-5/12 bg-blue-950 relative overflow-hidden flex flex-col justify-center text-white z-10">
+      <div className="lg:w-5/12 bg-blue-950 relative overflow-hidden flex flex-col justify-center text-white z-10 py-16 px-6 sm:px-10 lg:px-12">
         
         {/* GEOMETRIC BACKGROUND (Diagonal Slashes) */}
         {/* Top Texture */}
@@ -24,35 +24,72 @@ const Contact = () => {
         <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-900 -rotate-12 opacity-30 z-0 rounded-tr-[100px]"></div>
 
         {/* Content Container */}
-        <div className="relative z-10 text-center px-8">
+        <div className="relative z-10 px-8 max-w-md mx-auto w-full">
           <div className="mb-6 inline-block px-3 py-1 border border-sky-500 rounded-full text-sky-400 text-xs font-bold uppercase tracking-wider">
             Contact Our Experts
           </div>
           
-          <h2 className="text-4xl lg:text-5xl font-extrabold mb-12 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-10 tracking-tight">
             Get In <span className="text-sky-400">Touch</span>
           </h2>
 
-          <div className="space-y-10 mt-16 flex flex-col items-center">
+          <div className="space-y-8 text-left">
             {/* Phone */}
-            <div className="flex items-center justify-center gap-6 group">
+            <div className="flex items-start gap-5 group">
               <div className="flex-shrink-0 p-3 bg-white/10 rounded-lg group-hover:bg-sky-500 transition-colors duration-300">
                 <Phone className="w-6 h-6 text-white" />
               </div>
-              <div className="text-left">
-                <p className="text-xs text-sky-300 font-bold uppercase tracking-wider mb-1">Call Us</p>
-                <p className="text-2xl font-semibold text-white">+91 99999 99999</p>
+              <div>
+                <p className="text-xs text-sky-300 font-bold uppercase tracking-wider mb-2">Call Us</p>
+                <div className="space-y-2">
+                  <div>
+                    <a href="tel:+919811773207" className="text-lg font-semibold text-white hover:text-sky-300 transition-colors block">
+                      +91 9811773207
+                    </a>
+                    <span className="text-xs text-sky-200/70">India</span>
+                  </div>
+                  <div>
+                    <a href="tel:+14254009246" className="text-lg font-semibold text-white hover:text-sky-300 transition-colors block">
+                      (425) 400-9246
+                    </a>
+                    <span className="text-xs text-sky-200/70">USA</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Locations */}
+            <div className="flex items-start gap-5 group">
+              <div className="flex-shrink-0 p-3 bg-white/10 rounded-lg group-hover:bg-sky-500 transition-colors duration-300 mt-1">
+                <MapPin className="w-6 h-6 text-white" />
+              </div>
+              <div className="space-y-3">
+                <p className="text-xs text-sky-300 font-bold uppercase tracking-wider">Locations</p>
+                <div>
+                  <p className="text-xs font-semibold text-sky-200 mb-0.5">India</p>
+                  <p className="text-sm text-gray-200 leading-relaxed">
+                    GF-20, Omaxe Square, Jasola District Centre, New Delhi - 110025
+                  </p>
+                </div>
+                <div className="pt-2 border-t border-white/10">
+                  <p className="text-xs font-semibold text-sky-200 mb-0.5">USA</p>
+                  <p className="text-sm text-gray-200 leading-relaxed">
+                    600 1st Ave, Seattle, WA 98104
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Email */}
-            <div className="flex items-center justify-center gap-6 group">
+            <div className="flex items-center gap-5 group">
               <div className="flex-shrink-0 p-3 bg-white/10 rounded-lg group-hover:bg-sky-500 transition-colors duration-300">
                 <Mail className="w-6 h-6 text-white" />
               </div>
-              <div className="text-left">
+              <div>
                 <p className="text-xs text-sky-300 font-bold uppercase tracking-wider mb-1">Email Us</p>
-                <p className="text-xl font-semibold text-white">info@aischool.com</p>
+                <a href="mailto:info@aischool.com" className="text-lg font-semibold text-white hover:text-sky-300 transition-colors">
+                  info@aischool.com
+                </a>
               </div>
             </div>
           </div>

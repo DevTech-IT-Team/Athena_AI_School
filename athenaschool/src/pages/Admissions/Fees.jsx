@@ -634,7 +634,7 @@ function Fees() {
               <p className="text-xl text-blue-100 opacity-60">Speak with our education counselors to find the perfect fit for your child's academic future.</p>
             </div>
             <div className="flex flex-col gap-4 w-full md:w-auto">
-              <a href="tel:+919663213636" className="bg-white text-blue-950 px-10 py-5 font-black uppercase tracking-widest text-center hover:bg-blue-300 transition-all flex items-center justify-center gap-3">
+              <a href="tel:+919811773207" className="bg-white text-blue-950 px-10 py-5 font-black uppercase tracking-widest text-center hover:bg-blue-300 transition-all flex items-center justify-center gap-3">
                 <Phone size={20} /> Call Us Now
               </a>
               <button className="border-2 border-white px-10 py-5 font-black uppercase tracking-widest hover:bg-white hover:text-blue-950 transition-all">
