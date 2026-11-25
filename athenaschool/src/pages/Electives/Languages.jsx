@@ -3,116 +3,257 @@ import React from 'react';
 const Languages = () => {
   return (
     <div className="container mx-auto px-4 pt-24 pb-8">
+      {/* Breadcrumb */}
       <nav className="text-sm mb-4">
-        <span className="text-gray-600">Home</span> &gt; <span className="text-gray-600">Languages</span>
+        <span className="text-gray-600">Home</span> &gt;{" "}
+        <span className="text-gray-600">Languages</span>
       </nav>
 
-      <h1 className="text-4xl font-bold mb-6">Languages</h1>
+      {/* Hero Section */}
+      <section className="mb-10">
+        <h1 className="text-4xl font-bold mb-6">
+          Online Language Classes for Kids at Edulectual K12
+        </h1>
 
-      <div className="prose max-w-none">
-        <p className="text-lg mb-6">
-          Additional language is introduced as electives, enabling learners to further develop their linguistic abilities.
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          English is the main language of teaching at Edulectual K12 Online
+          School on both pathways. Learning another language as well helps
+          children think flexibly, connect with their heritage and open doors
+          for study and work later. This page explains our language options
+          and how to choose.
         </p>
 
-        <p className="text-lg mb-6">
-          We provide tailored support for non-English speakers of all levels and ages, helping them to successfully adopt English as their first language of learning.
+        <div className="flex flex-wrap gap-4 mt-6">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+            Book a free 2-week trial
+          </button>
+
+          <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+            Apply for 2027-28
+          </button>
+        </div>
+      </section>
+
+      {/* Languages Offered */}
+      <section className="mb-10 bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg shadow-sm">
+        <h2 className="text-2xl font-semibold mb-4 text-gray-800">
+          Languages We Offer
+        </h2>
+
+        <p className="text-gray-700 leading-relaxed">
+          We offer a range of language options to help students develop
+          communication skills, cultural awareness and confidence.
         </p>
 
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg mb-6 shadow-sm">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Language Selection Guidelines</h2>
+        <p className="text-gray-600 mt-3 italic">
+          Language options are subject to confirmation.
+        </p>
+      </section>
 
-          <ul className="list-disc pl-6 space-y-3 mb-6 text-gray-700">
-            <li>Learners can select any one 2nd and 3rd language subject from the below-mentioned options.</li>
-            <li>While learners must study 2nd Language, studying a third language is optional for Grades 1 to 8.</li>
-            <li>There is no additional tuition fee for studying a 2nd Language.</li>
-            <li>Learners of Grades 1 through 8 who choose to pursue a third language will incur additional tuition fees of ₹6500 for Indian Language & ₹8500 for Foreign Language.</li>
-            <li>This fee will be payable in 2 instalments, mentioned in the below table:</li>
-          </ul>
+      {/* Language Choices by Stage */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-semibold mb-6 text-gray-800">
+          How Language Choices Work by Stage
+        </h2>
 
-          <div className="overflow-x-auto shadow-md rounded-lg">
-            <table className="w-full border-collapse bg-white">
-              <thead>
-                <tr className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-                  <th className="px-6 py-3 text-left font-semibold">Grade</th>
-                  <th className="px-6 py-3 text-left font-semibold">Indian</th>
-                  <th className="px-6 py-3 text-left font-semibold">Foreign</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-3 font-medium">Grade 1</td>
-                  <td className="px-6 py-3 text-green-600 font-semibold">₹8,700</td>
-                  <td className="px-6 py-3 text-green-600 font-semibold">₹11,000</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-3 font-medium">Grade 2</td>
-                  <td className="px-6 py-3 text-green-600 font-semibold">₹8,700</td>
-                  <td className="px-6 py-3 text-green-600 font-semibold">₹11,000</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-3 font-medium">Grade 3</td>
-                  <td className="px-6 py-3 text-green-600 font-semibold">₹8,700</td>
-                  <td className="px-6 py-3 text-green-600 font-semibold">₹11,000</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-3 font-medium">Grade 4</td>
-                  <td className="px-6 py-3 text-green-600 font-semibold">₹8,700</td>
-                  <td className="px-6 py-3 text-green-600 font-semibold">₹11,000</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-3 font-medium">Grade 5</td>
-                  <td className="px-6 py-3 text-green-600 font-semibold">₹8,700</td>
-                  <td className="px-6 py-3 text-green-600 font-semibold">₹11,000</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-3 font-medium">Grade 6</td>
-                  <td className="px-6 py-3 text-green-600 font-semibold">₹8,700</td>
-                  <td className="px-6 py-3 text-green-600 font-semibold">₹11,000</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-3 font-medium">Grade 7</td>
-                  <td className="px-6 py-3 text-green-600 font-semibold">₹8,700</td>
-                  <td className="px-6 py-3 text-green-600 font-semibold">₹11,000</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-3 font-medium">Grade 8</td>
-                  <td className="px-6 py-3 text-green-600 font-semibold">₹8,700</td>
-                  <td className="px-6 py-3 text-green-600 font-semibold">₹11,000</td>
-                </tr>
-              </tbody>
-            </table>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white border border-blue-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+            <h3 className="text-xl font-semibold mb-3 text-blue-700">
+              Early Years and Primary
+            </h3>
+
+            <p className="text-gray-700 leading-relaxed">
+              Children learn English alongside a second language, building
+              vocabulary, listening skills and confidence through age-appropriate
+              activities.
+            </p>
+          </div>
+
+          <div className="bg-white border border-indigo-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+            <h3 className="text-xl font-semibold mb-3 text-indigo-700">
+              Middle School / Lower Secondary
+            </h3>
+
+            <p className="text-gray-700 leading-relaxed">
+              A second language forms part of the timetable, with an optional
+              third language depending on the available choices and programme.
+            </p>
+          </div>
+
+          <div className="bg-white border border-purple-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+            <h3 className="text-xl font-semibold mb-3 text-purple-700">
+              Grades 9–12
+            </h3>
+
+            <p className="text-gray-700 leading-relaxed">
+              Languages can be studied as International GCSE or NIOS subjects,
+              depending on the student's chosen pathway and subject availability.
+            </p>
           </div>
         </div>
+      </section>
 
-        <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg mb-6 shadow-sm">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Language Policy</h2>
+      {/* Choosing a Language */}
+      <section className="mb-10 bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg shadow-sm">
+        <h2 className="text-2xl font-semibold mb-4 text-gray-800">
+          Choosing a Language
+        </h2>
 
-          <ul className="list-disc pl-6 space-y-3 text-gray-700">
-            <li>English is the First Language and Medium of Instruction.</li>
-            <li>All learners must opt for Second Language from Grade 1 to 8.</li>
-            <li>Learners of Grades 1 to 8 can select a Third Language (optional) on payment of additional charges as mentioned above. Classes for these will be conducted twice a week after regular school hours.</li>
-            <li>Except in Grade 1, learners must have studied the language in earlier Grade to opt the 2nd Language at k12onlineschool.</li>
-            <li>The learning levels for 3rd Language are defined as per the rubrics detailed here. Parents are encouraged to ask learners to attempt the diagnostic assessment independently without assistance to ascertain the correct level of books and grade placement for 3rd Language only. Incorrect selection of Level of 3rd Language will cause delay, additional cost, returns, and loss of learning.</li>
-          </ul>
+        <p className="text-gray-700 leading-relaxed">
+          Think about where your family lives and where your child may study
+          later. Families in the Gulf often choose Arabic, families planning
+          to return to India may choose Hindi or a regional language, and
+          others pick a widely used foreign language. Our teachers can advise
+          families on choosing a language that suits their child's goals.
+        </p>
+      </section>
+
+      {/* Teaching Method */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-semibold mb-4 text-gray-800">
+          How We Teach Languages Online
+        </h2>
+
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Our small live online classes focus on speaking and listening,
+          supported by reading and writing practice. Students actively
+          participate in lessons and develop language skills through
+          interaction with teachers and classmates.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-blue-50 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-3 text-blue-700">
+              Early Years and Primary
+            </h3>
+
+            <p className="text-gray-700 leading-relaxed">
+              Songs, games, storytelling and interactive activities make
+              language learning enjoyable and help children develop
+              vocabulary and pronunciation.
+            </p>
+          </div>
+
+          <div className="bg-indigo-50 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-3 text-indigo-700">
+              Middle School and Senior Grades
+            </h3>
+
+            <p className="text-gray-700 leading-relaxed">
+              Lessons focus on conversation, grammar, reading, writing
+              and structured exam practice to develop fluency and
+              academic language skills.
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-          <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-lg text-white shadow-lg transform hover:scale-105 transition-transform duration-200">
-            <h3 className="text-xl font-bold mb-3">#k12onlineschool</h3>
-            <p className="text-blue-100">Actions Speak louder than words</p>
+      {/* Changing Language */}
+      <section className="mb-10 bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+        <h2 className="text-2xl font-semibold mb-4 text-gray-800">
+          Changing Language
+        </h2>
+
+        <p className="text-gray-700 leading-relaxed">
+          Students can usually change their language choice at the start
+          of a school year, subject to availability and programme
+          requirements. Families can contact our academic team for
+          guidance before making a change.
+        </p>
+      </section>
+
+      {/* Languages and Exams */}
+      <section className="mb-10 bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-lg shadow-sm">
+        <h2 className="text-2xl font-semibold mb-4 text-gray-800">
+          Languages and Exams
+        </h2>
+
+        <p className="text-gray-700 leading-relaxed mb-4">
+          On the British pathway, a language can be taken as an
+          International GCSE subject in Grades 9–10. On the Indian
+          pathway, NIOS offers a range of language subjects at
+          Secondary and Senior Secondary level.
+        </p>
+
+        <p className="text-gray-700 leading-relaxed">
+          Choosing a language early and continuing to study it through
+          Grade 8 can help students build a stronger foundation and
+          prepare more confidently for language examinations in later
+          grades. Subject availability depends on the chosen pathway.
+        </p>
+      </section>
+
+      {/* Supporting Language at Home */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-semibold mb-4 text-gray-800">
+          Supporting a Language at Home
+        </h2>
+
+        <p className="text-gray-700 leading-relaxed mb-6">
+          Children improve fastest when they hear and use a language
+          outside lessons. Parents can support language development
+          through simple everyday habits that make learning natural
+          and enjoyable.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-blue-50 p-6 rounded-lg shadow-sm">
+            <h3 className="text-lg font-semibold mb-3 text-blue-700">
+              Watch Together
+            </h3>
+
+            <p className="text-gray-700">
+              Watch a short programme or video in the language your
+              child is learning.
+            </p>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-6 rounded-lg text-white shadow-lg transform hover:scale-105 transition-transform duration-200">
-            <h3 className="text-xl font-bold mb-3">#k12onlineschool</h3>
-            <p className="text-purple-100">Starting the weekend with love we get from our learners</p>
+          <div className="bg-purple-50 p-6 rounded-lg shadow-sm">
+            <h3 className="text-lg font-semibold mb-3 text-purple-700">
+              Read Together
+            </h3>
+
+            <p className="text-gray-700">
+              Read picture books, stories or simple reading materials
+              to build vocabulary and comprehension.
+            </p>
           </div>
 
-          <div className="bg-gradient-to-br from-pink-500 to-pink-600 p-6 rounded-lg text-white shadow-lg transform hover:scale-105 transition-transform duration-200">
-            <h3 className="text-xl font-bold mb-3">#k12onlineschool</h3>
-            <p className="text-pink-100">Understanding rainforests with yug</p>
+          <div className="bg-pink-50 p-6 rounded-lg shadow-sm">
+            <h3 className="text-lg font-semibold mb-3 text-pink-700">
+              Speak Together
+            </h3>
+
+            <p className="text-gray-700">
+              Encourage conversations with family members, including
+              grandparents, using a home or heritage language.
+            </p>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Admissions CTA */}
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-8 rounded-xl shadow-lg text-center">
+        <h2 className="text-3xl font-bold mb-4">
+          Admissions for 2027-28 Are Open
+        </h2>
+
+        <p className="text-lg text-blue-100 leading-relaxed mb-6">
+          Try a free 2-week trial class with our teachers, then apply
+          when you are ready. The ₹999 registration fee is waived
+          during our launch.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-4">
+          <button className="bg-white text-blue-700 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition-colors">
+            Book a free 2-week trial
+          </button>
+
+          <button className="bg-indigo-800 hover:bg-indigo-900 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+            Apply for 2027-28
+          </button>
+        </div>
+      </section>
     </div>
   );
 };

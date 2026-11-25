@@ -5,154 +5,254 @@ const Primary = () => {
   return (
     <>
       <div className="academics-page">
+        {/* Hero Section */}
         <div className="relative h-[60vh] min-h-[400px] bg-gradient-to-br from-white via-blue-400 to-blue-950 flex items-center justify-center text-center overflow-hidden">
-          <div className="relative z-10 px-8 max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">Primary</h1>
-            <p className="text-lg md:text-xl font-light opacity-90">NCF India</p>
+          <div className="relative z-10 px-8 max-w-3xl text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
+              Indian Primary
+            </h1>
+            <p className="text-lg md:text-xl font-light opacity-90">
+              Grades 1–5 | Indian Curriculum
+            </p>
           </div>
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
         <div className="academics-content">
+          {/* Breadcrumb */}
           <div className="academics-breadcrumb">
             <a href="/">Home</a> &gt; Primary
           </div>
 
-      <div className="academics-nav">
-        <a href="/academics/learning-culture" className="nav-link">Learning Culture</a>
-        <a href="/academics/primary" className="nav-link active">Primary</a>
-        <a href="/academics/pre-primary" className="nav-link">Pre Primary</a>
-        <a href="/academics/middle" className="nav-link">Middle</a>
-        <a href="/academics/senior-school" className="nav-link">Senior School</a>
-        <a href="/academics/ncf-india" className="nav-link">NCF India</a>
-        <a href="/academics/music-arts-partner" className="nav-link">Music & Arts Partner</a>
-      </div>
+          {/* Academic Navigation */}
+          <div className="academics-nav">
+            <a href="/academics/learning-culture" className="nav-link">
+              Learning Culture
+            </a>
+            <a href="/academics/primary" className="nav-link active">
+              Primary
+            </a>
+            <a href="/academics/pre-primary" className="nav-link">
+              Pre Primary
+            </a>
+            <a href="/academics/middle" className="nav-link">
+              Middle
+            </a>
+            <a href="/academics/senior-school" className="nav-link">
+              Senior School
+            </a>
+            <a href="/academics/ncf-india" className="nav-link">
+              NCF India
+            </a>
+            <a href="/academics/music-arts-partner" className="nav-link">
+              Music & Arts Partner
+            </a>
+          </div>
 
-      <div className="academics-quote">
-        <p className="quote-text">
-          &quot;Express through literary Storytelling - LIT Fest&quot;
-        </p>
-        <div className="cta-buttons">
-          <button className="btn-primary">Enquire Now</button>
-          <button className="btn-secondary">Download Prospectus</button>
-        </div>
-      </div>
+          {/* Quote and CTA */}
+          <div className="academics-quote">
+            <p className="quote-text">
+              "Strong foundations today, confident learners tomorrow."
+            </p>
 
-      <div className="academics-section">
-        <h2>Primary</h2>
-        <p className="section-description">The Primary Program at k12onlineschool is designed for learners aged 6 to 10 years (Grade 1 to 5), a crucial stage in their personal, social, and academic growth. At this age, learners benefit from a curriculum that is both challenging and creative, providing them with clear goals that inspire focus and motivation to reach their full potential.</p>
+            <div className="cta-buttons">
+              <button className="btn-primary">
+                Book a free 2-week trial
+              </button>
+              <button className="btn-secondary">
+                Apply for 2027-28
+              </button>
+            </div>
+          </div>
 
-        <p className="section-text">The Primary Program covers the following subjects:</p>
+          {/* Main Content */}
+          <div className="academics-section">
+            <h2>Online Primary School in India (Grades 1–5)</h2>
 
-        <h3>Grade 1 &amp; 2:</h3>
-        <ul className="program-list">
-          <li>English (First Language)</li>
-          <li>Second Language - Compulsory</li>
-          <li>Third Language - Optional</li>
-          <li>Mathematics</li>
-          <li>EVS</li>
-          <li>Digital Media &amp; Arts</li>
-          <li>Music &amp; Movement</li>
-          <li>Physical Fitness &amp; Mindfulness</li>
-          <li>k12onlineschool Skills Program</li>
-          <li>Computational Thinking &amp; Coding</li>
-        </ul>
+            <p className="section-description">
+              Our Indian curriculum Primary programme covers Grades 1 to 5.
+              It suits families in India and in the Gulf, UK, North America
+              and Australia who want their children to learn the Indian way,
+              with strong basics, regular practice and room to be curious,
+              without a daily school run. It is part of our Indian pathway,
+              which leads to NIOS examinations in the senior years.
+            </p>
 
-        <h3>Grade 3 &amp; 5:</h3>
-        <ul className="program-list">
-          <li>English (First Language)</li>
-          <li>Second Language - Compulsory</li>
-          <li>Third Language - Optional</li>
-          <li>Mathematics</li>
-          <li>Science</li>
-          <li>Social Studies</li>
-          <li>Selective Activity (Digital Media &amp; Arts/ Music &amp; Movement/ Physical Fitness &amp; Mindfulness)</li>
-          <li>k12onlineschool Skills Program</li>
-          <li>Computational Thinking &amp; Coding</li>
-        </ul>
+            {/* CTA Buttons */}
+            <div className="cta-buttons">
+              <button className="btn-primary">
+                Book a free 2-week trial
+              </button>
+              <button className="btn-secondary">
+                Apply for 2027-28
+              </button>
+            </div>
 
-        <h3>Language Choices</h3>
-        <p className="section-text">Learners can select their second and third language from the below-mentioned list.</p>
-        <p className="section-text">The third language classes will be conducted in the afternoon for Morning Batches and in the morning for the Afternoon Batches.</p>
-        <p className="section-text">Learners can opt for Third Language at an additional fee.</p>
+            {/* Subjects */}
+            <h2>Subjects</h2>
 
-        <h3>Foreign Language Choices</h3>
-        <h3>Regional Languages Choices</h3>
-        <div className="program-table">
-          <table>
-            <thead>
-              <tr>
-                <th>Arabic</th>
-                <th>Hindi</th>
-                <th>Sanskrit</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>French</td>
-                <td>Kannada</td>
-                <td>Tamil</td>
-              </tr>
-              <tr>
-                <td>Japanese</td>
-                <td>Malayalam</td>
-                <td>Telugu</td>
-              </tr>
-              <tr>
-                <td>Spanish</td>
-                <td>Marathi</td>
-                <td>Urdu</td>
-              </tr>
-              <tr>
-                <td>ESOL (English)</td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+            <ul className="program-list">
+              <li>
+                <strong>English:</strong> Reading, comprehension, grammar
+                and writing.
+              </li>
+              <li>
+                <strong>Mathematics:</strong> Number, operations, fractions,
+                measurement, geometry and data, with lots of mental maths.
+              </li>
+              <li>
+                <strong>Environmental Studies (EVS):</strong> Family, food,
+                water, plants, animals and our surroundings, leading into
+                science and social studies.
+              </li>
+              <li>
+                <strong>Hindi or a second language:</strong> Placeholder –
+                confirm language options.
+              </li>
+              <li>
+                <strong>Additional Learning:</strong> Computers, art and
+                music, and wellbeing.
+              </li>
+            </ul>
 
-        <h3>Learning Material Kit delivered home for written work and home work:</h3>
-        <ul className="program-list">
-          <li>Skill-based, engaging Textbooks/Workbooks for English, 2nd Language, Social Studies / EVS, Science and Mathematics.</li>
-          <li>Subscription to eWorkBooks and e-CourseBooks</li>
-          <li>Access to AI-driven personalised learning platform (Grade 2 onwards)</li>
-          <li>Access to vast collection of books, videos and more from our Digital Library</li>
-          <li>Learner Merchandise- ID card, Almanac, T-Shirt and Annual Planner</li>
-          <li>3rd Language Book (If opted)</li>
-        </ul>
+            {/* Grades 1-2 */}
+            <h2>Grades 1–2: Building the Basics</h2>
 
-        <h3>Special Education Needs (SEN)</h3>
-        <p className="section-text">
-          We provide limited academic support to learners with special education needs through our qualified, trained, experienced team of child psychologists, Special Educators and Counsellors. Talk to our Admissions Advisor in complete confidence to discuss how we can help you and your child.
-        </p>
+            <p className="section-text">
+              Children become fluent readers and confident with numbers.
+              Lessons are short and active, and a parent or carer helps
+              with logins and keeps work organised.
+            </p>
 
-        <ul className="program-list">
-          <li>Based on Indian National Curriculum Framework 2005</li>
-          <li>Textbooks &amp; Workbooks delivered at home</li>
-          <li>Small interactive class size of 25 learners for personal attention</li>
-          <li>3 hours of Live Classes, Monday to Friday &amp; alternate Saturday</li>
-          <li>Academic structure and support to parents for stress-free learning</li>
-          <li>Access instant progress report of your child</li>
-        </ul>
-      </div>
+            {/* Grades 3-5 */}
+            <h2>Grades 3–5: Growing Independence</h2>
 
-      <div className="social-highlights">
-        <div className="highlight-card blue">
-          <h3>#Being k12onlineschool</h3>
-          <p>Learning a new skill is always exciting</p>
-        </div>
+            <p className="section-text">
+              Children read longer texts, write paragraphs, solve
+              multi-step problems and start small projects. They begin
+              to plan their own work, which prepares them for middle school.
+            </p>
 
-        <div className="highlight-card green">
-          <h3>#Being k12onlineschool</h3>
-          <p>A Little art and a little maths</p>
-        </div>
+            {/* Assessment */}
+            <h2>How Children Are Assessed</h2>
 
-        <div className="highlight-card purple">
-          <h3>#Being k12onlineschool</h3>
-          <p>Tiya Grade-2A Shows us there is more than one way to learn the tables</p>
-        </div>
-      </div>
+            <p className="section-text">
+              Teachers check progress through class activities, worksheets
+              and short tests, and share regular reports with parents.
+              There are no board exams in primary.
+            </p>
+
+            {/* Fees */}
+            <h2>Fees</h2>
+
+            <p className="section-text">
+              Indicative 2027-28 tuition for Nursery to Grade 5 on the
+              Indian pathway is ₹65,000–₹95,000 in India, AED 4,500–7,500
+              in the Gulf and USD 2,200–3,000 in the UK, US, Canada and
+              Australia. Final fees are still to be confirmed.
+            </p>
+
+            {/* Typical Day */}
+            <h2>A Typical Day</h2>
+
+            <p className="section-text">
+              A primary school day includes a few live lessons in core
+              subjects, separated by short breaks, followed by practice
+              tasks and reading. Younger children have shorter sessions
+              with more movement, and older children have longer lessons
+              and more independent work.
+            </p>
+
+            <p className="section-text">
+              <strong>Daily Hours:</strong> Placeholder – confirm daily hours.
+            </p>
+
+            {/* Parent Support */}
+            <h2>How Parents Can Help at Home</h2>
+
+            <p className="section-text">
+              Make reading part of every day, keep a regular routine,
+              check the learning platform for tasks and talk with your
+              child about what they learned. Teachers share simple ideas
+              each term.
+            </p>
+
+            {/* Moving to Middle School */}
+            <h2>Moving on to Middle School</h2>
+
+            <p className="section-text">
+              After Grade 5, children move into our Indian curriculum
+              Middle School programme for Grades 6–8 without changing
+              school. Teachers share notes on each child's progress so
+              the new teachers know where to start.
+            </p>
+
+            {/* FAQ */}
+            <h2>Frequently Asked Questions</h2>
+
+            <h3>Which curriculum does the Indian primary programme follow?</h3>
+
+            <p className="section-text">
+              An Indian curriculum that leads to NIOS examinations in the
+              senior years.
+            </p>
+
+            <p className="section-text">
+              <strong>Textbooks or Framework:</strong> Placeholder –
+              confirm the textbooks or framework used, e.g. NCERT.
+            </p>
+
+            <h3>Can NRI families join?</h3>
+
+            <p className="section-text">
+              Yes. Families in the UAE, Qatar, Oman, Kuwait, Bahrain,
+              the UK, Australia, the US and Canada can all join.
+            </p>
+
+            {/* Admissions */}
+            <h2>Admissions for 2027-28 Are Open</h2>
+
+            <p className="section-description">
+              Try a free 2-week trial class with our teachers, then apply
+              when you are ready. The ₹999 registration fee is waived
+              during our launch.
+            </p>
+
+            <div className="cta-buttons">
+              <button className="btn-primary">
+                Book a free 2-week trial
+              </button>
+              <button className="btn-secondary">
+                Apply for 2027-28
+              </button>
+            </div>
+          </div>
+
+          {/* Social Highlights */}
+          <div className="social-highlights">
+            <div className="highlight-card blue">
+              <h3>Learning with Curiosity</h3>
+              <p>
+                Building strong foundations through everyday learning
+                experiences.
+              </p>
+            </div>
+
+            <div className="highlight-card green">
+              <h3>Learning Beyond Books</h3>
+              <p>
+                Encouraging creativity, exploration and practical learning.
+              </p>
+            </div>
+
+            <div className="highlight-card purple">
+              <h3>Growing Together</h3>
+              <p>
+                Helping children become confident, curious and independent
+                learners.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </>

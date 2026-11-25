@@ -27,6 +27,7 @@ const LazySection = ({ children, label, placeholderHeight = 360 }) => {
 
   useEffect(() => {
     if (!ref.current || typeof IntersectionObserver === 'undefined') return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -38,6 +39,7 @@ const LazySection = ({ children, label, placeholderHeight = 360 }) => {
       },
       { rootMargin: '100px 0px', threshold: 0.1 }
     );
+
     observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
@@ -58,34 +60,37 @@ const LazySection = ({ children, label, placeholderHeight = 360 }) => {
 function Home() {
   return (
     <div className="min-h-screen bg-white">
+      {/* Homepage Hero - Online School for Nursery to Grade 12 */}
       <Hero />
 
-      {/* Stats Section - Load immediately */}
+      {/* Stats Section */}
       <div className="py-12 bg-white relative z-10">
-        <Suspense fallback={
-          <div className="py-12 bg-white flex items-center justify-center">
-            <div className="text-gray-400">Loading stats...</div>
-          </div>
-        }>
+        <Suspense
+          fallback={
+            <div className="py-12 bg-white flex items-center justify-center">
+              <div className="text-gray-400">Loading stats...</div>
+            </div>
+          }
+        >
           <Stats />
         </Suspense>
       </div>
 
-      {/* Our Programs Section */}
+      {/* Our Programs - British and Indian Curriculum Pathways */}
       <LazySection label="our programs" placeholderHeight={500}>
         <Suspense fallback={<SectionFallback label="our programs" />}>
           <OurPrograms />
         </Suspense>
       </LazySection>
 
-      {/* Affordable & Accredited Section */}
+      {/* Affordable & Accredited - Fees and Offers for 2027-28 */}
       <LazySection label="affordable accredited" placeholderHeight={800}>
         <Suspense fallback={<SectionFallback label="affordable accredited" />}>
           <AffordableAccredited />
         </Suspense>
       </LazySection>
 
-      {/* Features Section */}
+      {/* Features - Why Families Choose an Online School */}
       <LazySection label="features" placeholderHeight={400}>
         <Suspense fallback={<SectionFallback label="features" />}>
           <div className="py-12 bg-white relative z-10">
@@ -94,14 +99,14 @@ function Home() {
         </Suspense>
       </LazySection>
 
-      {/* Student Spotlight Section */}
+      {/* Student Spotlight */}
       <LazySection label="outstanding students" placeholderHeight={600}>
         <Suspense fallback={<SectionFallback label="outstanding students" />}>
           <StudentSpotlight />
         </Suspense>
       </LazySection>
 
-      {/* Curriculum Overview Section */}
+      {/* Curriculum Overview - Nursery to Grade 12 */}
       <LazySection label="curriculum overview" placeholderHeight={400}>
         <Suspense fallback={<SectionFallback label="curriculum overview" />}>
           <div className="py-12 bg-white relative z-10">
@@ -110,7 +115,7 @@ function Home() {
         </Suspense>
       </LazySection>
 
-      {/* Testimonials Section */}
+      {/* Testimonials */}
       <LazySection label="testimonials" placeholderHeight={400}>
         <Suspense fallback={<SectionFallback label="testimonials" />}>
           <div className="py-12 bg-white relative overflow-hidden">
@@ -119,7 +124,7 @@ function Home() {
         </Suspense>
       </LazySection>
 
-      {/* Academic Crew Section */}
+      {/* Academic Crew - Online School Teachers */}
       <LazySection label="academic crew" placeholderHeight={400}>
         <Suspense fallback={<SectionFallback label="academic crew" />}>
           <div className="py-12 bg-white relative z-10">
@@ -128,7 +133,7 @@ function Home() {
         </Suspense>
       </LazySection>
 
-      {/* Contact Section */}
+      {/* Contact Section - Admissions and Enquiries */}
       <LazySection label="contact" placeholderHeight={400}>
         <Suspense fallback={<SectionFallback label="contact" />}>
           <div className="bg-white relative z-10">
@@ -137,7 +142,7 @@ function Home() {
         </Suspense>
       </LazySection>
 
-      {/* Call to Action Section */}
+      {/* Call to Action - Admissions for 2027-28 */}
       <LazySection label="call to action" placeholderHeight={300}>
         <Suspense fallback={<SectionFallback label="call to action" />}>
           <CTA />

@@ -1,10 +1,12 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, Suspense, lazy } from 'react';
+
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import ErrorBoundary from './components/ErrorBoundary';
 import BlogComingSoon from './pages/BeingAthenaAI/BlogCommingSoon';
 
+// Lazy-loaded components
 const Footer = lazy(() => import('./components/Footer'));
 const EnquireTab = lazy(() => import('./components/EnquireTab'));
 
@@ -12,11 +14,13 @@ const About = lazy(() => import('./pages/About'));
 const Programs = lazy(() => import('./components/Programs'));
 const Pathway = lazy(() => import('./pages/Pathway'));
 const Contact = lazy(() => import('./pages/Contact'));
+
 const ApplyNow = lazy(() => import('./pages/Admissions/ApplyNow'));
 const WhoShouldRegister = lazy(() => import('./pages/Admissions/WhoShouldRegister'));
 const BatchTimings = lazy(() => import('./pages/Admissions/BatchTimings'));
 const EssentialRequirements = lazy(() => import('./pages/Admissions/EssentialRequirements'));
 const Fees = lazy(() => import('./pages/Admissions/Fees'));
+
 const HowItWorks = lazy(() => import('./pages/Howitworks/HowItWorksSimple'));
 const SpecialEducation = lazy(() => import('./pages/Howitworks/SpecialEducation'));
 const Technology = lazy(() => import('./pages/Howitworks/Technology'));
@@ -26,11 +30,15 @@ const FAQ = lazy(() => import('./pages/Howitworks/FAQ'));
 const AffiliationsAccreditation = lazy(() => import('./pages/Howitworks/AffiliationsAccreditation'));
 const Resources = lazy(() => import('./pages/Howitworks/Resources'));
 const ResourcesDownloads = lazy(() => import('./pages/Howitworks/ResourcesDownloads'));
+
 const Follow = lazy(() => import('./pages/Follow'));
 const LearningGarage = lazy(() => import('./pages/LearningGarage'));
+
 const Computational = lazy(() => import('./pages/Electives/Computational'));
 const Languages = lazy(() => import('./pages/Electives/Languages'));
 const InternationalBenchmarkTest = lazy(() => import('./pages/Electives/InternationalBenchmarkTest'));
+
+// Indian Pathway
 const NCFIndia = lazy(() => import('./pages/Academics Indian Pathway/NCFIndia'));
 const LearningCulture = lazy(() => import('./pages/Academics Indian Pathway/LearningCulture'));
 const PrePrimary = lazy(() => import('./pages/Academics Indian Pathway/PrePrimary'));
@@ -38,6 +46,8 @@ const Primary = lazy(() => import('./pages/Academics Indian Pathway/Primary'));
 const Middle = lazy(() => import('./pages/Academics Indian Pathway/Middle'));
 const SeniorSchool = lazy(() => import('./pages/Academics Indian Pathway/SeniorSchool'));
 const MusicArtsPartner = lazy(() => import('./pages/Academics Indian Pathway/MusicArtsPartner'));
+
+// British Pathway
 const CambridgeInternationalUK = lazy(() => import('./pages/Academics British Pathway/CambridgeInternationalUK'));
 const EdexcelUK = lazy(() => import('./pages/Academics British Pathway/EdexcelUK'));
 const EarlyYears = lazy(() => import('./pages/Academics British Pathway/EarlyYears'));
@@ -49,6 +59,8 @@ const EdexcelInternationalGCSE = lazy(() => import('./pages/Academics British Pa
 const BritishAdvancedLevels = lazy(() => import('./pages/Academics British Pathway/BritishAdvancedLevels'));
 const CambridgeAdvancedLevel = lazy(() => import('./pages/Academics British Pathway/CambridgeAdvancedLevel'));
 const EdexcelInternationalAdvancedLevel = lazy(() => import('./pages/Academics British Pathway/EdexcelInternationalAdvancedLevel'));
+
+// Being Athena AI
 const WallOfLove = lazy(() => import('./pages/BeingAthenaAI/WallOfLove'));
 const ReferAParent = lazy(() => import('./pages/BeingAthenaAI/ReferAParent'));
 const LearnerLedPodcast = lazy(() => import('./pages/BeingAthenaAI/LearnerLedPodcast'));
@@ -59,6 +71,8 @@ const ParentsSpeak = lazy(() => import('./pages/BeingAthenaAI/ParentsSpeak'));
 const Press = lazy(() => import('./pages/BeingAthenaAI/Press'));
 const Awards = lazy(() => import('./pages/BeingAthenaAI/Awards'));
 const OurLearnerCouncil = lazy(() => import('./pages/BeingAthenaAI/OurLearnerCouncil'));
+
+// About Pages
 const WhatSetsUsApart = lazy(() => import('./pages/About/WhatSetsUsApart'));
 const ValuesAndEthos = lazy(() => import('./pages/About/ValuesAndEthos'));
 const AthenaAIGroup = lazy(() => import('./pages/About/AthenaAIGroup'));
@@ -69,11 +83,18 @@ const MissionBridge = lazy(() => import('./pages/About/MissionBridge'));
 const WhyOnlineSchool = lazy(() => import('./pages/About/WhyOnlineSchool'));
 const OurVision = lazy(() => import('./pages/About/OurVision'));
 
+// 404 Page
+const NotFound = lazy(() => import('./components/NotFound'));
+
+// Scroll to top when route changes
 function ScrollToTopWrapper({ children }) {
   const location = useLocation();
-  
+
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   }, [location.pathname]);
 
   return children;
@@ -83,10 +104,22 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+
         <Navigation />
-        <Suspense fallback={<div className="py-16 text-center text-gray-500">Loading...</div>}>
+
+        <Suspense
+          fallback={
+            <div className="py-16 text-center text-gray-500">
+              Loading...
+            </div>
+          }
+        >
           <Routes>
+
+            {/* Home */}
             <Route path="/" element={<ScrollToTopWrapper><Home /></ScrollToTopWrapper>} />
+
+            {/* Main Pages */}
             <Route path="/pathway" element={<ScrollToTopWrapper><Pathway /></ScrollToTopWrapper>} />
             <Route path="/about" element={<ScrollToTopWrapper><About /></ScrollToTopWrapper>} />
             <Route path="/programs" element={<ScrollToTopWrapper><Programs /></ScrollToTopWrapper>} />
@@ -94,11 +127,15 @@ function App() {
             <Route path="/contact" element={<ScrollToTopWrapper><Contact /></ScrollToTopWrapper>} />
             <Route path="/follow" element={<ScrollToTopWrapper><Follow /></ScrollToTopWrapper>} />
             <Route path="/learning-garage" element={<ScrollToTopWrapper><LearningGarage /></ScrollToTopWrapper>} />
+
+            {/* Admissions */}
             <Route path="/apply-now" element={<ScrollToTopWrapper><ApplyNow /></ScrollToTopWrapper>} />
             <Route path="/who-should-register" element={<ScrollToTopWrapper><WhoShouldRegister /></ScrollToTopWrapper>} />
             <Route path="/batch-timings" element={<ScrollToTopWrapper><BatchTimings /></ScrollToTopWrapper>} />
             <Route path="/essential-requirements" element={<ScrollToTopWrapper><EssentialRequirements /></ScrollToTopWrapper>} />
             <Route path="/fees" element={<ScrollToTopWrapper><Fees /></ScrollToTopWrapper>} />
+
+            {/* How It Works */}
             <Route path="/how-it-works" element={<ScrollToTopWrapper><HowItWorks /></ScrollToTopWrapper>} />
             <Route path="/special-education" element={<ScrollToTopWrapper><SpecialEducation /></ScrollToTopWrapper>} />
             <Route path="/technology" element={<ScrollToTopWrapper><Technology /></ScrollToTopWrapper>} />
@@ -107,9 +144,13 @@ function App() {
             <Route path="/faq" element={<ScrollToTopWrapper><FAQ /></ScrollToTopWrapper>} />
             <Route path="/affiliations-accreditation" element={<ScrollToTopWrapper><AffiliationsAccreditation /></ScrollToTopWrapper>} />
             <Route path="/resources-downloads" element={<ScrollToTopWrapper><ResourcesDownloads /></ScrollToTopWrapper>} />
+
+            {/* Electives */}
             <Route path="/computational-thinking" element={<ScrollToTopWrapper><Computational /></ScrollToTopWrapper>} />
             <Route path="/languages" element={<ScrollToTopWrapper><Languages /></ScrollToTopWrapper>} />
             <Route path="/international-benchmark-test" element={<ScrollToTopWrapper><InternationalBenchmarkTest /></ScrollToTopWrapper>} />
+
+            {/* Indian Pathway */}
             <Route path="/ncf-india" element={<ScrollToTopWrapper><NCFIndia /></ScrollToTopWrapper>} />
             <Route path="/learning-culture" element={<ScrollToTopWrapper><LearningCulture /></ScrollToTopWrapper>} />
             <Route path="/pre-primary" element={<ScrollToTopWrapper><PrePrimary /></ScrollToTopWrapper>} />
@@ -117,6 +158,8 @@ function App() {
             <Route path="/middle" element={<ScrollToTopWrapper><Middle /></ScrollToTopWrapper>} />
             <Route path="/senior-school" element={<ScrollToTopWrapper><SeniorSchool /></ScrollToTopWrapper>} />
             <Route path="/music-arts-partner" element={<ScrollToTopWrapper><MusicArtsPartner /></ScrollToTopWrapper>} />
+
+            {/* British Pathway - Keep unchanged until confirmation */}
             <Route path="/cambridge-international-uk" element={<ScrollToTopWrapper><CambridgeInternationalUK /></ScrollToTopWrapper>} />
             <Route path="/edexcel-uk" element={<ScrollToTopWrapper><EdexcelUK /></ScrollToTopWrapper>} />
             <Route path="/early-years" element={<ScrollToTopWrapper><EarlyYears /></ScrollToTopWrapper>} />
@@ -128,6 +171,8 @@ function App() {
             <Route path="/british-advanced-levels" element={<ScrollToTopWrapper><BritishAdvancedLevels /></ScrollToTopWrapper>} />
             <Route path="/cambridge-advanced-level" element={<ScrollToTopWrapper><CambridgeAdvancedLevel /></ScrollToTopWrapper>} />
             <Route path="/edexcel-international-advanced-level" element={<ScrollToTopWrapper><EdexcelInternationalAdvancedLevel /></ScrollToTopWrapper>} />
+
+            {/* Being Athena AI */}
             <Route path="/wall-of-love" element={<ScrollToTopWrapper><WallOfLove /></ScrollToTopWrapper>} />
             <Route path="/refer-a-parent" element={<ScrollToTopWrapper><ReferAParent /></ScrollToTopWrapper>} />
             <Route path="/learner-led-podcast" element={<ScrollToTopWrapper><LearnerLedPodcast /></ScrollToTopWrapper>} />
@@ -136,8 +181,13 @@ function App() {
             <Route path="/learner-work" element={<ScrollToTopWrapper><LearnerWork /></ScrollToTopWrapper>} />
             <Route path="/parents-speak" element={<ScrollToTopWrapper><ParentsSpeak /></ScrollToTopWrapper>} />
             <Route path="/press" element={<ScrollToTopWrapper><Press /></ScrollToTopWrapper>} />
+
+            {/* Awards - Keep unchanged until confirmation */}
             <Route path="/awards" element={<ScrollToTopWrapper><Awards /></ScrollToTopWrapper>} />
+
             <Route path="/our-learner-council" element={<ScrollToTopWrapper><OurLearnerCouncil /></ScrollToTopWrapper>} />
+
+            {/* About */}
             <Route path="/what-sets-us-apart" element={<ScrollToTopWrapper><WhatSetsUsApart /></ScrollToTopWrapper>} />
             <Route path="/k12-online-school" element={<ScrollToTopWrapper><AthenaAISchool /></ScrollToTopWrapper>} />
             <Route path="/Wisdom-ai-school" element={<ScrollToTopWrapper><AthenaAISchool /></ScrollToTopWrapper>} />
@@ -149,18 +199,27 @@ function App() {
             <Route path="/Wisdom-ai-group" element={<ScrollToTopWrapper><AthenaAIGroup /></ScrollToTopWrapper>} />
             <Route path="/our-leaders" element={<ScrollToTopWrapper><OurLeaders /></ScrollToTopWrapper>} />
             <Route path="/habits-of-mind" element={<ScrollToTopWrapper><HabitsOfMind /></ScrollToTopWrapper>} />
+
+            {/* Blog - Keep unchanged until confirmation */}
             <Route path="/blog" element={<ScrollToTopWrapper><BlogComingSoon /></ScrollToTopWrapper>} />
+
+            {/* 404 */}
+            <Route path="*" element={<ScrollToTopWrapper><NotFound /></ScrollToTopWrapper>} />
+
           </Routes>
         </Suspense>
+
         <Suspense fallback={null}>
           <Footer />
         </Suspense>
+
         <Suspense fallback={null}>
           <EnquireTab />
         </Suspense>
+
       </div>
     </ErrorBoundary>
   );
 }
 
-export default App
+export default App;

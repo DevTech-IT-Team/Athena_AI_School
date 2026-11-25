@@ -9,7 +9,7 @@ function Pathway() {
       const preloadImages = [
         '/src/assets/optimized/alesia-kazantceva-VWcPlbHglYc-unsplash.webp'
       ];
-      
+
       preloadImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -23,7 +23,7 @@ function Pathway() {
         '//fonts.googleapis.com',
         '//fonts.gstatic.com'
       ];
-      
+
       dnsPrefetch.forEach(href => {
         const link = document.createElement('link');
         link.rel = 'dns-prefetch';
@@ -33,16 +33,37 @@ function Pathway() {
 
       // Add critical performance meta tags
       const metaTags = [
-        { name: 'description', content: 'British and Indian Pathway - Excellence Delivered, Consistently at k12onlineschool' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'theme-color', content: '#0284c7' },
-        { property: 'og:title', content: 'British and Indian Pathway - k12onlineschool' },
-        { property: 'og:description', content: 'Excellence Delivered, Consistently' },
-        { property: 'og:type', content: 'website' }
+        {
+          name: 'description',
+          content:
+            'Compare the British Pearson Edexcel and Indian NIOS online school pathways at Edulectual K12. Explore curriculum, qualifications, exams and admissions for 2027-28.'
+        },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1'
+        },
+        {
+          name: 'theme-color',
+          content: '#0284c7'
+        },
+        {
+          property: 'og:title',
+          content: 'British vs Indian Curriculum Online | Edulectual K12'
+        },
+        {
+          property: 'og:description',
+          content:
+            'Explore the British Pearson Edexcel and Indian NIOS curriculum pathways at Edulectual K12 Online School.'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        }
       ];
 
       metaTags.forEach(tag => {
         const meta = document.createElement('meta');
+
         if (tag.property) {
           meta.setAttribute('property', tag.property);
           meta.content = tag.content;
@@ -50,7 +71,12 @@ function Pathway() {
           meta.name = tag.name;
           meta.content = tag.content;
         }
-        if (!document.querySelector(`meta[${tag.property ? 'property' : 'name'}="${tag.property || tag.name}"]`)) {
+
+        if (
+          !document.querySelector(
+            `meta[${tag.property ? 'property' : 'name'}="${tag.property || tag.name}"]`
+          )
+        ) {
           document.head.appendChild(meta);
         }
       });
