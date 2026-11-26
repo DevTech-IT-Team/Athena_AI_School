@@ -2,337 +2,431 @@ import React from 'react';
 import '../../Academics.css';
 
 const MusicArtsPartner = () => {
+  const activities = [
+    {
+      title: 'Music',
+      description:
+        'Explore vocals, keyboard, guitar, percussion and Indian classical music while developing rhythm, creativity and musical understanding.',
+      number: '01',
+    },
+    {
+      title: 'Dance',
+      description:
+        'Learn classical and contemporary dance styles, improve coordination and movement, and express yourself through dance.',
+      number: '02',
+    },
+    {
+      title: 'Visual Arts',
+      description:
+        'Discover drawing, painting and craft through creative projects that encourage imagination and artistic expression.',
+      number: '03',
+    },
+    {
+      title: 'Other Activities',
+      description:
+        'Explore other activities, including martial arts, through selected partner academies.',
+      number: '04',
+    },
+  ];
+
+  const steps = [
+    {
+      title: 'Choose an Activity',
+      description:
+        'Browse the available partner activities and choose an activity and learning level that interests your child.',
+      number: '01',
+    },
+    {
+      title: 'Book Through Us',
+      description:
+        "Our team helps arrange a trial class and a regular learning slot that fits your child's school timetable.",
+      number: '02',
+    },
+    {
+      title: 'Track Progress',
+      description:
+        'Learners develop their skills through regular practice and guided activities with their instructors.',
+      number: '03',
+    },
+  ];
+
   return (
-    <div className="academics-page">
-        <div className="relative h-[60vh] min-h-[400px] bg-gradient-to-br from-white via-blue-400 to-blue-950 flex items-center justify-center text-center overflow-hidden">
-          <div className="relative z-10 px-8 max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">Music & Arts Partner</h1>
-            <p className="text-lg md:text-xl font-light opacity-90">NCF India</p>
+    <div className="academics-page bg-slate-50 text-slate-800">
+
+      {/* HERO SECTION */}
+      <div className="relative min-h-[420px] bg-blue-100 flex items-center justify-center text-center overflow-hidden px-6 py-20">
+        <div className="absolute inset-0 bg-blue-100"></div>
+
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <span className="inline-block bg-white text-blue-800 px-5 py-2 rounded-full text-sm font-bold tracking-wide mb-6 border border-blue-200">
+            CREATIVITY • EXPRESSION • GROWTH
+          </span>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-blue-950 mb-6 leading-tight tracking-tight">
+            Music & Arts
+          </h1>
+
+          <p className="text-lg md:text-xl text-slate-700 max-w-2xl mx-auto leading-relaxed">
+            Discover music, dance and art through creative learning experiences
+            that inspire confidence, imagination and self-expression.
+          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+            <a
+              href="#activities"
+              className="inline-flex items-center justify-center px-8 py-3.5 bg-blue-800 text-white font-bold rounded-xl hover:bg-blue-950 transition-all duration-300 hover:-translate-y-1 shadow-lg"
+            >
+              Explore Activities
+            </a>
+
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-blue-950 font-bold rounded-xl border border-blue-200 hover:bg-blue-50 transition-all duration-300 hover:-translate-y-1 shadow-sm"
+            >
+              Ask About Music & Arts
+            </a>
           </div>
-          <div className="absolute inset-0 bg-black/30"></div>
         </div>
-
-        <div className="academics-content">
-          <div className="academics-breadcrumb">
-            <a href="/">Home</a> &gt; Music & Arts Partner
-          </div>
-
-      <div className="academics-nav">
-        <a href="/academics/learning-culture" className="nav-link">Learning Culture</a>
-        <a href="/academics/primary" className="nav-link">Primary</a>
-        <a href="/academics/pre-primary" className="nav-link">Pre Primary</a>
-        <a href="/academics/middle" className="nav-link">Middle</a>
-        <a href="/academics/senior-school" className="nav-link">Senior School</a>
-        <a href="/academics/our-partners" className="nav-link">Our Partners</a>
-        <a href="/academics/music-arts-partner" className="nav-link active">Music & Arts Partner</a>
       </div>
 
-      <div className="academics-quote">
-        <p className="quote-text">
-          &quot;When you see your child looking forward to his classes, you know the school is doing something really right.&quot;
-        </p>
-        <div className="cta-buttons">
-          <button className="btn-primary">Enquire Now</button>
-          <button className="btn-secondary">Download Prospectus</button>
+      <div className="academics-content">
+
+        {/* BREADCRUMB */}
+        <div className="academics-breadcrumb">
+          <a href="/" className="hover:text-blue-700 transition-colors">
+            Home
+          </a>{' '}
+          &gt; Music & Arts
         </div>
+
+        {/* NAVIGATION */}
+        <div className="academics-nav">
+          <a href="/academics/learning-culture" className="nav-link">
+            Learning Culture
+          </a>
+          <a href="/academics/primary" className="nav-link">
+            Primary
+          </a>
+          <a href="/academics/pre-primary" className="nav-link">
+            Pre Primary
+          </a>
+          <a href="/academics/middle" className="nav-link">
+            Middle
+          </a>
+          <a href="/academics/senior-school" className="nav-link">
+            Senior School
+          </a>
+          <a href="/academics/our-partners" className="nav-link">
+            Our Partners
+          </a>
+          <a
+            href="/academics/music-arts-partner"
+            className="nav-link active"
+          >
+            Music & Arts
+          </a>
+        </div>
+
+        {/* INTRO SECTION */}
+        <section className="my-12 md:my-16">
+          <div className="bg-white rounded-2xl border border-blue-100 shadow-sm p-8 md:p-12 hover:shadow-md transition-shadow duration-300">
+            <div className="max-w-4xl mx-auto text-center">
+              <span className="text-blue-700 font-bold text-sm tracking-widest uppercase">
+                Creative Learning
+              </span>
+
+              <h2 className="text-3xl md:text-4xl font-extrabold text-blue-950 mt-3 mb-6">
+                Online Music and Art Classes for Kids with Partner Academies
+              </h2>
+
+              <p className="text-slate-700 text-base md:text-lg leading-relaxed">
+                Creative subjects help children express themselves, build
+                discipline and enjoy learning. Alongside the school timetable,
+                Edulectual K12 Online School gives learners access to music,
+                dance and art classes through partner academies. Families
+                choose the activity, and classes are scheduled around the
+                school day.
+              </p>
+
+              <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+                <a
+                  href="#contact"
+                  className="px-7 py-3 bg-blue-800 text-white font-bold rounded-xl hover:bg-blue-950 transition-all duration-300 hover:-translate-y-1 shadow-md"
+                >
+                  Book a Free 2-Week Trial
+                </a>
+
+                <a
+                  href="#activities"
+                  className="px-7 py-3 bg-blue-50 text-blue-950 font-bold rounded-xl border border-blue-200 hover:bg-blue-100 transition-all duration-300 hover:-translate-y-1"
+                >
+                  Explore Activities
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ACTIVITIES SECTION */}
+        <section id="activities" className="academics-section my-16">
+          <div className="text-center mb-10">
+            <span className="text-blue-700 font-bold tracking-widest text-sm uppercase">
+              Discover Your Passion
+            </span>
+
+            <h2 className="text-3xl md:text-4xl font-extrabold text-blue-950 mt-3 mb-4">
+              What Children Can Learn
+            </h2>
+
+            <p className="section-description max-w-3xl mx-auto text-slate-700">
+              Children can explore a variety of creative activities, develop new
+              skills and discover their interests through guided learning
+              experiences.
+            </p>
+          </div>
+
+          <div className="approach-grid">
+            {activities.map((activity, index) => (
+              <div
+                key={index}
+                className="approach-item bg-white border border-blue-100 rounded-2xl p-7 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
+              >
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-blue-100 text-blue-900 font-extrabold text-lg mb-5 group-hover:bg-blue-800 group-hover:text-white transition-colors duration-300">
+                  {activity.number}
+                </div>
+
+                <h3 className="text-xl font-extrabold text-blue-950 mb-4">
+                  {activity.title}
+                </h3>
+
+                <p className="text-slate-700 leading-relaxed">
+                  {activity.description}
+                </p>
+
+                <div className="mt-6 h-1 w-12 bg-blue-700 rounded-full group-hover:w-20 transition-all duration-300"></div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* PARTNER ACADEMIES */}
+        <section className="academics-section my-16">
+          <div className="bg-blue-100 border border-blue-200 rounded-2xl p-8 md:p-12">
+            <div className="max-w-4xl mx-auto text-center">
+              <span className="text-blue-800 font-bold tracking-widest text-sm uppercase">
+                Learning Beyond Academics
+              </span>
+
+              <h2 className="text-3xl md:text-4xl font-extrabold text-blue-950 mt-3 mb-6">
+                Our Partner Academies
+              </h2>
+
+              <p className="text-slate-700 text-base md:text-lg leading-relaxed">
+                Edulectual K12 works with partner academies to help children
+                explore music, dance and arts beyond their regular academic
+                classes. Partner activities, locations and class formats will
+                be shared as they are confirmed.
+              </p>
+            </div>
+          </div>
+
+          <div className="approach-grid mt-8">
+            <div className="approach-item bg-white border border-blue-100 rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all duration-300">
+              <h3 className="text-xl font-extrabold text-blue-950 mb-3">
+                Music Learning
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                Opportunities to explore musical instruments, vocals and
+                different musical traditions through guided classes.
+              </p>
+            </div>
+
+            <div className="approach-item bg-white border border-blue-100 rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all duration-300">
+              <h3 className="text-xl font-extrabold text-blue-950 mb-3">
+                Dance & Movement
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                Creative movement and dance classes designed to help learners
+                develop confidence, coordination and expression.
+              </p>
+            </div>
+
+            <div className="approach-item bg-white border border-blue-100 rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all duration-300">
+              <h3 className="text-xl font-extrabold text-blue-950 mb-3">
+                Art & Creativity
+              </h3>
+              <p className="text-slate-700 leading-relaxed">
+                Creative learning opportunities through drawing, painting,
+                craft and other visual arts activities.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* HOW IT WORKS */}
+        <section className="academics-section my-16">
+          <div className="text-center mb-10">
+            <span className="text-blue-700 font-bold tracking-widest text-sm uppercase">
+              A Simple Process
+            </span>
+
+            <h2 className="text-3xl md:text-4xl font-extrabold text-blue-950 mt-3 mb-4">
+              How It Works
+            </h2>
+
+            <p className="section-description max-w-3xl mx-auto text-slate-700">
+              Getting started with a creative activity is easy. Our team helps
+              families find the right activity and plan classes around their
+              child's learning schedule.
+            </p>
+          </div>
+
+          <div className="approach-grid">
+            {steps.map((step, index) => (
+              <div
+                key={index}
+                className="approach-item bg-white border border-blue-100 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+              >
+                <div className="w-16 h-16 rounded-full bg-blue-100 text-blue-950 border border-blue-200 flex items-center justify-center text-xl font-extrabold mb-6">
+                  {step.number}
+                </div>
+
+                <h3 className="text-xl font-extrabold text-blue-950 mb-4">
+                  {step.title}
+                </h3>
+
+                <p className="text-slate-700 leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* WHY ARTS */}
+        <section className="academics-section my-16">
+          <div className="bg-blue-50 border border-blue-200 rounded-2xl p-8 md:p-12">
+            <div className="max-w-4xl mx-auto">
+              <span className="text-blue-800 font-bold text-sm tracking-widest uppercase">
+                Beyond the Classroom
+              </span>
+
+              <h2 className="text-3xl md:text-4xl font-extrabold text-blue-950 mt-3 mb-6">
+                Why the Arts Belong in School
+              </h2>
+
+              <p className="text-slate-700 leading-relaxed text-base md:text-lg">
+                Practising an instrument or learning dance teaches focus,
+                patience and resilience. Performing builds confidence, while
+                creative activities help children express their ideas and
+                emotions. For online learners, music and arts also offer a
+                welcome change from screen-based academic study.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* CHOOSING AN ACTIVITY */}
+        <section className="academics-section my-16">
+          <div className="bg-white border border-blue-100 rounded-2xl p-8 md:p-12 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-blue-950 mb-6">
+              Choosing an Activity
+            </h2>
+
+            <p className="text-slate-700 text-base md:text-lg leading-relaxed">
+              Let your child try an activity before committing. A trial class
+              helps families discover whether the child enjoys the activity
+              and connects with the teacher. Consider practice time too: an
+              instrument may need a few short practice sessions each week,
+              while art and dance can often fit into weekends. Our team can
+              help you plan a timetable that leaves enough time for learning
+              and rest.
+            </p>
+          </div>
+        </section>
+
+        {/* PERFORMING AND SHARING */}
+        <section className="academics-section my-16">
+          <div className="bg-blue-100 border border-blue-200 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-blue-950 mb-6">
+              Performing and Sharing
+            </h2>
+
+            <p className="text-slate-700 text-base md:text-lg leading-relaxed">
+              Learners can share their performances and artwork through online
+              showcases and our Student Spotlight, giving them opportunities
+              to celebrate their creativity and progress with the school
+              community, with parental consent.
+            </p>
+          </div>
+        </section>
+
+        {/* SOCIAL HIGHLIGHTS */}
+        <section className="social-highlights my-16">
+          <div className="highlight-card blue rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <h3 className="font-extrabold text-xl">
+              Music
+            </h3>
+            <p>
+              Discover melodies, instruments and musical expression.
+            </p>
+          </div>
+
+          <div className="highlight-card green rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <h3 className="font-extrabold text-xl">
+              Dance
+            </h3>
+            <p>
+              Build confidence, coordination and creativity through movement.
+            </p>
+          </div>
+
+          <div className="highlight-card purple rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <h3 className="font-extrabold text-xl">
+              Art
+            </h3>
+            <p>
+              Turn ideas and imagination into creative works.
+            </p>
+          </div>
+        </section>
+
+        {/* ADMISSIONS CTA */}
+        <section id="contact" className="my-16">
+          <div className="bg-blue-100 border border-blue-200 rounded-3xl p-8 md:p-14 text-center shadow-md">
+            <span className="inline-block px-5 py-2 rounded-full bg-white text-blue-800 border border-blue-200 text-sm font-bold tracking-widest uppercase mb-6">
+              Admissions 2027-28
+            </span>
+
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-blue-950 mb-6">
+              Admissions for 2027-28 Are Open
+            </h2>
+
+            <p className="text-slate-700 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+              Try a free 2-week trial class with our teachers, then apply
+              when you are ready. The ₹999 registration fee is waived
+              during our launch.
+            </p>
+
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+              <a
+                href="#contact"
+                className="px-8 py-4 bg-blue-800 text-white font-extrabold rounded-xl hover:bg-blue-950 transition-all duration-300 hover:-translate-y-1 shadow-lg"
+              >
+                Book a Free 2-Week Trial
+              </a>
+
+              <a
+                href="/admissions"
+                className="px-8 py-4 bg-white text-blue-950 font-extrabold rounded-xl border border-blue-200 hover:bg-blue-50 transition-all duration-300 hover:-translate-y-1"
+              >
+                Apply for 2027-28
+              </a>
+            </div>
+          </div>
+        </section>
+
       </div>
-
-      <div className="academics-section">
-        <h2>Our Music & Arts Partners</h2>
-        <p className="section-description">
-          k12onlineschool collaborates with renowned music and arts academies across India to provide world-class creative education opportunities for our students.
-        </p>
-
-        <div className="approach-grid">
-          <div className="approach-item">
-            <h3>Urban Raga Music School</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Bengaluru</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Bidyut Chakrabarty</p>
-            <p className="text-gray-600 text-sm mb-1">998/1, 3rd Cross Road, HRBR Layout 1st Block, Kalyan Nagar, Bengaluru, Karnataka 560043</p>
-            <p className="text-gray-600 text-sm">+917795349578 | info@urbanraga.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Stars Music Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">South Jaipur</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Paras Ruhani</p>
-            <p className="text-gray-600 text-sm mb-1">270, Jagatpura Road, Vinoba Vihar, Model Town, Malviya Nagar, Jaipur, Rajasthan 302017</p>
-            <p className="text-gray-600 text-sm">919829188796 | starsmusicacademy@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Surtaal Music Training Institute</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">South Jaipur</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr Mahesh</p>
-            <p className="text-gray-600 text-sm mb-1">B-305, mahesh nagar, near ICS school, jaipur 302015</p>
-            <p className="text-gray-600 text-sm">919782884354 | surtaalcreation@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Backstreets Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Chandigarh</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Kartik</p>
-            <p className="text-gray-600 text-sm mb-1">SCO 541, Top Floor, Himalaya Marg, Sector 70, Mohali, Chandigarh, Punjab 160059</p>
-            <p className="text-gray-600 text-sm">919779922367 | backstreetsacademy@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Muzigyasa Music Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Delhi</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Deepak</p>
-            <p className="text-gray-600 text-sm mb-1">A-437 & 438, Block A, New Ashok Nagar, Delhi, 110096</p>
-            <p className="text-gray-600 text-sm">917503186689 | muzigyasa@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>SRJ Music Classes</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Jaipur</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Sibeon James</p>
-            <p className="text-gray-600 text-sm mb-1">Near 13, Ajmer Rd, Panch Batti, Mission Compound, Hathroi, Jaipur, Rajasthan 302001</p>
-            <p className="text-gray-600 text-sm">919950283453 | sibeon.james@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Nitish Music Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Uttarakhand</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Nitish</p>
-            <p className="text-gray-600 text-sm mb-1">P.O.B karbari, Shimla Bypass Rd, Jhewaredi, Uttarakhand 248001</p>
-            <p className="text-gray-600 text-sm">919634626076 | nitishmusicacademy@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>The Selewan Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Uttarakhand</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Ashish</p>
-            <p className="text-gray-600 text-sm mb-1">House No, Lal Kurti Cantonment, Roorkee, Uttarakhand 247667</p>
-            <p className="text-gray-600 text-sm">918477938411 | selewaan@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>The Melody Hub</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Jaipur</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Dipesh</p>
-            <p className="text-gray-600 text-sm mb-1">PLOT NO E287, Swej Farm Rd, opposite to MJRPU university, Ramnagar Extension, Sodala, Jaipur</p>
-            <p className="text-gray-600 text-sm">916375020567 | themelodyboxmusic@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Jagatpura Music Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Jaipur</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Pawan Kaushik</p>
-            <p className="text-gray-600 text-sm mb-1">Kusum Vihar, Vidhyadhar Nagar, Jagatpura, Jaipur, Rajasthan 302025</p>
-            <p className="text-gray-600 text-sm">917976603017 | jagatpuramusicacademy@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Piuriyaz Music Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Mumbai</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr Nayan</p>
-            <p className="text-gray-600 text-sm mb-1">Ground Floor, Samyakth Bliss, Govind Dham, Khar West, Mumbai, Maharashtra - 400052</p>
-            <p className="text-gray-600 text-sm">917900107033 | piuriyazmusic@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Goa Music Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Visakhapatnam</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Ms. Hemlata</p>
-            <p className="text-gray-600 text-sm mb-1">2nd floor 1-83 Opp. Swarna Bharathi, Stadium Resapuvanipalem, Dwaraka Nagar, Visakhapatnam, Andhra Pradesh 530013</p>
-            <p className="text-gray-600 text-sm">918805740177 | rammyhema@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Realistic World Taekwondo School</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">New Delhi</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Atheleno</p>
-            <p className="text-gray-600 text-sm mb-1">Wz 2/2 Hari Singh park, Multan nagar, paschim vihar EAST, opp Metro pillar no 218</p>
-            <p className="text-gray-600 text-sm">919911238798 | realistic.academy@yahoo.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Irfan Dance Studio</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Mumbai</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Irfan Hamid</p>
-            <p className="text-gray-600 text-sm mb-1">Shop No. 3, Lokhandwala Complex, B/ 25, Queenland Building, Shastri Nagar, Andheri West, Mumbai, Maharashtra 400053</p>
-            <p className="text-gray-600 text-sm">917208777517 | er2academy@yahoo.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Vox Dance Studio</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Jaipur</p>
-            <p className="text-gray-600">Dance Academy Partner</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Opus Music Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">New Delhi</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Mukul</p>
-            <p className="text-gray-600 text-sm mb-1">NP 148 A 1st Floor Pitampura, across Fitness First Gym, Delhi 110034</p>
-            <p className="text-gray-600 text-sm">919899176251 | opus.academy@yahoo.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Infrasonic School Of Music</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Bengaluru</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Rohit K Byahut</p>
-            <p className="text-gray-600 text-sm mb-1">15 Mrinalini, Bannerghatta Main Rd, Thimappa Reddy Layout, Omkar Nagar, Hulimavu, Bengaluru, Karnataka 560076</p>
-            <p className="text-gray-600 text-sm">918892850194 | iinfrasonic@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>VM Music Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Chennai</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Rahul</p>
-            <p className="text-gray-600 text-sm mb-1">VM Store, 16, Mahatma Gandhi Rd, Thiruvanmiyur, Chennai, Tamil Nadu 600041</p>
-            <p className="text-gray-600 text-sm">919940556519 | vmmusicclass@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Akki Dance Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Mumbai</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Akilesh Vijay Kedare</p>
-            <p className="text-gray-600 text-sm mb-1">Shop No.204, 2nd Floor, BMC Market Building, Station Road, Bhandup West, Mumbai 400078</p>
-            <p className="text-gray-600 text-sm">917208777517 | artstudiogenius@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Key 'n' Strings</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Bengaluru</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Joshua</p>
-            <p className="text-gray-600 text-sm mb-1">284, Munnekollal Main Rd, Thubarahalli, Munnekollal, Bengaluru, Karnataka 560037</p>
-            <p className="text-gray-600 text-sm">919886029367 | keynstrings.music@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Think Musical Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Mumbai</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Prashu</p>
-            <p className="text-gray-600 text-sm mb-1">Navdurga co-op Society, R12-414, MMRDA Colony, Poonam Nagar, Jogeshwari East, Mumbai 400093</p>
-            <p className="text-gray-600 text-sm">918149784158 | prashurockstar007@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>SwarDhwani Music School</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Bengaluru</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Tanusree</p>
-            <p className="text-gray-600 text-sm mb-1">Mahaveer Dazzle Apartment, Basavanagar Main Road, Hoodi Circle</p>
-            <p className="text-gray-600 text-sm">919036713880 | tanu.sarkar009@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Nritya Tarangini Dance Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Bengaluru</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Mythili Prathapa</p>
-            <p className="text-gray-600 text-sm mb-1">Vaikuntam Layout, Lakshminarayana Pura, AECS Layout, Marathahalli, Bengaluru, Karnataka 560037</p>
-            <p className="text-gray-600 text-sm">919611122317 | mythili.prathapa@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Shobhas Dance School</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Bangalore</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Shreyas</p>
-            <p className="text-gray-600 text-sm mb-1">No 19, 152/1 SRS Nilaya, Beside Dr.Prasad's Pet Clinic, Doddanekkundi, Bangalore 560037</p>
-            <p className="text-gray-600 text-sm">917026172737 | shreyasdance.7896@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>A Direction Dance Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Haridwar</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Alok</p>
-            <p className="text-gray-600 text-sm mb-1">Durga Nagar, Bhupatwala, Mathur Vaishya Dham, Haridwar</p>
-            <p className="text-gray-600 text-sm">919012010129 | alokgiri88855@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Tansen Music Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Roorkee</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Rehan</p>
-            <p className="text-gray-600 text-sm mb-1">Azad Nagar Nehru Nagar, Shiv Puri Road, Roorkee</p>
-            <p className="text-gray-600 text-sm">919045729957 | RehanAhmad1258@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Amala Music School</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Tamil Nadu</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Lourdu Samy</p>
-            <p className="text-gray-600 text-sm mb-1">9, 191, Thirunavukarasu Street, Fairlands, Salem, Tamil Nadu 636016</p>
-            <p className="text-gray-600 text-sm">919865616730 | amalamusicschool@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Music and Minds</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Mumbai</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Ujjal Ray</p>
-            <p className="text-gray-600 text-sm mb-1">Shop No 4, Duttakrupa Co-Operative Housing Society, Sector 11, Kharghar, Navi Mumbai, Maharashtra 410210</p>
-            <p className="text-gray-600 text-sm">919867670719 | Musicandminds86@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Bangalore Music Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Bengaluru</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Sundaresh</p>
-            <p className="text-gray-600 text-sm mb-1">2nd Floor, 2nd Main, Sidda Reddy Compound, SUPRABHA 13/A, Mico Layout, Arekere, Bengaluru, Karnataka 560076</p>
-            <p className="text-gray-600 text-sm">919880532266 | Violinsundaresh@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Mahadeva Music Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Haridwar</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Mohan</p>
-            <p className="text-gray-600 text-sm mb-1">Railway Colony, Industrial Area, Haridwar, Uttarakhand 249401</p>
-            <p className="text-gray-600 text-sm">917983345477 | mohandev996@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Professional Music Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Haridwar</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Kuldeep</p>
-            <p className="text-gray-600 text-sm mb-1">Rishikul, Haridwar</p>
-            <p className="text-gray-600 text-sm">918171652037 | kuldeepwilsonkumar@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Virusagam Preschool</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Pudukkottai, Tamil Nadu</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Vijayalaksmi</p>
-            <p className="text-gray-600 text-sm mb-1">115, Near, 3rd St, Machuvadi, Thaila Nagar, Pudukkottai, Tamil Nadu 622004</p>
-            <p className="text-gray-600 text-sm">919952502791 | vijayalakshmikg10@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>R Music Life</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Ahmedabad</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Chirag Shah</p>
-            <p className="text-gray-600 text-sm mb-1">40, Lala Lajpat Rai Marg, Prankunj Society, Pushpkunj, Maninagar, Ahmedabad, Gujarat 380043</p>
-            <p className="text-gray-600 text-sm">919898384973 | vichinishah@gmail.com</p>
-          </div>
-
-          <div className="approach-item">
-            <h3>Bollywood Music Academy</h3>
-            <p className="text-sm text-blue-600 font-medium mb-2">Jalandhar</p>
-            <p className="text-gray-600 mb-1"><strong>Contact:</strong> Mr. Shiv Kumar</p>
-            <p className="text-gray-600 text-sm mb-1">180, WX Basti 9, Jalandhar, Punjab</p>
-            <p className="text-gray-600 text-sm">919878626432 | Shivbma@yahoo.com</p>
-          </div>
-        </div>
-
-      <div className="social-highlights">
-        <div className="highlight-card blue">
-          <h3>#Being k12onlineschool</h3>
-          <p>Palchin Patil wants to master it all in 2021</p>
-        </div>
-
-        <div className="highlight-card green">
-          <h3>#Being k12onlineschool</h3>
-          <p>Teamwork makes us all winners</p>
-        </div>
-
-        <div className="highlight-card purple">
-          <h3>#Being k12onlineschool</h3>
-          <p>We enjoy learning even after classes</p>
-        </div>
-      </div>
-    </div>
-    </div>
     </div>
   );
 };
