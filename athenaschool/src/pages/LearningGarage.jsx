@@ -18,42 +18,55 @@ const LearningGarage = () => {
   return (
     <div className="min-h-screen">
       <LearningGarageNavbar />
+
       <div id="home">
         <LearningGarageHero />
       </div>
+
       <div id="about">
         <LearningGarageAbout />
       </div>
+
       <div id="programs">
         <LearningGaragePrograms />
       </div>
+
       <div id="benefits">
         <LearningGarageBenefits />
       </div>
+
       <div id="who">
         <LearningGarageWho />
       </div>
+
       <div id="how">
         <LearningGarageHow />
       </div>
+
       <div id="gallery">
         <LearningGarageGallery />
       </div>
+
       <div id="locations">
         <LearningGarageLocations />
       </div>
+
       <div id="pricing">
         <LearningGaragePricing />
       </div>
+
       <div id="testimonials">
         <LearningGarageTestimonials />
       </div>
+
       <div id="faq">
         <LearningGarageFAQ />
       </div>
+
       <div id="contact">
         <LearningGarageCTA />
       </div>
+
       <LearningGarageFooter />
     </div>
   );
