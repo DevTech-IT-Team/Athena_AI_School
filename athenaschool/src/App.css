@@ -1,53 +1,311 @@
+/* ================================
+   GLOBAL ROOT STYLES
+================================ */
+
 #root {
-  max-width: 1280px;
+  width: 100%;
+  min-height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 0;
+  text-align: left;
+  overflow-x: hidden;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* ================================
+   GLOBAL DESIGN SYSTEM
+================================ */
+
+:root {
+  --primary-blue: #2463eb;
+  --navy: #142b59;
+  --teal: #178b85;
+  --yellow: #ffd43b;
+  --light-blue: #f1f6ff;
+  --light-mint: #eefaf6;
+  --light-peach: #fff5ed;
+  --light-yellow: #fffbea;
+  --light-purple: #f6f0ff;
+  --text-color: #334155;
+  --muted-color: #64748b;
+  --white: #ffffff;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+html {
+  scroll-behavior: smooth;
 }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--navy);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+p {
+  margin-top: 0;
+  color: var(--text-color);
+}
+
+/* ================================
+   LINKS
+================================ */
+
+a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--navy);
+}
+
+/* ================================
+   BUTTONS
+================================ */
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* ================================
+   CARD DESIGN
+================================ */
 
 .card {
-  padding: 2em;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #edf0f5;
+  box-shadow: 0 4px 15px rgba(20, 43, 89, 0.04);
+  transition: all 0.3s ease;
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(20, 43, 89, 0.08);
 }
+
+/* ================================
+   SECTION STYLES
+================================ */
+
+.section {
+  width: 100%;
+  padding: 70px 5%;
+}
+
+.section-blue {
+  background: var(--light-blue);
+}
+
+.section-mint {
+  background: var(--light-mint);
+}
+
+.section-peach {
+  background: var(--light-peach);
+}
+
+.section-yellow {
+  background: var(--light-yellow);
+}
+
+.section-purple {
+  background: var(--light-purple);
+}
+
+.section-white {
+  background: var(--white);
+}
+
+/* ================================
+   SECTION HEADINGS
+================================ */
+
+.section-heading {
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  max-width: 700px;
+  font-size: 15px;
+  color: var(--muted-color);
+}
+
+/* ================================
+   CONTAINER
+================================ */
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ================================
+   IMAGES
+================================ */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.image-container {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.04);
+}
+
+/* ================================
+   PASTEL FEATURE CARDS
+================================ */
+
+.feature-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #edf0f5;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(20, 43, 89, 0.06);
+}
+
+.feature-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+/* ================================
+   BADGES
+================================ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.badge-blue {
+  background: #e8f0ff;
+  color: #2463eb;
+}
+
+.badge-teal {
+  background: #e4f7f2;
+  color: #178b85;
+}
+
+.badge-yellow {
+  background: #fff5c7;
+  color: #9a7200;
+}
+
+.badge-purple {
+  background: #f0e8ff;
+  color: #7c3aed;
+}
+
+/* ================================
+   LIST ITEMS
+================================ */
+
+.list-item {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(20, 43, 89, 0.04);
+  border: 1px solid #f1f3f7;
+}
+
+/* ================================
+   CTA SECTION
+================================ */
+
+.cta-section {
+  border-radius: 24px;
+  background: linear-gradient(135deg, #2164d9, #128b85);
+  color: var(--white);
+  padding: 40px;
+  overflow: hidden;
+}
+
+.cta-section h2 {
+  color: var(--white);
+}
+
+.cta-section p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ================================
+   ANIMATIONS
+================================ */
 
 @keyframes pulse {
   0% {
     opacity: 0.1;
   }
+
   50% {
     opacity: 0.3;
   }
+
   100% {
     opacity: 0.1;
   }
@@ -57,22 +315,94 @@
   0% {
     transform: translate(0px, 0px) scale(1);
   }
+
   33% {
-    transform: translate(30px, -50px) scale(1.1);
+    transform: translate(20px, -20px) scale(1.05);
   }
+
   66% {
-    transform: translate(-20px, 20px) scale(0.9);
+    transform: translate(-15px, 15px) scale(0.95);
   }
+
   100% {
     transform: translate(0px, 0px) scale(1);
   }
 }
 
 @keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
+  0%,
+  100% {
+    transform: translateY(-15%);
   }
+
   50% {
     transform: translateY(0);
+  }
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 55px 4%;
+  }
+
+  .section-heading h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 0;
+  }
+
+  .section {
+    padding: 45px 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 26px;
+  }
+
+  .card,
+  .feature-card {
+    padding: 20px;
+  }
+
+  .cta-section {
+    padding: 28px 22px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 35px 16px;
+  }
+
+  .section-heading h2 {
+    font-size: 23px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
+/* ================================
+   REDUCED MOTION ACCESSIBILITY
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

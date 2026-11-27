@@ -1,113 +1,113 @@
-import React from 'react';
-import { Monitor, Clock, Globe } from 'lucide-react';
-import josephImage from '../assets/optimized/joseph-gonzalez-iFgRcqHznqg-unsplash.webp';
+import React from "react";
+import {
+  Monitor,
+  Globe,
+  Video,
+  Clock,
+  Users,
+} from "lucide-react";
 
-const k12onlineschoolFeatureSection = () => {
+const K12OnlineSchoolFeatureSection = () => {
   const features = [
     {
       id: 1,
-      title: "Technology Driven Learning",
-      description: "Our Online Learning School provides a seamless, tech-driven learning experience. With features such as progress tracking, on-demand access to materials, and interactive tools, our learners and expert faculty are always supported. Our Online Learning School's ease of use provides a holistic learning experience.",
-      icon: <Monitor className="w-6 h-6" />,
-      iconColor: "text-sky-500",
-      bgColor: "bg-sky-50"
+      title: "Learn from anywhere",
+      description:
+        "The flexibility of online learning allows your child to learn from anywhere in the world, making education accessible and convenient.",
+      icon: <Monitor className="w-5 h-5" />,
+      iconColor: "text-blue-600",
+      bgColor: "bg-blue-100",
+      cardColor: "bg-white",
     },
     {
       id: 2,
-      title: "Anytime Learning",
-      description: "With over 1,250 hours of live, interactive classes conducted daily, our online school learners engage in dynamic, real-time learning. All sessions are recorded, giving learners the flexibility to revisit lessons anytime and anywhere, making our learner community truly diverse and our educational borderless.",
-      icon: <Clock className="w-6 h-6" />,
-      iconColor: "text-blue-500",
-      bgColor: "bg-blue-50"
+      title: "Same curriculum in every market",
+      description:
+        "Whether you live in Dubai, Delhi or Toronto, your child follows the same programmes and curriculum.",
+      icon: <Globe className="w-5 h-5" />,
+      iconColor: "text-teal-600",
+      bgColor: "bg-teal-100",
+      cardColor: "bg-white",
     },
     {
       id: 3,
-      title: "Future Ready Education",
-      description: "Offering globally recognized curriculums with a future-oriented approach, k12onlineschool prepares learners for success not only academically but in a rapidly evolving world. It enables us cater to both local and global educational standards, opening doors to international opportunities.",
-      icon: <Globe className="w-6 h-6" />,
-      iconColor: "text-indigo-500",
-      bgColor: "bg-indigo-50"
-    }
+      title: "Small online classes",
+      description:
+        "PLACEHOLDER: Confirm the maximum class size and teacher-to-student ratio.",
+      icon: <Video className="w-5 h-5" />,
+      iconColor: "text-yellow-600",
+      bgColor: "bg-yellow-100",
+      cardColor: "bg-yellow-50",
+    },
+    {
+      id: 4,
+      title: "A daily timetable that fits your time zone",
+      description:
+        "Classes are scheduled around key regions, so lessons fit your family's daily routine.",
+      icon: <Clock className="w-5 h-5" />,
+      iconColor: "text-orange-600",
+      bgColor: "bg-orange-100",
+      cardColor: "bg-orange-50",
+    },
+    {
+      id: 5,
+      title: "Parents stay informed",
+      description:
+        "Regular updates, progress reports and communication help parents stay involved in their child's learning.",
+      icon: <Users className="w-5 h-5" />,
+      iconColor: "text-purple-600",
+      bgColor: "bg-purple-100",
+      cardColor: "bg-purple-50",
+    },
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row w-full min-h-screen bg-white font-sans overflow-hidden">
-      
-      {/* LEFT SIDEBAR SECTION (Blue Background) */}
-      <div className="relative w-full lg:w-[35%] bg-blue-300 min-h-[300px] lg:min-h-auto flex items-center justify-center lg:block">
-        
-        {/* Decorative Circles (Top Right of the sidebar) */}
-        <div className="absolute top-8 right-8 lg:-right-6 flex gap-3 z-20">
-          <div className="w-4 h-4 rounded-full bg-sky-400"></div>
-          <div className="w-4 h-4 rounded-full bg-blue-600"></div>
-          <div className="w-4 h-4 rounded-full bg-blue-900"></div>
-        </div>
+    <section className="w-full bg-[#F1F6FF] py-16 px-5 md:px-10 lg:px-16 font-sans">
+      <div className="max-w-7xl mx-auto">
 
-        {/* Floating Image Card */}
-        <div className="relative z-10 w-96 h-[28rem] lg:absolute lg:top-1/2 lg:right-[-100px] lg:transform lg:-translate-y-1/2 shadow-2xl rounded-lg overflow-hidden border-4 border-white/10 group">
-          <img 
-            src={josephImage} 
-            alt="Online Education" 
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-blue-500/80 to-transparent"></div>
-          
-          <div className="absolute bottom-4 left-4">
-             <div className="bg-white/20 backdrop-blur-md p-2 rounded-lg border border-white/30">
-                <Monitor className="text-white w-6 h-6" />
-             </div>
-          </div>
-        </div>
+        {/* Section Heading */}
+        <div className="text-center mb-10">
+          <span className="inline-block text-[10px] font-bold uppercase tracking-[2px] text-teal-600 bg-teal-50 px-3 py-1 rounded-full mb-3">
+            Why online school
+          </span>
 
-        {/* Background Pattern for Sidebar */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-            <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-               <path d="M0 100 L100 0 L0 0 Z" fill="white" />
-            </svg>
-        </div>
-      </div>
-
-      {/* RIGHT CONTENT SECTION */}
-      <div className="flex-1 px-6 py-12 lg:p-24 lg:pl-32 bg-white">
-        <div className="max-w-3xl mx-auto lg:mx-0">
-          
-          {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-12 relative inline-block">
-            Why k12onlineschool is better
-            <span className="absolute -bottom-2 left-0 w-1/3 h-1 bg-sky-400 rounded-full"></span>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#142B59]">
+            Why families choose an online school
           </h2>
+        </div>
 
-          {/* Cards List */}
-          <div className="space-y-8">
-            {features.map((feature) => (
-              <div 
-                key={feature.id} 
-                className="group flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-white border border-slate-100 hover:border-sky-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+        {/* Feature Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          {features.map((feature) => (
+            <div
+              key={feature.id}
+              className={`${feature.cardColor} rounded-xl p-5 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1`}
+            >
+              {/* Icon */}
+              <div
+                className={`w-10 h-10 ${feature.bgColor} rounded-lg flex items-center justify-center mb-4`}
               >
-                {/* Icon Box */}
-                <div className={`shrink-0 w-14 h-14 rounded-xl ${feature.bgColor} flex items-center justify-center transition-colors group-hover:bg-blue-950`}>
-                  <div className={`${feature.iconColor} group-hover:text-white transition-colors`}>
-                    {feature.icon}
-                  </div>
-                </div>
-
-                {/* Text Content */}
-                <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-blue-950 uppercase tracking-wide">
-                    {feature.title}
-                  </h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
+                <span className={feature.iconColor}>
+                  {feature.icon}
+                </span>
               </div>
-            ))}
-          </div>
+
+              {/* Content */}
+              <h3 className="text-sm font-bold text-[#142B59] mb-2">
+                {feature.title}
+              </h3>
+
+              <p className="text-xs leading-relaxed text-gray-600">
+                {feature.description}
+              </p>
+            </div>
+          ))}
 
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default k12onlineschoolFeatureSection;
+export default K12OnlineSchoolFeatureSection;

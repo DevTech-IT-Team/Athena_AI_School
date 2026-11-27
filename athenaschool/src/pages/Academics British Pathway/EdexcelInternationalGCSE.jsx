@@ -5,110 +5,192 @@ const EdexcelInternationalGCSE = () => {
   return (
     <>
       <div className="academics-page">
+        {/* Hero Section */}
         <div className="relative h-[60vh] min-h-[400px] bg-gradient-to-br from-white via-blue-400 to-blue-950 flex items-center justify-center text-center overflow-hidden">
           <div className="relative z-10 px-8 max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">Edexcel International GCSE</h1>
-            <p className="text-lg md:text-xl font-light opacity-90">Wherever your child wishes to go help them get there with Edexcel International GCSE</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
+              Edexcel International GCSE
+            </h1>
+            <p className="text-lg md:text-xl font-light opacity-90">
+              Courses, Assessment and Exams
+            </p>
           </div>
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
         <div className="academics-content">
+          {/* Breadcrumb */}
           <div className="academics-breadcrumb">
             <a href="/">Home</a> &gt; Edexcel International GCSE
           </div>
 
+          {/* Introduction */}
           <div className="academics-section">
-            <h2>Edexcel International GCSE</h2>
+            <h2>Edexcel International GCSE Online: Courses and Exams</h2>
             <p>
-              Pearson is the largest awarding organisation in the UK. Pearson Edexcel is best placed to provide qualifications that are recognised as being most closely aligned with the British educational system. With over 3.4 million learners studying our qualifications worldwide, it offers qualifications to 6,500 schools, colleges and employers globally and marks over 9 million exam scripts on behalf of the UK Department for Education each year. It may be noted that Pearson Edexcel is regulated by Ofqual, UK.
+              This page focuses on the Pearson Edexcel International GCSE
+              qualification itself: how it is graded, when exams take place
+              and how entries work for an online student. For our Grades 9–10
+              programme as a whole, see our online IGCSE school page.
             </p>
-            <p>
-              Pearson Edexcel International qualifications come from the same team that provides the UK regulated versions and therefore ensures comparability to the UK versions and alignment to the UK government's intentions to raise standards.
-            </p>
-            <p>
-              International GCSEs are part of iProgress, the complete series of Pearson Edexcel academic qualifications for 5 to 19-year-olds for international schools. Edexcel Assessments only offer the 9–1 grading and chose not to continue to provide A*-G. The Assessments are linear over two years programme and offer November and May/June Exam Series.
-            </p>
-          </div>
 
-          <div className="academics-section">
-            <h2>Study Options</h2>
-            <p>
-              Learners can pursue Edexcel International GCSE either full-time or part-time. Under full-time, the learners will be studying any five of the following subjects:
-            </p>
-            <div className="subjects-grid">
-              <div className="subject-item">Accounting</div>
-              <div className="subject-item">Art and Design</div>
-              <div className="subject-item">Biology</div>
-              <div className="subject-item">Business</div>
-              <div className="subject-item">Chemistry</div>
-              <div className="subject-item">Chinese</div>
-              <div className="subject-item">Commerce</div>
-              <div className="subject-item">Computer Science</div>
-              <div className="subject-item">Economics</div>
-              <div className="subject-item">English (as 2nd language)</div>
-              <div className="subject-item">English Language A</div>
-              <div className="subject-item">English Language B</div>
-              <div className="subject-item">English Literature</div>
-              <div className="subject-item">French</div>
-              <div className="subject-item">Further Pure Mathematics</div>
-              <div className="subject-item">Geography</div>
-              <div className="subject-item">Global Citizenship</div>
-              <div className="subject-item">History</div>
-              <div className="subject-item">Human Biology</div>
-              <div className="subject-item">Information and Communication Technology</div>
-              <div className="subject-item">Mathematics</div>
-              <div className="subject-item">Mathematics A</div>
-              <div className="subject-item">Mathematics B</div>
-              <div className="subject-item">Physics</div>
-              <div className="subject-item">Science (Double Award)</div>
-              <div className="subject-item">Science (Single Award)</div>
-              <div className="subject-item">Spanish</div>
+            <div className="cta-buttons">
+              <button className="btn-primary">
+                Book a free 2-week trial
+              </button>
+              <button className="btn-secondary">
+                Apply for 2027-28
+              </button>
             </div>
+          </div>
+
+          {/* Qualification */}
+          <div className="academics-section">
+            <h2>About the Qualification</h2>
             <p>
-              We may add or remove subjects from our programme offering subject to changes by Pearson Edexcel and learner interest.
-            </p>
-            <p>
-              Under part-time, learners can opt to study any one or more of the above subjects while continuing to study in a physical school or as a private candidate.
+              Pearson Edexcel International GCSEs are qualifications for
+              students of around 14 to 16, designed for an international
+              audience. Each subject is assessed mainly through written
+              exams at the end of the course and graded 9 to 1. Many
+              students take between five and nine subjects.
             </p>
           </div>
 
+          {/* Exam Series */}
           <div className="academics-section">
-            <h2>Important Notes</h2>
+            <h2>Exam Series</h2>
+            <p>
+              Pearson runs International GCSE exams in set exam series each
+              year, with the main series in the summer and further series
+              for some subjects. Teachers plan the course so students are
+              ready for the series they enter.
+            </p>
+            <p>
+              [PLACEHOLDER: Confirm which series Edulectual K12 students
+              usually enter.]
+            </p>
+          </div>
+
+          {/* Exam Centres */}
+          <div className="academics-section">
+            <h2>Exam Centres and Entries for Online Students</h2>
+            <p>
+              Because Edulectual K12 is an online school, students sit
+              their exams in person at a Pearson-approved exam centre,
+              often a local school or British Council office that accepts
+              external candidates. We will:
+            </p>
+
+            <ul>
+              <li>
+                Help you find a centre near your home in India, the Gulf,
+                the UK or elsewhere.
+              </li>
+              <li>
+                Explain entry deadlines, which are usually several months
+                before the exam.
+              </li>
+              <li>
+                Provide coursework or endorsement evidence where a subject
+                needs it.
+              </li>
+            </ul>
+
+            <p>
+              Exam entry fees are set by the exam centre and paid directly
+              to it, so they are not part of our tuition.
+            </p>
+          </div>
+
+          {/* Preparation */}
+          <div className="academics-section">
+            <h2>How We Prepare Students</h2>
+            <ul>
+              <li>
+                Topic-by-topic teaching mapped to the Pearson specification.
+              </li>
+              <li>
+                Timed past-paper practice with mark schemes.
+              </li>
+              <li>
+                Mock exams and individual feedback.
+              </li>
+              <li>
+                Exam-technique workshops in the final term.
+              </li>
+            </ul>
+          </div>
+
+          {/* Choosing Exam Centre */}
+          <div className="academics-section">
+            <h2>Choosing an Exam Centre</h2>
+            <p>
+              When choosing a centre, check that it accepts external
+              candidates for the subjects your child takes, how far it is
+              from home, its entry deadlines and its fees. Centres in the
+              Gulf, India and the UK publish this information on their
+              websites or will confirm it by email. We share a checklist
+              so families can compare centres easily.
+            </p>
+          </div>
+
+          {/* Results */}
+          <div className="academics-section">
+            <h2>Results and Certificates</h2>
+            <p>
+              Results are released by Pearson on a set date after each
+              series, and certificates follow later through the exam
+              centre. We help students understand their results and plan
+              the next step.
+            </p>
+          </div>
+
+          {/* FAQs */}
+          <div className="academics-section">
+            <h2>Frequently Asked Questions</h2>
+
             <div className="notes-section">
               <div className="note-item">
-                <h4>Minimum Cohort Size</h4>
-                <p>A cohort of a minimum of 10 learners is mandatory to offer a subject. Learners may be asked to accept a different subject with fewer than 10 learners.</p>
+                <h4>How is the Edexcel International GCSE graded?</h4>
+                <p>
+                  International GCSEs are graded from 9 (highest) to 1.
+                </p>
               </div>
+
               <div className="note-item">
-                <h4>Exam Series</h4>
-                <p>The Exam Series may change based on the latest update from Pearson Edexcel. Not all subjects are offered in both June and November series.</p>
+                <h4>Can online students sit Edexcel exams?</h4>
+                <p>
+                  Yes. They sit exams in person at a Pearson-approved
+                  exam centre that accepts external candidates.
+                </p>
               </div>
+
               <div className="note-item">
-                <h4>Learning Materials</h4>
-                <p>We follow Pearson coursebooks and workbooks for core subjects.</p>
+                <h4>Who pays the exam fees?</h4>
+                <p>
+                  Families pay exam entry fees directly to the exam
+                  centre. They are not included in tuition.
+                </p>
               </div>
             </div>
           </div>
 
-          <div className="academics-section">
-            <h2>Additional Information</h2>
-            <p>
-              For more details on the Edexcel International GCSE Subjects and Curriculum, please visit: 
-              <a href="https://qualifications.pearson.com/en/qualifications/edexcel-international-gcses.html" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 className="external-link">
-                https://qualifications.pearson.com/en/qualifications/edexcel-international-gcses.html
-              </a>
-            </p>
-          </div>
-
+          {/* Admissions */}
           <div className="academics-cta">
-            <h3>"The change I have seen in my children is phenomenal. They want to explore more about topics taught in school!"</h3>
+            <h2>Admissions for 2027-28 Are Open</h2>
+            <p>
+              Try a free 2-week trial class with our teachers, then apply
+              when you are ready. The ₹999 registration fee is waived
+              during our launch.
+            </p>
+
             <div className="cta-buttons">
-              <button className="btn-primary">Enquire Now</button>
-              <button className="btn-secondary">Download Prospectus</button>
+              <button className="btn-primary">
+                Book a free 2-week trial
+              </button>
+              <button className="btn-secondary">
+                Apply for 2027-28
+              </button>
             </div>
           </div>
         </div>

@@ -5,120 +5,178 @@ const EdexcelInternationalAdvancedLevel = () => {
   return (
     <>
       <div className="academics-page">
+        {/* Hero Section */}
         <div className="relative h-[60vh] min-h-[400px] bg-gradient-to-br from-white via-blue-400 to-blue-950 flex items-center justify-center text-center overflow-hidden">
           <div className="relative z-10 px-8 max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">Edexcel International Advanced Level</h1>
-            <p className="text-lg md:text-xl font-light opacity-90">From here to the world's leading universities</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
+              Edexcel International A Level (IAL) Online
+            </h1>
+            <p className="text-lg md:text-xl font-light opacity-90">
+              Flexible learning, modular examinations and a pathway to universities worldwide.
+            </p>
+
+            <div className="cta-buttons mt-6">
+              <button className="btn-primary">Book a free 2-week trial</button>
+              <button className="btn-secondary">Apply for 2027-28</button>
+            </div>
           </div>
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
+        {/* Main Content */}
         <div className="academics-content">
+          {/* Breadcrumb */}
           <div className="academics-breadcrumb">
-            <a href="/">Home</a> &gt; Edexcel International Advanced Level
+            <a href="/">Home</a> &gt; Edexcel International A Level
           </div>
 
+          {/* Introduction */}
           <div className="academics-section">
-            <h2>Edexcel International Advanced Level</h2>
+            <h2>Edexcel International A Level (IAL) Online</h2>
             <p>
-              Pearson is the largest awarding organisation in the UK. Pearson Edexcel is best placed to provide qualifications that are recognised as being most closely aligned with the British educational system. With over 3.4 million learners studying our qualifications worldwide, it offers qualifications to 6,500 schools, colleges and employers globally and marks over 9 million exam scripts on behalf of the UK Department for Education each year. It may be noted that Pearson Edexcel is regulated by Ofqual, UK.
+              This page explains the Pearson Edexcel International A Level,
+              usually shortened to IAL, from an exam point of view: how units
+              work, when you can sit them and what online students need to
+              arrange. For subject choices and our wider Grades 11–12 programme,
+              see our A Levels online page.
             </p>
-            <p>
-              Pearson Edexcel International qualifications come from the same team that provides the UK regulated versions and therefore ensures comparability to the UK versions and alignment to the UK government's intentions to raise standards.
-            </p>
-          </div>
 
-          <div className="academics-section">
-            <h2>About International Advanced Levels (IAL)</h2>
-            <p>
-              Pearson Edexcel International Advanced Levels (IAL) are globally recognised qualifications which open doors to top universities worldwide. Available for a large number of subjects, they have a modular structure yet remain comparable to UK AS/A levels, as confirmed by NARIC, the national agency responsible for providing information and expert opinion on qualifications and skills worldwide.
-            </p>
-            <p>
-              IAL are part of iProgress, the complete series of Pearson Edexcel academic qualifications for 5 to 19-year-olds for international schools. Edexcel Assessments only offer the 9–1 grading and chose not to continue to offer A*-G. The Assessments are linear over two years programme and offer November and May/June Exam Series.
-            </p>
-          </div>
-
-          <div className="academics-section">
-            <h2>Study Options</h2>
-            <p>
-              Learners can pursue Edexcel IAL either full-time or part-time. Under full-time, the learners will be studying any three of the following subjects:
-            </p>
-            <div className="subjects-table">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Subject Code</th>
-                    <th>Subject Name</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>WPH1</td>
-                    <td>Physics</td>
-                  </tr>
-                  <tr>
-                    <td>WBI1</td>
-                    <td>Biology</td>
-                  </tr>
-                  <tr>
-                    <td>WCH1</td>
-                    <td>Chemistry</td>
-                  </tr>
-                  <tr>
-                    <td>WMA1</td>
-                    <td>Mathematics</td>
-                  </tr>
-                  <tr>
-                    <td>WEN01</td>
-                    <td>English Language B</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="cta-buttons mt-6">
+              <button className="btn-primary">Book a free 2-week trial</button>
+              <button className="btn-secondary">Apply for 2027-28</button>
             </div>
+          </div>
+
+          {/* Structure */}
+          <div className="academics-section">
+            <h2>How IAL is Structured</h2>
             <p>
-              We may add or remove subjects from our programme offering subject to changes by Pearson Edexcel and learner interest.
-            </p>
-            <p>
-              Under part-time, learners can opt to study any one or more of the above subjects while continuing to study in a physical school or as a private candidate.
+              Most IAL subjects are split into units. The first units make up
+              the International AS, roughly the first year, and the remaining
+              units complete the full International A Level. Because units are
+              examined separately, students can spread their exams across the
+              two years.
             </p>
           </div>
 
+          {/* Grading */}
           <div className="academics-section">
-            <h2>Important Notes</h2>
+            <h2>Grading and Resits</h2>
+            <p>
+              Full International A Levels are graded A* to E. Students can
+              resit individual units to improve their results. Resit policies
+              and result considerations are explained to families during the
+              academic planning process.
+            </p>
+          </div>
+
+          {/* Exam Series */}
+          <div className="academics-section">
+            <h2>Exam Series and Centres</h2>
+            <p>
+              Pearson offers IAL exams in several series each year for many
+              subjects. Online students sit them in person at a Pearson-approved
+              exam centre. We help each family choose a centre, plan which units
+              to take in each series and meet entry deadlines.
+            </p>
+            <p>
+              Exam entry fees are paid directly to the centre and are not part
+              of tuition.
+            </p>
+          </div>
+
+          {/* Teaching */}
+          <div className="academics-section">
+            <h2>How We Teach IAL</h2>
+            <ul>
+              <li>Units taught in the order students will sit them.</li>
+              <li>Past-paper practice and examiner-style marking.</li>
+              <li>Mock exams before each examination series.</li>
+              <li>Guidance on predicted grades for university applications.</li>
+            </ul>
+          </div>
+
+          {/* Universities */}
+          <div className="academics-section">
+            <h2>Universities</h2>
+            <p>
+              International A Levels are accepted for university entry in the
+              UK and by universities in many other countries. Students should
+              always check the requirements of the specific universities and
+              courses they are considering.
+            </p>
+          </div>
+
+          {/* Unit Timetable */}
+          <div className="academics-section">
+            <h2>Planning Your Unit Timetable</h2>
+            <p>
+              Because IAL is modular, each student's exam plan can be shaped
+              around their strengths and university deadlines. Some students
+              sit their AS units at the end of Grade 11 so that they have
+              results to show universities, then complete the A Level units in
+              Grade 12. Others spread units more evenly.
+            </p>
+            <p>
+              Teachers agree the plan with each family at the start of Grade 11
+              and review it after each examination series.
+            </p>
+          </div>
+
+          {/* Practical Requirements */}
+          <div className="academics-section">
+            <h2>Practical and Endorsement Requirements</h2>
+            <p>
+              Some science subjects include practical skills that must be
+              evidenced. We explain how practical work is completed and
+              recorded for online students and how this fits with the exam
+              centre's requirements.
+            </p>
+          </div>
+
+          {/* FAQ */}
+          <div className="academics-section">
+            <h2>Frequently Asked Questions</h2>
+
             <div className="notes-section">
               <div className="note-item">
-                <h4>Minimum Cohort Size</h4>
-                <p>A cohort of a minimum of 10 learners is mandatory to offer a subject. Learners may be asked to accept a different subject with fewer than 10 learners.</p>
+                <h4>What is the difference between AS and A Level?</h4>
+                <p>
+                  The International AS covers roughly the first half of the
+                  course. Adding the remaining units completes the full
+                  International A Level.
+                </p>
               </div>
+
               <div className="note-item">
-                <h4>Exam Series</h4>
-                <p>The Exam Series may change based on the latest update from Pearson Edexcel. Not all subjects are offered in both June and November series.</p>
+                <h4>Can units be resat?</h4>
+                <p>
+                  Yes, individual units can be resat to improve results,
+                  subject to the applicable examination rules.
+                </p>
               </div>
+
               <div className="note-item">
-                <h4>Learning Materials</h4>
-                <p>We follow Pearson coursebooks and workbooks for core subjects.</p>
+                <h4>Are exam fees included in tuition?</h4>
+                <p>
+                  No. Families pay exam entry fees directly to the exam centre.
+                </p>
               </div>
             </div>
           </div>
 
-          <div className="academics-section">
-            <h2>Additional Information</h2>
-            <p>
-              For more details on the Edexcel IAL Subjects and Curriculum, please visit: 
-              <a href="https://qualifications.pearson.com/en/qualifications/edexcel-international-advanced-levels.html" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 className="external-link">
-                https://qualifications.pearson.com/en/qualifications/edexcel-international-advanced-levels.html
-              </a>
-            </p>
-          </div>
-
+          {/* Admissions CTA */}
           <div className="academics-cta">
-            <h3>"The change I have seen in my children is phenomenal. They want to explore more about topics taught in school!"</h3>
+            <h2>Admissions for 2027-28 Are Open</h2>
+            <p>
+              Try a free 2-week trial class with our teachers, then apply when
+              you are ready. The ₹999 registration fee is waived during our
+              launch.
+            </p>
+
             <div className="cta-buttons">
-              <button className="btn-primary">Enquire Now</button>
-              <button className="btn-secondary">Download Prospectus</button>
+              <button className="btn-primary">Book a free 2-week trial</button>
+              <button className="btn-secondary">Apply for 2027-28</button>
             </div>
           </div>
         </div>

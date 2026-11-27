@@ -1,112 +1,136 @@
 import React from 'react';
-import { Brain, Settings, Target, Headset, MessageCircleQuestion } from 'lucide-react';
 import heroImage from '../assets/gemini.webp';
 import OptimizedImage from './OptimizedImage';
+import { Link } from 'react-router-dom';
 
 const HeroOptimized = () => {
   return (
-    <section className="relative w-full min-h-screen bg-gradient-to-br from-blue-50 to-white overflow-hidden flex items-center justify-center font-sans">
+    <section
+      style={{
+        position: 'relative',
+        background: 'linear-gradient(160deg,#EAF3FF 0%,#F4F0FF 45%,#FFF1E8 100%)',
+        padding: '44px 0 120px',
+        overflow: 'hidden',
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        marginTop: 0,
+        paddingTop: 'calc(44px + 36px + 78px)', /* announce + nav */
+      }}
+    >
+      {/* Blob decorations */}
+      <span className="ek-blob" style={{ width: 420, height: 420, background: '#FFE3A3', opacity: .55, right: -120, top: -140 }} />
+      <span className="ek-blob" style={{ width: 260, height: 260, background: '#BFE9E2', opacity: .6, left: -90, bottom: -60 }} />
 
-      {/* --- Background Effects (Optimized) --- */}
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-950/5 via-blue-900/5 to-black/5 z-0"></div>
+      {/* Dot grid */}
+      <div style={{
+        position: 'absolute', left: '46%', top: 60, width: 150, height: 110, zIndex: 0, pointerEvents: 'none',
+        backgroundImage: 'radial-gradient(#1660D9 2px, transparent 2.5px)',
+        backgroundSize: '18px 18px', opacity: .18,
+      }} />
 
-      {/* Abstract Grid/Dots Pattern (Optimized) */}
-      <div className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: 'radial-gradient(circle, #1e3a8a 1px, transparent 1px)',
-          backgroundSize: '50px 50px',
-          willChange: 'transform'
-        }}>
-      </div>
+      <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0 24px', width: '100%', position: 'relative', zIndex: 1 }}>
+        <div style={{
+          display: 'grid', gridTemplateColumns: '1.05fr .95fr',
+          gap: 56, alignItems: 'center',
+        }} className="hero-grid-ek">
 
-      {/* Decorative Side Lines (Bottom Left) */}
-      <div className="absolute bottom-10 left-10 hidden md:block opacity-50">
-        <svg width="200" height="150" viewBox="0 0 200 150" fill="none" stroke="#1e3a8a" strokeWidth="2">
-          <path d="M190 140 L150 100 L50 100 L10 60" />
-          <path d="M140 140 L110 110" />
-          <path d="M80 140 L60 120" />
-          <circle cx="10" cy="60" r="3" fill="#1e3a8a" />
-        </svg>
-      </div>
+          {/* ── Left column: text ── */}
+          <div>
+            <span className="ek-eyebrow">★ Admissions open for 2027-28</span>
 
-      {/* Vertical Dotted Line (Left & Right) */}
-      <div className="absolute left-6 top-1/4 bottom-1/4 w-1 border-l-2 border-dotted border-blue-950/20 hidden md:block"></div>
-      <div className="absolute right-6 top-1/4 bottom-1/4 w-1 border-r-2 border-dotted border-blue-950/20 hidden md:block"></div>
+            <h1 style={{ marginBottom: 0 }}>
+              k12<span style={{ color: 'var(--blue-600)' }}>online</span>school
+            </h1>
 
-      {/* --- Main Content Container --- */}
-      <div className="container mx-auto px-6 py-12 relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+            <p style={{ fontSize: 19, maxWidth: 620, margin: '22px 0 0', color: 'var(--muted)' }}>
+              PERSONALIZED ONLINE SCHOOLING DESIGNED FOR THE MODERN LEARNER
+            </p>
 
-        {/* --- Left Column: Text --- */}
-        <div className="text-center lg:text-left flex flex-col items-center lg:items-start max-w-full">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black text-blue-950 tracking-tight drop-shadow-sm max-w-full break-words">
-            k12<span className="text-sky-600">online</span>school
-          </h1>
-          <div className="h-1 w-24 bg-sky-500 my-4 rounded-full lg:hidden"></div>
-          <p className="text-base sm:text-lg md:text-xl text-blue-800 tracking-widest font-light uppercase mt-2">
-            Find your path
-          </p>
+            <p style={{ fontSize: 16, maxWidth: 560, margin: '14px 0 0', color: 'var(--muted)', lineHeight: 1.65 }}>
+              Experience education tailored to your child's unique needs, interests, and learning
+              style. Our AI-powered platform adapts to create a perfect learning journey.
+            </p>
 
-          <p className="text-sm sm:text-base md:text-lg text-gray-700 font-medium mt-4 max-w-xl">
-            PERSONALIZED ONLINE SCHOOLING DESIGNED FOR THE MODERN LEARNER
-          </p>
+            {/* CTA row */}
+            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'center', marginTop: 34 }}>
+              <Link to="/contact" className="ek-btn ek-btn-primary">
+                Book a free trial <span style={{ transition: '.15s', display: 'inline-block' }}>→</span>
+              </Link>
+              <Link to="/apply-now" className="ek-btn ek-btn-secondary">
+                Apply for 2027-28
+              </Link>
+            </div>
 
-          <p className="text-xs sm:text-sm md:text-base text-gray-500 mt-2 max-w-lg leading-relaxed">
-            Experience education tailored to your child's unique needs, interests, and learning style. Our AI-powered platform adapts to create a perfect learning journey.
-          </p>
+            {/* Country pills */}
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 28 }}>
+              {['India', 'UAE', 'Qatar', 'Oman', 'Kuwait', 'Bahrain', 'UK', 'Australia', 'US', 'Canada'].map(c => (
+                <span key={c} style={{
+                  background: '#fff', borderRadius: 999, padding: '8px 14px',
+                  fontWeight: 700, fontSize: 14.5, boxShadow: 'var(--sh-1)', color: 'var(--ink)',
+                }}>{c}</span>
+              ))}
+            </div>
+          </div>
 
-          {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-4">
-            <button className="px-8 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-              Enquire Now
-            </button>
-            <button className="px-8 py-3 bg-blue-950/10 hover:bg-blue-950/20 border border-blue-950/30 rounded-full text-blue-950 font-semibold backdrop-blur-md transition-all duration-300 transform hover:scale-105">
-              Learn More
-            </button>
+          {/* ── Right column: ring art ── */}
+          <div className="ek-hero-art" style={{ maxWidth: 540, justifySelf: 'center', width: '100%' }}>
+            <div className="ek-ring" />
+            <div className="ek-photo">
+              <OptimizedImage
+                src={heroImage}
+                alt="k12onlineschool – child learning online"
+                width={500}
+                height={500}
+                priority={true}
+                loading="eager"
+                fetchpriority="high"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '62% 40%' }}
+              />
+            </div>
+
+            {/* Floating badge 1 – live dot */}
+            <div className="ek-float" style={{ left: '-6%', top: '12%' }}>
+              <span className="ek-ic" style={{ background: '#FFE4E9' }}>
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#E11D48', boxShadow: '0 0 0 5px rgba(225,29,72,.18)', display: 'block' }} />
+              </span>
+              <span>
+                Live online classes
+                <small>With qualified teachers</small>
+              </span>
+            </div>
+
+            {/* Floating badge 2 – star */}
+            <div className="ek-float" style={{ right: '-4%', bottom: '14%' }}>
+              <span className="ek-ic" style={{ background: 'var(--sun-50)' }}>★</span>
+              <span>
+                Nursery – Grade 12
+                <small>Edexcel or NIOS</small>
+              </span>
+            </div>
           </div>
         </div>
-
-        {/* --- Right Column: Robot & Icons --- */}
-        <div className="relative flex justify-center items-center">
-
-          {/* The Glowing Rings Background (Optimized) */}
-          <div className="absolute w-[200px] h-[200px] md:w-[300px] md:h-[300px] border border-blue-950/5 rounded-full"></div>
-          <div className="absolute w-[150px] h-[150px] md:w-[250px] md:h-[250px] border border-blue-950/10 rounded-full"></div>
-
-          {/* Main Gemini Image */}
-          <OptimizedImage
-            src={heroImage}
-            alt="k12onlineschool"
-            className="relative z-10 w-full max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl"
-            width={400}
-            height={400}
-            priority={true}
-            loading="eager"
-            fetchpriority="high"
-          />
-
-          {/* Floating Icons - Properly aligned in circular formation */}
-          <FloatingIcon icon={<Brain size={28} />} position="top-1/9 left-30 -translate-x-1/2.5 -translate-y-1/2" delay="0s" />
-          <FloatingIcon icon={<Settings size={28} />} position="top-0 left-1/2 -translate-x-1/2 -translate-y-full" delay="1s" />
-          <FloatingIcon icon={<Target size={28} />} position="top-1/9 right-35 translate-x-1/2 -translate-y-1/2" delay="2s" />
-          <FloatingIcon icon={<Headset size={28} />} position="bottom-1/2 right-25 translate-x-1/2 translate-y-1/2" delay="1.5s" />
-          <FloatingIcon icon={<MessageCircleQuestion size={28} />} position="bottom-1/2 left-14 translate-x-1/2 translate-y-1/2" delay="2.5s" />
-
-        </div>
-
       </div>
-    </section>
-  );
-};
 
-// Helper Component for the floating bubbles (Optimized)
-const FloatingIcon = ({ icon, position, delay: _delay }) => {
-  return (
-    <div
-      className={`absolute ${position} w-10 h-10 md:w-12 md:h-12 bg-blue-950/5 border border-blue-950/20 rounded-full flex items-center justify-center text-blue-950 z-20`}
-    >
-      {icon}
-    </div>
+      {/* Wave bottom */}
+      <svg
+        style={{ position: 'absolute', left: 0, right: 0, bottom: -1, height: 80, zIndex: 1, width: '100%' }}
+        viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"
+      >
+        <path d="M0 50 C 240 90, 480 10, 720 40 S 1200 80, 1440 30 V80 H0Z" fill="#fff" />
+      </svg>
+
+      <style>{`
+        @media (max-width: 900px) {
+          .hero-grid-ek { grid-template-columns: 1fr !important; }
+          .ek-hero-art { max-width: 440px !important; }
+        }
+        @media (max-width: 600px) {
+          .hero-grid-ek { gap: 22px !important; }
+          .ek-hero-art { max-width: 250px !important; margin: 0 auto; order: -1; }
+        }
+      `}</style>
+    </section>
   );
 };
 

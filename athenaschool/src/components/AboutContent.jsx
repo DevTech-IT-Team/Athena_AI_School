@@ -1,278 +1,582 @@
-import React, { useEffect } from 'react';
-import { 
-  GraduationCap, 
-  Target, 
-  Eye, 
-  User, 
-  Lightbulb, 
-  Heart, 
-  Users, 
-  Trophy, 
-  Globe, 
-  Rocket, 
-  Award, 
-  Star, 
-  CheckCircle, 
-  Building, 
-  Bot, 
-  Beaker, 
-  Book, 
-  Monitor, 
-  Circle, 
-  Palette, 
-  Utensils, 
-  TrendingUp, 
-  Scale, 
-  MessageCircle 
-} from 'lucide-react';
+import React from "react";
+import {
+  GraduationCap,
+  Lightbulb,
+  BookOpen,
+  Shield,
+  Code,
+  Users,
+  Globe,
+  MessageCircle,
+  ArrowRight,
+  Star,
+} from "lucide-react";
 
 const AboutContent = () => {
-  useEffect(() => {
-    // Removed AOS for performance - using CSS transitions instead
-  }, []);
-
   return (
-    <div className="font-sans bg-white text-gray-900 selection:bg-sky-400 selection:text-white">
-      {/* Hero Section - Centered Typography */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-b from-sky-50 to-white">
-        {/* Background Decorative Blob */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-sky-200/20 rounded-full blur-3xl -z-10"></div>
-        
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gray-900 leading-tight">
-            About<span className="text-sky-500">.</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto font-light leading-relaxed">
-            India's First AI & English Grammar School. <br />
-            Shaping Future Leaders with Innovation and Excellence.
-          </p>
-        </div>
-      </section>
+    <div className="font-sans bg-white text-gray-800">
 
-      {/* SECTION 1: STORY (Matches Image "About Us" Split Layout) */}
-      <section id="our-story" className="py-20 bg-white relative">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            
-            {/* Left Side: Visual Block (Replacing Image with Abstract Design) */}
+      {/* Hero Section */}
+      <section className="relative px-6 py-20 md:py-28 bg-gradient-to-br from-blue-50 to-white overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+
+          {/* Breadcrumb */}
+          <nav className="text-sm text-gray-500 mb-8">
+            <a href="/" className="hover:text-blue-600">Home</a>
+            <span className="mx-2">›</span>
+            <span>About</span>
+            <span className="mx-2">›</span>
+            <span className="text-gray-800">About Us</span>
+          </nav>
+
+          <div className="grid lg:grid-cols-2 gap-14 items-center">
+
+            {/* Hero Content */}
+            <div>
+              <span className="inline-block text-blue-600 font-semibold tracking-wide uppercase text-sm mb-4">
+                ★ About Us
+              </span>
+
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+                About Edulectual K12 Online School
+              </h1>
+
+              <p className="text-lg text-gray-700 leading-relaxed mt-6">
+                Edulectual K12 Online School is an online school for children
+                from Nursery to Grade 12. We teach two pathways, the Pearson
+                Edexcel British curriculum and the Indian curriculum with NIOS
+                examinations, and each one follows the same curriculum in every
+                country where we have families. We are opening admissions for
+                the 2027-28 academic year.
+              </p>
+
+              <div className="flex flex-wrap gap-4 mt-8">
+                <a
+                  href="/apply-now#free-trial"
+                  className="px-7 py-3 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
+                >
+                  Book a free 2-week trial →
+                </a>
+
+                <a
+                  href="/apply-now#apply"
+                  className="px-7 py-3 rounded-full border border-blue-600 text-blue-600 font-semibold hover:bg-blue-50 transition"
+                >
+                  Apply for 2027-28
+                </a>
+              </div>
+            </div>
+
+            {/* Hero Image */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-sky-100 to-sky-200 rounded-3xl p-10 border border-sky-300 shadow-2xl relative overflow-hidden group hover:border-sky-400 transition-colors duration-500">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-sky-400/20 rounded-bl-full"></div>
-                
-                <div className="relative z-10">
-                   <GraduationCap className="text-8xl text-sky-600 mb-6" />
-                   <h3 className="text-4xl font-bold text-gray-900 mb-2">15 Years</h3>
-                   <p className="text-gray-700 text-lg">Of Educational Excellence</p>
-                   
-                   <div className="mt-8 pt-8 border-t border-blue-700">
-                      <div className="flex items-center gap-4">
-                        <div className="bg-sky-500 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold">
-                          <Rocket />
-                        </div>
-                        <div>
-                          <p className="text-gray-900 font-bold">First AI School</p>
-                          <p className="text-sm text-gray-600">Pioneering Future Tech</p>
-                        </div>
-                      </div>
-                   </div>
+              <div className="bg-blue-100 rounded-3xl p-4 relative">
+                <div className="rounded-2xl overflow-hidden">
+                  <img
+                    src="/assets/images/family-india.jpg"
+                    alt="Family at home with a laptop and drawing activities"
+                    className="w-full h-[400px] object-cover"
+                  />
                 </div>
               </div>
-              {/* Decorative elements behind */}
-              <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-sky-300 rounded-3xl -z-10"></div>
-            </div>
 
-            {/* Right Side: Content */}
-            <div>
-              <h4 className="text-sky-600 font-bold uppercase tracking-wider mb-2">Our Story</h4>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">We Always Make The Best Education Accessible.</h2>
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                Founded in 2010, k12onlineschool emerged from a vision to revolutionize education in India. From a humble beginning with 50 students, we have grown into a premier institution with over 7500 students.
-              </p>
-              <p className="text-gray-700 mb-8 leading-relaxed">
-                We are India's First AI & English Grammar School, creating an environment that prepares students not just for exams, but for life.
-              </p>
-              
-              <button className="bg-white text-blue-950 px-8 py-3 rounded-full font-bold hover:bg-sky-400 hover:text-white transition-all duration-300">
-                Contact Us
-              </button>
+              {/* Floating Cards */}
+              <div className="absolute -left-4 bottom-8 bg-white shadow-xl rounded-2xl p-4 flex items-center gap-3">
+                <div className="bg-pink-100 p-3 rounded-full">
+                  <GraduationCap className="text-blue-600" />
+                </div>
+
+                <div>
+                  <p className="font-semibold text-gray-900">
+                    Live online classes
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    Nursery to Grade 12
+                  </p>
+                </div>
+              </div>
+
+              <div className="absolute -right-4 top-8 bg-white shadow-xl rounded-2xl p-4 flex items-center gap-3">
+                <div className="bg-yellow-100 p-3 rounded-full">
+                  <Star className="text-yellow-500" />
+                </div>
+
+                <div>
+                  <p className="font-semibold text-gray-900">
+                    Admissions open
+                  </p>
+                  <p className="text-sm text-gray-500">2027-28</p>
+                </div>
+              </div>
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* SECTION 2: STATS & VALUES (Matches Image "Skills/Stats" Split Layout) */}
-      <section className="py-20 bg-gray-50 border-t border-gray-200">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            
-            {/* Left: Values (Styled like Progress Bars/Skills in the image) */}
-            <div>
-              <h4 className="text-sky-600 font-bold uppercase tracking-wider mb-2">Our Values</h4>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Core Principles That Guide Us</h2>
-              
-              <div className="space-y-6">
-                {[
-                  { label: 'Innovation & Technology', percent: '100%' },
-                  { label: 'Academic Integrity', percent: '100%' },
-                  { label: 'Global Citizenship', percent: '100%' },
-                  { label: 'Student Excellence', percent: '100%' }
-                ].map((skill, idx) => (
-                  <div key={idx}>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-gray-900 font-medium">{skill.label}</span>
-                      <span className="text-sky-600">{skill.percent}</span>
-                    </div>
-                    <div className="h-1 w-full bg-gray-300 rounded-full overflow-hidden">
-                      <div className="h-full bg-sky-500 w-full shadow-[0_0_10px_rgba(14,165,233,0.5)]"></div>
-                    </div>
-                  </div>
-                ))}
+      {/* Why We Started */}
+      <section className="py-20 bg-blue-50">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="grid md:grid-cols-2 gap-14 items-center">
+
+            {/* Image */}
+            <div className="relative">
+              <div className="rounded-3xl overflow-hidden">
+                <img
+                  src="/assets/images/parent-help.jpg"
+                  alt="Mother helping her daughter with homework"
+                  className="w-full h-[400px] object-cover"
+                  loading="lazy"
+                />
               </div>
             </div>
 
-            {/* Right: Stats Grid (Matches 2x2 Grid in Image) */}
-            <div className="grid grid-cols-2 gap-8">
-              {[
-                { value: '20+', label: 'Years Experience' },
-                { value: '7,500+', label: 'Happy Students' },
-                { value: '500+', label: 'Cities Reached' },
-                { value: '78+', label: 'Countries' }
-              ].map((stat, index) => (
-                <div key={index} className="text-center p-6 bg-white rounded-2xl border border-gray-200 hover:shadow-lg transition-all">
-                  <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">{stat.value}</h3>
-                  <p className="text-gray-600 text-sm md:text-base uppercase tracking-wider">{stat.label}</p>
-                </div>
-              ))}
+            {/* Content */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Why we started an online school
+              </h2>
+
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Many families need a school that does not depend on where they
+                live. Parents relocate for work, children train seriously in a
+                sport or the arts, some live far from a good school, and others
+                simply want more say in how and when their child learns.
+              </p>
+
+              <p className="text-gray-700 leading-relaxed mb-6">
+                We built Edulectual K12 for them: a structured school day
+                delivered online, with real teachers, a clear curriculum and
+                recognised exams at the end of it.
+              </p>
+
+              <p className="text-gray-700 leading-relaxed">
+                We are not a tuition service or a recorded-video course. We aim
+                to give children everything a good school gives them, including
+                a timetable, a class, teachers who know them and a path to
+                qualifications, without the commute or the campus.
+              </p>
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision Grid */}
+      {/* Founders */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Founders
+            </h2>
+
+            <p className="text-gray-600 leading-relaxed">
+              Edulectual K12 Online School is led by the co-founders of
+              Athena LMS, the learning platform company behind our technology.
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 p-10 rounded-3xl border border-gray-200 hover:border-sky-400 transition-all group">
-              <Target className="text-5xl text-sky-600 mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-              <p className="text-gray-700">
-                To provide transformative education that empowers students to become critical thinkers, lifelong learners, and responsible global citizens through innovative teaching methods.
+
+            {/* Founder 1 */}
+            <div className="bg-blue-50 rounded-3xl p-8 border border-blue-100">
+              <div className="rounded-2xl overflow-hidden mb-6">
+                <img
+                  src="/assets/images/founder-paulmichael.jpg"
+                  alt="PaulMichael Rowland, Co-Founder of Edulectual K12 Online School"
+                  className="w-full h-72 object-cover"
+                  loading="lazy"
+                />
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                PaulMichael Rowland
+              </h3>
+
+              <p className="text-blue-600 font-medium mb-4">
+                Co-Founder
+              </p>
+
+              <p className="text-gray-700 leading-relaxed">
+                A leader with over 15 years of experience in educational
+                technology, PaulMichael is passionate about building learning
+                solutions that transform lives and bridge the gap between
+                traditional and digital education.
               </p>
             </div>
-            <div className="bg-gray-50 p-10 rounded-3xl border border-gray-200 hover:border-sky-400 transition-all group">
-              <Eye className="text-5xl text-sky-600 mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-              <p className="text-gray-700">
-                To be a global leader in education, recognized for our innovative approach to learning, commitment to excellence, and ability to prepare students for tomorrow.
+
+            {/* Founder 2 */}
+            <div className="bg-purple-50 rounded-3xl p-8 border border-purple-100">
+              <div className="rounded-2xl overflow-hidden mb-6">
+                <img
+                  src="/assets/images/founder-javed.jpg"
+                  alt="Javed Irshad, Co-Founder of Edulectual K12 Online School"
+                  className="w-full h-72 object-cover"
+                  loading="lazy"
+                />
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                Javed Irshad
+              </h3>
+
+              <p className="text-purple-600 font-medium mb-4">
+                Co-Founder
               </p>
+
+              <p className="text-gray-700 leading-relaxed">
+                An education specialist with 25 years of experience, including
+                8 years in e-learning and content writing, and an expert in
+                designing learning experiences that captivate and educate.
+              </p>
+
+              <p className="text-gray-700 mt-4">
+                Read more about the people who run the school on our leadership
+                page.
+              </p>
+
+              <a
+                href="/our-leaders"
+                className="inline-flex items-center gap-2 mt-4 text-blue-600 font-semibold hover:text-blue-800"
+              >
+                Meet our leadership team <ArrowRight size={18} />
+              </a>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* Leadership Team Cards (Light Theme) */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Leadership Team</h2>
-            <div className="w-20 h-1 bg-sky-500 mx-auto mt-4"></div>
+      {/* What We Believe */}
+      <section className="py-20 bg-orange-50">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="max-w-3xl mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              What we believe
+            </h2>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <div className="space-y-6">
+
             {[
-              { name: 'Dr. Rajesh Kumar', title: 'Founder & CEO' },
-              { name: 'Ms. Priya Sharma', title: 'Principal' },
-              { name: 'Mr. Amit Patel', title: 'Academic Director' },
-              { name: 'Dr. Sarah Johnson', title: 'Innovation Dir.' }
-            ].map((leader, index) => (
-              <div key={index} className="bg-white p-6 rounded-2xl text-center border border-gray-200 hover:-translate-y-2 transition-transform">
-                <div className="w-24 h-24 mx-auto bg-sky-100 rounded-full flex items-center justify-center mb-4 text-sky-600 text-3xl">
-                  <User />
-                </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-1">{leader.name}</h4>
-                <p className="text-sky-600 text-sm">{leader.title}</p>
+              "Every child can do well when teaching fits how they learn.",
+              "Technology should support teachers, not replace them.",
+              "Parents are partners, so they should always know how their child is doing.",
+              "A school's claims should be easy to check, so we publish our curriculum, fees and policies openly."
+            ].map((belief, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-4 bg-white rounded-2xl p-6 shadow-sm"
+              >
+                <CheckCircle className="text-green-500 flex-shrink-0 mt-1" />
+
+                <p className="text-gray-700 leading-relaxed">
+                  {belief}
+                </p>
               </div>
             ))}
+
           </div>
         </div>
       </section>
 
-      {/* Facilities Grid (Icon + Text) */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="mb-12 flex justify-between items-end border-b border-gray-200 pb-4">
-             <div>
-               <h4 className="text-sky-600 font-bold uppercase tracking-wider mb-2">Infrastructure</h4>
-               <h2 className="text-3xl font-bold text-gray-900">Campus Facilities</h2>
-             </div>
-             <div className="hidden md:block text-gray-600">State-of-the-Art Environment</div>
+      {/* Where We Are */}
+      <section className="py-16 bg-green-50">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="bg-white rounded-3xl p-8 md:p-12 border border-green-100">
+            <div className="flex flex-col md:flex-row gap-6 items-start">
+
+              <div className="bg-green-500 p-4 rounded-2xl text-white">
+                <Globe size={30} />
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-5">
+                  Where we are
+                </h2>
+
+                <p className="text-gray-700 leading-relaxed">
+                  Edulectual K12 is fully online, and we do not run a physical
+                  campus. Our team is reachable through our India and USA
+                  offices{" "}
+                  <span className="text-orange-600 font-medium">
+                    [PLACEHOLDER: Farah to confirm the addresses shown on the contact page]
+                  </span>.
+                  Families join us from India, the UAE, Qatar, Oman, Kuwait,
+                  Bahrain, the UK, Australia, the US and Canada.
+                </p>
+              </div>
+
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-             {[
-               { icon: Beaker, title: 'Science Labs' },
-               { icon: Book, title: 'Digital Library' },
-               { icon: Monitor, title: 'AI & Computer Labs' },
-               { icon: Circle, title: 'Sports Complex' },
-               { icon: Palette, title: 'Art Studios' },
-               { icon: Utensils, title: 'Modern Cafeteria' }
-             ].map((item, i) => (
-                <div key={i} className="flex items-center p-4 bg-gray-50 rounded-xl border border-gray-200 hover:border-sky-400 transition-colors">
-                   <div className="p-3 bg-sky-100 rounded-lg text-sky-600 text-xl mr-4">
-                      <item.icon />
-                   </div>
-                   <span className="text-lg font-medium text-gray-900">{item.title}</span>
+        </div>
+      </section>
+
+      {/* Facts At A Glance */}
+      <section className="py-20 bg-green-50">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              Facts at a glance
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            {[
+              {
+                icon: GraduationCap,
+                title: "Grades",
+                text: "Nursery to Grade 12.",
+                color: "bg-blue-100 text-blue-600"
+              },
+              {
+                icon: Shield,
+                title: "Pathways",
+                text: "Pearson Edexcel British; Indian curriculum (NIOS).",
+                color: "bg-green-100 text-green-600"
+              },
+              {
+                icon: BookOpen,
+                title: "Academic year now enrolling",
+                text: "2027-28.",
+                color: "bg-yellow-100 text-yellow-600"
+              },
+              {
+                icon: TrendingUp,
+                title: "Founded",
+                text: "[PLACEHOLDER: founding year].",
+                color: "bg-purple-100 text-purple-600"
+              },
+              {
+                icon: Users,
+                title: "Registered legal name",
+                text: "[PLACEHOLDER: legal entity name].",
+                color: "bg-pink-100 text-pink-600"
+              }
+            ].map((fact, index) => {
+              const Icon = fact.icon;
+
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300"
+                >
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 ${fact.color}`}>
+                    <Icon size={28} />
+                  </div>
+
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {fact.title}
+                  </h3>
+
+                  <p className="text-gray-600 leading-relaxed">
+                    {fact.text}
+                  </p>
                 </div>
-             ))}
+              );
+            })}
+
           </div>
         </div>
       </section>
 
-      {/* CTA Section (Light Theme) */}
-      <section className="relative py-24 bg-gradient-to-r from-sky-500 to-sky-600 overflow-hidden">
-        {/* Background Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-600 to-sky-700 opacity-50"></div>
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-        
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/30 mb-8">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
-            </span>
-            <span className="text-sm font-medium text-white uppercase tracking-wide">
-              ADMISSIONS OPEN 2026-2027
-            </span>
+      {/* FAQ */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="grid md:grid-cols-2 gap-12">
+
+            {/* FAQ Intro */}
+            <div>
+              <span className="text-blue-600 font-semibold uppercase tracking-wide">
+                FAQ
+              </span>
+
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-6">
+                Frequently asked questions
+              </h2>
+
+              <p className="text-gray-600 mb-6">
+                Still deciding? Explore more about Edulectual K12.
+              </p>
+
+              <div className="flex flex-wrap gap-3">
+
+                {[
+                  {
+                    text: "Meet our leadership team",
+                    link: "/our-leaders"
+                  },
+                  {
+                    text: "Our mission, vision and values",
+                    link: "/values-and-ethos"
+                  },
+                  {
+                    text: "British and Indian pathways explained",
+                    link: "/pathway"
+                  },
+                  {
+                    text: "Contact our admissions team",
+                    link: "/contact"
+                  },
+                  {
+                    text: "Apply for 2027-28",
+                    link: "/apply-now"
+                  }
+                ].map((chip, index) => (
+                  <a
+                    key={index}
+                    href={chip.link}
+                    className="px-4 py-2 rounded-full border border-blue-200 text-blue-600 text-sm hover:bg-blue-50 transition"
+                  >
+                    {chip.text}
+                  </a>
+                ))}
+
+              </div>
+            </div>
+
+            {/* FAQ Accordion */}
+            <div className="space-y-4">
+
+              <details open className="border border-gray-200 rounded-2xl p-6">
+                <summary className="font-semibold text-gray-900 cursor-pointer">
+                  Does Edulectual K12 have a campus?
+                </summary>
+
+                <p className="text-gray-600 mt-4 leading-relaxed">
+                  No. We are a fully online school. All classes, assessments
+                  and parent meetings take place online.
+                </p>
+              </details>
+
+              <details className="border border-gray-200 rounded-2xl p-6">
+                <summary className="font-semibold text-gray-900 cursor-pointer">
+                  Who founded Edulectual K12 Online School?
+                </summary>
+
+                <p className="text-gray-600 mt-4 leading-relaxed">
+                  The school is led by co-founders PaulMichael Rowland and
+                  Javed Irshad, who also co-founded Athena LMS.
+                </p>
+              </details>
+
+              <details className="border border-gray-200 rounded-2xl p-6">
+                <summary className="font-semibold text-gray-900 cursor-pointer">
+                  Which curricula do you teach?
+                </summary>
+
+                <p className="text-gray-600 mt-4 leading-relaxed">
+                  The Pearson Edexcel British pathway and the Indian curriculum
+                  pathway with NIOS examinations.
+                </p>
+              </details>
+
+            </div>
+
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 max-w-4xl mx-auto leading-tight">
-            We Are Always Ready To 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-100"> Shape The Future.</span>
-          </h2>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-            <a href="/admissions.html" className="bg-white text-sky-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 hover:text-sky-700 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
-              Apply Now
-            </a>
-            <a href="#" className="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-sky-600 transition-all duration-300">
-              Schedule Visit
-            </a>
+        </div>
+      </section>
+
+      {/* Admissions CTA */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="relative bg-blue-950 rounded-3xl overflow-hidden">
+
+            {/* Decorative */}
+            <div className="absolute -top-20 -right-20 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"></div>
+
+            <div className="grid lg:grid-cols-2 items-center">
+
+              {/* CTA Content */}
+              <div className="p-8 md:p-14 relative z-10">
+
+                <span className="inline-block px-4 py-2 rounded-full bg-blue-500/20 text-blue-200 text-sm font-semibold mb-6">
+                  Admissions Open 2027-28
+                </span>
+
+                <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                  Admissions for 2027-28 are open
+                </h2>
+
+                <p className="text-blue-100 leading-relaxed mb-6">
+                  Try a free 2-week trial class with our teachers, then apply
+                  when you are ready. The ₹999 / USD 12 registration fee is
+                  waived during our launch.
+                </p>
+
+                <p className="text-blue-100 mb-8">
+                  Annual fees from{" "}
+                  <span className="font-bold">₹71,000</span> (India) /{" "}
+                  <span className="font-bold">USD 2,200</span> (international
+                  families).
+                </p>
+
+                <div className="flex flex-wrap gap-4">
+
+                  <a
+                    href="/fees"
+                    className="text-yellow-300 font-semibold underline underline-offset-4"
+                  >
+                    See full fees →
+                  </a>
+
+                </div>
+
+                <div className="flex flex-wrap gap-4 mt-8">
+
+                  <a
+                    href="/apply-now#free-trial"
+                    className="px-7 py-3 rounded-full bg-blue-500 text-white font-semibold hover:bg-blue-600 transition"
+                  >
+                    Book a free 2-week trial →
+                  </a>
+
+                  <a
+                    href="/apply-now#apply"
+                    className="px-7 py-3 rounded-full bg-white text-blue-950 font-semibold hover:bg-blue-50 transition"
+                  >
+                    Apply for 2027-28
+                  </a>
+
+                </div>
+              </div>
+
+              {/* CTA Image */}
+              <div className="h-full min-h-[350px]">
+                <img
+                  src="/assets/images/family-gulf.jpg"
+                  alt="Father and son looking at a laptop together at home"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+
+            </div>
           </div>
+
         </div>
       </section>
 
       {/* Floating WhatsApp */}
-      <a 
-        href="https://wa.me/7078049533"
+      <a
+        href="https://wa.me/919811773207"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 bg-sky-500 text-white p-4 rounded-full shadow-lg hover:bg-sky-400 transition-all duration-300 z-50 animate-bounce"
+        aria-label="Contact Edulectual K12 on WhatsApp"
+        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 z-50"
       >
-        <MessageCircle className="text-3xl" />
+        <MessageCircle size={28} />
       </a>
-      
-          </div>
+
+    </div>
   );
 };
 
