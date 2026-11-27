@@ -1,19 +1,35 @@
+import { Link } from 'react-router-dom';
+
 function CTA() {
   return (
-    <div className="bg-blue-800 text-white py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to help your child find their path?</h2>
-        <p className="text-xl mb-8 max-w-3xl mx-auto">We know choosing the best for your child is important to you. Speak to Athen AI School counsellors to understand how online school can help you and your children.</p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
-            Enquire Now
-          </button>
-          <button className="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
-            Download Brochure
-          </button>
+    <section style={{ padding: '80px 0 40px' }}>
+      <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0 24px' }}>
+        {/* CTA Band – blue→teal gradient matching Edulectual prototype */}
+        <div className="ek-band">
+          <span className="ek-blob" style={{ width: 260, height: 260, background: '#fff', opacity: .07, left: -80, bottom: -120 }} />
+
+          <div className="ek-band-c">
+            <h2>Ready to help your child find their path?</h2>
+            <p>
+              We know choosing the best for your child is important to you. Speak to Athena AI
+              School counsellors to understand how online school can help you and your children.
+            </p>
+
+            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'center' }}>
+              <Link to="/contact" className="ek-btn ek-btn-primary">
+                Enquire Now <span>→</span>
+              </Link>
+              <Link to="/resources-downloads" className="ek-btn ek-btn-light">
+                Download Brochure
+              </Link>
+            </div>
+          </div>
+
+          {/* Right side – decorative gradient panel (no image override) */}
+          <div style={{ position: 'relative', background: 'linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,200,61,.12))' }} />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

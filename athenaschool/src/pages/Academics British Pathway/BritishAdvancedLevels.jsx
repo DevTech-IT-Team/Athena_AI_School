@@ -5,128 +5,196 @@ const BritishAdvancedLevels = () => {
   return (
     <>
       <div className="academics-page">
+        {/* Hero Section */}
         <div className="relative h-[60vh] min-h-[400px] bg-gradient-to-br from-white via-blue-400 to-blue-950 flex items-center justify-center text-center overflow-hidden">
           <div className="relative z-10 px-8 max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">British Advanced Levels</h1>
-            <p className="text-lg md:text-xl font-light opacity-90">Wherever your child wishes to go help them get there with British Advanced Levels</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
+              A Levels (Grades 11–12)
+            </h1>
+            <p className="text-lg md:text-xl font-light opacity-90">
+              Wherever your child wishes to go, help them get there with online A Levels.
+            </p>
           </div>
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
         <div className="academics-content">
+          {/* Breadcrumb */}
           <div className="academics-breadcrumb">
-            <a href="/">Home</a> &gt; British Advanced Levels
+            <a href="/">Home</a> &gt; A Levels (Grades 11–12)
           </div>
 
+          {/* Introduction */}
           <div className="academics-section">
-            <h2>British Advanced Levels</h2>
+            <h2>Study A Levels Online (Grades 11–12)</h2>
             <p>
-              Advanced Level Qualifications (or A Levels for short) can lead to University, Apprenticeship, Vocational Education or Work. It is typically for learners aged 16 to 18 years. Taking three or more A levels is an intensive educational journey that will prepare you for the future. They're normally assessed by a series of examinations, which can be challenging but ultimately rewarding if they lead to university studies and professional careers in their respective fields. The skills that A-level learners learn will make them competitive for any job they take. They can develop their critical thinking abilities, and improve research techniques and data analysis, among many other things. The syllabuses develop a deep understanding of subjects and independent thinking skills.
+              Grades 11 and 12 at Edulectual K12 are our online sixth form.
+              Students specialise in three or four subjects at International A
+              Level on the Pearson Edexcel British pathway. A Levels are the
+              main entry qualification for universities in the UK and are used
+              by universities in many other countries, so this is where your
+              child's university plans start to take shape.
             </p>
-          </div>
 
-          <div className="academics-section">
-            <h2>Available Pathways</h2>
-            <p>The Advanced Level at k12onlineschool offers full-time and part-time Learners the following pathways:</p>
-            <div className="pathways-grid">
-              <div className="pathway-item">
-                <h3>Cambridge International AS & A Level</h3>
-                <p>Internationally recognised qualification with extensive subject range</p>
-              </div>
-              <div className="pathway-item">
-                <h3>Edexcel International Advanced Level (IAL)</h3>
-                <p>Globally recognised qualifications designed for international learners</p>
-              </div>
+            <div className="cta-buttons">
+              <button className="btn-primary">
+                Book a free 2-week trial
+              </button>
+              <button className="btn-secondary">
+                Apply for 2027-28
+              </button>
             </div>
+          </div>
+
+          {/* A Level Structure */}
+          <div className="academics-section">
+            <h2>How A Levels Are Structured</h2>
             <p>
-              Learners must study a minimum three 'A' Levels (or a combination of AS and A Levels) in core subjects to secure admission into most University Undergraduate Programmes. A few Universities worldwide also require IGCSE grades in core subjects, while most only ask for AS and A Level subjects. Specific requirements may vary from country to country.
+              An A Level usually takes two years. The first year leads to the
+              International AS, and the second completes the full International
+              A Level. Grades run from A* to E. Many subjects are assessed in
+              units, so some exams can be taken during the course rather than
+              all at the end.
             </p>
           </div>
 
+          {/* Subject Selection */}
           <div className="academics-section">
-            <h2>Program Details</h2>
+            <h2>Choosing Subjects</h2>
             <p>
-              The Cambridge Advanced programme has an extensive range of subjects available at AS and A Level.
+              Students pick subjects based on the degree they hope to study.
+              For example, future engineers usually take Mathematics and
+              Physics, medicine applicants usually take Chemistry and Biology,
+              and economics applicants often take Mathematics. Our teachers
+              guide each student through these choices in Grade 10.
             </p>
             <p>
-              Learners seeking to study Advanced Level taught by English-native Facilitators may click here.
-            </p>
-            <p>
-              Pearson Edexcel International Advanced Level (IAL) are globally recognised qualifications with academic content and assessment designed specifically for international learners. IAL are part of iProgress, the complete series of Pearson Edexcel academic qualifications for 5 to 19-year-olds for international schools.
-            </p>
-            <p>
-              Both Cambridge and Edexcel offer a wide range of subjects. Learners can choose to study 1 or more subjects with k12onlineschool with a combination of different pathways. Learners enrolling on 3 or more subjects are considered full-time learners, and such learners are generally not registered with any other Schools.
-            </p>
-            <p>
-              Learners studying with another school or as private candidates may opt to study one or more subjects online through k12onlineschool. This broadens opportunities for learners to demonstrate their learning, particularly for university undergraduate programmes. A more comprehensive choice of subjects at the Advanced Level will help learners get admission in their preferred University. The increased number of subjects available, and the ability to study them flexibly, means that learners can tailor their studies to match their interests and career aspirations. In addition, the online delivery of courses means that learners can study at their own pace and in their own time. This enhances the learning experience and opens up opportunities for those who might not otherwise have access to such programmes.
+              <strong>Subject List:</strong> [PLACEHOLDER: Confirm the A Level
+              subjects offered.]
             </p>
           </div>
 
+          {/* Teaching and Independent Study */}
           <div className="academics-section">
-            <h2>Quick Overview</h2>
+            <h2>Teaching and Independent Study</h2>
+            <ul className="program-list">
+              <li>Live, discussion-based lessons with small groups.</li>
+              <li>Weekly practice questions and written feedback.</li>
+              <li>Mock exams and revision programmes.</li>
+              <li>
+                Coaching in independent research and study skills for university.
+              </li>
+            </ul>
+          </div>
+
+          {/* University and Career Guidance */}
+          <div className="academics-section">
+            <h2>University and Career Guidance</h2>
+            <p>
+              We help students research courses, write personal statements and
+              meet application deadlines for universities in the UK, India,
+              the Gulf, North America and Australia.
+            </p>
+            <p>
+              [PLACEHOLDER: Confirm counselling support offered.]
+            </p>
+          </div>
+
+          {/* Exams and Fees */}
+          <div className="academics-section">
+            <h2>Exams and Fees</h2>
+            <p>
+              Students sit Pearson Edexcel exams at an approved exam centre,
+              and exam entry fees are paid separately to the centre.
+            </p>
+
+            <h3>Indicative 2027-28 Tuition Fees</h3>
             <div className="overview-table">
               <table>
                 <tbody>
                   <tr>
-                    <td><strong>Programmes:</strong></td>
-                    <td>Cambridge Advanced / Edexcel IAL</td>
+                    <td><strong>India</strong></td>
+                    <td>₹1,70,000–₹1,95,000</td>
                   </tr>
                   <tr>
-                    <td><strong>Age:</strong></td>
-                    <td>16 to 18 years</td>
+                    <td><strong>Gulf</strong></td>
+                    <td>AED 10,000–12,500</td>
                   </tr>
                   <tr>
-                    <td><strong>Enrollment:</strong></td>
-                    <td>Open for Both Full-time and Part-time Learners</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Academic Year begin date:</strong></td>
-                    <td>April 2025</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Exam Series:</strong></td>
-                    <td>March / June 2026 for AS level and March / June 2027 for A level</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Entry Requirements:</strong></td>
-                    <td>Learners must have completed IGCSE or equivalent</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Class size:</strong></td>
-                    <td>24 learners per batch</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Facilitators:</strong></td>
-                    <td>Subject Experts</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Class Hours:</strong></td>
-                    <td>Based on the number of subjects selected</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Batches:</strong></td>
-                    <td>Classes are conducted from 9.30 am IST to 5.30 pm IST. Learners will be required to attend classes as per the subject selected</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Mode of Classes:</strong></td>
-                    <td>Live Classes, Synchronous learning on our learning platform</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Learning kit:</strong></td>
-                    <td>Option to purchase Books through k12onlineschool, delivered to home</td>
+                    <td><strong>UK, US, Canada and Australia</strong></td>
+                    <td>USD 4,000–5,000</td>
                   </tr>
                 </tbody>
               </table>
             </div>
+
+            <p>
+              Final fees are still to be confirmed.
+            </p>
           </div>
 
-          <div className="academics-cta">
-            <h3>"The change I have seen in my children is phenomenal. They want to explore more about topics taught in school!"</h3>
-            <div className="cta-buttons">
-              <button className="btn-primary">Enquire Now</button>
-              <button className="btn-secondary">Download Prospectus</button>
+          {/* Online A Level Study */}
+          <div className="academics-section">
+            <h2>Is Online A Level Study Right for My Child?</h2>
+            <p>
+              Online A Levels suit students who are motivated, can manage their
+              time and want flexibility, for example to train in a sport, live
+              abroad or avoid a long commute. Teachers keep a close eye on
+              progress through regular tasks and feedback, so students who
+              start to fall behind are spotted early and supported.
+            </p>
+          </div>
+
+          {/* FAQ */}
+          <div className="academics-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div className="faq-item">
+              <h3>How many A Levels should my child take?</h3>
+              <p>
+                Most students take three subjects. Some take four, usually
+                including Further Mathematics.
+              </p>
+            </div>
+
+            <div className="faq-item">
+              <h3>Can my child join for Grade 12 only?</h3>
+              <p>
+                Sometimes, if their Grade 11 subjects match ours. Contact
+                admissions to check.
+              </p>
+              <p>
+                [PLACEHOLDER: Confirm.]
+              </p>
+            </div>
+
+            <div className="faq-item">
+              <h3>Are A Level exam fees included?</h3>
+              <p>
+                No. Pearson Edexcel exam entry fees are paid to the exam centre.
+              </p>
             </div>
           </div>
+
+          {/* Admissions */}
+          <div className="academics-section">
+            <h2>Admissions for 2027-28 Are Open</h2>
+            <p>
+              Try a free 2-week trial class with our teachers, then apply when
+              you are ready. The ₹999 registration fee is waived during our
+              launch.
+            </p>
+
+            <div className="cta-buttons">
+              <button className="btn-primary">
+                Book a free 2-week trial
+              </button>
+              <button className="btn-secondary">
+                Apply for 2027-28
+              </button>
+            </div>
+          </div>
+
         </div>
       </div>
     </>

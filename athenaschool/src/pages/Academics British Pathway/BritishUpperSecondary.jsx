@@ -5,126 +5,219 @@ const BritishUpperSecondary = () => {
   return (
     <>
       <div className="academics-page">
+        {/* Hero Section */}
         <div className="relative h-[60vh] min-h-[400px] bg-gradient-to-br from-white via-blue-400 to-blue-950 flex items-center justify-center text-center overflow-hidden">
-          <div className="relative z-10 px-8 max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">British Upper Secondary</h1>
-            <p className="text-lg md:text-xl font-light opacity-90">Wherever your child wishes to go help them get there with British Upper Secondary</p>
+          <div className="relative z-10 px-8 max-w-3xl text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
+              IGCSE
+            </h1>
+            <p className="text-lg md:text-xl font-light opacity-90">
+              Grades 9–10 | Pearson Edexcel International GCSE
+            </p>
           </div>
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
         <div className="academics-content">
+          {/* Breadcrumb */}
           <div className="academics-breadcrumb">
             <a href="/">Home</a> &gt; British Upper Secondary
           </div>
 
+          {/* Introduction */}
           <div className="academics-section">
-            <h2>British Upper Secondary</h2>
-            <p>
-              Upper Secondary builds on the foundations of British Lower Secondary, although learners do not need to complete that stage before this one. Leading universities and employers worldwide accept IGCSE as evidence of academic ability. It is typically for learners aged 14 to 16 years – Year 1 and Year 2 of IGCSE.
-            </p>
-          </div>
+            <h2>Online IGCSE School for Grades 9–10</h2>
 
-          <div className="academics-section">
-            <h2>Available Pathways</h2>
-            <p>The Upper Secondary Level at k12onlineschool offers full-time and part-time learners the following pathways:</p>
-            <div className="pathways-grid">
-              <div className="pathway-item">
-                <h3>Cambridge IGCSE</h3>
-                <p>Internationally recognized qualification with extensive subject range</p>
-              </div>
-              <div className="pathway-item">
-                <h3>Edexcel International GCSE</h3>
-                <p>Globally recognised qualifications designed for international learners</p>
-              </div>
-            </div>
-            <p>
-              Learners must study a recommended five subjects to secure the IGCSE qualification and prepare for the Advanced Level. A few Universities worldwide require IGCSE grades in core subjects as part of their University Undergraduate Programme entry requirements, while most only ask for AS and A Level subjects.
+            <p className="section-description">
+              British Upper Secondary at Edulectual K12 covers Grades 9 and 10,
+              when students study for International GCSE qualifications. These
+              are the first formal qualifications on the British pathway.
+              Universities, sixth forms and employers look at them when students
+              apply for the next stage. We teach the Pearson Edexcel
+              International GCSE live online, with full exam preparation.
             </p>
-          </div>
 
-          <div className="academics-section">
-            <h2>Program Details</h2>
-            <p>
-              The Cambridge Upper Secondary programme has an extensive range of subjects available at Cambridge IGCSE or Cambridge O Level.
-            </p>
-            <p>
-              Learners seeking to study Cambridge O Level or IGCSE taught by English-native Facilitators may click here.
-            </p>
-            <p>
-              Pearson Edexcel International GCSEs are globally recognised qualifications with academic content and assessment designed specifically for international learners. International GCSEs are part of iProgress, the complete series of Pearson Edexcel academic qualifications for 5 to 19-year-olds for international schools.
-            </p>
-            <p>
-              Both Cambridge and Edexcel offer a wide range of subjects. Learners can choose to study 1 or more subjects with k12onlineschool with a combination of different pathways. Learners registering on 5 or more subjects are considered full-time learners, and such learners are generally not registered with any other schools.
-            </p>
-            <p>
-              Learners studying with another school or as private candidates may opt to study one or more subjects online through k12onlineschool. This broadens opportunities for learners to demonstrate their learning, particularly for university undergraduate programmes. A more comprehensive choice of subjects at the IGCSE level will help learners select the right combination of Advanced Level subjects. The increased number of subjects available, and the ability to study them flexibly, means that learners can tailor their studies to match their interests and career aspirations. In addition, the online delivery of courses means that learners can study at their own pace and in their own time. This enhances the learning experience and opens up opportunities for those who might not otherwise have access to such programmes.
-            </p>
-          </div>
-
-          <div className="academics-section">
-            <h2>Quick Overview</h2>
-            <div className="overview-table">
-              <table>
-                <tbody>
-                  <tr>
-                    <td><strong>Programmes:</strong></td>
-                    <td>Cambridge IGCSE / Edexcel iGCSE</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Age:</strong></td>
-                    <td>14 to 16 years</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Enrollment:</strong></td>
-                    <td>Open for Both Full-time and Part-time Learners</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Academic Year begin date:</strong></td>
-                    <td>April 2025</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Exam Series:</strong></td>
-                    <td>March / June 2027 or later</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Entry Requirements:</strong></td>
-                    <td>Learners must have completed Grade 8 from any recognised Board. Entry is permissible at Grade 9 (year 1 of IGCSE) only</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Class size:</strong></td>
-                    <td>24 learners per batch</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Facilitators:</strong></td>
-                    <td>Subject Expert Facilitator</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Class Hours:</strong></td>
-                    <td>Based on the number of subjects selected</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Batches:</strong></td>
-                    <td>Classes are conducted from 9.30 am IST to 5.30 pm IST. Learners will be required to attend classes as per the subject selected</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Mode of Classes:</strong></td>
-                    <td>Live Classes, Synchronous learning on our learning platform</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Learning kit:</strong></td>
-                    <td>Option to purchase Books through k12onlineschool, delivered to home</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div className="academics-cta">
-            <h3>"The change I have seen in my children is phenomenal. They want to explore more about topics taught in school!"</h3>
             <div className="cta-buttons">
-              <button className="btn-primary">Enquire Now</button>
-              <button className="btn-secondary">Download Prospectus</button>
+              <button className="btn-primary">
+                Book a free 2-week trial
+              </button>
+              <button className="btn-secondary">
+                Apply for 2027-28
+              </button>
+            </div>
+          </div>
+
+          {/* What is IGCSE */}
+          <div className="academics-section">
+            <h2>What is an International GCSE?</h2>
+
+            <p className="section-text">
+              The International GCSE is a two-year, subject-based qualification
+              for students aged around 14 to 16. Each subject is assessed by
+              exams at the end of the course and graded 9 to 1, with 9 the
+              highest. Students usually take several subjects, and these grades
+              shape A Level choices and university applications.
+            </p>
+          </div>
+
+          {/* Subjects */}
+          <div className="academics-section">
+            <h2>Subjects We Offer</h2>
+
+            <p className="section-text">
+              Placeholder – confirm the subject list, e.g. English Language,
+              English Literature, Mathematics, Further Pure Mathematics,
+              Biology, Chemistry, Physics, Computer Science, Economics,
+              Business, Geography, History and a second language.
+            </p>
+          </div>
+
+          {/* Teaching Approach */}
+          <div className="academics-section">
+            <h2>How We Teach International GCSE Online</h2>
+
+            <ul className="program-list">
+              <li>
+                Live lessons on a fixed timetable for each region.
+              </li>
+              <li>
+                Regular past-paper practice and teacher feedback on exam
+                technique.
+              </li>
+              <li>
+                Mock exams before the real series.
+              </li>
+              <li>
+                Revision sessions in the run-up to exams.
+              </li>
+            </ul>
+          </div>
+
+          {/* Exams */}
+          <div className="academics-section">
+            <h2>Sitting the Exams</h2>
+
+            <p className="section-text">
+              Students sit Pearson Edexcel exams in person at an approved
+              exam centre. We help families find a centre nearby and explain
+              the entry process and deadlines. Exam entry fees are not part
+              of tuition and are paid directly to the exam centre.
+            </p>
+          </div>
+
+          {/* After IGCSE */}
+          <div className="academics-section">
+            <h2>After International GCSE</h2>
+
+            <p className="section-text">
+              Most students continue to International A Level with us in
+              Grades 11–12. Our A Level page explains subject choices
+              and university routes.
+            </p>
+          </div>
+
+          {/* Fees */}
+          <div className="academics-section">
+            <h2>Fees</h2>
+
+            <p className="section-text">
+              Indicative 2027-28 tuition for Grades 9–10 on the Edexcel
+              pathway is ₹1,60,000–₹1,80,000 in India, AED 9,000–11,000
+              in the Gulf and USD 3,500–4,500 in the UK, US, Canada and
+              Australia. Final fees are still to be confirmed.
+            </p>
+          </div>
+
+          {/* Workload */}
+          <div className="academics-section">
+            <h2>A Realistic Workload</h2>
+
+            <p className="section-text">
+              International GCSE years are busy. We help students plan a
+              weekly routine that balances lessons, homework and revision
+              with rest and activities, and teachers flag early if a
+              student's workload needs adjusting.
+            </p>
+
+            <h3>Support Between Lessons</h3>
+
+            <p className="section-text">
+              Students can post questions to teachers on the learning
+              platform between lessons and get help before small problems
+              become big ones.
+            </p>
+          </div>
+
+          {/* FAQ */}
+          <div className="academics-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <h3>Is the IGCSE recognised for university?</h3>
+
+            <p className="section-text">
+              International GCSE grades are widely used by schools, colleges
+              and universities as evidence of achievement at age 16.
+              Check each university's entry requirements.
+            </p>
+
+            <h3>Where will my child sit the exams?</h3>
+
+            <p className="section-text">
+              At a Pearson-approved exam centre near you. We help you find one.
+            </p>
+
+            <h3>Are exam fees included?</h3>
+
+            <p className="section-text">
+              No. Exam entry fees are paid directly to the exam centre.
+            </p>
+          </div>
+
+          {/* Admissions */}
+          <div className="academics-cta">
+            <h3>Admissions for 2027-28 Are Open</h3>
+
+            <p className="section-text">
+              Try a free 2-week trial class with our teachers, then apply
+              when you are ready. The ₹999 registration fee is waived
+              during our launch.
+            </p>
+
+            <div className="cta-buttons">
+              <button className="btn-primary">
+                Book a free 2-week trial
+              </button>
+
+              <button className="btn-secondary">
+                Apply for 2027-28
+              </button>
+            </div>
+          </div>
+
+          {/* Social Highlights */}
+          <div className="social-highlights">
+            <div className="highlight-card blue">
+              <h3>Exam Preparation</h3>
+              <p>
+                Build confidence through structured revision and
+                exam-focused practice.
+              </p>
+            </div>
+
+            <div className="highlight-card green">
+              <h3>Expert Teaching</h3>
+              <p>
+                Learn through live online classes and personalised
+                teacher feedback.
+              </p>
+            </div>
+
+            <div className="highlight-card purple">
+              <h3>Future Opportunities</h3>
+              <p>
+                Prepare for International A Levels and future academic
+                opportunities.
+              </p>
             </div>
           </div>
         </div>
