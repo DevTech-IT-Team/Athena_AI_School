@@ -1,59 +1,120 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 const PerformanceMonitor = () => {
   useEffect(() => {
-    // Monitor Core Web Vitals
-    const measurePerformance = () => {
-      // First Contentful Paint
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.name === 'first-contentful-paint') {
-            console.log(`FCP: ${entry.startTime.toFixed(2)}ms`);
-          }
+    if (
+      typeof window === "undefined" ||
+      typeof PerformanceObserver === "undefined"
+    ) {
+      return;
+    }
+
+    const isDevelopment =
+      typeof import.meta !== "undefined" &&
+      import.meta.env?.DEV;
+
+    const observers = [];
+
+    let clsValue = 0;
+    let lcpValue = 0;
+    let inpValue = 0;
+
+    const logPerformance = (metric, value, unit = "ms") => {
+      if (!isDevelopment) return;
+
+      console.info(
+        `[Edulectual K12 Performance] ${metric}: ${value.toFixed(2)} ${unit}`
+      );
+    };
+
+    // Safely create Performance Observers
+    const observeMetric = (type, callback) => {
+      try {
+        if (
+          !PerformanceObserver.supportedEntryTypes?.includes(type)
+        ) {
+          return;
         }
-      });
 
-      try {
-        observer.observe({ entryTypes: ['paint'] });
-      } catch (_e) {
-        console.log('Performance monitoring not supported');
-      }
+        const observer = new PerformanceObserver((list) => {
+          callback(list.getEntries());
+        });
 
-      // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        console.log(`LCP: ${lastEntry.startTime.toFixed(2)}ms`);
-      });
+        observer.observe({
+          type,
+          buffered: true,
+        });
 
-      try {
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (_e) {
-        console.log('LCP monitoring not supported');
-      }
-
-      // Cumulative Layout Shift
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-          }
+        observers.push(observer);
+      } catch (error) {
+        if (isDevelopment) {
+          console.warn(`${type} monitoring is not supported.`);
         }
-        console.log(`CLS: ${clsValue.toFixed(3)}`);
-      });
-
-      try {
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (_e) {
-        console.log('CLS monitoring not supported');
       }
     };
 
-    measurePerformance();
+    // 1. First Contentful Paint (FCP)
+    observeMetric("paint", (entries) => {
+      entries.forEach((entry) => {
+        if (entry.name === "first-contentful-paint") {
+          logPerformance("FCP", entry.startTime);
+        }
+      });
+    });
+
+    // 2. Largest Contentful Paint (LCP)
+    observeMetric("largest-contentful-paint", (entries) => {
+      const lastEntry = entries[entries.length - 1];
+
+      if (lastEntry) {
+        lcpValue = lastEntry.startTime;
+      }
+    });
+
+    // 3. Cumulative Layout Shift (CLS)
+    observeMetric("layout-shift", (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+        }
+      });
+    });
+
+    // 4. Interaction to Next Paint (INP)
+    observeMetric("event", (entries) => {
+      entries.forEach((entry) => {
+        if (entry.interactionId && entry.duration) {
+          inpValue = Math.max(inpValue, entry.duration);
+        }
+      });
+    });
+
+    // Report metrics when the page becomes hidden
+    const reportMetrics = () => {
+      if (document.visibilityState !== "hidden") return;
+
+      logPerformance("LCP", lcpValue);
+      logPerformance("CLS", clsValue, "");
+      logPerformance("INP", inpValue);
+    };
+
+    document.addEventListener(
+      "visibilitychange",
+      reportMetrics
+    );
+
+    // Cleanup observers and listeners
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+
+      document.removeEventListener(
+        "visibilitychange",
+        reportMetrics
+      );
+    };
   }, []);
 
-  return null; // This component doesn't render anything
+  return null;
 };
 
 export default PerformanceMonitor;

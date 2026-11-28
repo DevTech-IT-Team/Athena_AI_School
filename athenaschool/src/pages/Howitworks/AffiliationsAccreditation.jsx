@@ -1,5 +1,18 @@
+
 import React, { useState } from "react";
-import { Award, CheckCircle, Globe, ShieldCheck, BookOpen } from "lucide-react";
+import {
+  Award,
+  CheckCircle,
+  Globe,
+  ShieldCheck,
+  BookOpen,
+  ArrowRight,
+  Star,
+  GraduationCap,
+  Video,
+  Clock,
+  ChevronDown,
+} from "lucide-react";
 
 const AffiliationsAccreditation = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -26,69 +39,177 @@ const AffiliationsAccreditation = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white text-[#14215B] font-['Nunito',sans-serif]">
+
+      {/* Announcement Banner */}
+      <div className="bg-[#14215B] text-white text-center px-4 py-3 text-sm">
+        <p>
+          Admissions for 2027-28 are open. Founding families save 25%
+          when they enrol by 31 March 2027.{" "}
+          <a
+            href="/fees"
+            className="font-bold underline underline-offset-4 ml-1"
+          >
+            See fees and offers →
+          </a>
+        </p>
+      </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-950 to-blue-700 text-white py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative overflow-hidden bg-[#FFF9F2] pt-10 pb-24 md:pt-16 md:pb-28">
 
-          <div className="max-w-5xl mx-auto text-center">
+        {/* Decorative elements */}
+        <div className="absolute -top-20 -right-20 w-72 h-72 bg-[#D8F4E8] rounded-full opacity-60" />
+        <div className="absolute bottom-10 -left-20 w-64 h-64 bg-[#FFE4E9] rounded-full opacity-50" />
 
-            <span className="text-sm font-bold uppercase tracking-[0.3em] text-blue-200">
-              Qualifications & Recognition
-            </span>
+        <div className="max-w-7xl mx-auto px-5 md:px-10 relative z-10">
 
-            <h1 className="text-4xl md:text-5xl font-bold mt-6 mb-6">
-              Online School Accreditation and Affiliations
-            </h1>
+          {/* Breadcrumb */}
+          <div className="text-sm text-[#64748B] mb-8">
+            <a href="/" className="hover:text-blue-600">
+              Home
+            </a>
+            <span className="mx-2">›</span>
+            <a href="/about" className="hover:text-blue-600">
+              About
+            </a>
+            <span className="mx-2">›</span>
+            <span>Accreditation</span>
+          </div>
 
-            <p className="text-lg md:text-xl leading-relaxed text-blue-100 max-w-4xl mx-auto">
-              Parents rightly ask whether an online school's
-              qualifications are recognised. At Edulectual K12 the
-              answer rests on the exam boards our students sit, so
-              this page sets out exactly how each pathway leads to
-              a recognised certificate. We only list affiliations
-              we can show evidence for.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            {/* Hero Content */}
+            <div>
 
-              <button
-                onClick={handleTrialClick}
-                className="bg-white text-blue-950 px-8 py-4 rounded-lg font-semibold hover:bg-blue-100 transition-colors"
-              >
-                Book a free 2-week trial
-              </button>
+              <span className="inline-flex items-center gap-2 bg-[#FFE4E9] text-[#14215B] px-4 py-2 rounded-full text-sm font-bold mb-6">
+                <Star size={16} />
+                Accreditation
+              </span>
 
-              <button
-                onClick={handleApplyClick}
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-950 transition-colors"
-              >
-                Apply for 2027-28
-              </button>
+              <h1 className="font-['Fredoka',sans-serif] text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#14215B] mb-6">
+                Online School Accreditation and Affiliations
+              </h1>
+
+              <p className="text-lg text-[#526078] leading-relaxed">
+                Parents rightly ask whether an online school's
+                qualifications are recognised. At Edulectual K12 the
+                answer rests on the exam boards our students sit, so
+                this page sets out exactly how each pathway leads to
+                a recognised certificate. We only list affiliations
+                we can show evidence for.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+
+                <button
+                  onClick={handleTrialClick}
+                  className="bg-[#14215B] text-white px-7 py-4 rounded-full font-bold hover:bg-[#263a82] transition-all duration-300 flex items-center justify-center gap-2 shadow-lg"
+                >
+                  Book a free 2-week trial
+                  <ArrowRight size={18} />
+                </button>
+
+                <button
+                  onClick={handleApplyClick}
+                  className="bg-white text-[#14215B] border-2 border-[#14215B] px-7 py-4 rounded-full font-bold hover:bg-[#14215B] hover:text-white transition-all duration-300"
+                >
+                  Apply for 2027-28
+                </button>
+
+              </div>
+
+            </div>
+
+            {/* Hero Image */}
+            <div className="relative">
+
+              <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
+
+                <img
+                  src="/images/teen-classroom.jpg"
+                  alt="Student learning online"
+                  className="w-full h-[400px] md:h-[500px] object-cover"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-[#14215B]/20 to-transparent" />
+
+              </div>
+
+              {/* Floating Card 1 */}
+              <div className="absolute -left-4 md:-left-8 bottom-10 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-4 max-w-[260px]">
+
+                <div className="bg-[#FFE4E9] p-3 rounded-xl">
+                  <Video className="text-[#14215B]" size={24} />
+                </div>
+
+                <div>
+                  <p className="font-bold text-[#14215B]">
+                    Live online classes
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    Nursery to Grade 12
+                  </p>
+                </div>
+
+              </div>
+
+              {/* Floating Card 2 */}
+              <div className="absolute -right-3 md:-right-5 top-10 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-4">
+
+                <div className="bg-[#FFF4C5] p-3 rounded-xl">
+                  <Award className="text-[#14215B]" size={24} />
+                </div>
+
+                <div>
+                  <p className="font-bold text-[#14215B]">
+                    Admissions open
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    2027-28
+                  </p>
+                </div>
+
+              </div>
 
             </div>
 
           </div>
-
         </div>
+
+        {/* Decorative Wave */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden">
+          <svg
+            viewBox="0 0 1440 100"
+            className="w-full h-20 md:h-24"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,50 C240,100 480,10 720,50 C960,90 1200,20 1440,60 L1440,100 L0,100 Z"
+              fill="#ffffff"
+            />
+          </svg>
+        </div>
+
       </section>
 
-      {/* Main Content */}
-      <section className="container mx-auto px-4 py-16">
+      {/* Qualifications Section */}
+      <section className="py-20 bg-white">
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto px-5 md:px-10">
 
           {/* Introduction */}
-          <div className="text-center mb-16">
+          <div className="text-center max-w-4xl mx-auto mb-16">
 
-            <Award className="w-16 h-16 text-blue-600 mx-auto mb-6" />
+            <div className="inline-flex items-center justify-center bg-[#FFF4C5] p-5 rounded-2xl mb-6">
+              <Award size={40} className="text-[#14215B]" />
+            </div>
 
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="font-['Fredoka',sans-serif] text-3xl md:text-4xl font-bold mb-6">
               Qualifications That Matter
             </h2>
 
-            <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-lg text-[#526078] leading-relaxed mb-4">
               At Edulectual K12 Online School, our academic pathways
               are built around recognised examination boards. Students
               follow their chosen curriculum and work towards
@@ -96,7 +217,7 @@ const AffiliationsAccreditation = () => {
               boards.
             </p>
 
-            <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mt-4">
+            <p className="text-lg text-[#526078] leading-relaxed">
               We believe parents deserve clear information about
               examinations, certificates and school-level affiliations.
               This page distinguishes the qualifications our students
@@ -106,60 +227,65 @@ const AffiliationsAccreditation = () => {
           </div>
 
           {/* Pathway Cards */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="grid lg:grid-cols-2 gap-8">
 
-            {/* Pearson */}
-            <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 border-t-4 border-blue-600">
+            {/* Pearson Card */}
+            <div className="bg-[#F0F7FF] rounded-[2rem] p-8 md:p-10 border border-blue-100 hover:shadow-xl transition-all duration-300">
 
-              <div className="flex items-center mb-6">
+              <div className="flex items-center gap-4 mb-8">
 
-                <Globe className="w-10 h-10 text-blue-600 mr-4" />
+                <div className="bg-[#DCEBFF] p-4 rounded-2xl">
+                  <Globe size={32} className="text-[#14215B]" />
+                </div>
 
                 <div>
-                  <span className="text-xs uppercase tracking-widest font-bold text-blue-600">
+                  <span className="text-sm uppercase tracking-widest font-bold text-blue-600">
                     British Pathway
                   </span>
 
-                  <h3 className="text-2xl font-bold text-gray-900 mt-1">
+                  <h3 className="font-['Fredoka',sans-serif] text-2xl md:text-3xl font-bold mt-1">
                     Pearson Edexcel
                   </h3>
                 </div>
 
               </div>
 
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-[#526078] leading-relaxed mb-6">
                 Students on the British pathway take Pearson Edexcel
                 International GCSE and International A Level
                 qualifications.
               </p>
 
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-[#526078] leading-relaxed mb-8">
                 These certificates are issued by Pearson, not by
                 the school, and are recognised by universities in
                 the UK and many other countries.
               </p>
 
-              <div className="bg-blue-50 border-l-4 border-blue-600 p-5 rounded-lg">
+              <div className="bg-white rounded-2xl p-6 mb-6">
 
-                <h4 className="font-semibold text-blue-950 mb-2">
-                  Examination Board
-                </h4>
+                <div className="flex items-center gap-3 mb-3">
+                  <CheckCircle className="text-blue-600" size={24} />
 
-                <p className="text-sm text-blue-900 leading-relaxed">
+                  <h4 className="font-bold text-[#14215B] text-lg">
+                    Examination Board
+                  </h4>
+                </div>
+
+                <p className="text-[#526078] leading-relaxed">
                   Pearson Edexcel issues International GCSE and
                   International A Level qualifications.
                 </p>
 
               </div>
 
-              {/* Affiliation Placeholder */}
-              <div className="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-lg mt-6">
+              <div className="bg-[#FFF4C5] rounded-2xl p-6">
 
-                <h4 className="font-semibold text-amber-900 mb-2">
+                <h4 className="font-bold text-[#14215B] mb-3">
                   School Affiliation Details
                 </h4>
 
-                <p className="text-sm text-amber-800 leading-relaxed">
+                <p className="text-[#526078] leading-relaxed text-sm">
                   [PLACEHOLDER: Edulectual K12's Pearson centre
                   or partner status, with reference number.]
                 </p>
@@ -168,58 +294,63 @@ const AffiliationsAccreditation = () => {
 
             </div>
 
-            {/* NIOS */}
-            <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 border-t-4 border-green-600">
+            {/* NIOS Card */}
+            <div className="bg-[#F0FFF7] rounded-[2rem] p-8 md:p-10 border border-green-100 hover:shadow-xl transition-all duration-300">
 
-              <div className="flex items-center mb-6">
+              <div className="flex items-center gap-4 mb-8">
 
-                <BookOpen className="w-10 h-10 text-green-600 mr-4" />
+                <div className="bg-[#D8F4E8] p-4 rounded-2xl">
+                  <BookOpen size={32} className="text-green-700" />
+                </div>
 
                 <div>
-                  <span className="text-xs uppercase tracking-widest font-bold text-green-600">
+                  <span className="text-sm uppercase tracking-widest font-bold text-green-700">
                     Indian Pathway
                   </span>
 
-                  <h3 className="text-2xl font-bold text-gray-900 mt-1">
+                  <h3 className="font-['Fredoka',sans-serif] text-2xl md:text-3xl font-bold mt-1">
                     National Institute of Open Schooling
                   </h3>
                 </div>
 
               </div>
 
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-[#526078] leading-relaxed mb-6">
                 Students on the Indian pathway take Secondary and
                 Senior Secondary examinations with the National
                 Institute of Open Schooling (NIOS), set up by
                 the Ministry of Education, Government of India.
               </p>
 
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-[#526078] leading-relaxed mb-8">
                 Certificates are issued by NIOS, the examination
                 board, not by the school.
               </p>
 
-              <div className="bg-green-50 border-l-4 border-green-600 p-5 rounded-lg">
+              <div className="bg-white rounded-2xl p-6 mb-6">
 
-                <h4 className="font-semibold text-green-950 mb-2">
-                  Examination Board
-                </h4>
+                <div className="flex items-center gap-3 mb-3">
+                  <CheckCircle className="text-green-600" size={24} />
 
-                <p className="text-sm text-green-900 leading-relaxed">
+                  <h4 className="font-bold text-[#14215B] text-lg">
+                    Examination Board
+                  </h4>
+                </div>
+
+                <p className="text-[#526078] leading-relaxed">
                   NIOS issues Secondary and Senior Secondary
                   certificates.
                 </p>
 
               </div>
 
-              {/* Affiliation Placeholder */}
-              <div className="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-lg mt-6">
+              <div className="bg-[#FFF4C5] rounded-2xl p-6">
 
-                <h4 className="font-semibold text-amber-900 mb-2">
+                <h4 className="font-bold text-[#14215B] mb-3">
                   School Affiliation Details
                 </h4>
 
-                <p className="text-sm text-amber-800 leading-relaxed">
+                <p className="text-[#526078] leading-relaxed text-sm">
                   [PLACEHOLDER: Edulectual K12's NIOS accredited
                   institution status and code, if any.]
                 </p>
@@ -230,178 +361,287 @@ const AffiliationsAccreditation = () => {
 
           </div>
 
-          {/* Other Memberships */}
-          <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 mb-12">
+        </div>
 
-            <div className="flex items-center mb-8">
+      </section>
 
-              <ShieldCheck className="w-10 h-10 text-blue-600 mr-4" />
+      {/* Other Memberships */}
+      <section className="py-20 bg-[#D8F4E8]">
 
-              <h3 className="text-2xl font-bold text-gray-900">
-                Other Memberships and Standards
-              </h3>
+        <div className="max-w-7xl mx-auto px-5 md:px-10">
 
-            </div>
+          <div className="text-center mb-12">
 
-            <div className="space-y-6">
+            <span className="inline-block bg-white text-[#14215B] px-5 py-2 rounded-full font-bold text-sm mb-4">
+              Our Standards
+            </span>
 
-              <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg">
+            <h2 className="font-['Fredoka',sans-serif] text-3xl md:text-4xl font-bold">
+              Other Memberships and Standards
+            </h2>
 
-                <h4 className="font-semibold text-gray-900 mb-3">
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+
+            {/* Accreditation */}
+            <div className="bg-white rounded-[2rem] p-8 shadow-sm">
+
+              <div className="flex items-center gap-4 mb-6">
+
+                <div className="bg-[#FFE4E9] p-4 rounded-2xl">
+                  <ShieldCheck size={32} className="text-[#14215B]" />
+                </div>
+
+                <h3 className="font-['Fredoka',sans-serif] text-2xl font-bold">
                   Other Accreditation and Memberships
-                </h4>
-
-                <p className="text-gray-700 leading-relaxed">
-                  [PLACEHOLDER: any other accreditation, membership
-                  or quality certification, with certificate number
-                  and issuing body.]
-                </p>
+                </h3>
 
               </div>
 
-              <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg">
+              <p className="text-[#526078] leading-relaxed">
+                [PLACEHOLDER: any other accreditation, membership
+                or quality certification, with certificate number
+                and issuing body.]
+              </p>
 
-                <h4 className="font-semibold text-gray-900 mb-3">
+            </div>
+
+            {/* Data Protection */}
+            <div className="bg-white rounded-[2rem] p-8 shadow-sm">
+
+              <div className="flex items-center gap-4 mb-6">
+
+                <div className="bg-[#FFF4C5] p-4 rounded-2xl">
+                  <ShieldCheck size={32} className="text-[#14215B]" />
+                </div>
+
+                <h3 className="font-['Fredoka',sans-serif] text-2xl font-bold">
                   Data Protection and Information Security
-                </h4>
-
-                <p className="text-gray-700 leading-relaxed">
-                  [PLACEHOLDER: data protection or information
-                  security certification, if held.]
-                </p>
+                </h3>
 
               </div>
+
+              <p className="text-[#526078] leading-relaxed">
+                [PLACEHOLDER: data protection or information
+                security certification, if held.]
+              </p>
 
             </div>
 
           </div>
 
-          {/* How to Check */}
-          <div className="bg-blue-50 rounded-xl p-8 md:p-10 mb-12">
+        </div>
 
-            <div className="flex items-center mb-6">
+      </section>
 
-              <CheckCircle className="w-10 h-10 text-blue-600 mr-4" />
+      {/* Verification & Why It Matters */}
+      <section className="py-20 bg-[#FFF4C5]">
 
-              <h3 className="text-2xl font-bold text-blue-950">
-                How to Check
-              </h3>
+        <div className="max-w-7xl mx-auto px-5 md:px-10">
+
+          <div className="grid lg:grid-cols-2 gap-8">
+
+            {/* How to Check */}
+            <div className="bg-white rounded-[2rem] p-8 md:p-10">
+
+              <div className="flex items-center gap-4 mb-6">
+
+                <div className="bg-[#D8F4E8] p-4 rounded-2xl">
+                  <CheckCircle size={32} className="text-green-700" />
+                </div>
+
+                <h3 className="font-['Fredoka',sans-serif] text-2xl md:text-3xl font-bold">
+                  How to Check
+                </h3>
+
+              </div>
+
+              <p className="text-[#526078] leading-relaxed mb-8">
+                You can ask us for a copy of any certificate listed
+                on this page. We will also explain how to verify
+                results directly with Pearson or NIOS.
+              </p>
+
+              <div className="space-y-5">
+
+                <div className="bg-[#F0F7FF] rounded-2xl p-6">
+
+                  <h4 className="font-bold text-[#14215B] mb-3">
+                    Pearson Verification
+                  </h4>
+
+                  <p className="text-[#526078] text-sm leading-relaxed">
+                    International GCSE and International A Level
+                    qualifications can be checked through the
+                    relevant Pearson verification channels.
+                  </p>
+
+                </div>
+
+                <div className="bg-[#F0FFF7] rounded-2xl p-6">
+
+                  <h4 className="font-bold text-[#14215B] mb-3">
+                    NIOS Verification
+                  </h4>
+
+                  <p className="text-[#526078] text-sm leading-relaxed">
+                    Secondary and Senior Secondary qualifications
+                    can be verified through the relevant NIOS
+                    verification processes.
+                  </p>
+
+                </div>
+
+              </div>
 
             </div>
 
-            <p className="text-gray-700 leading-relaxed mb-6">
-              You can ask us for a copy of any certificate listed
-              on this page. We will also explain how to verify
-              results directly with Pearson or NIOS.
-            </p>
+            {/* Why Exam Board Matters */}
+            <div className="bg-white rounded-[2rem] p-8 md:p-10">
 
-            <div className="grid md:grid-cols-2 gap-6">
+              <div className="flex items-center gap-4 mb-6">
 
-              <div className="bg-white p-6 rounded-lg">
+                <div className="bg-[#FFE4E9] p-4 rounded-2xl">
+                  <Star size={32} className="text-[#14215B]" />
+                </div>
 
-                <h4 className="font-semibold text-gray-900 mb-3">
-                  Pearson Verification
-                </h4>
-
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  International GCSE and International A Level
-                  qualifications can be checked through the
-                  relevant Pearson verification channels.
-                </p>
+                <h3 className="font-['Fredoka',sans-serif] text-2xl md:text-3xl font-bold">
+                  Why the Exam Board Matters More Than a Logo
+                </h3>
 
               </div>
 
-              <div className="bg-white p-6 rounded-lg">
+              <p className="text-[#526078] leading-relaxed mb-6">
+                For an online school, what counts most is the
+                certificate your child receives at the end of
+                Grade 10 and Grade 12. Because those certificates
+                come from Pearson or NIOS, universities and
+                employers can check them directly with the board.
+              </p>
 
-                <h4 className="font-semibold text-gray-900 mb-3">
-                  NIOS Verification
-                </h4>
-
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  Secondary and Senior Secondary qualifications
-                  can be verified through the relevant NIOS
-                  verification processes.
-                </p>
-
-              </div>
+              <p className="text-[#526078] leading-relaxed">
+                We would rather explain this clearly than fill
+                the page with badges, and we will add each
+                school-level affiliation here only once it is
+                confirmed in writing.
+              </p>
 
             </div>
 
           </div>
 
-          {/* Why Exam Board Matters */}
-          <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 mb-12">
+        </div>
 
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Why the Exam Board Matters More Than a Logo
-            </h3>
+      </section>
 
-            <p className="text-gray-700 leading-relaxed mb-6">
-              For an online school, what counts most is the
-              certificate your child receives at the end of
-              Grade 10 and Grade 12. Because those certificates
-              come from Pearson or NIOS, universities and
-              employers can check them directly with the board.
-            </p>
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
 
-            <p className="text-gray-700 leading-relaxed">
-              We would rather explain this clearly than fill
-              the page with badges, and we will add each
-              school-level affiliation here only once it is
-              confirmed in writing.
-            </p>
+        <div className="max-w-7xl mx-auto px-5 md:px-10">
 
-          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
 
-          {/* FAQ */}
-          <div className="mb-16">
+            {/* FAQ Intro */}
+            <div>
 
-            <div className="text-center mb-10">
-
-              <span className="text-sm font-bold uppercase tracking-[0.3em] text-blue-600">
+              <span className="inline-block bg-[#FFE4E9] text-[#14215B] px-5 py-2 rounded-full font-bold text-sm mb-5">
                 FAQs
               </span>
 
-              <h2 className="text-3xl font-bold text-gray-900 mt-4">
+              <h2 className="font-['Fredoka',sans-serif] text-3xl md:text-4xl font-bold mb-6">
                 Frequently Asked Questions
               </h2>
 
+              <p className="text-[#526078] leading-relaxed mb-8">
+                Still deciding? Explore more about our qualifications,
+                pathways and learning options.
+              </p>
+
+              <div className="flex flex-wrap gap-3">
+
+                <a
+                  href="/edexcel-uk"
+                  className="bg-[#F0F7FF] text-[#14215B] px-4 py-3 rounded-full text-sm font-bold hover:bg-blue-100 transition"
+                >
+                  Pearson Edexcel
+                </a>
+
+                <a
+                  href="/senior-school"
+                  className="bg-[#F0FFF7] text-[#14215B] px-4 py-3 rounded-full text-sm font-bold hover:bg-green-100 transition"
+                >
+                  NIOS Senior School
+                </a>
+
+                <a
+                  href="/pathway"
+                  className="bg-[#FFF4C5] text-[#14215B] px-4 py-3 rounded-full text-sm font-bold hover:bg-yellow-100 transition"
+                >
+                  British vs Indian pathway
+                </a>
+
+                <a
+                  href="/contact"
+                  className="bg-[#FFE4E9] text-[#14215B] px-4 py-3 rounded-full text-sm font-bold hover:bg-pink-100 transition"
+                >
+                  Contact admissions
+                </a>
+
+              </div>
+
             </div>
 
+            {/* Accordion */}
             <div className="space-y-4">
 
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-gray-200 rounded-xl shadow-sm"
+                  className="bg-[#FFF9F2] border border-[#F1E5D9] rounded-2xl overflow-hidden"
                 >
 
                   <button
                     onClick={() =>
                       setOpenFAQ(openFAQ === index ? null : index)
                     }
-                    className="w-full flex items-center justify-between text-left p-6"
+                    className="w-full flex items-center justify-between text-left p-6 gap-4"
                   >
 
-                    <h3 className="text-lg font-semibold text-gray-900 pr-6">
+                    <h3 className="text-lg font-bold text-[#14215B]">
                       {faq.question}
                     </h3>
 
-                    <span className="text-2xl text-blue-600 font-bold">
-                      {openFAQ === index ? "−" : "+"}
-                    </span>
+                    <ChevronDown
+                      size={22}
+                      className={`text-[#14215B] flex-shrink-0 transition-transform duration-300 ${
+                        openFAQ === index ? "rotate-180" : ""
+                      }`}
+                    />
 
                   </button>
 
-                  {openFAQ === index && (
-                    <div className="px-6 pb-6">
+                  <div
+                    className={`grid transition-all duration-300 ${
+                      openFAQ === index
+                        ? "grid-rows-[1fr]"
+                        : "grid-rows-[0fr]"
+                    }`}
+                  >
 
-                      <p className="text-gray-700 leading-relaxed">
-                        {faq.answer}
-                      </p>
+                    <div className="overflow-hidden">
+
+                      <div className="px-6 pb-6">
+
+                        <p className="text-[#526078] leading-relaxed">
+                          {faq.answer}
+                        </p>
+
+                      </div>
 
                     </div>
-                  )}
+
+                  </div>
 
                 </div>
               ))}
@@ -410,38 +650,83 @@ const AffiliationsAccreditation = () => {
 
           </div>
 
-          {/* Admissions CTA */}
-          <div className="bg-gradient-to-r from-blue-950 to-blue-700 text-white rounded-2xl p-10 md:p-16 text-center">
+        </div>
 
-            <span className="text-sm font-bold uppercase tracking-[0.3em] text-blue-200">
-              Admissions Open
-            </span>
+      </section>
 
-            <h2 className="text-3xl md:text-5xl font-bold mt-6 mb-8">
-              Admissions for 2027-28 Are Open
-            </h2>
+      {/* Admissions CTA */}
+      <section className="py-16 md:py-24 bg-white">
 
-            <p className="text-lg text-blue-100 leading-relaxed max-w-3xl mx-auto mb-6">
-              Try a free 2-week trial class with our teachers,
-              then apply when you are ready. The ₹999 registration
-              fee is waived during our launch.
-            </p>
+        <div className="max-w-7xl mx-auto px-5 md:px-10">
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+          <div className="relative overflow-hidden rounded-[2.5rem] bg-[#14215B] text-white">
 
-              <button
-                onClick={handleTrialClick}
-                className="bg-white text-blue-950 px-8 py-4 rounded-lg font-semibold hover:bg-blue-100 transition-colors"
-              >
-                Book a free 2-week trial
-              </button>
+            {/* Decorative elements */}
+            <div className="absolute -top-24 -right-24 w-72 h-72 bg-[#60A5FA] rounded-full opacity-20" />
+            <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-[#F9A8D4] rounded-full opacity-20" />
 
-              <button
-                onClick={handleApplyClick}
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-950 transition-colors"
-              >
-                Apply for 2027-28
-              </button>
+            <div className="relative z-10 grid lg:grid-cols-2 items-center">
+
+              {/* CTA Content */}
+              <div className="p-8 md:p-14 lg:p-16">
+
+                <span className="inline-block bg-white/10 text-blue-200 px-5 py-2 rounded-full font-bold text-sm mb-6">
+                  Admissions Open
+                </span>
+
+                <h2 className="font-['Fredoka',sans-serif] text-3xl md:text-5xl font-bold leading-tight mb-6">
+                  Admissions for 2027-28 Are Open
+                </h2>
+
+                <p className="text-blue-100 text-lg leading-relaxed mb-6">
+                  Try a free 2-week trial class with our teachers,
+                  then apply when you are ready. The ₹999 / USD 12
+                  registration fee is waived during our launch.
+                </p>
+
+                <p className="text-blue-200 leading-relaxed mb-8">
+                  Annual fees from ₹71,000 (India) / USD 2,200
+                  (international families).
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+
+                  <button
+                    onClick={handleTrialClick}
+                    className="bg-white text-[#14215B] px-7 py-4 rounded-full font-bold hover:bg-blue-100 transition flex items-center justify-center gap-2"
+                  >
+                    Book a free 2-week trial
+                    <ArrowRight size={18} />
+                  </button>
+
+                  <button
+                    onClick={handleApplyClick}
+                    className="border-2 border-white text-white px-7 py-4 rounded-full font-bold hover:bg-white hover:text-[#14215B] transition"
+                  >
+                    Apply for 2027-28
+                  </button>
+
+                </div>
+
+                <a
+                  href="/fees"
+                  className="inline-block mt-6 text-blue-200 font-bold underline underline-offset-4 hover:text-white"
+                >
+                  See full fees →
+                </a>
+
+              </div>
+
+              {/* CTA Image */}
+              <div className="h-full min-h-[300px] lg:min-h-[550px]">
+
+                <img
+                  src="/images/family-gulf.jpg"
+                  alt="Family learning together at home"
+                  className="w-full h-full object-cover"
+                />
+
+              </div>
 
             </div>
 

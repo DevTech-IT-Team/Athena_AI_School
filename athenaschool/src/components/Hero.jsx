@@ -1,203 +1,143 @@
+
 import React, { memo } from "react";
-import { ArrowRight, BookOpen, Globe, GraduationCap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import heroImage from "../assets/gemini.webp (2).webp";
 
 const Hero = memo(() => {
+  const learningTags = [
+    "India",
+    "UAE",
+    "Qatar",
+    "Oman",
+    "Kuwait",
+    "Bahrain",
+    "UK",
+    "Australia",
+    "USA",
+    "Canada",
+  ];
+
   return (
-    <section className="relative w-full overflow-hidden bg-[#FFF9F2]">
+    <section className="ek-home-hero">
 
-      {/* Background Decorations */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/40 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-yellow-100/40 rounded-full blur-3xl" />
+      {/* Decorative Background */}
+      <div className="ek-home-blob ek-home-blob-top" />
+      <div className="ek-home-blob ek-home-blob-bottom" />
 
-      {/* Hero Container */}
-      <div className="relative container mx-auto px-6 lg:px-12 py-20 lg:py-24">
+      <div className="ek-home-dots" aria-hidden="true">
+        {Array.from({ length: 36 }).map((_, index) => (
+          <span key={index} />
+        ))}
+      </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      {/* Main Hero Container */}
+      <div className="ek-home-hero-container">
 
-          {/* LEFT CONTENT */}
-          <div className="text-center lg:text-left">
+        {/* LEFT CONTENT */}
+        <div className="ek-home-hero-content">
 
-            {/* Admissions Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold mb-6">
-              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              Admissions Open for 2027-28
-            </div>
+          {/* Badge */}
+          <div className="ek-home-admission-badge">
+            <span className="ek-home-badge-dot" />
+            Admissions Open for 2027–28
+          </div>
 
-            {/* Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#142B59] leading-tight tracking-tight">
+          {/* Heading */}
+          <h1>
+            Online School for
+            <span>Nursery to Grade 12,</span>
+            <span>Wherever You Live</span>
+          </h1>
 
-              Online School for
+          {/* Description */}
+          <p className="ek-home-description">
+            Edulectual K12 Online School is a fully online school for
+            children from Nursery to Grade 12. Your child learns from
+            home with qualified teachers in live online classes,
+            follows one clear curriculum and works towards recognised
+            qualifications. Admissions are now open for the 2027–28
+            academic year.
+          </p>
 
-              <span className="block text-blue-600">
-                Nursery to Grade 12
-              </span>
+          {/* Supporting Description */}
+          <p className="ek-home-description ek-home-description-secondary">
+            We offer two pathways, and each one follows the same
+            curriculum in every country we serve. The Pearson Edexcel
+            British pathway runs from Primary through Lower Secondary
+            to International GCSE and International A Level. The Indian
+            curriculum pathway prepares students for NIOS (National
+            Institute of Open Schooling) examinations. Families can
+            join from India, the UAE, Qatar, Oman, Kuwait, Bahrain,
+            the UK, Australia, the US and Canada.
+          </p>
 
-              <span className="block text-[#142B59] text-3xl sm:text-4xl lg:text-5xl mt-3">
-                Wherever You Live
-              </span>
+          {/* Buttons */}
+          <div className="ek-home-hero-actions">
 
-            </h1>
+            <a href="/contact" className="ek-home-btn ek-home-btn-primary">
+              Book a free 2-week trial
+              <ArrowRight size={16} />
+            </a>
 
-            {/* Accent */}
-            <div className="w-20 h-1.5 bg-yellow-400 rounded-full my-6 mx-auto lg:mx-0" />
+            <a href="/apply-now" className="ek-home-btn ek-home-btn-secondary">
+              Apply for 2027-28
+              <ArrowRight size={16} />
+            </a>
 
-            {/* Description */}
-            <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          </div>
 
-              Edulectual K12 Online School is a fully online school for
-              children from Nursery to Grade 12. Your child learns from
-              home with qualified teachers in live online classes,
-              follows one clear curriculum and works towards recognised
-              qualifications.
+          {/* Country Tags */}
+          <div className="ek-home-country-tags">
+            {learningTags.map((tag, index) => (
+              <span key={index}>{tag}</span>
+            ))}
+          </div>
 
-            </p>
+        </div>
 
-            {/* Supporting Description */}
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed mt-4 max-w-xl mx-auto lg:mx-0">
+        {/* RIGHT IMAGE */}
+        <div className="ek-home-hero-visual">
 
-              Choose the Pearson Edexcel British pathway or the Indian
-              curriculum pathway with NIOS examinations. A structured
-              school day, real teachers and a curriculum that travels
-              with your family.
+          {/* Gradient Ring */}
+          <div className="ek-home-image-ring">
 
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start">
-
-              {/* Trial Button */}
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-yellow-400 hover:bg-yellow-500 text-[#142B59] font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                Book a free 2-week trial
-                <ArrowRight size={18} />
-              </a>
-
-              {/* Apply Button */}
-              <a
-                href="/apply-now"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#142B59] hover:bg-blue-900 text-white font-semibold rounded-full transition-all duration-300 hover:-translate-y-1"
-              >
-                Apply for 2027-28
-                <ArrowRight size={18} />
-              </a>
-
-            </div>
-
-            {/* Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10">
-
-              {/* Feature 1 */}
-              <div className="flex items-center gap-3 justify-center lg:justify-start">
-
-                <div className="w-11 h-11 bg-blue-100 rounded-full flex items-center justify-center text-blue-700">
-                  <GraduationCap size={22} />
-                </div>
-
-                <div className="text-left">
-                  <p className="text-sm font-bold text-[#142B59]">
-                    Nursery–12
-                  </p>
-                  <p className="text-xs text-gray-500">
-                    Complete schooling
-                  </p>
-                </div>
-
-              </div>
-
-              {/* Feature 2 */}
-              <div className="flex items-center gap-3 justify-center lg:justify-start">
-
-                <div className="w-11 h-11 bg-green-100 rounded-full flex items-center justify-center text-green-700">
-                  <BookOpen size={22} />
-                </div>
-
-                <div className="text-left">
-                  <p className="text-sm font-bold text-[#142B59]">
-                    Two Pathways
-                  </p>
-                  <p className="text-xs text-gray-500">
-                    British & Indian
-                  </p>
-                </div>
-
-              </div>
-
-              {/* Feature 3 */}
-              <div className="flex items-center gap-3 justify-center lg:justify-start">
-
-                <div className="w-11 h-11 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-700">
-                  <Globe size={22} />
-                </div>
-
-                <div className="text-left">
-                  <p className="text-sm font-bold text-[#142B59]">
-                    Global Learning
-                  </p>
-                  <p className="text-xs text-gray-500">
-                    Learn from anywhere
-                  </p>
-                </div>
-
-              </div>
-
+            {/* Image */}
+            <div className="ek-home-image-inner">
+              <img
+                src={heroImage}
+                alt="Student learning online with Edulectual K12"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+              />
             </div>
 
           </div>
 
-          {/* RIGHT CONTENT – IMAGE */}
-          <div className="relative flex items-center justify-center">
+          {/* Live Class Badge */}
+          <div className="ek-home-floating-card ek-home-live-card">
 
-            {/* Background Shape */}
-            <div className="absolute w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] bg-blue-100 rounded-full opacity-60" />
+            <span className="ek-home-float-icon ek-home-live-icon">
+              📹
+            </span>
 
-            {/* Decorative Circle */}
-            <div className="absolute w-[320px] h-[320px] sm:w-[450px] sm:h-[450px] lg:w-[550px] lg:h-[550px] border-2 border-blue-200 rounded-full" />
-
-            {/* Image */}
-            <img
-              src={heroImage}
-              alt="Students learning online with Edulectual K12"
-              className="relative z-10 w-full max-w-md sm:max-w-lg lg:max-w-xl object-contain drop-shadow-xl"
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-              }}
-            />
-
-            {/* Floating Badge */}
-            <div className="absolute top-5 right-0 sm:right-5 z-20 bg-white rounded-2xl shadow-lg px-5 py-4">
-
-              <p className="text-xs text-gray-500 font-medium">
-                Academic Year
-              </p>
-
-              <p className="text-xl font-bold text-[#142B59]">
-                2027–28
-              </p>
-
-              <p className="text-xs text-green-600 font-semibold">
-                Admissions Open
-              </p>
-
+            <div>
+              <strong>Live online classes</strong>
+              <small>With qualified teachers</small>
             </div>
 
-            {/* Floating Trial Badge */}
-            <div className="absolute bottom-5 left-0 sm:left-5 z-20 bg-white rounded-2xl shadow-lg px-5 py-4">
+          </div>
 
-              <p className="text-sm font-bold text-[#142B59]">
-                Start with a free trial
-              </p>
+          {/* Grade Badge */}
+          <div className="ek-home-floating-card ek-home-grade-card">
 
-              <p className="text-xs text-gray-500 mt-1">
-                Experience a real online class
-              </p>
+            <span className="ek-home-float-icon ek-home-grade-icon">
+              ⭐
+            </span>
 
+            <div>
+              <strong>Nursery – Grade 12</strong>
+              <small>Edexcel or NIOS</small>
             </div>
 
           </div>

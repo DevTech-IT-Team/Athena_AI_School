@@ -1,30 +1,51 @@
-import React, { Suspense, lazy, useEffect, useRef, useState } from 'react';
-import { GraduationCap } from 'lucide-react';
-import HeroSection from './HeroSection';
-import { pathwayContent } from '../data/pathwayContent';
+import React, { Suspense, lazy, useEffect, useRef, useState } from "react";
+import HeroSection from "./HeroSection";
+import { pathwayContent } from "../data/pathwayContent";
 
-// Lazy load ALL sections except hero
-const AthenaFeatureSection = lazy(() => import('./AthenaFeatureSection'));
-const PhilosophySection = lazy(() => import('./PhilosophySection'));
-const AccreditationUISection = lazy(() => import('./AccreditationUISection'));
-const OurPrograms = lazy(() => import('./OurPrograms'));
-const ClassSelection = lazy(() => import('./ClassSelection'));
-const BlogCards = lazy(() => import('./BlogCards'));
-const ParentTestimonials = lazy(() => import('./ParentTestimonials'));
-const FAQSection = lazy(() => import('./FAQSection'));
+// Lazy load sections
+const AthenaFeatureSection = lazy(() => import("./AthenaFeatureSection"));
+const PhilosophySection = lazy(() => import("./PhilosophySection"));
+const AccreditationUISection = lazy(() => import("./AccreditationUISection"));
+const OurPrograms = lazy(() => import("./OurPrograms"));
+const ClassSelection = lazy(() => import("./ClassSelection"));
+const BlogCards = lazy(() => import("./BlogCards"));
+const ParentTestimonials = lazy(() => import("./ParentTestimonials"));
+const FAQSection = lazy(() => import("./FAQSection"));
 
+// Section loading fallback
 const SectionFallback = ({ label }) => (
-  <div className="py-12 text-center text-sm text-gray-500" aria-label={`Loading ${label}`}>
-    Loading {label}...
+  <div
+    className="flex min-h-[280px] items-center justify-center px-6 py-16"
+    aria-label={`Loading ${label}`}
+  >
+    <div className="flex flex-col items-center gap-3">
+      <div className="h-10 w-10 animate-spin rounded-full border-4 border-blue-100 border-t-blue-600" />
+
+      <p className="text-sm font-medium text-slate-500">
+        Loading {label}...
+      </p>
+    </div>
   </div>
 );
 
-const LazySection = ({ children, label, placeholderHeight = 360 }) => {
+// Lazy section wrapper
+const LazySection = ({
+  children,
+  label,
+  placeholderHeight = 360,
+  background = "bg-white",
+}) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
   useEffect(() => {
-    if (!ref.current || typeof IntersectionObserver === 'undefined') return;
+    if (!ref.current) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -34,89 +55,120 @@ const LazySection = ({ children, label, placeholderHeight = 360 }) => {
           }
         });
       },
-      { rootMargin: '0px 0px', threshold: 0.15 }
+      {
+        rootMargin: "200px 0px",
+        threshold: 0.05,
+      }
     );
+
     observer.observe(ref.current);
+
     return () => observer.disconnect();
   }, []);
 
   return (
-    <div ref={ref} aria-label={label || 'deferred section'}>
+    <section
+      ref={ref}
+      className={`w-full ${background}`}
+      aria-label={label}
+    >
       {isVisible ? (
-        children
+        <Suspense fallback={<SectionFallback label={label} />}>
+          {children}
+        </Suspense>
       ) : (
-        <div className="py-12 flex items-center justify-center text-gray-400" style={{ minHeight: placeholderHeight }}>
-          <span className="text-sm">Preparing {label || 'section'}…</span>
+        <div
+          className="flex w-full items-center justify-center"
+          style={{ minHeight: placeholderHeight }}
+        >
+          <div className="h-6 w-6 animate-pulse rounded-full bg-blue-200" />
         </div>
       )}
-    </div>
+    </section>
   );
 };
 
+// Main Layout
 const AthenaElegantLayout = () => {
   return (
-    <div className="font-sans text-blue-950 bg-white">
-      
-      {/* ---------------- HERO SECTION ---------------- */}
+    <main className="w-full overflow-hidden bg-white font-sans text-[#10234F]">
+
+      {/* ================= HERO ================= */}
       <HeroSection hero={pathwayContent.hero} />
 
-      {/* ---------------- ATHENA FEATURE SECTION ---------------- */}
-      <LazySection label="k12onlineschool features" placeholderHeight={520}>
-        <Suspense fallback={<SectionFallback label="k12onlineschool features" />}>
-          <AthenaFeatureSection />
-        </Suspense>
+      {/* ================= FEATURES ================= */}
+      <LazySection
+        label="k12onlineschool features"
+        placeholderHeight={520}
+        background="bg-[#F0FAF7]"
+      >
+        <AthenaFeatureSection />
       </LazySection>
 
-      {/* ---------------- PHILOSOPHY SECTION ---------------- */}
-      <LazySection label="philosophy">
-        <Suspense fallback={<SectionFallback label="philosophy" />}>
-          <PhilosophySection />
-        </Suspense>
+      {/* ================= PHILOSOPHY ================= */}
+      <LazySection
+        label="philosophy"
+        placeholderHeight={400}
+        background="bg-[#FFF7F0]"
+      >
+        <PhilosophySection />
       </LazySection>
 
-      {/* ---------------- ACCREDITATION UI SECTION ---------------- */}
-      <LazySection label="accreditation">
-        <Suspense fallback={<SectionFallback label="accreditation" />}>
-          <AccreditationUISection />
-        </Suspense>
+      {/* ================= ACCREDITATION ================= */}
+      <LazySection
+        label="accreditation"
+        placeholderHeight={400}
+        background="bg-[#F0FAF7]"
+      >
+        <AccreditationUISection />
       </LazySection>
 
-      {/* ---------------- OUR PROGRAMS SECTION ---------------- */}
-      <LazySection label="our programs">
-        <Suspense fallback={<SectionFallback label="our programs" />}>
-          <OurPrograms />
-        </Suspense>
+      {/* ================= PROGRAMS ================= */}
+      <LazySection
+        label="our programs"
+        placeholderHeight={500}
+        background="bg-[#FFFBEA]"
+      >
+        <OurPrograms />
       </LazySection>
 
-      {/* ---------------- CLASS SELECTION SECTION ---------------- */}
-      <LazySection label="class selection">
-        <Suspense fallback={<SectionFallback label="class selection" />}>
-          <ClassSelection />
-        </Suspense>
+      {/* ================= CLASS SELECTION ================= */}
+      <LazySection
+        label="class selection"
+        placeholderHeight={450}
+        background="bg-[#F3F6FF]"
+      >
+        <ClassSelection />
       </LazySection>
 
-      {/* ---------------- BLOG CARDS ---------------- */}
-      <LazySection label="blog">
-        <Suspense fallback={<SectionFallback label="blog" />}>
-          <BlogCards />
-        </Suspense>
+      {/* ================= BLOG ================= */}
+      <LazySection
+        label="blog"
+        placeholderHeight={400}
+        background="bg-[#FFF7F0]"
+      >
+        <BlogCards />
       </LazySection>
 
-      {/* ---------------- PARENT TESTIMONIALS ---------------- */}
-      <LazySection label="testimonials">
-        <Suspense fallback={<SectionFallback label="testimonials" />}>
-          <ParentTestimonials />
-        </Suspense>
+      {/* ================= TESTIMONIALS ================= */}
+      <LazySection
+        label="testimonials"
+        placeholderHeight={450}
+        background="bg-[#F0FAF7]"
+      >
+        <ParentTestimonials />
       </LazySection>
 
-      {/* ---------------- FAQS ---------------- */}
-      <LazySection label="faq">
-        <Suspense fallback={<SectionFallback label="faq" />}>
-          <FAQSection />
-        </Suspense>
+      {/* ================= FAQ ================= */}
+      <LazySection
+        label="faq"
+        placeholderHeight={450}
+        background="bg-[#FFF7F0]"
+      >
+        <FAQSection />
       </LazySection>
 
-    </div>
+    </main>
   );
 };
 

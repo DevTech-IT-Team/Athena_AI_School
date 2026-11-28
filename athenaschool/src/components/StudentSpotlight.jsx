@@ -1,179 +1,351 @@
-import React from 'react';
-import { PlayCircle, ArrowRight, Trophy, Star } from 'lucide-react';
-import personalizedImage from '/assets/images/ariel-HkN64BISuQA-unsplash.webp';
-import chessImage from '../assets/optimized/2.webp';
-import watercolorImage from '/assets/images/watercolor-painting-artist-his-studio.webp';
+import React from "react";
+import {
+  PlayCircle,
+  ArrowRight,
+  Trophy,
+  Star,
+  Award,
+} from "lucide-react";
+
+import personalizedImage from "/assets/images/ariel-HkN64BISuQA-unsplash.webp";
+import chessImage from "../assets/optimized/2.webp";
+import watercolorImage from "/assets/images/watercolor-painting-artist-his-studio.webp";
+
+const students = [
+  {
+    id: 1,
+    name: "Divith Reddy",
+    age: "8 years old",
+    mainBadge: "Chess Champion",
+    description:
+      "A young prodigy, Divith recently won the U-8 World Chess Championship in Italy. With his love for chess, he is determined to become the world's youngest Grandmaster.",
+    tags: ["World Champion", "Chess Prodigy", "Math Genius"],
+    image: chessImage,
+    hasVideo: true,
+    accent: "#E7A928",
+    bg: "#FFF7E5",
+  },
+  {
+    id: 2,
+    name: "Keya Hatkar",
+    age: "13 years old",
+    mainBadge: "Award Winner",
+    description:
+      "Keya, recipient of the prestigious Pradhan Mantri Rashtriya Bal Puraskar, is an award-winning author, artist, and social impact entrepreneur.",
+    tags: ["Award Winner", "Author", "Artist"],
+    image: watercolorImage,
+    hasVideo: false,
+    accent: "#269B91",
+    bg: "#E9F7F3",
+  },
+];
 
 const StudentSpotlight = () => {
-  const students = [
-    {
-      id: 1,
-      name: "Divith Reddy",
-      age: "8 years old",
-      mainBadge: "Chess Champion",
-      description: "A young prodigy, Divith recently won the U-8 World Chess Championship in Italy. With his love for chess, he is determined to become the world's youngest Grandmaster.",
-      tags: ["World Champion", "Chess Prodigy", "Math Genius"],
-      image: chessImage, // Local image
-      hasVideo: true
-    },
-    {
-      id: 2,
-      name: "Keya Hatkar",
-      age: "13 years old",
-      mainBadge: "Award Winner",
-      description: "Keya, recipient of the prestigious Pradhan Mantri Rashtriya Bal Puraskar, is an award-winning author, artist, and social impact entrepreneur.",
-      tags: ["Award Winner", "Author", "Artist"],
-      image: watercolorImage, // Watercolor artist image
-      hasVideo: false
-    }
-  ];
-
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen bg-white font-sans overflow-hidden">
-      
-      {/* LEFT COLUMN - Hero Section (Blue 950 Theme) */}
-      <div className="w-full lg:w-5/12 bg-sky-600 text-white relative p-8 lg:p-12 flex flex-col justify-between">
-        
-        {/* Decorative Background Element */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+    <section className="relative w-full overflow-hidden bg-white font-sans">
 
-        <div className="relative z-10">
-          <div className="mb-8">
-            <span className="font-serif text-8xl opacity-60 absolute -top-10 -left-4">01</span>
-            <h2 className="text-white font-medium tracking-widest text-sm uppercase mb-2 ml-2">Success Stories</h2>
-            <h1 className="text-5xl lg:text-6xl font-serif leading-tight">
-              Meet Our <br />
-              <span className="text-sky-200 italic">Outstanding</span> <br />
+      {/* ================= HERO SECTION ================= */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-[#F0F5FF] via-[#FFF8F1] to-[#FCEEF2] px-6 py-16 md:px-12 md:py-20">
+
+        {/* Background decorations */}
+        <div className="absolute -left-20 top-10 h-64 w-64 rounded-full bg-[#C8EDE7]/50 blur-3xl" />
+
+        <div className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-[#F9D8C7]/50 blur-3xl" />
+
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+
+          {/* Left content */}
+          <div>
+
+            <div className="mb-5 flex items-center gap-2 text-sm font-medium text-gray-500">
+              <span>Home</span>
+              <span>/</span>
+              <span>Student Stories</span>
+            </div>
+
+            <span className="inline-block rounded-full bg-[#DDF4EF] px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#168477]">
+              Success Stories
+            </span>
+
+            <h1 className="mt-5 max-w-xl text-4xl font-extrabold leading-tight text-[#172554] md:text-5xl lg:text-6xl">
+              Celebrating Our
+              <span className="text-[#218F83]"> Outstanding </span>
               Students
             </h1>
-          </div>
 
-          <div className="mt-8 border-l-2 border-sky-500 pl-6">
-            <p className="text-blue-100 text-lg leading-relaxed font-light">
-              "No two learners are alike, so why should their journey be? Discover how personalized education creates exceptional results."
+            <p className="mt-6 max-w-xl text-base leading-8 text-gray-600 md:text-lg">
+              Every learner has a unique journey. Discover inspiring stories
+              of young achievers who are exploring their passions, developing
+              their talents and creating their own paths to success.
             </p>
-          </div>
-        </div>
 
-        {/* Featured Image Container (mimicking the Polaroid/Frame style in reference) */}
-        <div className="relative mt-12 lg:mt-auto mb-8 mx-auto w-full max-w-sm transform rotate-2 hover:rotate-0 transition-transform duration-500">
-          <div className="bg-white p-3 shadow-2xl shadow-black/50">
-            <img 
-              src={personalizedImage} 
-              alt="Student holding a trophy" 
-              loading="lazy"
-              decoding="async"
-              sizes="(max-width: 1024px) 90vw, 420px"
-              width="640"
-              height="512"
-              className="w-full h-80 object-cover grayscale hover:grayscale-0 transition-all duration-500"
-            />
-            <div className="pt-3 flex justify-between items-end">
-              <div className="flex flex-col">
-                 <span className="text-sky-600 font-bold text-lg">Excellence</span>
-                 <span className="text-gray-500 text-xs uppercase tracking-wider">Class of 2025</span>
-              </div>
-              <Trophy className="text-sky-500 w-6 h-6" />
+            <div className="mt-8 flex flex-wrap gap-4">
+
+              <a
+                href="/contact"
+                className="inline-flex items-center gap-2 rounded-full bg-[#F9C842] px-7 py-3.5 text-sm font-bold text-[#172554] shadow-md transition hover:-translate-y-1 hover:bg-[#F0B92D]"
+              >
+                Book a free 2-week trial
+                <ArrowRight size={17} />
+              </a>
+
+              <a
+                href="/programmes"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-[#1D477E] px-7 py-3.5 text-sm font-bold text-[#1D477E] transition hover:bg-[#1D477E] hover:text-white"
+              >
+                Explore programmes
+              </a>
+
             </div>
           </div>
-          {/* Decorative Square behind */}
-          <div className="absolute -z-10 top-4 -right-4 w-full h-full border-2 border-sky-500/50"></div>
-        </div>
 
-        {/* Vertical Text Decoration */}
-        <div className="absolute left-4 bottom-8 hidden lg:block origin-bottom-left -rotate-90">
-           <span className="text-sky-500/30 text-xs tracking-[0.3em] uppercase">Empowering the next generation</span>
+          {/* Right hero image */}
+          <div className="relative mx-auto w-full max-w-xl">
+
+            <div className="absolute -inset-4 rounded-[48%] border-[10px] border-[#F4B83F]/70" />
+
+            <div className="relative h-[300px] overflow-hidden rounded-[48%] border-[8px] border-white shadow-2xl md:h-[390px]">
+              <img
+                src={personalizedImage}
+                alt="Student celebrating an achievement"
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
+            </div>
+
+            {/* Floating achievement badge */}
+            <div className="absolute left-0 top-8 flex items-center gap-3 rounded-xl bg-white px-4 py-3 shadow-lg">
+
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF2D5] text-[#D99A22]">
+                <Trophy size={21} />
+              </div>
+
+              <div>
+                <p className="text-xs font-bold text-[#172554]">
+                  Young Achievers
+                </p>
+                <p className="text-[10px] text-gray-500">
+                  Inspiring journeys
+                </p>
+              </div>
+            </div>
+
+            <div className="absolute bottom-8 right-0 flex items-center gap-3 rounded-xl bg-white px-4 py-3 shadow-lg">
+
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#E5F7F2] text-[#218F83]">
+                <Award size={21} />
+              </div>
+
+              <div>
+                <p className="text-xs font-bold text-[#172554]">
+                  Student Excellence
+                </p>
+                <p className="text-[10px] text-gray-500">
+                  Beyond academics
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
 
-      {/* RIGHT COLUMN - List Section (White/Sky Blue Theme) */}
-      <div className="w-full lg:w-7/12 bg-slate-50 p-6 lg:p-16 overflow-y-auto">
-        
-        <div className="mb-10">
-          <h3 className="text-sky-600 text-3xl font-serif mb-2">Student Spotlight</h3>
-          <p className="text-slate-500">Inspiring stories from our brilliant learners</p>
-          <hr className="mt-4 border-sky-200 w-24" />
-        </div>
+      {/* ================= STUDENT SPOTLIGHT ================= */}
+      <div className="bg-[#F7FAFF] px-6 py-16 md:px-12 md:py-20">
 
-        <div className="space-y-8">
-          {students.map((student) => (
-            <div key={student.id} className="group relative">
-              {/* Card Container */}
-              <div className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col md:flex-row overflow-hidden border border-slate-100">
-                
-                {/* Content Side */}
-                <div className="flex-1 p-6 lg:p-8 flex flex-col justify-center bg-sky-600 text-white relative overflow-hidden">
-                  {/* Subtle background decoration for card */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-sky-500/20 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
-                  
-                  <div className="relative z-10">
-                    <div className="flex items-baseline gap-2 mb-1">
-                      <h4 className="text-2xl font-bold text-white">{student.name}</h4>
-                      <span className="text-sky-300 text-sm font-medium">— {student.age}</span>
-                    </div>
-                    
-                    <div className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-white mb-3">
-                      <Star className="w-3 h-3 fill-current" />
+        <div className="mx-auto max-w-7xl">
+
+          {/* Section heading */}
+          <div className="mb-10">
+
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#218F83]">
+              Celebrating success
+            </span>
+
+            <h2 className="mt-3 text-3xl font-extrabold text-[#172554] md:text-4xl">
+              Student Spotlight
+            </h2>
+
+            <p className="mt-4 max-w-2xl text-base leading-7 text-gray-600">
+              Meet our talented learners whose dedication, creativity and
+              achievements inspire us every day.
+            </p>
+
+          </div>
+
+          {/* Student cards */}
+          <div className="space-y-8">
+
+            {students.map((student) => (
+              <article
+                key={student.id}
+                className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+              >
+
+                <div className="grid grid-cols-1 md:grid-cols-5">
+
+                  {/* Student image */}
+                  <div className="relative h-64 overflow-hidden md:col-span-2 md:h-auto">
+
+                    <img
+                      src={student.image}
+                      alt={student.name}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full min-h-[280px] w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#172554]/30 to-transparent" />
+
+                    <div
+                      className="absolute bottom-5 left-5 flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold shadow-md"
+                      style={{ color: student.accent }}
+                    >
+                      <Trophy size={15} />
                       {student.mainBadge}
                     </div>
 
-                    <p className="text-blue-100/80 text-sm leading-relaxed mb-6">
-                      {student.description}
-                    </p>
+                  </div>
 
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {student.tags.map((tag, i) => (
-                        <span key={i} className="px-2 py-1 bg-blue-900 border border-blue-800 text-xs text-sky-200 rounded">
-                          {tag}
+                  {/* Student information */}
+                  <div className="relative flex flex-col justify-center p-6 md:col-span-3 md:p-9 lg:p-12">
+
+                    {/* Decorative circle */}
+                    <div
+                      className="absolute right-0 top-0 h-36 w-36 rounded-full opacity-40 blur-3xl"
+                      style={{ backgroundColor: student.accent }}
+                    />
+
+                    <div className="relative z-10">
+
+                      {/* Student name */}
+                      <div className="mb-4 flex flex-wrap items-center gap-3">
+
+                        <h3 className="text-2xl font-extrabold text-[#172554] md:text-3xl">
+                          {student.name}
+                        </h3>
+
+                        <span className="rounded-full bg-[#F0F5FF] px-3 py-1.5 text-xs font-semibold text-[#3679D8]">
+                          {student.age}
                         </span>
-                      ))}
-                    </div>
 
-                    {/* Actions */}
-                    <div className="flex items-center gap-4">
-                      <button className="flex items-center gap-2 text-sm font-semibold text-white hover:text-sky-300 transition-colors group/btn">
-                        Read Full Story <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                      </button>
-                      {student.hasVideo && (
-                        <button className="flex items-center gap-2 text-sm font-semibold text-white hover:text-sky-300 transition-colors">
-                          <PlayCircle className="w-4 h-4" /> Watch Story
+                      </div>
+
+                      {/* Achievement badge */}
+                      <div
+                        className="mb-5 inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold"
+                        style={{
+                          backgroundColor: student.bg,
+                          color: student.accent,
+                        }}
+                      >
+                        <Star size={14} fill="currentColor" />
+                        {student.mainBadge}
+                      </div>
+
+                      {/* Description */}
+                      <p className="max-w-2xl text-sm leading-8 text-gray-600 md:text-base">
+                        {student.description}
+                      </p>
+
+                      {/* Tags */}
+                      <div className="mt-6 flex flex-wrap gap-2">
+
+                        {student.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded-full border border-gray-100 bg-[#F7FAFF] px-4 py-2 text-xs font-semibold text-[#475569]"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+
+                      </div>
+
+                      {/* Action buttons */}
+                      <div className="mt-8 flex flex-wrap items-center gap-5">
+
+                        <button
+                          type="button"
+                          className="inline-flex items-center gap-2 text-sm font-bold text-[#1769AA] transition hover:gap-3"
+                        >
+                          Read Full Story
+                          <ArrowRight size={17} />
                         </button>
-                      )}
+
+                        {student.hasVideo && (
+                          <button
+                            type="button"
+                            className="inline-flex items-center gap-2 rounded-full bg-[#EAF4FF] px-5 py-2.5 text-sm font-bold text-[#1769AA] transition hover:bg-[#1769AA] hover:text-white"
+                          >
+                            <PlayCircle size={18} />
+                            Watch Story
+                          </button>
+                        )}
+
+                      </div>
+
                     </div>
                   </div>
-                </div>
 
-                {/* Image Side - Stays on right like the reference */}
-                <div className="w-full md:w-48 lg:w-56 h-48 md:h-auto relative">
-                  <img 
-                    src={student.image} 
-                    alt={student.name} 
-                    loading="lazy"
-                    decoding="async"
-                    sizes="(max-width: 768px) 100vw, 224px"
-                    width="320"
-                    height="320"
-                    className="w-full h-full object-cover"
-                  />
-
-                  {/* Overlay on hover */}
-                  <div className="absolute inset-0 bg-sky-600/20 group-hover:bg-transparent transition-colors duration-300"></div>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        
-        {/* Bottom CTA (Optional filler to balance height) */}
-        <div className="mt-12 text-center">
-            <button className="px-6 py-3 border border-sky-600 text-sky-600 font-medium hover:bg-sky-600 hover:text-white transition-colors uppercase text-sm tracking-widest">
-                View All Achievers
+              </article>
+            ))}
+
+          </div>
+
+          {/* View all button */}
+          <div className="mt-12 text-center">
+
+            <button
+              type="button"
+              className="inline-flex items-center gap-3 rounded-full border-2 border-[#1D477E] px-8 py-3.5 text-sm font-bold text-[#1D477E] transition hover:bg-[#1D477E] hover:text-white"
+            >
+              View All Achievers
+              <ArrowRight size={17} />
             </button>
+
+          </div>
+
+        </div>
+      </div>
+
+      {/* ================= BOTTOM CTA ================= */}
+      <section className="bg-[#FFF4EF] px-6 py-14 md:px-12">
+
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-7 rounded-3xl bg-gradient-to-r from-[#1769AA] to-[#218F83] p-8 text-white md:flex-row md:p-12">
+
+          <div className="max-w-2xl">
+
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#D7F5ED]">
+              Your child's journey starts here
+            </span>
+
+            <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">
+              Every child has the potential to shine.
+            </h2>
+
+            <p className="mt-4 text-sm leading-7 text-white/85 md:text-base">
+              Give your child the opportunity to learn, explore and discover
+              their strengths through flexible online education.
+            </p>
+
+          </div>
+
+          <a
+            href="/contact"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#F9C842] px-7 py-4 text-sm font-bold text-[#172554] transition hover:-translate-y-1 hover:bg-white"
+          >
+            Start a free trial
+            <ArrowRight size={18} />
+          </a>
+
         </div>
 
-      </div>
-    </div>
+      </section>
+
+    </section>
   );
 };
 

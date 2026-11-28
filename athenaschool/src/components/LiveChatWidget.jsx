@@ -4,107 +4,181 @@ import { useState } from 'react';
 function LiveChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { id: 1, text: "Hello! 👋 How can I help you today?", sender: 'bot', timestamp: new Date() }
+    {
+      id: 1,
+      text: "Hello! 👋 Welcome to Edulectual K12. How can we help you today?",
+      sender: 'bot',
+      timestamp: new Date(),
+    },
   ]);
   const [inputValue, setInputValue] = useState('');
 
   const toggleChat = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
 
   const handleSend = (e) => {
     e.preventDefault();
-    if (inputValue.trim()) {
-      // Add user message
-      const newUserMessage = {
-        id: messages.length + 1,
-        text: inputValue,
-        sender: 'user',
-        timestamp: new Date()
+
+    const messageText = inputValue.trim();
+    if (!messageText) return;
+
+    const newUserMessage = {
+      id: Date.now(),
+      text: messageText,
+      sender: 'user',
+      timestamp: new Date(),
+    };
+
+    setMessages((prev) => [...prev, newUserMessage]);
+    setInputValue('');
+
+    setTimeout(() => {
+      const botResponse = {
+        id: Date.now() + 1,
+        text: "Thanks for reaching out! Our education specialist will get back to you shortly.",
+        sender: 'bot',
+        timestamp: new Date(),
       };
-      
-      setMessages([...messages, newUserMessage]);
-      setInputValue('');
-      
-      // Simulate bot response after a delay
-      setTimeout(() => {
-        const botResponse = {
-          id: messages.length + 2,
-          text: "Thanks for your message! Our education specialist will get back to you shortly.",
-          sender: 'bot',
-          timestamp: new Date()
-        };
-        setMessages(prev => [...prev, botResponse]);
-      }, 1000);
-    }
+
+      setMessages((prev) => [...prev, botResponse]);
+    }, 1000);
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
-      {!isOpen ? (
+    <div className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 font-sans">
+
+      {/* Chat Toggle Button */}
+      {!isOpen && (
         <button
           onClick={toggleChat}
-          className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all animate-bounce"
-          aria-label="Open chat"
+          aria-label="Open Edulectual support chat"
+          className="group relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-[#172554] text-white rounded-full shadow-xl hover:bg-[#253B80] transition-all duration-300 hover:scale-105"
         >
-          <MessageCircle size={24} />
+          <MessageCircle size={26} />
+
+          {/* Notification Dot */}
+          <span className="absolute top-1 right-1 w-3 h-3 bg-[#FACC15] rounded-full border-2 border-white" />
         </button>
-      ) : (
-        <div className="bg-white rounded-lg shadow-xl w-80 h-96 flex flex-col border border-gray-200">
-          {/* Chat Header */}
-          <div className="bg-blue-600 text-white p-4 rounded-t-lg flex justify-between items-center">
-            <div className="flex items-center">
-              <div className="bg-blue-500 p-1 rounded-full mr-2">
-                <MessageCircle size={16} />
+      )}
+
+      {/* Chat Window */}
+      {isOpen && (
+        <div className="w-[320px] sm:w-[360px] h-[480px] max-h-[80vh] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden">
+
+          {/* Header */}
+          <div className="bg-[#172554] text-white px-5 py-4 flex justify-between items-center">
+
+            <div className="flex items-center gap-3">
+
+              <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
+                <MessageCircle size={20} />
               </div>
-              <span className="font-semibold">Live Support</span>
+
+              <div>
+                <h3 className="font-bold text-sm">
+                  Edulectual K12
+                </h3>
+
+                <div className="flex items-center gap-1.5 text-xs text-blue-100 mt-1">
+                  <span className="w-2 h-2 bg-green-400 rounded-full" />
+                  <span>Online support</span>
+                </div>
+              </div>
+
             </div>
-            <button 
+
+            <button
               onClick={toggleChat}
-              className="text-white hover:text-blue-200"
+              aria-label="Close chat"
+              className="p-2 rounded-full hover:bg-white/10 transition-colors"
             >
               <X size={20} />
             </button>
+
           </div>
-          
-          {/* Messages Container */}
-          <div className="flex-1 overflow-y-auto p-4 bg-gray-50">
+
+          {/* Welcome Message */}
+          <div className="px-4 py-3 bg-[#F1F0FF] border-b border-slate-100">
+
+            <p className="text-xs text-[#172554] leading-relaxed">
+              Welcome! Ask us about admissions, programmes, fees,
+              curriculum or online classes.
+            </p>
+
+          </div>
+
+          {/* Messages */}
+          <div className="flex-1 overflow-y-auto px-4 py-4 bg-[#F8F8FC]">
+
             {messages.map((message) => (
-              <div 
-                key={message.id} 
-                className={`mb-3 ${message.sender === 'user' ? 'text-right' : 'text-left'}`}
+              <div
+                key={message.id}
+                className={`flex mb-4 ${
+                  message.sender === 'user'
+                    ? 'justify-end'
+                    : 'justify-start'
+                }`}
               >
-                <div 
-                  className={`inline-block p-3 rounded-lg max-w-xs ${
-                    message.sender === 'user' 
-                      ? 'bg-blue-600 text-white rounded-tr-none' 
-                      : 'bg-gray-200 text-gray-800 rounded-tl-none'
+
+                <div
+                  className={`max-w-[85%] px-4 py-3 text-sm leading-relaxed shadow-sm ${
+                    message.sender === 'user'
+                      ? 'bg-[#172554] text-white rounded-2xl rounded-br-sm'
+                      : 'bg-white text-slate-700 border border-slate-100 rounded-2xl rounded-bl-sm'
                   }`}
                 >
                   {message.text}
+
+                  <span
+                    className={`block text-[10px] mt-2 ${
+                      message.sender === 'user'
+                        ? 'text-blue-100'
+                        : 'text-slate-400'
+                    }`}
+                  >
+                    {message.timestamp.toLocaleTimeString([], {
+                      hour: '2-digit',
+                      minute: '2-digit',
+                    })}
+                  </span>
                 </div>
+
               </div>
             ))}
+
           </div>
-          
+
           {/* Input Area */}
-          <form onSubmit={handleSend} className="p-3 border-t border-gray-200 bg-white">
-            <div className="flex">
+          <form
+            onSubmit={handleSend}
+            className="p-4 bg-white border-t border-slate-100"
+          >
+
+            <div className="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-full p-1.5 focus-within:border-[#4F46E5] focus-within:ring-2 focus-within:ring-indigo-100 transition-all">
+
               <input
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 placeholder="Type your message..."
-                className="flex-1 border border-gray-300 rounded-l-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+                aria-label="Type your message"
+                className="flex-1 bg-transparent px-3 py-2 text-sm text-slate-700 outline-none placeholder:text-slate-400"
               />
+
               <button
                 type="submit"
-                className="bg-blue-600 text-white px-3 py-2 rounded-r-lg hover:bg-blue-700 transition-colors"
+                disabled={!inputValue.trim()}
+                aria-label="Send message"
+                className="w-10 h-10 flex items-center justify-center bg-[#FACC15] text-[#172554] rounded-full hover:bg-yellow-500 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
               >
-                <Send size={18} />
+                <Send size={17} />
               </button>
+
             </div>
+
           </form>
+
         </div>
       )}
     </div>
