@@ -1,548 +1,926 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+
+import {
+  ArrowRight,
+  BookOpen,
+  GraduationCap,
+  Globe2,
+  Users,
+  Monitor,
+  Clock,
+  Award,
+  HeartHandshake,
+  CheckCircle2,
+  Baby,
+  BookMarked,
+  School,
+  Laptop,
+  MapPin,
+  CalendarDays,
+  Star,
+  ShieldCheck,
+} from "lucide-react";
 
 const K12OnlineSchoolPage = () => {
+
+  const benefits = [
+    {
+      icon: Globe2,
+      title: "Learn From Anywhere",
+      description:
+        "The school moves with your family, so relocating or travelling does not mean changing schools.",
+      color: "bg-blue-100 text-blue-600",
+    },
+    {
+      icon: BookOpen,
+      title: "Same Curriculum",
+      description:
+        "Students follow the same curriculum and teaching standards wherever they live.",
+      color: "bg-teal-100 text-teal-600",
+    },
+    {
+      icon: Monitor,
+      title: "Live Teaching",
+      description:
+        "Real teachers, interactive lessons, discussions, group work and regular feedback.",
+      color: "bg-orange-100 text-orange-600",
+    },
+    {
+      icon: Clock,
+      title: "Time-Zone Friendly",
+      description:
+        "Class batches are arranged by region to fit your family's daily schedule.",
+      color: "bg-purple-100 text-purple-600",
+    },
+    {
+      icon: Users,
+      title: "Parents Stay Informed",
+      description:
+        "Regular progress updates and parent-teacher meetings keep families connected.",
+      color: "bg-pink-100 text-pink-600",
+    },
+    {
+      icon: Award,
+      title: "Recognised Qualifications",
+      description:
+        "Students work towards Pearson Edexcel qualifications or NIOS examinations.",
+      color: "bg-yellow-100 text-yellow-700",
+    },
+  ];
+
+  const programs = [
+    {
+      icon: Baby,
+      stage: "Stage 01",
+      title: "Early Years",
+      grades: "Nursery & Kindergarten",
+      description:
+        "Language, number sense and confidence through short, playful sessions.",
+      color: "bg-orange-50",
+      iconColor: "text-orange-500",
+      border: "border-orange-200",
+    },
+    {
+      icon: BookOpen,
+      stage: "Stage 02",
+      title: "Primary",
+      grades: "Grades 1–5",
+      description:
+        "Strong foundations in reading, writing, mathematics and the wider world.",
+      color: "bg-blue-50",
+      iconColor: "text-blue-600",
+      border: "border-blue-200",
+    },
+    {
+      icon: BookMarked,
+      stage: "Stage 03",
+      title: "Middle School",
+      grades: "Grades 6–8",
+      description:
+        "Science, humanities, languages, computing and independent study.",
+      color: "bg-teal-50",
+      iconColor: "text-teal-600",
+      border: "border-teal-200",
+    },
+    {
+      icon: GraduationCap,
+      stage: "Stage 04",
+      title: "Senior School",
+      grades: "Grades 9–12",
+      description:
+        "Preparation for International GCSE, A Level or NIOS examinations.",
+      color: "bg-purple-50",
+      iconColor: "text-purple-600",
+      border: "border-purple-200",
+    },
+  ];
+
+  const countries = [
+    "India",
+    "UAE",
+    "Qatar",
+    "Oman",
+    "Kuwait",
+    "Bahrain",
+    "United Kingdom",
+    "Australia",
+    "United States",
+    "Canada",
+  ];
+
+  const pathways = [
+    {
+      number: "01",
+      title: "Pearson Edexcel British Pathway",
+      description:
+        "A British-style education that leads to Pearson Edexcel International GCSEs in Grades 9–10 and International A Levels in Grades 11–12.",
+      stages: [
+        "Primary",
+        "Lower Secondary",
+        "International GCSE",
+        "International A Level",
+      ],
+      suitable:
+        "Suitable for families who move between countries, plan for universities abroad or prefer a British curriculum.",
+      color: "border-blue-500",
+      badge: "bg-blue-100 text-blue-700",
+      icon: "bg-blue-100 text-blue-600",
+    },
+    {
+      number: "02",
+      title: "Indian Curriculum Pathway",
+      description:
+        "An Indian curriculum taught online, with Secondary and Senior Secondary examinations through NIOS, the national open schooling board.",
+      stages: [
+        "Primary",
+        "Middle School",
+        "Secondary (Class 10)",
+        "Senior Secondary (Class 12)",
+      ],
+      suitable:
+        "Suitable for families who want an Indian qualification with the flexibility of learning from home, in India or overseas.",
+      color: "border-teal-500",
+      badge: "bg-teal-100 text-teal-700",
+      icon: "bg-teal-100 text-teal-600",
+    },
+  ];
+
   return (
-    <div className="bg-white text-blue-900 font-serif selection:bg-blue-100">
+    <main className="overflow-hidden bg-white font-sans text-slate-800">
 
-      {/* --- COVER SPREAD / HERO SECTION --- */}
-      <section className="min-h-screen grid grid-cols-1 md:grid-cols-12 border-b-8 border-blue-900">
+      {/* ================= HERO SECTION ================= */}
 
-        <div className="md:col-span-7 p-8 md:p-20 flex flex-col justify-center border-r border-slate-200">
-          <div>
-            <span className="uppercase tracking-[0.3em] text-sm font-sans font-bold text-blue-400 block mb-6">
+      <section className="relative bg-[#F1F6FF]">
+
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 py-16 sm:px-8 md:py-20 lg:grid-cols-2 lg:gap-16 lg:px-12">
+
+          {/* Hero Content */}
+
+          <div className="order-2 lg:order-1">
+
+            <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-blue-700 shadow-sm">
+              <span className="h-2 w-2 rounded-full bg-green-500"></span>
               Admissions Open · 2027-28
             </span>
 
-            <h1 className="text-4xl md:text-6xl lg:text-8xl leading-none font-black tracking-tighter mb-6">
-              Edulectual <br />
-              <span className="text-blue-500">K12</span>
+            <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-[#142B59] sm:text-5xl md:text-6xl lg:text-7xl">
+
+              Edulectual
+
+              <span className="block text-blue-600">
+                K12 Online School
+              </span>
+
             </h1>
 
-            <p className="text-3xl italic leading-tight text-slate-700 max-w-md">
+            <h2 className="mt-6 max-w-xl text-xl font-semibold leading-relaxed text-slate-700 md:text-2xl">
               Online School for Nursery to Grade 12, Wherever You Live.
+            </h2>
+
+            <p className="mt-6 max-w-xl text-base leading-8 text-slate-600 md:text-lg">
+              Edulectual K12 Online School is a fully online school for
+              children from Nursery to Grade 12. Your child learns from
+              home with qualified teachers in live online classes,
+              follows one clear curriculum and works towards recognised
+              qualifications.
             </p>
 
-            <p className="text-lg text-slate-600 mt-8 max-w-xl leading-relaxed">
-              Edulectual K12 Online School is a fully online school for children
-              from Nursery to Grade 12. Your child learns from home with
-              qualified teachers in live online classes, follows one clear
-              curriculum and works towards recognised qualifications.
-            </p>
+            {/* Hero Buttons */}
 
-            <div className="flex flex-wrap gap-4 mt-10 font-sans">
+            <div className="mt-9 flex flex-wrap gap-4">
+
               <Link
                 to="/apply-now#free-trial"
-                className="bg-blue-900 text-white px-8 py-4 font-bold uppercase tracking-wider hover:bg-blue-700 transition"
+                className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-7 py-4 font-bold text-white shadow-lg shadow-blue-200 transition hover:-translate-y-1 hover:bg-blue-700"
               >
                 Book a Free 2-Week Trial
+                <ArrowRight size={18} />
               </Link>
 
               <Link
                 to="/apply-now#apply"
-                className="border-2 border-blue-900 px-8 py-4 font-bold uppercase tracking-wider hover:bg-blue-900 hover:text-white transition"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-blue-600 bg-white px-7 py-4 font-bold text-blue-700 transition hover:bg-blue-50"
               >
                 Apply for 2027-28
               </Link>
-            </div>
-          </div>
-        </div>
 
-        <div className="md:col-span-5 relative bg-blue-900 overflow-hidden min-h-[400px]">
-          <img
-            src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=1000"
-            alt="Students learning together"
-            className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60"
-          />
-
-          <div className="relative h-full p-12 flex flex-col justify-end text-white">
-            <h2 className="text-5xl md:text-6xl font-bold uppercase tracking-widest">
-              Online <br /> Learning
-            </h2>
-
-            <div className="h-1 w-20 bg-blue-400 mt-4"></div>
-
-            <p className="text-lg mt-6 text-blue-100 max-w-md">
-              A structured school day, real teachers, a clear curriculum and
-              recognised qualifications — all from home.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* --- INTRO SPREAD --- */}
-      <section className="grid grid-cols-1 md:grid-cols-2 min-h-[70vh]">
-
-        <div className="p-8 md:p-20 bg-slate-50 flex flex-col justify-center">
-          <h3 className="text-blue-400 uppercase font-sans tracking-widest mb-4">
-            About Edulectual
-          </h3>
-
-          <h2 className="text-5xl mb-8 leading-tight">
-            A School That <br />
-            Moves With You
-          </h2>
-
-          <p className="text-xl text-slate-600 leading-relaxed max-w-lg">
-            Edulectual K12 is a fully online school for children from Nursery
-            to Grade 12. We offer two pathways, the Pearson Edexcel British
-            curriculum and the Indian curriculum with NIOS examinations.
-          </p>
-
-          <p className="text-lg text-slate-600 leading-relaxed mt-6 max-w-lg">
-            Families can learn from anywhere while following the same curriculum
-            and teaching standards across the countries we serve.
-          </p>
-        </div>
-
-        <div className="relative p-8 md:p-20 flex items-center justify-center">
-
-          {/* IMAGE BOX */}
-          <div className="relative z-10 w-full aspect-square border-4 border-blue-900 overflow-hidden shadow-2xl">
-            <img
-              src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&q=80&w=1000"
-              alt="Child learning at home"
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="absolute top-1/2 left-0 w-3/4 h-1/2 bg-blue-900 -z-0 translate-y-[-50%] hidden md:block"></div>
-
-          <div className="absolute bottom-10 right-10 z-20 bg-white p-6 shadow-xl max-w-xs border-l-4 border-blue-500">
-            <p className="text-sm font-sans font-bold uppercase text-blue-500 mb-2">
-              Our Approach
-            </p>
-
-            <p className="text-lg italic">
-              One school, two pathways, learning without borders.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* --- TWO CURRICULUM PATHWAYS --- */}
-      <section className="bg-blue-900 text-white p-8 md:p-24">
-
-        <div className="max-w-6xl mx-auto">
-
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-blue-700 pb-8">
-
-            <div>
-              <span className="text-blue-400 font-sans uppercase tracking-widest text-sm">
-                Academic Pathways
-              </span>
-
-              <h2 className="text-5xl md:text-6xl font-bold italic mt-4">
-                Two Pathways
-              </h2>
             </div>
 
-            <p className="text-blue-300 font-sans tracking-widest uppercase mt-6 md:mt-0">
-              One Standard of Teaching
-            </p>
-          </div>
+            {/* Trust Points */}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="mt-10 flex flex-wrap gap-6 text-sm font-medium text-slate-600">
 
-            {/* BRITISH PATHWAY */}
-            <div className="border-t border-blue-700 pt-8">
-
-              <span className="text-blue-400 font-sans font-bold text-xs uppercase tracking-widest">
-                Pathway 01
-              </span>
-
-              <h3 className="text-3xl font-bold mt-4 mb-6">
-                Pearson Edexcel British Pathway
-              </h3>
-
-              <p className="text-blue-200 text-lg leading-relaxed mb-8">
-                A British-style education that leads to Pearson Edexcel
-                International GCSEs in Grades 9–10 and International A Levels
-                in Grades 11–12.
-              </p>
-
-              <div className="space-y-4">
-
-                {[
-                  'Primary',
-                  'Lower Secondary',
-                  'International GCSE',
-                  'International A Level',
-                ].map((stage, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center border-b border-blue-800 pb-4"
-                  >
-                    <span className="text-blue-400 font-bold mr-4">
-                      0{index + 1}
-                    </span>
-
-                    <h4 className="text-xl font-semibold">
-                      {stage}
-                    </h4>
-                  </div>
-                ))}
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={18} className="text-green-500" />
+                Live Online Classes
               </div>
 
-              <p className="text-slate-300 text-sm leading-relaxed mt-8">
-                Suitable for families who move between countries, plan for
-                universities abroad or prefer a British curriculum.
-                Examination entries are made through Pearson-approved
-                examination centres.
-              </p>
-            </div>
-
-            {/* INDIAN PATHWAY */}
-            <div className="border-t border-blue-700 pt-8">
-
-              <span className="text-blue-400 font-sans font-bold text-xs uppercase tracking-widest">
-                Pathway 02
-              </span>
-
-              <h3 className="text-3xl font-bold mt-4 mb-6">
-                Indian Curriculum Pathway
-              </h3>
-
-              <p className="text-blue-200 text-lg leading-relaxed mb-8">
-                An Indian curriculum taught online, with Secondary and
-                Senior Secondary examinations through NIOS, the national
-                open schooling board.
-              </p>
-
-              <div className="space-y-4">
-
-                {[
-                  'Primary',
-                  'Middle School',
-                  'Secondary (Class 10)',
-                  'Senior Secondary (Class 12)',
-                ].map((stage, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center border-b border-blue-800 pb-4"
-                  >
-                    <span className="text-blue-400 font-bold mr-4">
-                      0{index + 1}
-                    </span>
-
-                    <h4 className="text-xl font-semibold">
-                      {stage}
-                    </h4>
-                  </div>
-                ))}
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={18} className="text-green-500" />
+                Qualified Teachers
               </div>
 
-              <p className="text-slate-300 text-sm leading-relaxed mt-8">
-                Suitable for families who want an Indian qualification
-                with the flexibility of learning from home, in India
-                or overseas.
-              </p>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 size={18} className="text-green-500" />
+                Flexible Learning
+              </div>
+
             </div>
 
           </div>
-        </div>
-      </section>
 
-      {/* --- WHY FAMILIES CHOOSE US --- */}
-      <section className="py-20 px-8 md:px-20 grid grid-cols-1 md:grid-cols-12 gap-12">
+          {/* Hero Image */}
 
-        <div className="md:col-span-4">
-          <h2 className="text-5xl font-bold text-blue-900 leading-none sticky top-10">
-            Why <br />
-            Families <br />
-            Choose Us
-          </h2>
-        </div>
+          <div className="relative order-1 lg:order-2">
 
-        <div className="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="absolute -right-8 -top-8 h-40 w-40 rounded-full bg-yellow-200 opacity-60 blur-2xl"></div>
 
-          {[
-            {
-              n: '01',
-              t: 'Learn From Anywhere',
-              d: 'The school moves with your family, so relocating or travelling does not mean changing schools.',
-            },
-            {
-              n: '02',
-              t: 'Same Curriculum',
-              d: 'Whether you live in Dubai, Delhi or Toronto, your child follows the same curriculum and teaching standards.',
-            },
-            {
-              n: '03',
-              t: 'Live Teaching',
-              d: 'Real teachers, interactive lessons, discussions, group work and feedback rather than learning through recorded videos alone.',
-            },
-            {
-              n: '04',
-              t: 'Time-Zone Friendly',
-              d: 'Class batches are arranged by region so that lessons fit your family’s daily schedule.',
-            },
-            {
-              n: '05',
-              t: 'Parents Stay Informed',
-              d: 'Regular progress updates and online parent–teacher meetings help parents stay connected with learning.',
-            },
-            {
-              n: '06',
-              t: 'Recognised Qualifications',
-              d: 'Students work towards Pearson Edexcel qualifications or NIOS examinations through their chosen pathway.',
-            },
-          ].map((item) => (
-            <div key={item.n} className="group">
+            <div className="absolute -bottom-8 -left-8 h-40 w-40 rounded-full bg-teal-200 opacity-60 blur-2xl"></div>
 
-              <span className="text-6xl font-black text-slate-100 group-hover:text-blue-100 transition-colors duration-500">
-                {item.n}
-              </span>
+            <div className="relative overflow-hidden rounded-[32px] shadow-2xl">
 
-              <div className="-mt-6 relative z-10">
-                <h4 className="text-2xl font-bold mb-2">
-                  {item.t}
-                </h4>
+              <img
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=85&w=1200"
+                alt="Students learning together"
+                className="h-[380px] w-full object-cover sm:h-[480px] lg:h-[560px]"
+              />
 
-                <p className="text-slate-500 leading-relaxed">
-                  {item.d}
-                </p>
-              </div>
-            </div>
-          ))}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#142B59]/70 via-transparent to-transparent"></div>
 
-        </div>
-      </section>
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white md:p-9">
 
-      {/* --- WHAT YOUR CHILD LEARNS --- */}
-      <section className="bg-slate-50 py-20 px-8 md:px-20">
-
-        <div className="max-w-6xl mx-auto">
-
-          <div className="mb-16">
-            <span className="text-blue-500 uppercase tracking-widest font-sans font-bold text-sm">
-              Learning Journey
-            </span>
-
-            <h2 className="text-5xl md:text-6xl font-bold mt-4">
-              From Nursery <br />
-              to Grade 12
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-
-            {[
-              {
-                g: 'Nursery & Kindergarten',
-                f: 'Early Years',
-                d: 'Language, number sense and confidence through short, playful sessions.',
-              },
-              {
-                g: 'Grades 1–5',
-                f: 'Primary',
-                d: 'Strong foundations in reading, writing, mathematics and the wider world.',
-              },
-              {
-                g: 'Grades 6–8',
-                f: 'Middle School',
-                d: 'Science, humanities, languages, computing and independent study.',
-              },
-              {
-                g: 'Grades 9–12',
-                f: 'Senior School',
-                d: 'Preparation for International GCSE, A Level or NIOS Secondary and Senior Secondary examinations.',
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="border-t-2 border-blue-900 pt-6"
-              >
-
-                <span className="text-blue-500 font-sans font-bold text-xs uppercase tracking-widest">
-                  Stage 0{index + 1}
+                <span className="rounded-full bg-white/20 px-4 py-2 text-sm font-semibold backdrop-blur-md">
+                  Learning Without Borders
                 </span>
 
-                <h4 className="text-2xl font-bold mt-4 mb-4">
-                  {item.g}
+                <h3 className="mt-4 text-3xl font-bold md:text-4xl">
+                  A Better Way to Learn
+                </h3>
+
+                <p className="mt-3 max-w-md text-sm leading-relaxed text-blue-50 md:text-base">
+                  Real teachers, interactive classes and a structured
+                  school experience from anywhere in the world.
+                </p>
+
+              </div>
+
+            </div>
+
+            {/* Floating Card */}
+
+            <div className="absolute -bottom-7 left-4 hidden rounded-2xl bg-white p-5 shadow-xl sm:block md:left-[-30px]">
+
+              <div className="flex items-center gap-3">
+
+                <div className="rounded-xl bg-yellow-100 p-3 text-yellow-600">
+                  <GraduationCap size={28} />
+                </div>
+
+                <div>
+                  <p className="font-bold text-[#142B59]">
+                    Nursery to Grade 12
+                  </p>
+
+                  <p className="text-sm text-slate-500">
+                    One complete learning journey
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* ================= ABOUT SECTION ================= */}
+
+      <section className="bg-white py-20 md:py-24">
+
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:px-12">
+
+          {/* About Image */}
+
+          <div className="relative">
+
+            <div className="absolute -left-5 -top-5 h-32 w-32 rounded-3xl bg-yellow-100"></div>
+
+            <img
+              src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&q=85&w=1000"
+              alt="Child learning at home"
+              className="relative z-10 h-[400px] w-full rounded-[28px] object-cover shadow-xl md:h-[500px]"
+            />
+
+            <div className="absolute -bottom-7 -right-5 z-20 max-w-xs rounded-2xl border-l-4 border-blue-500 bg-white p-6 shadow-xl">
+
+              <div className="mb-3 flex items-center gap-2 text-blue-600">
+                <HeartHandshake size={22} />
+                <span className="text-sm font-bold uppercase tracking-wide">
+                  Our Approach
+                </span>
+              </div>
+
+              <p className="text-lg font-semibold leading-relaxed text-[#142B59]">
+                One school, two pathways, learning without borders.
+              </p>
+
+            </div>
+
+          </div>
+
+          {/* About Content */}
+
+          <div>
+
+            <span className="inline-block rounded-full bg-blue-50 px-4 py-2 text-sm font-bold uppercase tracking-wider text-blue-600">
+              About Edulectual
+            </span>
+
+            <h2 className="mt-6 text-3xl font-extrabold leading-tight text-[#142B59] md:text-5xl">
+
+              A School That
+              <span className="block text-blue-600">
+                Moves With You
+              </span>
+
+            </h2>
+
+            <p className="mt-7 text-lg leading-8 text-slate-600">
+              Edulectual K12 is a fully online school for children from
+              Nursery to Grade 12. We offer two pathways, the Pearson
+              Edexcel British curriculum and the Indian curriculum
+              with NIOS examinations.
+            </p>
+
+            <p className="mt-5 text-base leading-8 text-slate-600">
+              Families can learn from anywhere while following the
+              same curriculum and teaching standards across the
+              countries we serve.
+            </p>
+
+            <div className="mt-9 grid grid-cols-2 gap-5">
+
+              <div className="rounded-2xl bg-blue-50 p-5">
+                <BookOpen className="mb-3 text-blue-600" size={30} />
+
+                <h4 className="font-bold text-[#142B59]">
+                  Two Pathways
                 </h4>
 
-                <p className="text-blue-600 text-sm mb-4 font-sans font-semibold italic">
-                  {item.f}
-                </p>
-
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  {item.d}
+                <p className="mt-2 text-sm text-slate-600">
+                  British and Indian curriculum.
                 </p>
               </div>
+
+              <div className="rounded-2xl bg-teal-50 p-5">
+                <Globe2 className="mb-3 text-teal-600" size={30} />
+
+                <h4 className="font-bold text-[#142B59]">
+                  Global Learning
+                </h4>
+
+                <p className="mt-2 text-sm text-slate-600">
+                  Learn from anywhere.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* ================= CURRICULUM PATHWAYS ================= */}
+
+      <section className="bg-[#F1F6FF] py-20 md:py-24">
+
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+
+            <span className="rounded-full bg-blue-100 px-5 py-2 text-sm font-bold uppercase tracking-wider text-blue-700">
+              Academic Pathways
+            </span>
+
+            <h2 className="mt-6 text-3xl font-extrabold text-[#142B59] md:text-5xl">
+              Two Pathways.
+              <span className="block text-blue-600">
+                One Standard of Teaching.
+              </span>
+            </h2>
+
+            <p className="mt-5 text-lg leading-relaxed text-slate-600">
+              Choose the educational pathway that best supports
+              your child's academic journey and future goals.
+            </p>
+
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+
+            {pathways.map((pathway, index) => (
+
+              <div
+                key={index}
+                className={`rounded-3xl border-t-[6px] ${pathway.color} bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl md:p-10`}
+              >
+
+                <div className="mb-6 flex items-center justify-between">
+
+                  <span className={`rounded-full px-4 py-2 text-sm font-bold ${pathway.badge}`}>
+                    Pathway {pathway.number}
+                  </span>
+
+                  <div className={`rounded-2xl p-4 ${pathway.icon}`}>
+                    {index === 0 ? (
+                      <GraduationCap size={30} />
+                    ) : (
+                      <School size={30} />
+                    )}
+                  </div>
+
+                </div>
+
+                <h3 className="text-2xl font-extrabold leading-tight text-[#142B59] md:text-3xl">
+                  {pathway.title}
+                </h3>
+
+                <p className="mt-5 leading-8 text-slate-600">
+                  {pathway.description}
+                </p>
+
+                <h4 className="mb-5 mt-8 font-bold text-[#142B59]">
+                  Learning Stages
+                </h4>
+
+                <div className="space-y-3">
+
+                  {pathway.stages.map((stage, stageIndex) => (
+
+                    <div
+                      key={stageIndex}
+                      className="flex items-center gap-4 rounded-xl bg-slate-50 p-4 transition hover:bg-blue-50"
+                    >
+
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-100 text-sm font-bold text-blue-700">
+                        0{stageIndex + 1}
+                      </span>
+
+                      <span className="font-semibold text-slate-700">
+                        {stage}
+                      </span>
+
+                      <CheckCircle2
+                        size={19}
+                        className="ml-auto shrink-0 text-green-500"
+                      />
+
+                    </div>
+
+                  ))}
+
+                </div>
+
+                <div className="mt-8 rounded-xl bg-blue-50 p-5">
+
+                  <p className="text-sm leading-relaxed text-slate-600">
+                    {pathway.suitable}
+                  </p>
+
+                </div>
+
+              </div>
+
             ))}
 
           </div>
+
         </div>
+
       </section>
 
-      {/* --- COUNTRIES WE SERVE --- */}
-      <section className="py-20 px-8 md:px-20">
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      {/* ================= WHY CHOOSE US ================= */}
+
+      <section className="bg-white py-20 md:py-24">
+
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+          <div className="mb-14 text-center">
+
+            <span className="rounded-full bg-yellow-100 px-5 py-2 text-sm font-bold uppercase tracking-wider text-yellow-700">
+              Why Edulectual
+            </span>
+
+            <h2 className="mt-6 text-3xl font-extrabold text-[#142B59] md:text-5xl">
+              Why Families Choose Us
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-slate-600">
+              We combine quality education, flexibility and personal
+              support to create a meaningful online school experience.
+            </p>
+
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+            {benefits.map((item, index) => {
+
+              const Icon = item.icon;
+
+              return (
+
+                <div
+                  key={index}
+                  className="group rounded-2xl border border-slate-100 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                >
+
+                  <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl ${item.color} transition-transform group-hover:scale-110`}>
+                    <Icon size={28} />
+                  </div>
+
+                  <h3 className="text-xl font-bold text-[#142B59]">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-4 leading-7 text-slate-600">
+                    {item.description}
+                  </p>
+
+                </div>
+
+              );
+
+            })}
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* ================= LEARNING JOURNEY ================= */}
+
+      <section className="bg-[#F1F6FF] py-20 md:py-24">
+
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+          <div className="mb-14 text-center">
+
+            <span className="rounded-full bg-blue-100 px-5 py-2 text-sm font-bold uppercase tracking-wider text-blue-700">
+              Learning Journey
+            </span>
+
+            <h2 className="mt-6 text-3xl font-extrabold leading-tight text-[#142B59] md:text-5xl">
+              From Nursery to Grade 12
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-600">
+              A complete educational journey designed to support
+              children at every stage of their development.
+            </p>
+
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+            {programs.map((program, index) => {
+
+              const Icon = program.icon;
+
+              return (
+
+                <div
+                  key={index}
+                  className={`rounded-2xl border ${program.border} ${program.color} p-7 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg`}
+                >
+
+                  <span className="text-xs font-bold uppercase tracking-widest text-slate-500">
+                    {program.stage}
+                  </span>
+
+                  <div className="mb-6 mt-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-sm">
+                    <Icon size={32} className={program.iconColor} />
+                  </div>
+
+                  <h3 className="text-2xl font-extrabold text-[#142B59]">
+                    {program.title}
+                  </h3>
+
+                  <p className="mt-2 text-sm font-bold text-blue-600">
+                    {program.grades}
+                  </p>
+
+                  <p className="mt-5 text-sm leading-7 text-slate-600">
+                    {program.description}
+                  </p>
+
+                  <Link
+                    to="/programmes"
+                    className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-blue-700 transition-all hover:gap-3"
+                  >
+                    Explore Programme
+                    <ArrowRight size={17} />
+                  </Link>
+
+                </div>
+
+              );
+
+            })}
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* ================= COUNTRIES WE SERVE ================= */}
+
+      <section className="bg-white py-20 md:py-24">
+
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:px-12">
 
           <div>
-            <span className="text-blue-500 uppercase tracking-widest font-sans font-bold text-sm">
+
+            <span className="rounded-full bg-teal-100 px-5 py-2 text-sm font-bold uppercase tracking-wider text-teal-700">
               A Global School
             </span>
 
-            <h2 className="text-5xl font-bold mt-4 mb-8 leading-tight">
-              Wherever You Live, <br />
-              School Continues
+            <h2 className="mt-6 text-3xl font-extrabold leading-tight text-[#142B59] md:text-5xl">
+              Wherever You Live,
+              <span className="block text-blue-600">
+                School Continues.
+              </span>
             </h2>
 
-            <p className="text-xl text-slate-600 leading-relaxed">
+            <p className="mt-6 text-lg leading-8 text-slate-600">
               Families can join from multiple countries. Our curriculum
               remains consistent, and classes are arranged by time zone
               to make online learning fit your day.
             </p>
+
+            <div className="mt-8 flex items-center gap-4 rounded-2xl bg-blue-50 p-5">
+
+              <div className="rounded-xl bg-blue-100 p-3 text-blue-600">
+                <Globe2 size={28} />
+              </div>
+
+              <div>
+                <h4 className="font-bold text-[#142B59]">
+                  Learning Without Borders
+                </h4>
+
+                <p className="mt-1 text-sm text-slate-600">
+                  One school experience across multiple countries.
+                </p>
+              </div>
+
+            </div>
+
           </div>
 
-          <div className="bg-blue-900 p-8 md:p-12 text-white">
+          <div className="rounded-3xl bg-[#142B59] p-8 text-white shadow-xl md:p-10">
 
-            <h3 className="text-3xl font-bold mb-8">
-              Countries We Serve
-            </h3>
+            <div className="mb-8 flex items-center gap-4">
 
-            <div className="grid grid-cols-2 gap-4">
+              <div className="rounded-xl bg-white/10 p-3">
+                <MapPin size={30} className="text-yellow-400" />
+              </div>
 
-              {[
-                'India',
-                'UAE',
-                'Qatar',
-                'Oman',
-                'Kuwait',
-                'Bahrain',
-                'United Kingdom',
-                'Australia',
-                'United States',
-                'Canada',
-              ].map((country, index) => (
+              <div>
+                <h3 className="text-2xl font-bold">
+                  Countries We Serve
+                </h3>
+
+                <p className="mt-1 text-sm text-blue-200">
+                  Join our global learning community.
+                </p>
+              </div>
+
+            </div>
+
+            <div className="grid grid-cols-2 gap-3">
+
+              {countries.map((country, index) => (
+
                 <div
                   key={index}
-                  className="border-b border-blue-700 pb-3 text-blue-100"
+                  className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 p-4 transition hover:bg-white/10"
                 >
-                  {country}
+
+                  <CheckCircle2
+                    size={17}
+                    className="shrink-0 text-teal-400"
+                  />
+
+                  <span className="text-sm font-medium text-blue-50">
+                    {country}
+                  </span>
+
                 </div>
+
               ))}
 
             </div>
 
           </div>
+
         </div>
+
       </section>
 
-      {/* --- FEES AND OFFERS --- */}
-      <section className="bg-blue-50 py-20 px-8 md:px-20">
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      {/* ================= FEES AND OFFERS ================= */}
 
-          <div>
-            <span className="text-blue-500 uppercase tracking-widest font-sans font-bold text-sm">
+      <section className="bg-[#FFF9E9] py-20 md:py-24">
+
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+
+          <div className="mb-12 text-center">
+
+            <span className="rounded-full bg-yellow-100 px-5 py-2 text-sm font-bold uppercase tracking-wider text-yellow-700">
               Admissions 2027-28
             </span>
 
-            <h2 className="text-5xl font-bold mt-4 mb-8 leading-tight">
-              Fees & <br />
-              Offers
+            <h2 className="mt-6 text-3xl font-extrabold text-[#142B59] md:text-5xl">
+              Fees & Special Offers
             </h2>
 
-            <p className="text-lg text-slate-600 leading-relaxed">
-              Annual tuition depends on your child’s grade, pathway
-              and country. Indicative fee ranges are published on our
-              fees page. Final fees are still to be confirmed.
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-slate-600">
+              Explore our fee structure and special offers for
+              families joining Edulectual K12.
             </p>
 
-            <Link
-              to="/fees"
-              className="inline-block mt-8 bg-blue-900 text-white px-8 py-4 font-bold uppercase tracking-wider hover:bg-blue-700 transition"
-            >
-              View Fees
-            </Link>
           </div>
 
-          <div className="bg-blue-900 text-white p-8 md:p-12 shadow-xl">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
 
-            <span className="text-blue-400 uppercase tracking-widest font-sans font-bold text-sm">
-              Founding Family Offer
-            </span>
+            {/* Fees Card */}
 
-            <h3 className="text-6xl md:text-7xl font-black mt-6">
-              25% OFF
-            </h3>
+            <div className="rounded-3xl bg-white p-8 shadow-sm md:p-10">
 
-            <p className="text-xl text-blue-200 mt-4 leading-relaxed">
-              Founding families who enrol by 31 March 2027 receive
-              25% off year-one tuition with fees locked for three years.
-            </p>
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-blue-600">
+                <BookMarked size={30} />
+              </div>
 
-            <div className="border-t border-blue-700 mt-8 pt-8">
+              <h3 className="text-3xl font-extrabold text-[#142B59]">
+                Tuition & Fees
+              </h3>
 
-              <p className="text-lg font-semibold">
-                Discounts can be combined up to a maximum of 35%.
+              <p className="mt-5 leading-8 text-slate-600">
+                Annual tuition depends on your child's grade, pathway
+                and country. Indicative fee ranges are published on
+                our fees page. Final fees are still to be confirmed.
               </p>
 
-              <p className="text-blue-300 mt-4">
-                Every family can start with a free 2-week trial class.
-              </p>
+              <Link
+                to="/fees"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-blue-600 px-7 py-4 font-bold text-white transition hover:bg-blue-700"
+              >
+                View Fees
+                <ArrowRight size={18} />
+              </Link>
 
             </div>
+
+            {/* Offer Card */}
+
+            <div className="relative overflow-hidden rounded-3xl bg-[#142B59] p-8 text-white shadow-xl md:p-10">
+
+              <div className="absolute -right-12 -top-12 h-48 w-48 rounded-full bg-blue-500 opacity-20 blur-2xl"></div>
+
+              <div className="relative">
+
+                <span className="inline-flex items-center gap-2 rounded-full bg-yellow-400/20 px-4 py-2 text-sm font-bold text-yellow-300">
+                  <Star size={16} />
+                  Founding Family Offer
+                </span>
+
+                <h3 className="mt-8 text-6xl font-extrabold text-yellow-400 md:text-7xl">
+                  25% OFF
+                </h3>
+
+                <p className="mt-5 text-lg leading-8 text-blue-100">
+                  Founding families who enrol by 31 March 2027 receive
+                  25% off year-one tuition with fees locked for three years.
+                </p>
+
+                <div className="mt-8 border-t border-white/20 pt-7">
+
+                  <p className="font-semibold">
+                    Discounts can be combined up to a maximum of 35%.
+                  </p>
+
+                  <p className="mt-4 text-sm text-blue-200">
+                    Every family can start with a free 2-week trial class.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
 
         </div>
+
       </section>
 
-      {/* --- FINAL CTA --- */}
-      <section className="relative min-h-[80vh] flex items-center justify-center bg-blue-900">
 
-        <img
-          src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&q=80&w=1500"
-          className="absolute inset-0 w-full h-full object-cover opacity-30 grayscale"
-          alt="Students learning"
-        />
+      {/* ================= FINAL CTA ================= */}
 
-        <div className="relative text-center text-white px-4 max-w-5xl">
+      <section className="relative overflow-hidden bg-[#142B59] py-24 md:py-32">
 
-          <span className="text-blue-300 font-sans uppercase tracking-widest text-sm font-bold">
+        <div className="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-blue-500 opacity-20 blur-3xl"></div>
+
+        <div className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-teal-400 opacity-20 blur-3xl"></div>
+
+        <div className="relative mx-auto max-w-5xl px-5 text-center sm:px-8">
+
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-sm font-bold uppercase tracking-wider text-yellow-300">
+            <CalendarDays size={17} />
             Admissions Open · 2027-28
           </span>
 
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 mt-6 uppercase tracking-tighter">
-            Start With <br />
-            A Free Trial
+          <h2 className="mt-8 text-4xl font-extrabold leading-tight text-white sm:text-5xl md:text-7xl">
+
+            Start Your Child's
+            <span className="block text-yellow-400">
+              Learning Journey.
+            </span>
+
           </h2>
 
-          <p className="text-xl md:text-2xl text-blue-100 max-w-2xl mx-auto mb-10">
+          <p className="mx-auto mt-7 max-w-2xl text-lg leading-8 text-blue-100 md:text-xl">
             The best way to know whether online school suits your child
             is to try it. Meet our teachers and experience a real lesson.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
 
             <Link
               to="/apply-now#free-trial"
-              className="bg-blue-500 hover:bg-white hover:text-blue-900 text-white px-10 py-5 text-lg font-bold uppercase tracking-widest transition-all shadow-2xl"
+              className="inline-flex items-center gap-3 rounded-full bg-yellow-400 px-8 py-5 font-bold text-[#142B59] shadow-lg transition hover:-translate-y-1 hover:bg-yellow-300"
             >
               Book a Free 2-Week Trial
+              <ArrowRight size={20} />
             </Link>
 
             <Link
               to="/apply-now#apply"
-              className="border-2 border-white hover:bg-white hover:text-blue-900 text-white px-10 py-5 text-lg font-bold uppercase tracking-widest transition-all"
+              className="inline-flex items-center gap-3 rounded-full border-2 border-white/70 px-8 py-5 font-bold text-white transition hover:bg-white hover:text-[#142B59]"
             >
               Apply for 2027-28
             </Link>
 
           </div>
 
-          <p className="text-blue-200 mt-8 text-sm">
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-3 text-sm text-blue-200">
+
+            <ShieldCheck size={19} className="text-teal-400" />
+
             During our launch, the ₹999 registration fee is waived.
-          </p>
+
+          </div>
 
         </div>
+
       </section>
 
-    </div>
+    </main>
   );
 };
 

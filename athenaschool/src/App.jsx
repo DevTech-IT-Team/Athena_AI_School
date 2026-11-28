@@ -1,3 +1,4 @@
+
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, Suspense, lazy } from 'react';
 
@@ -15,12 +16,14 @@ const Programs = lazy(() => import('./components/Programs'));
 const Pathway = lazy(() => import('./pages/Pathway'));
 const Contact = lazy(() => import('./pages/Contact'));
 
+// Admissions
 const ApplyNow = lazy(() => import('./pages/Admissions/ApplyNow'));
 const WhoShouldRegister = lazy(() => import('./pages/Admissions/WhoShouldRegister'));
 const BatchTimings = lazy(() => import('./pages/Admissions/BatchTimings'));
 const EssentialRequirements = lazy(() => import('./pages/Admissions/EssentialRequirements'));
 const Fees = lazy(() => import('./pages/Admissions/Fees'));
 
+// How It Works
 const HowItWorks = lazy(() => import('./pages/Howitworks/HowItWorksSimple'));
 const SpecialEducation = lazy(() => import('./pages/Howitworks/SpecialEducation'));
 const Technology = lazy(() => import('./pages/Howitworks/Technology'));
@@ -31,9 +34,11 @@ const AffiliationsAccreditation = lazy(() => import('./pages/Howitworks/Affiliat
 const Resources = lazy(() => import('./pages/Howitworks/Resources'));
 const ResourcesDownloads = lazy(() => import('./pages/Howitworks/ResourcesDownloads'));
 
+// Being Athena AI
 const Follow = lazy(() => import('./pages/Follow'));
 const LearningGarage = lazy(() => import('./pages/LearningGarage'));
 
+// Electives
 const Computational = lazy(() => import('./pages/Electives/Computational'));
 const Languages = lazy(() => import('./pages/Electives/Languages'));
 const InternationalBenchmarkTest = lazy(() => import('./pages/Electives/InternationalBenchmarkTest'));
@@ -60,7 +65,7 @@ const BritishAdvancedLevels = lazy(() => import('./pages/Academics British Pathw
 const CambridgeAdvancedLevel = lazy(() => import('./pages/Academics British Pathway/CambridgeAdvancedLevel'));
 const EdexcelInternationalAdvancedLevel = lazy(() => import('./pages/Academics British Pathway/EdexcelInternationalAdvancedLevel'));
 
-// Being Athena AI
+// Being Athena AI pages
 const WallOfLove = lazy(() => import('./pages/BeingAthenaAI/WallOfLove'));
 const ReferAParent = lazy(() => import('./pages/BeingAthenaAI/ReferAParent'));
 const LearnerLedPodcast = lazy(() => import('./pages/BeingAthenaAI/LearnerLedPodcast'));
@@ -72,7 +77,7 @@ const Press = lazy(() => import('./pages/BeingAthenaAI/Press'));
 const Awards = lazy(() => import('./pages/BeingAthenaAI/Awards'));
 const OurLearnerCouncil = lazy(() => import('./pages/BeingAthenaAI/OurLearnerCouncil'));
 
-// About Pages
+// About pages
 const WhatSetsUsApart = lazy(() => import('./pages/About/WhatSetsUsApart'));
 const ValuesAndEthos = lazy(() => import('./pages/About/ValuesAndEthos'));
 const AthenaAIGroup = lazy(() => import('./pages/About/AthenaAIGroup'));
@@ -83,10 +88,10 @@ const MissionBridge = lazy(() => import('./pages/About/MissionBridge'));
 const WhyOnlineSchool = lazy(() => import('./pages/About/WhyOnlineSchool'));
 const OurVision = lazy(() => import('./pages/About/OurVision'));
 
-// 404 Page
+// 404
 const NotFound = lazy(() => import('./components/NotFound'));
 
-// Scroll to top when route changes
+// Scroll to top on route change
 function ScrollToTopWrapper({ children }) {
   const location = useLocation();
 
@@ -100,13 +105,24 @@ function ScrollToTopWrapper({ children }) {
   return children;
 }
 
+// Route wrapper
+function Page({ children }) {
+  return (
+    <ScrollToTopWrapper>
+      {children}
+    </ScrollToTopWrapper>
+  );
+}
+
 function App() {
   return (
     <ErrorBoundary>
-      <div className="min-h-screen" style={{ background: "#fff" }}>
+      <div className="min-h-screen bg-white">
 
+        {/* Main Navigation */}
         <Navigation />
 
+        {/* Main Pages */}
         <Suspense
           fallback={
             <div className="py-16 text-center text-gray-500">
@@ -117,102 +133,124 @@ function App() {
           <Routes>
 
             {/* Home */}
-            <Route path="/" element={<ScrollToTopWrapper><Home /></ScrollToTopWrapper>} />
+            <Route path="/" element={<Page><Home /></Page>} />
 
-            {/* Main Pages */}
-            <Route path="/pathway" element={<ScrollToTopWrapper><Pathway /></ScrollToTopWrapper>} />
-            <Route path="/about" element={<ScrollToTopWrapper><About /></ScrollToTopWrapper>} />
-            <Route path="/programs" element={<ScrollToTopWrapper><Programs /></ScrollToTopWrapper>} />
-            <Route path="/resources" element={<ScrollToTopWrapper><Resources /></ScrollToTopWrapper>} />
-            <Route path="/contact" element={<ScrollToTopWrapper><Contact /></ScrollToTopWrapper>} />
-            <Route path="/follow" element={<ScrollToTopWrapper><Follow /></ScrollToTopWrapper>} />
-            <Route path="/learning-garage" element={<ScrollToTopWrapper><LearningGarage /></ScrollToTopWrapper>} />
+            {/* Main Website */}
+            <Route path="/pathway" element={<Page><Pathway /></Page>} />
+            <Route path="/about" element={<Page><About /></Page>} />
+            <Route path="/programs" element={<Page><Programs /></Page>} />
+            <Route path="/contact" element={<Page><Contact /></Page>} />
+            <Route path="/follow" element={<Page><Follow /></Page>} />
+            <Route path="/floww" element={<Page><Follow /></Page>} />
+            <Route path="/learning-garage" element={<Page><LearningGarage /></Page>} />
 
-            {/* Admissions */}
-            <Route path="/apply-now" element={<ScrollToTopWrapper><ApplyNow /></ScrollToTopWrapper>} />
-            <Route path="/who-should-register" element={<ScrollToTopWrapper><WhoShouldRegister /></ScrollToTopWrapper>} />
-            <Route path="/batch-timings" element={<ScrollToTopWrapper><BatchTimings /></ScrollToTopWrapper>} />
-            <Route path="/essential-requirements" element={<ScrollToTopWrapper><EssentialRequirements /></ScrollToTopWrapper>} />
-            <Route path="/fees" element={<ScrollToTopWrapper><Fees /></ScrollToTopWrapper>} />
+            {/* Admissions & Fees */}
+            <Route path="/apply-now" element={<Page><ApplyNow /></Page>} />
+            <Route path="/who-should-register" element={<Page><WhoShouldRegister /></Page>} />
+            <Route path="/batch-timings" element={<Page><BatchTimings /></Page>} />
+            <Route path="/essential-requirements" element={<Page><EssentialRequirements /></Page>} />
+            <Route path="/fees" element={<Page><Fees /></Page>} />
 
-            {/* How It Works */}
-            <Route path="/how-it-works" element={<ScrollToTopWrapper><HowItWorks /></ScrollToTopWrapper>} />
-            <Route path="/special-education" element={<ScrollToTopWrapper><SpecialEducation /></ScrollToTopWrapper>} />
-            <Route path="/technology" element={<ScrollToTopWrapper><Technology /></ScrollToTopWrapper>} />
-            <Route path="/features" element={<ScrollToTopWrapper><Features /></ScrollToTopWrapper>} />
-            <Route path="/why-online-only" element={<ScrollToTopWrapper><WhyOnlineOnly /></ScrollToTopWrapper>} />
-            <Route path="/faq" element={<ScrollToTopWrapper><FAQ /></ScrollToTopWrapper>} />
-            <Route path="/affiliations-accreditation" element={<ScrollToTopWrapper><AffiliationsAccreditation /></ScrollToTopWrapper>} />
-            <Route path="/resources-downloads" element={<ScrollToTopWrapper><ResourcesDownloads /></ScrollToTopWrapper>} />
+            {/* Admissions aliases */}
+            <Route path="/how-to-apply" element={<Page><ApplyNow /></Page>} />
+            <Route path="/class-timings" element={<Page><BatchTimings /></Page>} />
+            <Route path="/refer-a-family" element={<Page><ReferAParent /></Page>} />
+            <Route path="/refer-a-parent" element={<Page><ReferAParent /></Page>} />
+
+            {/* Online Learning */}
+            <Route path="/how-it-works" element={<Page><HowItWorks /></Page>} />
+            <Route path="/special-education" element={<Page><SpecialEducation /></Page>} />
+            <Route path="/technology" element={<Page><Technology /></Page>} />
+            <Route path="/features" element={<Page><Features /></Page>} />
+            <Route path="/why-online-only" element={<Page><WhyOnlineOnly /></Page>} />
+            <Route path="/why-online-school" element={<Page><WhyOnlineSchool /></Page>} />
+            <Route path="/learning-culture" element={<Page><LearningCulture /></Page>} />
+
+            {/* Help & Contact */}
+            <Route path="/faq" element={<Page><FAQ /></Page>} />
+            <Route path="/resources" element={<Page><Resources /></Page>} />
+            <Route path="/help-and-support" element={<Page><Resources /></Page>} />
+            <Route path="/affiliations-accreditation" element={<Page><AffiliationsAccreditation /></Page>} />
+            <Route path="/accreditation" element={<Page><AffiliationsAccreditation /></Page>} />
+            <Route path="/resources-downloads" element={<Page><ResourcesDownloads /></Page>} />
+            <Route path="/prospectus-downloads" element={<Page><ResourcesDownloads /></Page>} />
 
             {/* Electives */}
-            <Route path="/computational-thinking" element={<ScrollToTopWrapper><Computational /></ScrollToTopWrapper>} />
-            <Route path="/languages" element={<ScrollToTopWrapper><Languages /></ScrollToTopWrapper>} />
-            <Route path="/international-benchmark-test" element={<ScrollToTopWrapper><InternationalBenchmarkTest /></ScrollToTopWrapper>} />
+            <Route path="/computational-thinking" element={<Page><Computational /></Page>} />
+            <Route path="/languages" element={<Page><Languages /></Page>} />
+            <Route path="/international-benchmark-test" element={<Page><InternationalBenchmarkTest /></Page>} />
 
             {/* Indian Pathway */}
-            <Route path="/ncf-india" element={<ScrollToTopWrapper><NCFIndia /></ScrollToTopWrapper>} />
-            <Route path="/learning-culture" element={<ScrollToTopWrapper><LearningCulture /></ScrollToTopWrapper>} />
-            <Route path="/pre-primary" element={<ScrollToTopWrapper><PrePrimary /></ScrollToTopWrapper>} />
-            <Route path="/primary" element={<ScrollToTopWrapper><Primary /></ScrollToTopWrapper>} />
-            <Route path="/middle" element={<ScrollToTopWrapper><Middle /></ScrollToTopWrapper>} />
-            <Route path="/senior-school" element={<ScrollToTopWrapper><SeniorSchool /></ScrollToTopWrapper>} />
-            <Route path="/music-arts-partner" element={<ScrollToTopWrapper><MusicArtsPartner /></ScrollToTopWrapper>} />
+            <Route path="/ncf-india" element={<Page><NCFIndia /></Page>} />
+            <Route path="/learning-culture-india" element={<Page><LearningCulture /></Page>} />
+            <Route path="/pre-primary" element={<Page><PrePrimary /></Page>} />
+            <Route path="/primary" element={<Page><Primary /></Page>} />
+            <Route path="/middle" element={<Page><Middle /></Page>} />
+            <Route path="/senior-school" element={<Page><SeniorSchool /></Page>} />
+            <Route path="/music-arts-partner" element={<Page><MusicArtsPartner /></Page>} />
 
-            {/* British Pathway - Keep unchanged until confirmation */}
-            <Route path="/cambridge-international-uk" element={<ScrollToTopWrapper><CambridgeInternationalUK /></ScrollToTopWrapper>} />
-            <Route path="/edexcel-uk" element={<ScrollToTopWrapper><EdexcelUK /></ScrollToTopWrapper>} />
-            <Route path="/early-years" element={<ScrollToTopWrapper><EarlyYears /></ScrollToTopWrapper>} />
-            <Route path="/british-primary" element={<ScrollToTopWrapper><BritishPrimary /></ScrollToTopWrapper>} />
-            <Route path="/british-lower-secondary" element={<ScrollToTopWrapper><BritishLowerSecondary /></ScrollToTopWrapper>} />
-            <Route path="/british-upper-secondary" element={<ScrollToTopWrapper><BritishUpperSecondary /></ScrollToTopWrapper>} />
-            <Route path="/cambridge-igcse" element={<ScrollToTopWrapper><CambridgeIGCSE /></ScrollToTopWrapper>} />
-            <Route path="/edexcel-international-gcse" element={<ScrollToTopWrapper><EdexcelInternationalGCSE /></ScrollToTopWrapper>} />
-            <Route path="/british-advanced-levels" element={<ScrollToTopWrapper><BritishAdvancedLevels /></ScrollToTopWrapper>} />
-            <Route path="/cambridge-advanced-level" element={<ScrollToTopWrapper><CambridgeAdvancedLevel /></ScrollToTopWrapper>} />
-            <Route path="/edexcel-international-advanced-level" element={<ScrollToTopWrapper><EdexcelInternationalAdvancedLevel /></ScrollToTopWrapper>} />
+            {/* British Pathway */}
+            <Route path="/cambridge-international-uk" element={<Page><CambridgeInternationalUK /></Page>} />
+            <Route path="/edexcel-uk" element={<Page><EdexcelUK /></Page>} />
+            <Route path="/early-years" element={<Page><EarlyYears /></Page>} />
+            <Route path="/british-primary" element={<Page><BritishPrimary /></Page>} />
+            <Route path="/british-lower-secondary" element={<Page><BritishLowerSecondary /></Page>} />
+            <Route path="/british-upper-secondary" element={<Page><BritishUpperSecondary /></Page>} />
+            <Route path="/cambridge-igcse" element={<Page><CambridgeIGCSE /></Page>} />
+            <Route path="/edexcel-international-gcse" element={<Page><EdexcelInternationalGCSE /></Page>} />
+            <Route path="/british-advanced-levels" element={<Page><BritishAdvancedLevels /></Page>} />
+            <Route path="/cambridge-advanced-level" element={<Page><CambridgeAdvancedLevel /></Page>} />
+            <Route path="/edexcel-international-advanced-level" element={<Page><EdexcelInternationalAdvancedLevel /></Page>} />
+
+            {/* Pathway aliases */}
+            <Route path="/british-vs-indian-pathway" element={<Page><Pathway /></Page>} />
+            <Route path="/pathways" element={<Page><Pathway /></Page>} />
 
             {/* Being Athena AI */}
-            <Route path="/wall-of-love" element={<ScrollToTopWrapper><WallOfLove /></ScrollToTopWrapper>} />
-            <Route path="/refer-a-parent" element={<ScrollToTopWrapper><ReferAParent /></ScrollToTopWrapper>} />
-            <Route path="/learner-led-podcast" element={<ScrollToTopWrapper><LearnerLedPodcast /></ScrollToTopWrapper>} />
-            <Route path="/student-spotlight" element={<ScrollToTopWrapper><StudentSpotlight /></ScrollToTopWrapper>} />
-            <Route path="/meet-our-academic-crew" element={<ScrollToTopWrapper><MeetOurAcademicCrew /></ScrollToTopWrapper>} />
-            <Route path="/learner-work" element={<ScrollToTopWrapper><LearnerWork /></ScrollToTopWrapper>} />
-            <Route path="/parents-speak" element={<ScrollToTopWrapper><ParentsSpeak /></ScrollToTopWrapper>} />
-            <Route path="/press" element={<ScrollToTopWrapper><Press /></ScrollToTopWrapper>} />
-
-            {/* Awards - Keep unchanged until confirmation */}
-            <Route path="/awards" element={<ScrollToTopWrapper><Awards /></ScrollToTopWrapper>} />
-
-            <Route path="/our-learner-council" element={<ScrollToTopWrapper><OurLearnerCouncil /></ScrollToTopWrapper>} />
+            <Route path="/wall-of-love" element={<Page><WallOfLove /></Page>} />
+            <Route path="/learner-led-podcast" element={<Page><LearnerLedPodcast /></Page>} />
+            <Route path="/student-spotlight" element={<Page><StudentSpotlight /></Page>} />
+            <Route path="/meet-our-academic-crew" element={<Page><MeetOurAcademicCrew /></Page>} />
+            <Route path="/our-teachers" element={<Page><MeetOurAcademicCrew /></Page>} />
+            <Route path="/learner-work" element={<Page><LearnerWork /></Page>} />
+            <Route path="/parents-speak" element={<Page><ParentsSpeak /></Page>} />
+            <Route path="/press" element={<Page><Press /></Page>} />
+            <Route path="/awards" element={<Page><Awards /></Page>} />
+            <Route path="/our-learner-council" element={<Page><OurLearnerCouncil /></Page>} />
 
             {/* About */}
-            <Route path="/what-sets-us-apart" element={<ScrollToTopWrapper><WhatSetsUsApart /></ScrollToTopWrapper>} />
-            <Route path="/k12-online-school" element={<ScrollToTopWrapper><AthenaAISchool /></ScrollToTopWrapper>} />
-            <Route path="/Wisdom-ai-school" element={<ScrollToTopWrapper><AthenaAISchool /></ScrollToTopWrapper>} />
-            <Route path="/our-vision" element={<ScrollToTopWrapper><OurVision /></ScrollToTopWrapper>} />
-            <Route path="/mission-bridge" element={<ScrollToTopWrapper><MissionBridge /></ScrollToTopWrapper>} />
-            <Route path="/why-online-school" element={<ScrollToTopWrapper><WhyOnlineSchool /></ScrollToTopWrapper>} />
-            <Route path="/values-and-ethos" element={<ScrollToTopWrapper><ValuesAndEthos /></ScrollToTopWrapper>} />
-            <Route path="/k12-online-group" element={<ScrollToTopWrapper><AthenaAIGroup /></ScrollToTopWrapper>} />
-            <Route path="/Wisdom-ai-group" element={<ScrollToTopWrapper><AthenaAIGroup /></ScrollToTopWrapper>} />
-            <Route path="/our-leaders" element={<ScrollToTopWrapper><OurLeaders /></ScrollToTopWrapper>} />
-            <Route path="/habits-of-mind" element={<ScrollToTopWrapper><HabitsOfMind /></ScrollToTopWrapper>} />
+            <Route path="/what-sets-us-apart" element={<Page><WhatSetsUsApart /></Page>} />
+            <Route path="/why-choose-us" element={<Page><WhatSetsUsApart /></Page>} />
 
-            {/* Blog - Keep unchanged until confirmation */}
-            <Route path="/blog" element={<ScrollToTopWrapper><BlogComingSoon /></ScrollToTopWrapper>} />
+            <Route path="/k12-online-school" element={<Page><AthenaAISchool /></Page>} />
+            <Route path="/wisdom-ai-school" element={<Page><AthenaAISchool /></Page>} />
+
+            <Route path="/our-vision" element={<Page><OurVision /></Page>} />
+            <Route path="/mission-bridge" element={<Page><MissionBridge /></Page>} />
+            <Route path="/mission-vision-values" element={<Page><ValuesAndEthos /></Page>} />
+            <Route path="/values-and-ethos" element={<Page><ValuesAndEthos /></Page>} />
+
+            <Route path="/k12-online-group" element={<Page><AthenaAIGroup /></Page>} />
+            <Route path="/wisdom-ai-group" element={<Page><AthenaAIGroup /></Page>} />
+
+            <Route path="/our-leaders" element={<Page><OurLeaders /></Page>} />
+            <Route path="/habits-of-mind" element={<Page><HabitsOfMind /></Page>} />
+
+            {/* Blog */}
+            <Route path="/blog" element={<Page><BlogComingSoon /></Page>} />
 
             {/* 404 */}
-            <Route path="*" element={<ScrollToTopWrapper><NotFound /></ScrollToTopWrapper>} />
+            <Route path="*" element={<Page><NotFound /></Page>} />
 
           </Routes>
         </Suspense>
 
+        {/* Footer */}
         <Suspense fallback={null}>
           <Footer />
         </Suspense>
 
+        {/* Floating Enquiry Tab */}
         <Suspense fallback={null}>
           <EnquireTab />
         </Suspense>

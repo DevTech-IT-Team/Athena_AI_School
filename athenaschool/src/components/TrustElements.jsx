@@ -1,194 +1,243 @@
-import { Shield, Award, Users, Star } from 'lucide-react';
+import React from "react";
+import {
+  Shield,
+  BookOpen,
+  Users,
+  GraduationCap,
+  Monitor,
+  HeartHandshake,
+  ArrowRight,
+  CheckCircle2,
+} from "lucide-react";
 
 function TrustElements() {
-  const accreditations = [
+  const trustCards = [
     {
-      name: "Cambridge International",
-      description: "Official Cambridge International School",
-      logo: "CI"
+      icon: BookOpen,
+      title: "Recognised Learning Pathways",
+      description:
+        "Explore structured learning pathways designed around British and Indian curricula.",
+      bg: "bg-blue-100",
+      iconColor: "text-blue-600",
     },
     {
-      name: "Edexcel",
-      description: "Approved Edexcel examination center",
-      logo: "ED"
+      icon: GraduationCap,
+      title: "Teacher-Led Classes",
+      description:
+        "Learn through live online classes with teachers guiding students throughout their learning journey.",
+      bg: "bg-yellow-100",
+      iconColor: "text-yellow-600",
     },
     {
-      name: "British Council",
-      description: "Recognized by British Council standards",
-      logo: "BC"
+      icon: Users,
+      title: "Individual Attention",
+      description:
+        "An online learning experience designed to encourage participation, engagement and interaction.",
+      bg: "bg-green-100",
+      iconColor: "text-green-600",
     },
     {
-      name: "Cognia",
-      description: "Cognia-accredited educational institution",
-      logo: "CO"
-    }
+      icon: Monitor,
+      title: "Structured Online Learning",
+      description:
+        "A structured online school experience with live classes and a learning routine.",
+      bg: "bg-purple-100",
+      iconColor: "text-purple-600",
+    },
+    {
+      icon: HeartHandshake,
+      title: "Parent Support",
+      description:
+        "Parents are part of the learning journey, with communication and support throughout.",
+      bg: "bg-pink-100",
+      iconColor: "text-pink-600",
+    },
+    {
+      icon: Shield,
+      title: "Learning with Purpose",
+      description:
+        "A school experience focused on helping students develop knowledge, confidence and independence.",
+      bg: "bg-orange-100",
+      iconColor: "text-orange-600",
+    },
   ];
 
-  const awards = [
-    {
-      title: "Best Online School 2023",
-      organization: "Global Education Awards",
-      year: "2023"
-    },
-    {
-      title: "Excellence in Digital Learning",
-      organization: "International Education Forum",
-      year: "2023"
-    },
-    {
-      title: "Top 10 Online Schools",
-      organization: "Education Excellence Rankings",
-      year: "2023"
-    },
-    {
-      title: "Innovation in Education",
-      organization: "Global EdTech Awards",
-      year: "2022"
-    }
-  ];
-
-  const partnerships = [
-    {
-      name: "University of London",
-      description: "Pathway partner for undergraduate programs",
-      logo: "UL"
-    },
-    {
-      name: "Cambridge Assessment",
-      description: "Official assessment partner",
-      logo: "CA"
-    },
-    {
-      name: "Microsoft Education",
-      description: "Technology integration partner",
-      logo: "MS"
-    },
-    {
-      name: "UNESCO Associated Schools",
-      description: "Member of global education network",
-      logo: "UN"
-    }
-  ];
-
-  const safetyCertifications = [
-    {
-      name: "ISO 27001",
-      description: "Information Security Management",
-      icon: "🔒"
-    },
-    {
-      name: "Child Safety Certified",
-      description: "Verified child protection policies",
-      icon: "🛡️"
-    },
-    {
-      name: "GDPR Compliant",
-      description: "Data protection and privacy compliant",
-      icon: "📋"
-    },
-    {
-      name: "Safe Spaces Certified",
-      description: "Secure online learning environment",
-      icon: "🔐"
-    }
+  const learningFeatures = [
+    "Live teacher-led online classes",
+    "Structured learning schedules",
+    "British and Indian learning pathways",
+    "Support for students and parents",
+    "Interactive online learning",
+    "School experience from Nursery to Grade 12",
   ];
 
   return (
-    <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Trusted by Thousands Worldwide</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">Recognized accreditations, prestigious awards, and strong partnerships</p>
+    <section className="relative overflow-hidden bg-[#FFF9F2] py-20 md:py-28">
+      {/* Background Decorations */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-200/30 blur-3xl rounded-full" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-orange-200/30 blur-3xl rounded-full" />
+
+      {/* Subtle Grid */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:3rem_3rem]" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-5">
+            <Shield className="w-4 h-4" />
+            The Edulectual Experience
+          </span>
+
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#172554] mb-6 leading-tight">
+            A School Experience
+            <span className="block text-blue-600">
+              You Can Feel Confident About
+            </span>
+          </h2>
+
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Discover an online school designed around structured learning,
+            teacher interaction, student engagement and support for families.
+          </p>
         </div>
 
-        {/* Accreditations */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
-          <div className="text-center mb-8">
-            <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600">
-              <Shield size={32} />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Accreditations</h3>
-            <p className="text-gray-600">Globally recognized educational standards</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {accreditations.map((acc, index) => (
-              <div key={index} className="text-center p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl border border-gray-200 hover:shadow-md transition-shadow">
-                <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">
-                  {acc.logo}
+        {/* Trust Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+          {trustCards.map((card, index) => {
+            const Icon = card.icon;
+
+            return (
+              <div
+                key={index}
+                className="group bg-white rounded-3xl p-7 md:p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                <div
+                  className={`${card.bg} w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110`}
+                >
+                  <Icon className={`w-8 h-8 ${card.iconColor}`} />
                 </div>
-                <h4 className="font-bold text-gray-900 mb-2">{acc.name}</h4>
-                <p className="text-gray-600 text-sm">{acc.description}</p>
+
+                <h3 className="text-xl font-bold text-[#172554] mb-3">
+                  {card.title}
+                </h3>
+
+                <p className="text-gray-600 leading-relaxed">
+                  {card.description}
+                </p>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
 
-        {/* Awards */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
-          <div className="text-center mb-8">
-            <div className="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-yellow-600">
-              <Award size={32} />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Awards & Recognition</h3>
-            <p className="text-gray-600">Industry recognition for excellence</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {awards.map((award, index) => (
-              <div key={index} className="p-6 bg-gradient-to-br from-yellow-50 to-white rounded-xl border border-gray-200">
-                <div className="flex items-center justify-center mb-4">
-                  <Star className="text-yellow-500 fill-current" size={24} />
+        {/* Learning Features Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          {/* Left Content */}
+          <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-sm border border-gray-100">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-6">
+              <CheckCircle2 className="w-4 h-4" />
+              What Makes Our School Different
+            </span>
+
+            <h3 className="text-3xl font-bold text-[#172554] mb-5">
+              More Than Just Online Classes
+            </h3>
+
+            <p className="text-gray-600 leading-relaxed mb-8">
+              Edulectual K12 brings together teachers, structured learning
+              and student support to create an online school experience
+              that goes beyond individual lessons.
+            </p>
+
+            <div className="space-y-4">
+              {learningFeatures.map((feature, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-4 h-4 text-green-600" />
+                  </div>
+
+                  <p className="text-gray-700 font-medium">
+                    {feature}
+                  </p>
                 </div>
-                <h4 className="font-bold text-gray-900 mb-1">{award.title}</h4>
-                <p className="text-gray-700 text-sm mb-1">{award.organization}</p>
-                <p className="text-blue-600 font-medium text-sm">{award.year}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Partnerships */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
-          <div className="text-center mb-8">
-            <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-green-600">
-              <Users size={32} />
+              ))}
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Partnerships</h3>
-            <p className="text-gray-600">Leading institutions and organizations</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {partnerships.map((partner, index) => (
-              <div key={index} className="text-center p-6 bg-gradient-to-br from-green-50 to-white rounded-xl border border-gray-200">
-                <div className="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">
-                  {partner.logo}
+
+          {/* Right Content */}
+          <div className="relative">
+            <div className="bg-gradient-to-br from-blue-100 via-[#EAF4FF] to-purple-100 rounded-[2rem] p-8 md:p-12">
+              {/* Decorative Element */}
+              <div className="absolute top-5 right-5 w-20 h-20 rounded-full bg-yellow-200/70" />
+
+              <div className="relative z-10">
+                <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md mb-6">
+                  <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-5">
+                    <GraduationCap className="w-7 h-7 text-blue-600" />
+                  </div>
+
+                  <h4 className="text-2xl font-bold text-[#172554] mb-3">
+                    Learning from Home
+                  </h4>
+
+                  <p className="text-gray-600 leading-relaxed">
+                    Experience the flexibility of online education while
+                    being part of a structured school environment.
+                  </p>
                 </div>
-                <h4 className="font-bold text-gray-900 mb-2">{partner.name}</h4>
-                <p className="text-gray-600 text-sm">{partner.description}</p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="bg-[#DFF5E8] rounded-2xl p-5">
+                    <BookOpen className="w-7 h-7 text-green-700 mb-3" />
+
+                    <h5 className="font-bold text-green-900 mb-2">
+                      Academic Learning
+                    </h5>
+
+                    <p className="text-sm text-green-800">
+                      Structured curriculum and classroom learning.
+                    </p>
+                  </div>
+
+                  <div className="bg-[#FFF1D6] rounded-2xl p-5">
+                    <Users className="w-7 h-7 text-orange-700 mb-3" />
+
+                    <h5 className="font-bold text-orange-900 mb-2">
+                      Student Engagement
+                    </h5>
+
+                    <p className="text-sm text-orange-800">
+                      Participation and interaction in online classes.
+                    </p>
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
 
-        {/* Safety Certifications */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <div className="text-center mb-8">
-            <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-red-600">
-              <Shield size={32} />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Safety Certifications</h3>
-            <p className="text-gray-600">Committed to student safety and security</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {safetyCertifications.map((cert, index) => (
-              <div key={index} className="text-center p-6 bg-gradient-to-br from-red-50 to-white rounded-xl border border-gray-200">
-                <div className="text-3xl mb-4">{cert.icon}</div>
-                <h4 className="font-bold text-gray-900 mb-2">{cert.name}</h4>
-                <p className="text-gray-600 text-sm">{cert.description}</p>
-              </div>
-            ))}
-          </div>
+        {/* Bottom CTA */}
+        <div className="mt-20 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-[#172554] mb-5">
+            Discover the Edulectual K12 Experience
+          </h3>
+
+          <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+            Explore our programmes, meet our teachers and see how
+            online school can work for your family.
+          </p>
+
+          <a
+            href="/contact"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-blue-600 text-white font-semibold rounded-full shadow-lg shadow-blue-600/20 hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300"
+          >
+            Explore Our School
+            <ArrowRight className="w-5 h-5" />
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

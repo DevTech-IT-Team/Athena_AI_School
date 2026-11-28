@@ -1,238 +1,299 @@
-import React, { useState, useEffect, useRef, memo } from 'react';
-import { BookOpen, Calculator, LineChart, Star, Zap, Globe, Award, CheckCircle2 } from 'lucide-react';
-import vitalyImage from '../assets/optimized/vitaly-gariev-tP666CeG03o-unsplash.webp';
-import johnImage from '../assets/optimized/jonathan-klok-JS8RhWVk74Q-unsplash.webp';
-import kimberlyImage from '../assets/optimized/kimberly-farmer-lUaaKCUANVI-unsplash.webp';
-import OptimizedImage from './OptimizedImage';
+import React from 'react';
+import {
+  Search,
+  Layers3,
+  Target,
+  Award,
+  BookOpen,
+  Calculator,
+  CheckCircle2,
+  ArrowRight,
+  GraduationCap,
+  Users,
+  Eye,
+} from 'lucide-react';
 
 const FlowwLearningStack = () => {
-  const [activeTab, setActiveTab] = useState('mastery');
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef();
+  const steps = [
+    {
+      icon: Search,
+      title: 'Find the starting point',
+      description:
+        'A short diagnostic check shows what your child already knows and where the gaps are.',
+      color: 'blue',
+    },
+    {
+      icon: Layers3,
+      title: 'Learn in small steps',
+      description:
+        'Lessons build gradually. Each step is supported until your child is ready to move on.',
+      color: 'teal',
+    },
+    {
+      icon: Target,
+      title: 'Practise little and often',
+      description:
+        'Practice, regular questions and short tasks help skills become secure over time.',
+      color: 'yellow',
+    },
+    {
+      icon: Award,
+      title: 'Check and celebrate',
+      description:
+        'Progress checks show what is secure, what needs more support and the next steps.',
+      color: 'orange',
+    },
+  ];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
+  const masterySubjects = [
+    {
+      icon: BookOpen,
+      title: 'English mastery',
+      description:
+        'Reading and writing fluency, vocabulary, comprehension, grammar and sentence skills for meaningful use of English.',
+      color: 'blue',
+    },
+    {
+      icon: Calculator,
+      title: 'Maths mastery',
+      description:
+        'Number sense, calculation, fractions, problem-solving and reasoning skills with practical methods and clear explanations.',
+      color: 'teal',
+    },
+  ];
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+  const learnerTypes = [
+    'Children who find English or maths hard and need to rebuild confidence.',
+    'Curious, quick learners who want more challenge.',
+    'Children returning from a break in schooling or changing curriculum.',
+  ];
 
-    return () => observer.disconnect();
-  }, []);
+  const informationCards = [
+    {
+      icon: GraduationCap,
+      title: 'How FLOWW fits with school',
+      description:
+        'For Edulectual K12 learners, FLOWW can support regular lessons or targeted support or revision. Families outside the school can join for specific needs, without replacing their school curriculum. FLOWW is designed to fit alongside school, not become another full-time timetable.',
+      color: 'blue',
+    },
+    {
+      icon: Eye,
+      title: 'What parents see',
+      description:
+        'Parents receive short programme updates showing which skills have been secured, what can be practised and what comes next, with simple ideas for practice at home.',
+      color: 'teal',
+    },
+  ];
+
+  const exploreLinks = [
+    'Indian curriculum Primary',
+    'British Primary',
+    'Special education support',
+    'Fees',
+  ];
+
+  const colorStyles = {
+    blue: {
+      icon: 'bg-blue-600',
+      border: 'border-t-blue-500',
+      background: 'bg-blue-50',
+    },
+    teal: {
+      icon: 'bg-teal-700',
+      border: 'border-t-teal-600',
+      background: 'bg-teal-50',
+    },
+    yellow: {
+      icon: 'bg-yellow-400',
+      border: 'border-t-yellow-400',
+      background: 'bg-yellow-50',
+    },
+    orange: {
+      icon: 'bg-orange-500',
+      border: 'border-t-orange-500',
+      background: 'bg-orange-50',
+    },
+  };
 
   return (
-    <div ref={sectionRef} className="flex flex-col lg:flex-row min-h-screen bg-white font-sans text-blue-950">
-      {!isVisible ? (
-        <div className="flex items-center justify-center w-full h-96">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-        </div>
-      ) : (
-        <>
-          {/* LEFT SIDE: Fixed Checkerboard (Desktop) */}
-          <div className="w-full lg:w-1/2 lg:h-screen lg:sticky lg:top-0 grid grid-cols-2 grid-rows-3 overflow-hidden">
-        <div className="bg-slate-100">
-          <OptimizedImage
-            src={vitalyImage}
-            alt="Learning"
-            className="w-full h-full grayscale"
-            width={1200}
-            height={1200}
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            objectFit="cover"
-            priority={true}
-            fetchPriority="high"
-          />
-        </div>
-        <div className="bg-blue-300 p-6 flex flex-col justify-center border-b border-white">
-          <BookOpen className="mb-2 w-6 h-6 text-blue-600" />
-          <h3 className="font-bold text-lg">Academic Excellence</h3>
-        </div>
-        <div className="bg-blue-300 p-6 flex flex-col justify-center border-r border-white">
-          <Calculator className="mb-2 w-6 h-6 text-blue-600" />
-          <h3 className="font-bold text-lg">Cognitive Logic</h3>
-        </div>
-        <div className="bg-slate-100">
-          <OptimizedImage
-            src={johnImage}
-            alt="Math"
-            className="w-full h-full grayscale"
-            width={1200}
-            height={1200}
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            objectFit="cover"
-            loading="lazy"
-          />
-        </div>
-        <div className="bg-slate-100">
-          <OptimizedImage
-            src={kimberlyImage}
-            alt="Habits"
-            className="w-full h-full grayscale"
-            width={1200}
-            height={1200}
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            objectFit="cover"
-            loading="lazy"
-          />
-        </div>
-        <div className="bg-blue-300 p-6 flex flex-col justify-center">
-          <Star className="mb-2 w-6 h-6 text-blue-600" />
-          <h3 className="font-bold text-lg">Future Habits</h3>
-        </div>
-      </div>
+    <section className="bg-white text-[#14234f] overflow-hidden">
 
-      {/* RIGHT SIDE: Smooth Scroll Content */}
-      <div className="w-full lg:w-1/2 p-6 md:p-12 lg:p-20 flex flex-col">
-        {/* Header */}
-        <header className="max-w-xl">
-          <div className="flex items-center gap-2 text-blue-600 mb-4">
-            <span className="h-px w-8 bg-blue-600"></span>
-            <span className="text-xs font-bold tracking-[0.2em] uppercase">The FLOWW Learning Stack</span>
+      {/* HOW FLOWW WORKS */}
+      <section className="bg-[#f2f6ff] py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+
+          <div className="mb-10">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+              How FLOWW works
+            </h2>
           </div>
-          <h1 className="text-4xl lg:text-6xl font-black leading-[1.1] mb-6">
-            Three Dimensions of <span className="text-blue-500">Complete Learning</span>
-          </h1>
-          <p className="text-lg text-slate-500 leading-relaxed">
-            A coherent learning system designed to deliver multi-dimensional success at scale.
-          </p>
-        </header>
 
-        {/* Tabs Navigation */}
-        <nav className="flex gap-8 border-b border-slate-100 mt-12 mb-10">
-          {[
-            { id: 'mastery', label: 'Mastery Pathways' },
-            { id: 'languages', label: 'Languages' },
-            { id: 'capstones', label: 'Capstones' }
-          ].map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`pb-4 text-sm font-bold transition-all relative ${
-                activeTab === tab.id ? 'text-blue-950' : 'text-slate-400 hover:text-blue-400'
-              }`}
-            >
-              {tab.label}
-              {activeTab === tab.id && (
-                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600" />
-              )}
-            </button>
-          ))}
-        </nav>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {steps.map((step, index) => {
+              const Icon = step.icon;
+              const styles = colorStyles[step.color];
 
-        {/* Content Area */}
-        <main className="max-w-2xl animate-in fade-in slide-in-from-bottom-4 duration-700">
-          
-          {/* MASTERY TAB */}
-          {activeTab === 'mastery' && (
-            <div className="space-y-10">
-              <div>
-                <h2 className="text-2xl font-bold mb-3 text-blue-600">Mastery Pathways — English & Math</h2>
-                <p className="text-slate-600 leading-relaxed">
-                  Deep, focused mastery programmes designed to build strong academic foundations with AI-assisted personalised progression.
+              return (
+                <div
+                  key={index}
+                  className={`bg-white rounded-2xl p-6 border-t-4 ${styles.border} shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300`}
+                >
+                  <div
+                    className={`${styles.icon} w-10 h-10 rounded-xl flex items-center justify-center mb-4`}
+                  >
+                    <Icon className="w-5 h-5 text-white" />
+                  </div>
+
+                  <h3 className="text-base font-bold mb-3">
+                    {step.title}
+                  </h3>
+
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ENGLISH & MATHS MASTERY */}
+      <section className="bg-[#effaf7] py-14 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {masterySubjects.map((subject, index) => {
+              const Icon = subject.icon;
+              const styles = colorStyles[subject.color];
+
+              return (
+                <div
+                  key={index}
+                  className={`bg-white rounded-2xl p-6 sm:p-8 border-t-4 ${styles.border} shadow-sm hover:shadow-md transition-shadow duration-300`}
+                >
+                  <div className="flex items-start gap-4">
+
+                    <div
+                      className={`${styles.icon} w-12 h-12 rounded-xl flex items-center justify-center shrink-0`}
+                    >
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-extrabold mb-3">
+                        {subject.title}
+                      </h3>
+
+                      <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                        {subject.description}
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+        </div>
+      </section>
+
+      {/* WHO FLOWW IS FOR */}
+      <section className="bg-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+
+          <h2 className="text-2xl sm:text-3xl font-extrabold mb-8">
+            Who FLOWW is for
+          </h2>
+
+          <div className="space-y-4">
+            {learnerTypes.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-4 bg-white px-5 py-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300"
+              >
+                <div className="w-7 h-7 rounded-full bg-teal-700 flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="w-4 h-4 text-white" />
+                </div>
+
+                <p className="text-sm sm:text-base font-medium text-slate-700">
+                  {item}
                 </p>
               </div>
+            ))}
+          </div>
 
-              <div className="grid grid-cols-3 gap-1">
-                {[
-                  { val: '10', label: 'Months' },
-                  { val: '2x', label: 'Per Week' },
-                  { val: '40', label: 'Minutes' }
-                ].map((stat, i) => (
-                  <div key={i} className="bg-blue-50 p-6 rounded-2xl">
-                    <div className="text-3xl font-black">{stat.val}</div>
-                    <div className="text-[10px] uppercase tracking-wider font-bold text-blue-400">{stat.label}</div>
+        </div>
+      </section>
+
+      {/* INFORMATION CARDS */}
+      <section className="bg-[#fff8ed] py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {informationCards.map((card, index) => {
+              const Icon = card.icon;
+              const styles = colorStyles[card.color];
+
+              return (
+                <div
+                  key={index}
+                  className={`bg-white rounded-2xl p-6 sm:p-8 border-t-4 ${styles.border} shadow-sm hover:shadow-md transition-all duration-300`}
+                >
+                  <div className="flex items-start gap-4">
+
+                    <div
+                      className={`${styles.icon} w-12 h-12 rounded-xl flex items-center justify-center shrink-0`}
+                    >
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-extrabold mb-3">
+                        {card.title}
+                      </h3>
+
+                      <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                        {card.description}
+                      </p>
+                    </div>
+
                   </div>
-                ))}
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-10">
-                <div className="space-y-4">
-                  <h4 className="font-bold">Features</h4>
-                  <ul className="space-y-3 text-sm text-slate-600">
-                    <li className="flex items-start gap-2"><CheckCircle2 size={14} className="mt-1 text-blue-500" /> Spiral learning with levelled grouping</li>
-                    <li className="flex items-start gap-2"><CheckCircle2 size={14} className="mt-1 text-blue-500" /> Classes between 3:15 PM – 5:45 PM IST</li>
-                    <li className="flex items-start gap-2"><CheckCircle2 size={14} className="mt-1 text-blue-500" /> Weekly formative mastery checks</li>
-                  </ul>
                 </div>
-                <div className="space-y-4">
-                  <h4 className="font-bold">Outcomes</h4>
-                  <ul className="space-y-3 text-sm text-slate-600">
-                    <li className="flex items-start gap-2"><CheckCircle2 size={14} className="mt-1 text-blue-500" /> Demonstrable skill progression</li>
-                    <li className="flex items-start gap-2"><CheckCircle2 size={14} className="mt-1 text-blue-500" /> Quarterly reviews and portfolios</li>
-                    <li className="flex items-start gap-2"><CheckCircle2 size={14} className="mt-1 text-blue-500" /> Regular parent progress updates</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          )}
+              );
+            })}
+          </div>
 
-          {/* LANGUAGES TAB */}
-          {activeTab === 'languages' && (
-            <div className="space-y-8">
-              <h2 className="text-2xl font-bold text-blue-600">Languages Programme</h2>
-              <p className="text-slate-600">14 regional and international languages designed for global readiness.</p>
-              
-              <div className="flex flex-wrap gap-2">
-                {['IELTS', 'Arabic', 'French', 'Hindi', 'Japanese', 'Kannada', 'Malayalam', 'Marathi', 'Sanskrit', 'Spanish', 'Tamil', 'Telugu', 'Urdu'].map((lang) => (
-                  <span key={lang} className="px-4 py-2 bg-blue-50 rounded-full text-xs font-bold hover:bg-blue-100 cursor-default transition-colors">
-                    {lang}
-                  </span>
-                ))}
-              </div>
+        </div>
+      </section>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-slate-50">
-                {[
-                  { title: 'Global', desc: 'International opportunities' },
-                  { title: 'Empathy', desc: 'Cultural appreciation' },
-                  { title: 'Interest', desc: 'Personalised electives' },
-                ].map((item, i) => (
-                  <div key={i}>
-                    <div className="font-bold text-sm mb-1">{item.title}</div>
-                    <div className="text-xs text-slate-500">{item.desc}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+      {/* EXPLORE MORE */}
+      <section className="bg-[#fff4ed] py-10 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
 
-          {/* CAPSTONES TAB */}
-          {activeTab === 'capstones' && (
-            <div className="space-y-8">
-              <h2 className="text-2xl font-bold text-blue-600">Capstones Programme</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {[
-                  { title: 'Financial Literacy', desc: 'Money management and investments' },
-                  { title: 'Young Pioneer', desc: 'Entrepreneurship and business basics' },
-                  { title: 'AI & Machine Learning', desc: 'Future-ready technology' },
-                  { title: 'Public Speaking', desc: 'Confidence and communication' }
-                ].map((cap) => (
-                  <div key={cap.title} className="p-5 rounded-2xl bg-blue-50 border border-transparent hover:border-blue-200 transition-all">
-                    <div className="font-bold text-sm mb-1">{cap.title}</div>
-                    <div className="text-xs text-slate-500">{cap.desc}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+          <h3 className="text-lg font-extrabold mb-5">
+            Explore more
+          </h3>
 
-          <button className="mt-12 group flex items-center gap-3 bg-blue-950 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-800 transition-all">
-            Start Learning Journey
-            <span className="group-hover:translate-x-1 transition-transform">→</span>
-          </button>
-        </main>
-      </div>
-    </>
-  )}
-    </div>
+          <div className="flex flex-wrap gap-3">
+            {exploreLinks.map((link, index) => (
+              <a
+                href="#"
+                key={index}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-slate-100 shadow-sm text-sm font-semibold text-[#14234f] hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-300"
+              >
+                {link}
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+    </section>
   );
 };
 
-export default memo(FlowwLearningStack);
+export default FlowwLearningStack;
